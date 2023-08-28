@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+@font-face {
+    font-family: Mitr;
+    src: url(../../font/Mitr/Mitr-Regular.ttf);
+}
+
+.font {
+    font-family: Mitr;
+}
+
+::selection {
+    background: #fa4299;
+    color: #fff;
+}
+
+.displayFooter {
+    position: absolute;
+    display: block;
+    z-index: 4;
+}
+
+.main-AddMoneyPromo {
+    min-width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #7110af 40%, #2a0bd6 100%);
+    align-items: center;
+}
+
+.wrapperMoney {
+    overflow: hidden;
+    max-width: 1800px;
+    max-height: 1000px;
+    width: 50%;
+    height: 90%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 9rem auto;
+    position: relative;
+    /* margin-top: 30%;*/
+}
+
+.wrapperMoney .title-text {
+    display: flex;
+    width: 200%;
+}
+
+.wrapperMoney .title {
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapperMoney .slide-controls {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 5px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+}
+
+.textTitle {
+    width: 80%;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: left;
+    color: #930bbd;
+    margin: 5px 0 2px 0;
+    margin-left: 22%;
+}
+
+.textinput {
+    margin: 5px 0 50px 0;
+}
+
+
+.form-inner form .fieldMoney input::placeholder {
+    color: #ff00ff;
+    transition: all 0.3s ease;
+}
+
+
+.textFrame {
+    background-color: #930bbd;
+    border-radius: 30px;
+    width: 40%;
+    height: 60px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    display: flex;
+}
+
+.title-textDeposit {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-controls .slide {
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+}
+
+.slide-controls label.signup {
+    color: #000;
+    display: none;
+}
+
+.slide-controls .slider-tab {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#signup:checked~.slider-tab {
+    left: 50%;
+}
+
+#signup:checked~label.signup {
+    color: #fff;
+    cursor: default;
+    user-select: none;
+}
+
+#signup:checked~label.login {
+    color: #ffffff;
+}
+
+#login:checked~label.signup {
+    color: #000;
+}
+
+#login:checked~label.login {
+    cursor: default;
+    user-select: none;
+}
+
+.wrapperMoney .form-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-container .form-inner {
+    display: flex;
+    width: 200%;
+}
+
+.form-container .form-inner form {
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.form-inner form .fieldMoney {
+    height: 55px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-inner form .fieldMoney input {
+    height: 100%;
+    width: 60%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 20px;
+    border-bottom-width: 2px;
+    border: 3px solid rgb(175, 23, 206);
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: rgb(126, 16, 160);
+}
+
+
+.form-inner form .fieldDataDeposit {
+    height: 55px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-inner form .fieldDataDeposit input {
+    height: 100%;
+    width: 60%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 15px;
+    border-bottom-width: 2px;
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: -webkit-linear-gradient(left, #930bbd, #b31de0, #c244e9, #be3ee6);
+    box-shadow: 5px 0.2px 9px black;
+    color: white;
+}
+
+.form-inner form .fieldDataDeposit input:focus {
+    border-color: #fc83bb;
+    /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+
+.form-inner form .fieldDataDeposit input::placeholder {
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+form .fieldDataDeposit input:focus::placeholder {
+    color: #ffffff;
+}
+
+.form-inner form .pass-link {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.form-inner form .money-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-inner form .pass-link a,
+.form-inner form .money-link a {
+    color: #fa4299;
+    text-decoration: none;
+}
+
+.form-inner form .pass-link a:hover,
+.form-inner form .money-link a:hover {
+    text-decoration: underline;
+}
+
+form .btn {
+    top: 10px;
+    height: 10px;
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+form .btn .btn-layer {
+    height: 210%;
+    width: 0%;
+    position: absolute;
+    left: -100%;
+
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+form .btn:hover .btn-layer {
+    left: 0;
+}
+
+form .btnsubmit input[type="submit"] {
+    height: 90%;
+    font-size: 20px;
+    width: 60%;
+    z-index: 2;
+    color: #ffffff;
+    background: -webkit-linear-gradient(right, #0148a5, #135199, #1e8cf3, #00b1e7);
+    margin-top: 2%;
+    box-shadow: 5px 0.2px 9px black;
+}
+
+
+.iconMoney {
+    position: absolute;
+    transform: translate(40%, 50%);
+    font-size: 30px;
+    color: #ffffff;
+    pointer-events: none;
+}
+
+.input-container {
+    position: relative;
+}
+
+.input-with-icon {
+    padding-left: 40px;
+    /* Add space for the icon */
+}
+
+.input-icon {
+    position: absolute;
+    left: 20px;
+    top: 90%;
+    font-size: 30px;
+    transform: translateY(-50%);
+    color: #aaa;
+    color: #ffffff;
+}
+
+.imgWayDeposit{
+    width: 500px;
+}
+
+.scaltimgDeposit {
+    position: absolute;
+    width: 29%;
+    scale: 50%;
+    top: 35%;
+    right : 79%;
+    z-index: 4;
+}
+
+.scaltimgDepositCircleI {
+    position: absolute;
+    width: 51%;
+    scale: 10%;
+    bottom: 20%;
+    left: 50%;
+    z-index: 4;
+}
+
+.scaltimgDepositCircleII {
+    position: absolute;
+    width: 51%;
+    scale: 30%;
+    bottom: 10%;
+    right: 50%;
+    z-index: 3;
+}
+
+.scaltimgDepositCircleIII {
+    position: absolute;
+    width: 48%;
+    scale: 35%;
+    top: 35%;
+    left : 50%;
+    z-index: 4;
+}
+
+.scaltimgDepositCircleIIII {
+    position: absolute;
+    width: 58%;
+    scale: 35%;
+    bottom: 10%;
+    right : 45%;
+    z-index: 4;
+    display: block;
+}
+
+.scaltimgDepositCircleV {
+    position: absolute;
+    width: 52%;
+    scale: 10%;
+    top: 5%;
+    right : 60%;
+    z-index: 4;
+    display: block;
+}
+
+.scaltimgDepositCircleVI {
+    position: absolute;
+    width: 52%;
+    scale: 30%;
+    top: 50%;
+    left : 60%;
+    z-index: 1;
+    display: block;
+}
+
+.upload-box {
+    font-size: 16px;
+    background: white;
+    border-radius: 50px;
+    box-shadow: 5px 5px 10px black;
+    width: 450px;
+    outline: none;
+}
+
+::-webkit-file-upload-button {
+    color: white;
+    background: #930bbd;
+    padding: 20px;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 1px 0 1px #930bbd;
+    outline: none;
+}
+
+::-webkit-file-upload-button:hover {
+    background: #b31de0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    input {
+        font-size: 14px;
+    }
+
+    .scaltimgcartoon7Login {
+        position: relative;
+        width: 150px;
+        transform: translate(-500%, 20%);
+    }
+
+    .wrapperMoney .title-text {
+        display: flex;
+        width: 200%;
+    }
+
+    .wrapperMoney .title {
+        width: 50%;
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapperMoney .slide-controls {
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+        margin: 5px 0 10px 0;
+    }
+
+    .textTitle {
+        width: 80%;
+        font-size: 17px;
+        font-weight: 400;
+        margin: 5px 0 2px 0;
+        margin-left: 10%;
+    }
+
+    .textinput {
+        margin: 5px 0 33px 0;
+    }
+
+    .textFrame {
+        border-radius: 30px;
+        width: 85%;
+        height: 40px;
+        margin-left: 7%;
+    }
+
+
+
+    .form-inner form .fieldMoney input {
+        height: 80%;
+        width: 92%;
+        font-size: 20px;
+    }
+
+    .form-inner form .fieldDataDeposit input {
+        height: 80%;
+        width: 92%;
+        font-size: 20px;
+    }
+
+    .form-inner form .fieldMoney input::placeholder {
+        color: #ff00ff;
+        transition: all 0.3s ease;
+    }
+
+    form .btnsubmit input[type="submit"] {
+        height: 70%;
+        font-size: 20px;
+        width: 86%;
+        margin-top: 2%;
+    }
+
+    .main-AddMoneyPromo {
+        min-height: 230vw;
+    }
+
+    .form-inner form .money-link {
+        margin-top: 5px;
+    }
+
+    .displayFooter {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .wrapperMoney {
+        width: 90%;
+        height: 100%;
+        margin-top: 40%;
+    }
+
+    .slide-controls .slider-tab {
+        display: block;
+    }
+
+    .slide-controls label.signup {
+        display: block;
+    }
+
+    .imgWayDeposit {
+        width: 100px;
+    }
+
+    .scaltimgDeposit {
+        width: 90%;
+        scale: 25%;
+        top: 39%;
+        right: 37%;
+        z-index: 10;
+    }
+
+    .scaltimgDepositCircleI {
+        width: 100%;
+        scale: 20%;
+        bottom: 48%;
+        left: 40%;
+        z-index: 3;
+    }
+
+    .scaltimgDepositCircleII {
+        width: 100%;
+        scale: 20%;
+        bottom: 20%;
+        right: 40%;
+        z-index: 3;
+    }
+
+    .scaltimgDepositCircleIII {
+        width: 100%;
+        scale: 25%;
+        top: -10%;
+        left: 37%;
+        display: none;
+    }
+    .scaltimgDepositCircleIIII {
+        display: none;
+    }
+    .scaltimgDepositCircleV {
+        display: none;
+    }
+    .scaltimgDepositCircleVI {
+        display: none;
+    }
+
+    .upload-box {
+        width: 280px;
+        margin-top: 5%;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    ::-webkit-file-upload-button {
+        height: 90px;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .scaltimgDeposit {
+        width: 90%;
+        scale: 30%;
+        top: 36%;
+        right: 35%;
+        z-index: 10;
+    }
+
+    .scaltimgDepositCircleI {
+        width: 100%;
+        scale: 20%;
+        bottom: 48%;
+        left: 40%;
+        z-index: 3;
+    }
+
+    .scaltimgDepositCircleII {
+        width: 100%;
+        scale: 20%;
+        bottom: 20%;
+        right: 40%;
+        z-index: 3;
+    }
+
+    .scaltimgDepositCircleIII {
+        width: 100%;
+        scale: 25%;
+        bottom: 40%;
+        left: 37%;
+        z-index: 5;
+    }
+}

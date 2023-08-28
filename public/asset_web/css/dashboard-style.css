@@ -1,0 +1,1185 @@
+.dw-submit-modal {
+    background: #131313;
+    border: 0
+}
+
+.dw-submit-modal .modal-body .code-modal-body {
+    max-width: 450px;
+    margin-inline: auto
+}
+
+.form-input input:-internal-autofill-selected {
+    background-color: #000
+}
+
+.search-input {
+    display: inline-flex;
+    vertical-align: middle;
+    width: 100%;
+    margin: 10px 0;
+    align-items: center;
+    position: relative
+}
+
+.search-input .input-box-option {
+    padding: 8px 15px;
+    min-width: fit-content;
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+    text-align: center;
+    color: #fff;
+    border: 1px solid transparent
+}
+
+.search-input .input-type-option {
+    background: #000;
+    border-radius: 16px;
+    overflow-y: scroll;
+    display: inline-flex;
+    white-space: nowrap
+}
+
+.search-input .input-type-option::-webkit-scrollbar {
+    width: 0;
+    height: 5px
+}
+
+.common-input .inputDatePicker i {
+    color: #fff
+}
+
+.form-control.datepicker {}
+
+.search-input .input-type-option::-webkit-scrollbar-track {
+    background: #242424
+}
+
+.search-input .input-type-option::-webkit-scrollbar-thumb {
+    background: #515151;
+    border-radius: 30px
+}
+
+.search-input .input-type-option::-webkit-scrollbar-thumb:hover {
+    background: #515151
+}
+
+.search-input .input-box-option.active {
+    background: #591f8e;
+    border-radius: 16px
+}
+
+.mission-daily-calendar-holder {
+    background: #252525;
+    border-radius: 15px;
+    margin: 16px 0
+}
+
+.mission-daily-calendar-holder .missionCalendar {
+    margin-bottom: 24px;
+    font-size: 12px
+}
+
+.missionCalendar .day-content,
+.missionCalendar .calender-day-header {
+    text-align: center;
+    border: none;
+    padding: 5px
+}
+
+.missionCalendar .day-content {
+    padding: 4px
+}
+
+.calender-day-header {
+    color: #919191;
+    text-transform: uppercase
+}
+
+.check-in-indicator-icon {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.calender-header-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, #D600E3 0%, #8A2BE2 100%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px
+}
+
+.month-year-text {
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px
+}
+
+.daily-image-container {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    background: grey;
+    justify-content: center;
+    background: #1c1c1c;
+    border-radius: 10px;
+    margin-top: 5px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative
+}
+
+.daily-image-container .mission-calendar-missed {
+    background: #1c1c1c;
+    border: 1px solid #534f4a
+}
+
+.day-content.checked .mission-special-occassion {}
+
+.daily-image-container .mission-calendar-checked-in {
+    background: rgba(19, 163, 0, .1);
+    border: 1px solid #254b20
+}
+
+.daily-image-container.mission-today-before-check {
+    background: rgba(19, 163, 0, .1);
+    border: 1px solid #ffce00
+}
+
+.daily-image-container.mission-today-before-check img {
+    width: 40px
+}
+
+.daily-image-container .mission-special-occassion {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #534f4a;
+    padding: 5px;
+    border-radius: 10px;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.daily-image-container .mission-special-occassion:nth-child(3) {
+    left: 0
+}
+
+.calender-header-tab .left-arrow-button,
+.calender-header-tab .right-arrow-button {
+    background: #ffce00;
+    padding: 16px;
+    max-height: 24px;
+    max-width: 24px;
+    border-radius: 50%;
+    color: #1b222b;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.calender-header-tab .right-arrow-button.disabled {
+    opacity: .7;
+    color: #1b222b;
+    pointer-events: none
+}
+
+.mission-month-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+
+#mission-daily-calendar .day-type-container {
+    display: flex;
+    gap: 10px;
+    margin: 0 8px;
+    border-top: 1px solid #413e3b;
+    padding: 20px 0
+}
+
+#mission-daily-calendar .day-type-container .day-type-item img {
+    width: 18px;
+    height: 18px
+}
+
+.mission-container .no-record {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 30px auto;
+    line-height: 3
+}
+
+.mission-container .no-record span {
+    font-size: 70px;
+    color: var(--generalInactive)
+}
+
+.wt-switch {
+    position: relative;
+    display: inline-block;
+    width: 65px;
+    height: 25px;
+    vertical-align: middle
+}
+
+.wt-switch .wt-checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0
+}
+
+.wt-slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #979797;
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+.wt-slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 5px;
+    bottom: 2px;
+    background: #ececec;
+    -webkit-transition: .4s;
+    transition: .4s
+}
+
+.wt-checkbox:checked+.wt-slider {
+    background: #46ad4d
+}
+
+.wt-checkbox:checked+.wt-slider:before {
+    transform: translateX(35px)
+}
+
+.wt-slider.round {
+    border-radius: 35px
+}
+
+.wt-slider.round:before {
+    border-radius: 50%
+}
+
+.button-dashboardAct i {
+    font-size: 24px
+}
+
+.button-dashboardAct:nth-child(2) i {
+    transform: rotate(180deg)
+}
+
+.button-dashboardAct,
+.button-dashboardAct:focus,
+.button-dashboardAct:active,
+.button-dashboardAct:hover {
+    background: #000;
+    border-radius: 14px;
+    color: #cacaca;
+    cursor: pointer;
+    min-width: auto;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    justify-content: center;
+    min-height: 56px;
+    text-transform: capitalize;
+    font-weight: 400
+}
+
+.button-dashboardAct.newNav.active {
+    background: #591f8e
+}
+
+.dashboard-menu [class^=icon-],
+.dashboard-menu [class*=" icon-"],
+.dashboard-menu i {
+    width: 26px;
+    height: 26px
+}
+
+.dashboard-menu.active,
+.dashboard-menu:active,
+.dashboard-menu:focus,
+.dashboard-menu:hover {
+    color: #d600e3
+}
+
+.copyUsername {
+    color: #919191
+}
+
+.dashboard-profile-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.dashboard-profile-container {
+    background: #1c1c1c;
+    border-radius: 20px;
+    padding: 10px 15px
+}
+
+.dashboard-user-details {
+    display: flex;
+    align-items: center;
+    min-width: max-content;
+    gap: 5px;
+    justify-content: space-between;
+    position: relative
+}
+
+.dashboard-user-details .img-responsive {
+    right: 0
+}
+
+.dashboard-user-wallet-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    flex-direction: row
+}
+
+.dashboard-user-wallet-container .dashboard-wallet-details:nth-child(2) {
+    align-items: flex-end;
+    justify-content: flex-start
+}
+
+.dashboard-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 10px
+}
+
+.dashboard-wallet-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+    flex-direction: column
+}
+
+.dashboard-wallet-details .main-wallet {
+    display: flex;
+    gap: 10px;
+    align-items: center
+}
+
+.dashboard-wallet-details span,
+.dashboard-wallet-details .mp-transfer-lbl {
+    color: #919191
+}
+
+.dashboard-wallet-details label {}
+
+.dashboard-profile-container>div {
+    padding: 10px 0
+}
+
+.dashboard-separator {
+    border-bottom: 1px solid #413e3b
+}
+
+.dashboard-separator:last-child {
+    border-bottom: none
+}
+
+.dashboard-profile-user-details,
+.dashboard-wallet-auto-transfer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    white-space: nowrap
+}
+
+.dashboard-profile-user-name {
+    text-transform: uppercase
+}
+
+.dashboard-profile-user-id {
+    color: #d600e3
+}
+
+.dashboard-profile-user-holder {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px
+}
+
+.dashboard-profile-user-pending-verified-container {
+    border: 1px solid #ffce00;
+    padding: 5px;
+    border-radius: 15px;
+    color: #ffce00;
+    white-space: nowrap
+}
+
+.dashboard-profile-user-verified-container {
+    border: 1px solid #46ad4d;
+    padding: 5px;
+    border-radius: 10px;
+    color: #46ad4d
+}
+
+.dashboard-user-verification-details {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px
+}
+
+.dashboard-user-verification-icons {
+    display: flex;
+    grid-gap: 10px;
+    padding: 10px
+}
+
+.dashboard-user-verification-icons.disabled {
+    pointer-events: none
+}
+
+.user-verification {
+    display: flex;
+    color: #fff;
+    background: #413e3b;
+    border-radius: 15px;
+    width: 45px;
+    height: 45px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+    position: relative;
+    opacity: 70%;
+    cursor: pointer
+}
+
+.user-verification.verified,
+.user-verification:focus,
+.user-verification:active,
+.user-verification:hover {
+    opacity: 100%
+}
+
+.user-verification.verified {
+    background: #212f0d;
+    color: #fff
+}
+
+.user-verification.failed {
+    background: #2b0403;
+    color: #fff
+}
+
+.user-verification img {
+    width: 26%;
+    position: absolute;
+    bottom: 20%;
+    right: 20%
+}
+
+.vip-points-holder {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.vip-points-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.vip-points-level,
+.vip-points-details {
+    display: flex;
+    gap: 5px;
+    align-items: center
+}
+
+.vip-points-details .vip-point {
+    color: #ffce00
+}
+
+.vip-points-details i,
+.vip-privilege i {
+    background: #413e3b;
+    border-radius: 10px;
+    padding: 5px;
+    color: #919191;
+    cursor: pointer
+}
+
+.vip-progress-container {
+    width: 100%;
+    height: 15px;
+    background: #e1e1e1 !important;
+    overflow: hidden;
+    border-radius: 10px
+}
+
+.vip-progress-points,
+.vip-progress {
+    height: inherit;
+    float: left;
+    border-radius: 10px;
+    background: linear-gradient(to right, #8A2BE2 0%, #D600E3 100%)
+}
+
+.vip-to-next-level-points,
+.vip-to-next-level {
+    color: #919191
+}
+
+.vip-privilege {
+    display: flex;
+    align-items: center;
+    justify-content: space-between
+}
+
+.vip-privilege span {
+    color: #fff
+}
+
+.sidebar-menu-navigations {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    font-size: 16px
+}
+
+.sidebar-menu-navigations .dashboard-menu {
+    padding: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px
+}
+
+.newNav .notiCount {
+    border-radius: 30px;
+    background: red;
+    padding: 5px;
+    color: #fff;
+    margin-left: 5px
+}
+
+.missionDiary-notif {
+    border-radius: 30px;
+    background: #ff4f29;
+    padding: 3px;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    margin-left: 5px;
+    width: 5px;
+    height: 5px
+}
+
+.pulse {
+    animation: pulse-animation 2s infinite
+}
+
+@keyframes pulse-animation {
+    0% {
+        box-shadow: 0 0 0 0 rgba(240, 255, 0, .3)
+    }
+
+    100% {
+        box-shadow: 0 0 0 7px transparent
+    }
+}
+
+.pulsate-img {
+    animation: pulsate-img 1s infinite ease-in-out alternate
+}
+
+@keyframes pulsate-img {
+    from {
+        transform: scale(.8)
+    }
+
+    to {
+        transform: scale(1.2)
+    }
+}
+
+.section-setting {
+    display: flex;
+    width: 95%;
+    gap: 10px;
+    max-width: 1920px;
+    margin: 40px auto
+}
+
+.section-setting .right-panel {
+    width: -webkit-fill-available;
+    position: relative;
+    overflow-x: auto
+}
+
+.section-setting .right-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px
+}
+
+.section-setting .bubble-container {
+    background: #1c1c1c;
+    padding: 20px;
+    width: 100%;
+    border-radius: 20px;
+    height: 100%
+}
+
+.main-title-holder {
+    border-bottom: 1px solid #413e3b
+}
+
+.org-title {
+    font-size: 24px;
+    color: #fff;
+    padding: 10px 0;
+    font-variant-caps: all-petite-caps
+}
+
+.section-profile {
+    padding: 25px 0
+}
+
+.sub-title {
+    color: #e3e3e3;
+    padding: 10px 0;
+    font-weight: 700
+}
+
+.deposit-info {
+    background: #120e16;
+    padding: 15px 30px;
+    border-radius: 15px;
+    line-height: 1.5
+}
+
+.deposit-info .info-desc .box {
+    display: inline-flex;
+    gap: 5px;
+    color: #e3e3e3
+}
+
+.deposit-info .info-desc .box:first-child {
+    min-width: 25%
+}
+
+.custom-file {
+    height: 40px
+}
+
+.custom-file-label {
+    border: none;
+    height: 40px;
+    background: #000;
+    display: inline-flex;
+    align-items: center
+}
+
+.custom-file-label::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+    display: flex;
+    line-height: 1.42857143;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    color: #fff;
+    content: "Browse";
+    background-color: #d600e3;
+    border-left: inherit;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    align-items: center;
+    height: 40px
+}
+
+.btn_add_receipt {
+    color: #919191
+}
+
+.tblList {
+    width: 100%;
+    overflow-y: auto;
+    background: #22242a;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px
+}
+
+.table-history {
+    width: 100%
+}
+
+.table-history thead tr th {
+    color: #fff;
+    font-weight: 400
+}
+
+.table-history tbody tr td {
+    color: #919191
+}
+
+.table-history thead tr th,
+.table-history tbody tr td {
+    padding: 10px 15px
+}
+
+.table-history tbody tr:nth-child(odd) {
+    background: #1c1c1c
+}
+
+.table-history tbody tr:nth-child(even) {
+    background: #151515
+}
+
+.table-history .nr {
+    text-align: center
+}
+
+.tblStats.rejected {
+    color: #e71a33
+}
+
+.tblStats.approved {
+    color: #58b300
+}
+
+.tblStats.pending {
+    color: #ffed00
+}
+
+.pagination>.disabled>a,
+.pagination>.disabled>a:focus,
+.pagination>.disabled>a:hover,
+.pagination>.disabled>span,
+.pagination>.disabled>span:focus,
+.pagination>.disabled>span:hover {
+    color: #b7b7b7;
+    cursor: not-allowed;
+    background-color: transparent;
+    border: none;
+    font-size: 16px
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    z-index: 3;
+    color: #5e4f71;
+    cursor: default;
+    background-color: transparent;
+    border: none
+}
+
+.pagination>li>a,
+.pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 0 7px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    color: #b7b7b7;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    border-radius: 50%;
+    font-size: 16px
+}
+
+.pagination>li>a:focus,
+.pagination>li>a:hover,
+.pagination>li>span:focus,
+.pagination>li>span:hover {
+    z-index: 2;
+    color: #5e4f71;
+    background-color: transparent;
+    border: none
+}
+
+.pagination .ellipse {
+    cursor: not-allowed;
+    pointer-events: none
+}
+
+.dashboard-button,
+.dashboard-button:active,
+.dashboard-button:focus,
+.dashboard-button:hover {
+    border-radius: 15px;
+    cursor: pointer;
+    border: none;
+    padding: 10px
+}
+
+.dashboard-button.active {
+    background: #591f8e
+}
+
+.deposit-method,
+.withdrawal-method {
+    display: inline-block;
+    width: 100%
+}
+
+.deposit-method .box,
+.withdrawal-method .box {
+    display: inline-flex;
+    align-items: center;
+    column-gap: 10px;
+    background: #242424;
+    padding: 10px;
+    border-radius: 14px;
+    width: calc(100%/5 - 10px);
+    margin: 10px 5px;
+    opacity: 70%
+}
+
+.deposit-method .box.active,
+.withdrawal-method .box.active {
+    background: #591f8e;
+    opacity: 100%
+}
+
+.deposit-method .box img,
+.withdrawal-method .box img,
+.deposit-bank .box img,
+.deposit-crypto .box img {
+    max-width: 30px
+}
+
+.deposit-method .name,
+.withdrawal-method .name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.deposit-bank .box,
+.deposit-crypto .box {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    column-gap: 10px;
+    background: #242424;
+    padding: 10px;
+    border-radius: 14px;
+    width: calc(100%/5 - 10px);
+    text-overflow: ellipsis;
+    overflow: hidden;
+    margin: 10px 5px;
+    opacity: 70%
+}
+
+.deposit-bank,
+.deposit-crypto {
+    display: inline-block;
+    margin: 10px 0;
+    width: 100%
+}
+
+.deposit-bank .box.active,
+.deposit-crypto .box.active {
+    background: #591f8e;
+    opacity: 100%
+}
+
+.deposit-bank .name,
+.deposit-crypto .name {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap
+}
+
+.preview-img img {
+    max-width: 250px
+}
+
+.profile-verification-holder {
+    display: flex;
+    align-items: center;
+    gap: 15px
+}
+
+.referral-form span {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30%;
+    color: #cfcfcf
+}
+
+.profile-verification-holder {
+    display: flex;
+    align-items: center;
+    gap: 15px
+}
+
+.vip-navigation-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%
+}
+
+@media screen and (max-width:1450px) {
+    .mission-main {
+        max-width: 50%
+    }
+
+    .daily-image-container .mission-special-occassion {
+        width: 25px;
+        height: 25px
+    }
+
+    .daily-image-container {
+        width: 50px;
+        height: 50px
+    }
+}
+
+@media screen and (max-width:1300px) {
+
+    .deposit-method .box,
+    .withdrawal-method .box,
+    .deposit-bank .box,
+    .deposit-crypto .box {
+        width: calc(100%/3 - 10px)
+    }
+}
+
+@media screen and (max-width:1200px) {
+    .two-title-holder:nth-child(2) {
+        display: none
+    }
+
+    .mission-main {
+        max-width: 100%
+    }
+}
+
+@media screen and (max-width:800px) {
+    .custom-file-label::after {
+        content: "";
+        width: 30px;
+        background-image: url(../img/icon/icon-search.svg);
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-top-right-radius: .25rem;
+        border-bottom-right-radius: .25rem
+    }
+
+    .dashboard-button,
+    .dashboard-button:active,
+    .dashboard-button:focus,
+    .dashboard-button:hover,
+    .dashboard-button.active {
+        background: 0 0;
+        position: relative;
+        width: calc(100%/2 - 5px);
+        line-height: 3
+    }
+
+    .dashboard-button.active {
+        color: #ffe7b2
+    }
+
+    .dashboard-button.active:after {
+        content: "";
+        background: #ffe7b2;
+        display: block;
+        height: 3px;
+        width: 70%;
+        position: absolute;
+        margin: auto;
+        left: 0;
+        right: 0
+    }
+
+    .dashboard-topBar-holder {
+        display: flex;
+        margin: auto;
+        padding: 20px;
+        background: #120e16;
+        align-items: center;
+        font-size: 20px
+    }
+
+    .dashboard-topBar-title {
+        display: flex;
+        width: 100%;
+        justify-content: center
+    }
+
+    .dashboard-title {
+        text-transform: uppercase;
+        color: #fff
+    }
+
+    .section-setting {
+        width: 100%;
+        margin: unset
+    }
+
+    .left-panel {
+        display: none
+    }
+
+    .dashboard-profile-holder {
+        padding: 15px
+    }
+
+    .dashboard-user-details.m-dev .dashboard-profile-user-details {
+        flex: .8
+    }
+
+    .org-title {
+        display: none
+    }
+
+    .main-title-holder {
+        border-bottom: none
+    }
+
+    .section-setting .right-container {
+        padding: 0
+    }
+
+    .section-setting .bubble-container {
+        border-radius: 0
+    }
+
+    .vip-navigation-holder,
+    .dashboard-btn-holder,
+    .profile-verification-holder {
+        justify-content: center;
+        width: 100%
+    }
+
+    .mobileWallet {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        background: linear-gradient(140deg, #444444 0%, #222222 100%);
+        flex-direction: row;
+        min-height: 150px;
+        justify-content: space-between;
+        contain: content;
+        border-radius: 10px;
+        color: #919191;
+        align-items: center
+    }
+
+    .mainWallet-holder {
+        width: -webkit-fill-available
+    }
+
+    .mainWallet-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+        align-items: center;
+        position: relative
+    }
+
+    .mainWallet-container-item {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        z-index: 2
+    }
+
+    .mainWallet-container .main-wallet {
+        color: #fff;
+        display: flex;
+        gap: 10px
+    }
+
+    .mainWallet-label {
+        color: #919191
+    }
+
+    .mainWallet-container img {
+        position: absolute;
+        right: 0;
+        height: 100%;
+        z-index: 1
+    }
+}
+
+@media screen and (max-width:470px) {
+    .missionCalendar .day-content {
+        padding: 0
+    }
+
+    .daily-image-container .mission-special-occassion {
+        width: 20px;
+        height: 20px;
+        border-radius: 5px
+    }
+
+    .daily-image-container {
+        width: 40px;
+        height: 40px
+    }
+
+    .deposit-method .box,
+    .withdrawal-method .box,
+    .deposit-bank .box,
+    .deposit-crypto .box {
+        width: calc(100%/2 - 10px)
+    }
+
+    .dashboard-user-details {
+        gap: 5px
+    }
+
+    .button-dashboardAct,
+    .button-dashboardAct:focus,
+    .button-dashboardAct:active,
+    .button-dashboardAct:hover {
+        font-size: 12px
+    }
+}

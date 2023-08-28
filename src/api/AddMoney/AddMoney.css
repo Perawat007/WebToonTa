@@ -1,0 +1,226 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Mitr;
+    src: url(../../font/Mitr/Mitr-Regular.ttf)
+}
+
+.login_form_container {
+    position: relative;
+    width: 400px;
+    height: 1000px;
+    max-width: 2000px;
+    max-height: 600px;
+    background: #040717;
+    border-radius: 50px 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.login_form_container::before {
+
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #ee00ff);
+    animation: rotate_border 6s linear infinite;
+
+}
+
+.login_form_container::after {
+    position: absolute;
+    width: 170%;
+    height: 170%;
+    content: '';
+    background-image: conic-gradient(transparent, transparent, transparent, #000000);
+    animation: rotate_border 6s linear infinite;
+    animation-delay: -3s;
+}
+
+@keyframes rotate_border {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.login_form {
+    position: absolute;
+    content: '';
+    justify-content: center;
+    background-color: #ffffff;
+    border-radius: 100px 5px;
+    inset: 5px;
+    padding: 50px 40px;
+    z-index: 10;
+    color: #000000;
+}
+
+.input_group {
+    margin-top: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.input_text {
+    width: 95%;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.322);
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #530045;
+    font-size: 20px;
+    padding-left: 10px;
+    color: #000000;
+
+}
+
+::placeholder {
+    font-size: 15px;
+    color: #262727;
+    letter-spacing: 1px;
+
+}
+
+.fa {
+    font-size: 20px;
+}
+
+#login_button {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    transition: 1s;
+    margin-top: 100px;
+}
+
+.main-login .login_button:hover {
+    box-shadow: 0.5px 0.5px 9px -1px black;
+    transform: translateY(-5px);
+}
+
+#login_button a {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    z-index: 10;
+    cursor: pointer;
+    font-size: 22px;
+    letter-spacing: 2px;
+    border: 1px solid #000000;
+    border-radius: 50px;
+    background: linear-gradient(to right, #1693ed 40%, #0f26ff 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-family: Mitr;
+}
+
+.fotter {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer {
+    font-family: Mitr;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #000000;
+}
+
+.glowIcon {
+    text-shadow: 0 0 10px #00ccff;
+
+}
+
+.labelTitle {
+    font-family: Mitr;
+    display: block;
+    margin: auto;
+    float: left;
+    width: 70%;
+    font-size: medium;
+    color: rgb(0, 0, 0);
+    margin-bottom: -4rem;
+}
+
+/* Modal */
+.overlay {
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+}
+
+.modalContainer {
+    max-width: 600px;
+    width: 100%;
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: #333333;
+    box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 8px;
+}
+
+.img {
+    width: 250px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+}
+
+.modalRight {
+    width: 100%;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin-top: 3rem;
+    padding: 1rem 2rem;
+    color: #ffffff;
+}
+
+.btnContainer {
+    display: flex;
+    padding: 1rem 1rem;
+}
+
+.btnContainer button {
+    width: 100%;
+    margin: .5rem;
+    padding: 16px 0;
+    /* border: none; */
+    border: 1px solid #411b57;
+    /* color: #ffffff; */
+}
+
+.btnPrimary {
+    border-radius: 50px;
+    background: linear-gradient(to right, #1693ed 40%, #0f26ff 100%);
+    color: white;
+}

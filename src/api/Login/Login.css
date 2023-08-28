@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+@font-face {
+    font-family: Mitr;
+    src: url(../../font/Mitr/Mitr-Regular.ttf);
+}
+
+.font {
+    font-family: Mitr;
+}
+
+::selection {
+    background: #fa4299;
+    color: #fff;
+}
+
+.displayFooterLogin {
+    position: absolute;
+    display: block;
+    z-index: 5;
+}
+
+.main-Login {
+    min-width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #7110af 40%, #2a0bd6 100%);
+    align-items: center;
+}
+
+.wrapperLogin {
+    overflow: hidden;
+    max-width: 1800px;
+    max-height: 1800px;
+    width: 50%;
+    height: 40rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 10rem auto;
+    position: relative;
+    /* margin-top: 30%;*/
+}
+
+.wrapperLogin .title-textLogin {
+    display: flex;
+    width: 200%;
+}
+
+.wrapperLogin .titleLogin {
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapperLogin .slide-controlsLogin {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 5px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+}
+
+.textTitleLogin {
+    width: 80%;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: left;
+    color: #930bbd;
+    margin: 5px 0 10px 0;
+    margin-left: 22%;
+}
+
+.textinputLogin {
+    margin: 5px 0 50px 0;
+}
+
+
+.form-innerLogin form .fieldLogin input::placeholder {
+    color: #ff00ff;
+    transition: all 0.3s ease;
+}
+
+
+.textFrameLogin {
+    background-color: #930bbd;
+    border-radius: 30px;
+    width: 40%;
+    height: 60px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    display: flex;
+}
+
+.title-textLogin {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-controlsLogin .slideLogin {
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+}
+
+.slide-controlsLogin label.signup {
+    color: #000;
+    display: none;
+}
+
+.slide-controlsLogin .slider-tabLogin {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#signup:checked~.slider-tab {
+    left: 50%;
+}
+
+#signup:checked~label.signup {
+    color: #fff;
+    cursor: default;
+    user-select: none;
+}
+
+#signup:checked~label.login {
+    color: #ffffff;
+}
+
+#login:checked~label.signup {
+    color: #000;
+}
+
+#login:checked~label.login {
+    cursor: default;
+    user-select: none;
+}
+
+.wrapperLogin .form-containerLogin {
+    width: 100%;
+    overflow: hidden;
+}
+
+.form-containerLogin .form-innerLogin {
+    display: flex;
+    width: 200%;
+}
+
+.form-containerLogin .form-innerLogin form {
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.form-innerLogin form .fieldLogin {
+    height: 55px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-innerLogin form .fieldLogin input {
+    height: 100%;
+    width: 60%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 20px;
+    border-bottom-width: 2px;
+    border: 3px solid rgb(175, 23, 206);
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: rgb(126, 16, 160);
+}
+
+
+.form-innerLogin form .fieldDataLogin {
+    height: 55px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-innerLogin form .fieldDataLogin input {
+    height: 100%;
+    width: 60%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 15px;
+    border-bottom-width: 2px;
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: -webkit-linear-gradient(left, #930bbd, #b31de0, #c244e9, #be3ee6);
+    box-shadow: 5px 0.2px 9px black;
+    color: white;
+}
+
+.form-innerLogin form .fieldDataLogin input:focus {
+    border-color: #fc83bb;
+    /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+
+.form-innerLogin form .fieldDataLogin input::placeholder {
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+form .fieldDataLogin input:focus::placeholder {
+    color: #ffffff;
+}
+
+.form-innerLogin form .pass-link {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.form-innerLogin form .Login-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-innerLogin form .pass-link a,
+.form-innerLogin form .Login-link a {
+    color: #fa4299;
+    text-decoration: none;
+}
+
+.form-innerLogin form .pass-link a:hover,
+.form-innerLogin form .Login-link a:hover {
+    text-decoration: underline;
+}
+
+form .btn {
+    top: 10px;
+    height: 10px;
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+form .btn .btn-layerLogin {
+    height: 210%;
+    width: 0%;
+    position: absolute;
+    left: -100%;
+
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+form .btn:hover .btn-layerLogin {
+    left: 0;
+}
+
+form .btnsubmitLogin input[type="submit"] {
+    height: 90%;
+    font-size: 20px;
+    width: 60%;
+    z-index: 2;
+    color: #ffffff;
+    background: -webkit-linear-gradient(right, #0148a5, #135199, #1e8cf3, #00b1e7);
+    margin-top: 2%;
+    box-shadow: 5px 0.2px 9px black;
+}
+
+
+.iconLogin {
+    position: absolute;
+    transform: translate(40%, 50%);
+    font-size: 30px;
+    color: #ffffff;
+    pointer-events: none;
+}
+
+.input-containerLogin {
+    position: relative;
+}
+
+.input-with-iconLogin {
+    padding-left: 40px;
+    /* Add space for the icon */
+}
+
+.input-iconLogin {
+    position: absolute;
+    left: 200px;
+    top: 110%;
+    font-size: 30px;
+    transform: translateY(-50%);
+    color: #aaa;
+    color: #5d0972be;
+    z-index: 10;
+}
+
+.imgWayLogin{
+    width: 500px;
+}
+
+.scaltimgLogin {
+    position: absolute;
+    width: 120%;
+    scale: 35%;
+    top: 42%;
+    left : -10%;
+    z-index: 4;
+}
+
+.scaltimgLoginCircleI {
+    position: absolute;
+    width: 51%;
+    scale: 10%;
+    bottom: 20%;
+    left: 50%;
+    z-index: 4;
+}
+
+.scaltimgLoginCircleII {
+    position: absolute;
+    width: 51%;
+    scale: 30%;
+    bottom: 10%;
+    right: 50%;
+    z-index: 3;
+}
+
+.scaltimgLoginCircleIII {
+    position: absolute;
+    width: 48%;
+    scale: 35%;
+    top: 5%;
+    left : 50%;
+    z-index: 4;
+}
+
+.scaltimgLoginCircleIIII {
+    position: absolute;
+    width: 35%;
+    scale: 30%;
+    bottom: 10%;
+    right : 55%;
+    z-index: 4;
+    display: block;
+}
+
+.scaltimgLoginCircleV {
+    position: absolute;
+    width: 52%;
+    scale: 10%;
+    top: 5%;
+    right : 60%;
+    z-index: 4;
+    display: block;
+}
+
+.scaltimgLoginCircleVI {
+    position: absolute;
+    width: 52%;
+    scale: 30%;
+    top: 50%;
+    left : 60%;
+    z-index: 1;
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    input {
+        font-size: 14px;
+    }
+    
+    .wrapperLogin.title-text {
+        display: flex;
+        width: 200%;
+    }
+
+    .wrapperLogin .title {
+        width: 100%;
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapperLogin .slide-controls {
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+        margin: 5px 0 10px 0;
+    }
+
+    .textTitleLogin {
+        width: 100%;
+        font-size: 17px;
+        font-weight: 400;
+        margin: 5px 0 2px 0;
+        margin-left: 10%;
+    }
+
+    .textinputLogin {
+        margin: 5px 0 33px 0;
+    }
+
+    .textFrameLogin {
+        border-radius: 30px;
+        width: 85%;
+        height: 40px;
+        margin-left: 7%;
+    }
+
+
+
+    .form-innerLogin form .fieldLogin input {
+        height: 80%;
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .form-innerLogin form .fieldDataLogin input {
+        height: 80%;
+        width: 80%;
+        font-size: 20px;
+    }
+
+    .form-innerLogin form .fieldLogin input::placeholder {
+        color: #ff00ff;
+        transition: all 0.3s ease;
+    }
+
+    form .btnsubmitLogin input[type="submit"] {
+        height: 70%;
+        font-size: 20px;
+        width: 86%;
+        margin-top: 2%;
+    }
+
+    .main-Login {
+        min-height: 210vw;
+
+    }
+
+    .form-innerLogin form .Login-link {
+        margin-top: 5px;
+    }
+
+    .displayFooterLogin {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .wrapperLogin {
+        width: 90%;
+        height: 100%;
+        margin-top: 45%;
+    }
+
+    .slide-controlsLogin .slider-tabLogin {
+        display: block;
+    }
+
+    .slide-controlsLogin label.signup {
+        display: block;
+    }
+
+    .imgWayLogin{
+        width: 100px;
+    }
+
+    .scaltimgLogin {
+        width: 1500px;
+        scale: 28%;
+        top: 50%;
+        left: -125%;
+        z-index: 3;
+        text-align: center;
+        position: fixed;
+    }
+
+    .scaltimgLoginCircleI {
+        width: 100%;
+        scale: 20%;
+        bottom: 48%;
+        left: 40%;
+        z-index: 3;
+    }
+
+    .scaltimgLoginCircleII {
+        width: 100%;
+        scale: 20%;
+        bottom: 20%;
+        right: 40%;
+        z-index: 3;
+    }
+
+    .scaltimgLoginCircleIII {
+        width: 100%;
+        scale: 25%;
+        top: -10%;
+        left: 37%;
+        z-index: 4;
+        display: none;
+    }
+    .scaltimgLoginCircleIIII {
+        display: none;
+    }
+    .scaltimgLoginCircleV {
+        display: none;
+    }
+    .scaltimgLoginCircleVI {
+        display: none;
+    }
+
+    .input-iconLogin {
+        left: 50px;
+        top: 90%;
+        font-size: 30px;
+    }
+    
+}
+
+@media (max-width: 400px) {
+
+    .scaltimgLogin {
+        width: 1500px;
+        scale: 25%;
+        top: 50%;
+        left: -142%;
+        z-index: 4;
+    }
+
+    .scaltimgLoginCircleI {
+        width: 100%;
+        scale: 20%;
+        bottom: 48%;
+        left: 40%;
+        z-index: 3;
+    }
+
+    .scaltimgLoginCircleII {
+        width: 100%;
+        scale: 20%;
+        bottom: 20%;
+        right: 40%;
+        z-index: 3;
+    }
+
+    .scaltimgLoginCircleIII {
+        width: 100%;
+        scale: 25%;
+        bottom: 40%;
+        left: 37%;
+        z-index: 4;
+    }
+}

@@ -1,0 +1,10 @@
+<svg id="close_button" data-name="close button" xmlns="http://www.w3.org/2000/svg" width="109" height="109" viewBox="0 0 109 109">
+  <g id="Ellipse_4" data-name="Ellipse 4" fill="none" stroke="#fff" stroke-width="6">
+    <circle cx="54.5" cy="54.5" r="54.5" stroke="none"/>
+    <circle cx="54.5" cy="54.5" r="51.5" fill="none"/>
+  </g>
+  <g id="Group_11723" data-name="Group 11723" transform="translate(-0.265 -1.532)">
+    <line id="Line_135" data-name="Line 135" x2="34.861" y2="32.01" transform="translate(37.265 39.957)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="6.367"/>
+    <line id="Line_136" data-name="Line 136" x1="32.01" y2="34.861" transform="translate(38.69 38.532)" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="6.367"/>
+  </g>
+</svg>

@@ -1,0 +1,886 @@
+.sidebar-body .sidebar-profile .logo-overlay div{
+    -webkit-mask-image:url('https://s3-ap-southeast-1.amazonaws.com/siam855-pub/backend/production/member_site/logo.png');
+    mask-image:url('https://s3-ap-southeast-1.amazonaws.com/siam855-pub/backend/production/member_site/logo.png');
+}
+.user-id{
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.user-top{
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.common-holder{
+    display: none;
+}
+
+.section-footer,
+.section-copyright{
+    position: relative;
+}
+
+.own-logo-prov-size{
+    height: 43px;
+}
+
+.mob-game-cat-warp{
+    width: 50%;
+}
+
+.mob-game-cat-warp span.select2-selection.select2-selection--single {
+    background: #1C1C1C;
+    border: 0;
+    height: 45px;
+}
+.mob-game-cat-warp .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #fff transparent transparent transparent;
+}
+.select2-search--dropdown {
+    display: none !important;
+}
+.mob-game-cat-warp .select2-container {
+    width: 100%!important;
+}
+.mob-game-cat-warp .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 47px !important;
+    right: 5px;
+}
+.mob-game-cat-warp .select2-container--default .select2-selection--single {
+    border-radius: 10px;
+}
+.select2-container--default .select2-results>.select2-results__options {
+    border-radius: 3px !important;
+    /*background: var(--predictor-rounds-top);*/
+    background: #1E1E1E !important;
+    color: #fff;
+    font-weight: 600;
+}
+.select2-results {
+    background: var(--predictor-rounds-top);
+    border-radius: 3px;
+}
+.select2-container--default .select2-dropdown.select2-dropdown--below {
+    border-radius: 3px !important;
+    border: 0 !important;
+}
+.mob-game-cat-warp .select2-container--default.select2-container--open.select2-container--below .select2-selection--single, .select2-container--default.select2-container--open.select2-container--below .select2-selection--multiple {
+    border-bottom-left-radius: 3px !important;
+    border-bottom-right-radius: 3px !important;
+}
+.mob-game-cat-warp .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    webkit-transform: scaleY(-1);
+    transform: scaleY(-1);
+    border-width: 5px 4px 0 4px !important;
+}
+.select2-container--default .select2-results__option {
+    padding: 16px 18px;
+    /* text-align: center; */
+    text-transform: capitalize;
+    font-size: 13px;
+}
+.mob-game-cat-warp .select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: #fff;
+    text-transform: capitalize;
+    font-weight: 600;
+    text-align: left;
+    padding-right: 8px !important;
+    font-size: 13px;
+    line-height: 40px;
+}
+.select2-container--default .select2-results__option--highlighted[aria-selected], .select2-container--default .select2-results__option--highlighted[aria-selected]:hover {
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 13px;
+    background-color: unset;
+    color: #FFCE00;
+}
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background: var(--predictor-rounds-top);
+    color: var(--predictor-main-color);
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.select2-results__option[aria-selected=true] { 
+    display: none;
+}
+
+.mob-show-prov-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    flex-direction: row;
+    width: 50%;
+    background: #1C1C1C;
+    border-radius: 10px;
+    padding: 0px 15px;
+    height: 45px;
+}
+
+.mob-show-prov-btn .providerIcon{
+    max-width: 45px;
+    width: 40px;
+}
+
+.mob-prov-scroll{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.mob-prov-scroll .list{
+    overflow-x: scroll;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 15px 0;
+    padding: 8px 0;
+    width: 100%;
+}
+
+.mob-prov-scroll .list .box.active{
+    background: #591F8E;
+}
+
+.mob-prov-scroll .list .box{
+    position: relative;
+    background: #413E3B;
+    border-radius: 50%
+}
+
+.mob-prov-scroll .list .box .image{
+    width: 60px;
+    padding: 10px;
+}
+
+.mob-prov-scroll .list .box .new,
+.mob-prov-scroll .list .box .hot{
+    position: absolute;
+    top: -10px;
+    right: 0;
+    width: 30px;
+}
+
+.mob-prov-scroll .list .box .app-marking{
+    border-radius: 3px;
+    padding: 3px 5px;
+    background: #CA4843;
+    color: #fff;
+    font-size: 8px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    top: 3px;
+    right: 5px;
+}
+
+.mob-prov-left-arrow,
+.mob-prov-right-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: fit-content;
+    font-size: 18px;
+}
+
+.mob-prov-img-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-weight: bold;
+}
+
+.midbar-providers .list .vpn-marking{
+    border-radius: 3px;
+    padding: 3px 5px;
+    background: #1C00F5;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    position: absolute;
+    top: 6px;
+    left: 7px;
+}
+
+/*load game*/
+.show-game-count {
+    color: #fff;
+    font-size: 13px;
+    width: fit-content;
+    margin: 40px auto 0 auto;
+    position: relative;
+    text-transform: lowercase;
+}
+
+.show-game-count .show-game-progress-container {
+    background: #fff;
+    height: 4px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.show-game-progress-bar {
+    background: linear-gradient(to bottom, var(--gradientSubColor1) 0%, var(--gradientSubColor2) 100%);
+    height: inherit;
+    border-radius: 30px;
+    width: 0%;
+}
+
+.show-game-count .show-game-progress-label {
+    padding-top: 25px;
+}
+
+.show-game-count .show-game-progress-label::first-letter {
+    text-transform: uppercase;
+}
+
+
+
+
+.home-banner-app-download{
+    position: relative;
+}
+
+.app-qr-img,
+.app-left-logo {
+    width: 6%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+}
+
+.app-left-logo {
+    right: 11.7%;
+}
+
+.app-qr-img {
+    right: 2.6%;
+}
+
+.download-banner {
+    width: 100%;
+}
+
+@media screen and (max-width: 800px){
+    .pg-home .section-banner .skeleton-gray{
+        padding-top: calc(371/1024 * 100%);
+    } 
+}
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+  60%, 100% {
+    background-position: -50% 0;
+  }
+}
+
+.daily-mission-modal-content{
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
+
+/* Daily check in modal*/
+.calender-claim-modal{
+    background: var(--calenderClaimModalBg);
+    border: 1px solid var(--calenderClaimModalBorderColor);
+    padding: 10px 10px 20px;
+}
+.calender-claim-modal-body-content{
+    background: var(--calenderInnerBgColor);
+    padding-bottom: 30px;
+}
+.reward-won-modal-dialog,
+.daily-claim-modal-dialog{
+    max-width: 400px !important;
+}
+/*.daily-check-in-modal-dialog{
+    max-width: 600px !important;
+}*/
+.check-in-modal{
+    background: linear-gradient(to bottom, var(--checkInModalBgColorGradient1) 0%, var(--checkInModalBgColorGradient2) 100%);
+}
+.check-in-modal-body-content{
+    padding: 20px 20px 40px
+}
+.check-in-modal-title-content{
+    position: relative;
+}
+.check-in-modal-title-content .modal-title-text{
+    position: absolute;
+    top: 6%;
+    width: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.calendar-spring-small-img{
+    display: unset;
+    margin-top: -24px;
+    width: 57%;
+}
+.coin-calendar-img{
+    position: relative;
+    margin: 20px 0;
+    z-index: 99;
+}
+.coin-tick-img{
+    position: relative;
+    margin: 40px 0;
+    z-index: 99;
+}
+.coin-calendar-img .money-lottie{
+    position: absolute;
+    top: -120px;
+    z-index: -1;
+    left: 10%;
+    margin: auto;
+}
+.coin-tick-img .star-light-lottie{
+    position: absolute;
+    top: -79px;
+    z-index: -1;
+    /*left: 10%;*/
+    margin: auto;
+}
+.coin-calendar-img .star-light-lottie{
+    position: absolute;
+}
+.coin-tick-img .coin-tick,
+.coin-calendar-img .calendar{
+    /* width: 300px;
+    margin-top: -72px;
+    margin-left: auto;
+    margin-right: auto; */
+    margin: auto;
+    z-index: 999;
+
+}
+.select-game-provider-text,
+.reward-won-title-text,
+.daily-claim-text{
+    color: var(--dailyClaimTextColor);
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: bold;
+}
+.select-game-provider-text{
+    margin-top: 10px;
+}
+.claim-bonus-provider-list{
+    margin-top: 10px;
+}
+.claim-btn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+.come-back-tmr{
+    color: var(--comeBackTmrTextColor);
+}
+.claim-bonus-provider-list .provider-list{
+    background: #FFFFFF;
+    color: var(--dailyClaimTextColor);
+    border-radius: 6px;
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+/*.you-have-won-text{
+    margin-top: 5px;
+    color: var(--dailyClaimTextColor);
+}*/
+
+.bonus-won{
+    color: var(--checkInWonTextColor);
+    margin-top: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.promo-code{
+    background: #FFFFFF;
+    border-radius: 8px;
+    border: 1px solid var(--promoCodeBorderColor);
+    padding: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--dailyClaimTextColor);
+    margin-top: 5px;
+}
+.promo-code-expired-date{
+    color: var(--rewardWonExpiredTextColor);
+    padding: 10px 0;
+}
+.reward-divider{
+    border-top: 1px solid var(--promoCodeBorderBottomColor);
+}
+.reward-won-container{
+    padding: 0 20px;
+}
+.btn-redeem-now,
+.btn-redeem-later,
+.btn-daily-claim-now,
+.btn-daily-claim-login-to-continue,
+.btn-daily-claim-maybe-later
+{
+    color: var(--generalTxtColor2);
+    width: 200px;
+    margin: auto;
+    padding: 10px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.btn-redeem-now,
+.btn-daily-claim-login-to-continue,
+.btn-daily-claim-now{
+    background: linear-gradient(to bottom, var(--dailyClaimBtnDesign1Gradient1) 0%, var(--dailyClaimBtnDesign1Gradient2) 100%);
+}
+.btn-redeem-now,
+.btn-redeem-later{
+    text-transform: unset;
+}
+.btn-redeem-later,
+.btn-daily-claim-maybe-later
+{
+    background: linear-gradient(to bottom, var(--dailyClaimBtnDesign2Gradient1) 0%, var(--dailyClaimBtnDesign2Gradient2) 100%);
+}
+.daily-claim-modal-close{
+    margin: auto;
+    width: 43px;
+    padding-top: 20px;
+}
+.top-bar-task-container:hover,
+.top-bar-calendar-container:hover {
+    /* transform: scale(1.2); */
+}
+.check-in-control-btn-and-text{
+    padding: 20px 15px;
+    background: var(--calenderClaimModalBg);
+}
+.total-day-check-in{
+    color: var(--totalDayCheckInColor);
+}
+.total-day-check-in-content-modal{
+    position: absolute;
+    top: 30%;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 17px;
+    width: fit-content;
+}
+.modal-check-in-btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.check-in-modal-btn-top-control{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+}
+.check-in-modal-btn-bottom-control img,
+.check-in-modal-btn-top-control div img {
+    width: 200px;
+    margin: unset;
+}
+
+.check-in-modal-btn-bottom-control{
+    margin: 15px 0;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.checkInModal::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.checkInModal {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+.modal-calendar{
+    margin-top: 7px;
+}
+
+.calendar-modal-tab-options{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.calendar-modal-tab-options .term-and-conditon-option,
+.calendar-modal-tab-options .calendar-option{
+    background: linear-gradient(to bottom, var(--inactiveCalendarModalOptionGradient1) 0%, var(--inactiveCalendarModalOptionGradient2) 100%);
+    padding: 10px 24px;
+    border-radius: 5px;
+    margin: 13px 0;
+    min-width: 130px;
+    text-transform: uppercase;
+    color: var(--calendarModalTabOptionsTextColor);
+}
+
+.calendar-modal-tab-options .calendar-option.active,
+.calendar-modal-tab-options .term-and-conditon-option.active{
+    background: linear-gradient(to bottom, var(--activeCalendarModalOptionGradient1) 0%, var(--activeCalendarModalOptionGradient2) 100%);
+}
+.modal-terms-and-condition-content{
+    color: #000000;
+}
+.modal-terms-and-condition-content .terms-and-conditon-table-content tr .text{
+    text-align: initial;
+    color: var(--checkInModalTermsAndConditonTextColor);
+}
+
+.check-in-message-board {
+    position: relative;
+    color: var(--dailyCheckInDayTextColor);
+    margin-top: 10px;
+}
+
+.calendar-board-modal-container{
+    background: var(--calenderBgColor);
+    padding: 20px;
+    width: 400px;
+    box-shadow: 2px 2px 2px #888888;
+    height: 100%;
+}
+
+.modal-calender-header-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.gift-img {
+    width: 25px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.grey-overlay {
+    margin: auto;
+    position: absolute;
+    opacity: 0.5;
+    top: 0;
+    background: black;
+    height: -webkit-fill-available;
+    width: -webkit-fill-available;
+}
+
+
+/** T&C */
+.daily-claim-term-and-condition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 20px;
+}
+
+.terms-and-conditon-title {
+    color: var(--dailyClaimTermAndConditionColor);
+    font-size: 20px;
+}
+.terms-and-conditon-table-content tr .text{
+    padding: 10px 0;
+}
+.terms-and-conditon-table-content tr .numbering{
+    padding: 10px 10px 10px 0px;
+    float: left;
+}
+
+.terms-and-conditon-table-content tr .numbering span{
+    background: linear-gradient(to bottom, var(--numberingBgGradient1) 0%, var(--numberingBgGradient2) 100%);
+    display: flex;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.attendent-page-terms-and-conditon-content .terms-and-conditon-table-content tr .text{
+    text-align: initial;
+    color: var(--termsAndConditonTextColor);
+}
+/** T&C END*/
+
+/* Register Reward START*/
+.register-reward-modal-body-content{
+    padding-top: 40px;
+    padding-bottom: 20px;
+    border-radius: 0px 0px 20px 20px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center
+}
+.register-reward-modal-body-content .title{
+    font-weight: bold;
+}
+.register-reward-text{
+    color: #FFFFFF;
+    font-size: 18px;
+}
+
+.register-claim-successful-text{
+    margin-top: 15px;
+}
+
+.register-reward-modal-animation-image{
+    position: relative;
+    margin-top: 20px;
+}
+.register-reward-modal-animation-image img{
+    margin: auto;
+    width: 250px;
+}
+.register-reward-emoji{
+    position: absolute;
+    right: -20px;
+    top: -25px;
+}
+.register-reward-first-star {
+    position: absolute;
+    left: 70px;
+    top: 80px;
+}
+.register-reward-second-star {
+    position: absolute;
+    right: 60px;
+    top: 60px;
+    
+}
+.register-reward-third-star {
+    position: absolute;
+    top: -13px;
+    right: 165px;
+}
+/* Register Reward END */
+
+
+/* Start of New Code To Sync Deposit/Withdraw/Reward Won/Check In Modal From 22WIN */
+/* Reward Won Modal START */
+#rewardWonModal {
+    background: rgba(0, 0, 0, .5);
+}
+
+.reward-won-modal {
+    background: transparent!important;
+    border: 0!important;
+    padding: 10px 10px 20px;
+}
+.reward-won-modal-body-content {
+    background: transparent!important;
+    /*padding-bottom: 30px;*/
+}
+
+.coin-tick-img .gift-box {
+    margin: auto;
+    z-index: 999;
+    max-width: 180px;
+}
+
+.button-claim-reward,
+.button-claim-reward:hover,
+.button-claim-reward:focus,
+.button-claim-reward:active {
+    background: linear-gradient(to bottom, var(--gradientSubColor1) 0%, var(--gradientSubColor2) 100%);
+    color: #000;
+    margin-top: 0;
+}
+/* Reward Won Modal END */
+
+/* Deposit/Withdraw Status Modal START */
+.dw-submit-modal {
+    background: #131313;
+    border: 0;
+}
+
+.dw-submit-modal .modal-body .code-modal-body {
+    max-width: 450px;
+    margin-inline: auto;
+}
+/* Deposit/Withdraw Status Modal END */
+
+/* Check In Calendar Modal START */
+#checkInModal .calender-header-tab {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #D600E3 0%, #8A2BE2 100%);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 10px;
+    position: relative;
+}
+
+#checkInModal .happy-giftbox {
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(-19deg) translate(-15%, -38%);
+}
+
+#checkInModal .day-type-container {
+    display: flex;
+    gap: 10px;
+    margin: 0 8px;
+    border-top: 1px solid #413E3B;
+    padding: 20px 0;
+}
+
+#checkInModal .day-type-container .day-type-item img{
+    width: 18px;
+    height: 18px;
+}
+
+#checkInModal .check-in-btn-modal {
+    background: linear-gradient(180deg, #FFF686 0%, #EDA400 100%);
+    width: 75%;
+    border: 0;
+    color: #000;
+    border-radius: 10px;
+    padding: 10px 0;
+    animation-name: grow-shrink;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+#checkInModal .daily-claim-modal-close{
+    margin: auto;
+    width: 100%;
+    padding-top: 20px;
+}
+
+/* For check in button animation */
+@keyframes grow-shrink {
+  40% { transform: scale(1.2); }
+  80% { transform: scale(1); }
+}
+/* Check In Calendar Modal END */
+
+
+/* New Code for Calendar Day Type */
+#mission-daily-calendar .day-type-container {
+    display: flex;
+    gap: 10px;
+    margin: 0 8px;
+    border-top: 1px solid #413E3B;
+    padding: 20px 0;
+}
+
+#mission-daily-calendar .day-type-container .day-type-item img{
+    width: 18px;
+    height: 18px;
+}
+.angpow-lottie{
+    z-index: -1;
+    left: 10%;
+    margin: auto;
+}
+#angpowDailyLimitModal .coin-tick-img{
+    margin: unset!important;
+}
+
+.maintenance-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.prov-maintenance-estimate-time{
+    color: #FFCE00
+}
+
+.mob-bottom-download-app{
+    position: relative;
+}
+.mob-bottom-download-app img{
+    width: 100%;
+}
+.close-bottom-download-app-banner {
+    position: absolute;
+    top: -30px;
+    right: 15px;
+}
+@media screen and (max-width: 800px){
+    #chat-widget-container,
+    .lineLoadBtn{
+        bottom: 75px !important;
+    }
+
+    .lineBoard{
+        bottom: 145px;
+    }
+    
+    .buttonToTop{
+        bottom: 165px;
+    }
+}
+
+.slick-next {
+    right: 10px;
+}
+
+.slick-prev {
+    left: 10px;
+}
+
+.slick-prev::before {
+    content: "<";
+}
+
+.slick-next::before {
+    content: ">";
+}
+
+.slick-next:before,
+.slick-prev:before {
+    font-weight: 700;
+    color: #FABB1F;
+}
+
+.pg-home{
+    padding-top: 86px;
+    display: block;
+}
+
+@media screen and (max-width: 480px) {
+    .pg-home{
+        padding-top: 105px;
+        display: block;
+    }
+    
+  }
+  

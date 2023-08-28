@@ -1,0 +1,116 @@
+$main-color:#7110af;
+
+.main-Money{
+    min-height: 100vh;
+    min-width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #7110af 40%, #2a0bd6 100%);
+    align-items: center;
+    .login-contain{
+        height: 75vh;
+        width: 70%;
+        margin: 5rem auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .Title{
+            color: #ffff;
+        }
+        .Link{
+            text-decoration: none;
+            color: $main-color;
+            transition: all 0.3s ease;
+            &:hover{
+                transform: translateY(-5px);
+                color: gray;
+            }
+        }
+        .left-side, .right-side{
+            margin: 2rem 2rem;
+            background: white;
+            border-radius: 2rem;
+            box-shadow: 1rem 2rem 2rem -1rem rgb(0, 0, 0);
+        }
+        .left-side{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 80%;
+            width: 100%;
+            .img-class{
+                height: 2rem;
+                #img-id{
+                    height: 50%;
+                    object-fit: cover;
+                }
+            }
+            input{
+                display: block;
+                border: none;
+                height: 3rem;
+
+                width: 70%;
+                border-radius: 1rem;
+                margin: auto;
+                background: rgba(117, 117, 117, 0.322);
+                margin-bottom: 1.5rem;
+                padding: 0.2rem 1rem;
+                color:black;
+                transition: all 0.1s ease-in-out;
+                &:focus{
+                    outline: none;
+                    border: none;
+                }
+                &:hover{
+                    outline: 0.5px solid $main-color;
+                    box-shadow: 4px 3px 9px 1px  $main-color;
+                }
+            }
+            label{
+                display: block;
+                margin: auto;
+                float: left;
+                width: 70%;
+                font-size:medium;
+                color: rgb(0, 0, 0);
+                margin-bottom: -4rem;
+            }
+            #sub_butt{
+                width: 80%;
+                background: linear-gradient(to right, #1693ed 40%, #0f26ff 100%);
+                color: white;
+                border: none;
+                border-radius: 2rem;
+                cursor: pointer;
+                padding: 0.5rem 1rem;
+                transition: all 0.2s ease;
+                &:hover{
+                    box-shadow: 4px 3px 9px 1px  $main-color;
+                    transform: translateY(-5px);
+                }
+            }
+        }
+
+        .right-side{
+            height: 80%;
+            width: 180%;
+            .welcomeNote{
+                margin-left: 0rem;
+                color: black;
+                float: left;
+                margin-bottom: 15rem;
+            }
+            .welcomeImg{
+                height: 30%;
+                width: 100%;
+                scale: 50%;
+                margin: 0rem auto;
+                #wel-img-id{
+                    width: 100%;
+                    object-fit:cover;
+                }
+            }
+        }
+    }
+}

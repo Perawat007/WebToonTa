@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400');
+
+.Rh3 {
+	font-size: 30px;
+	text-transform: uppercase;
+	font-weight: 500px;
+	font-style: normal;
+	margin: 0 0 0 0;
+	color: rgb(255, 174, 0);
+}
+
+.Rp {
+	font-size: 20px;
+	text-transform: uppercase;
+	font-weight: 50;
+	font-style: normal;
+	margin: 0 0 0 0;
+	color: rgb(255, 174, 0);
+}
+
+.conrainerRe {
+	margin-top: 20%;
+}
+
+.containerRe {
+	position: relative;
+	max-width: 2500px;
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	margin-top: 10%;
+	margin-bottom: 10%;
+	margin-left: 2%;
+	top: 30px;
+	z-index: 4;
+}
+
+.blog-item {
+	position: relative;
+	width: 97%;
+	min-height: 290px;
+	height: auto;
+	background-image: url("../../img/reward/rewardfileB.png");
+	overflow: hidden;
+	border-radius: 10px;
+	margin: 0 0 30px 0;
+	transform: scaleY(140%);
+	right: 1%;
+}
+
+.blog-content {
+	position: absolute;
+	width: 65%;
+	height: 100%;
+	top: 29%;
+	left: 45%;
+	padding: 30px;
+}
+
+.blog-image1,
+.blog-image2,
+.blog-image3,
+.blog-image4 {
+	position: absolute;
+	width: 40%;
+	height: 100%;
+	transform: scaleY(70%);
+	scale: 80%;
+	top: 23px;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.blog-image1 {
+	left: 100px;
+	background-image: url('../../img//reward/card1.png');
+}
+
+.blog-image2 {
+	left: 100px;
+	background-image: url('../../img//reward/card2.png');
+}
+
+.blog-image3 {
+	left: 100px;
+	background-image: url('../../img//reward/card3.png');
+}
+
+.blog-image4 {
+	left: 100px;
+	background-image: url('../../img//reward/card4.png');
+}
+
+.imgWayReward {
+	width: 500px;
+}
+
+.scaltimgReward {
+	position: absolute;
+	width: 70%;
+	scale: 60%;
+	bottom: 22%;
+	left: 17%;
+	z-index: 2;
+}
+
+@media screen and (max-width: 500px) {
+	.scaltimgReward {
+		width: 100%;
+		scale: 60%;
+		bottom: 15%;
+		left: -10%;
+		z-index: 2;
+	}
+
+	.Rh3 {
+		font-size: 40px;
+		text-transform: uppercase;
+		font-weight: 500px;
+		margin: 0 0 0 0;
+		color: rgb(255, 174, 0);
+	}
+	
+	.Rp {
+		font-size: 30px;
+		text-transform :none;
+		font-weight: 100px;
+		margin: 0 0 0 0;
+		color: rgb(255, 174, 0);
+	}
+
+	.containerRe {
+		max-width: 2500px;
+		width: 100%;
+		height: auto;
+		margin: 0 auto;
+		margin-top: 10%;
+		margin-bottom: 10%;
+		margin-left: -23%;
+		top: 30px;
+		z-index: 4;
+	}
+
+	
+	.blog-item {
+		width: 118%;
+		min-height: 650px;
+		scale: 70%;
+		height: auto;
+		background-image: url("../../img/reward/rewardfileD.png");
+		border-radius: 10px;
+		margin: 0 0 30px 0;
+		transform: scaleY(110%);
+	}
+
+	.blog-content {
+		position: absolute;
+		width: 65%;
+		height: 100%;
+		top: 50%;
+		left: 20%;
+		padding: 30px;
+	}
+	
+	.blog-image1,
+	.blog-image2,
+	.blog-image3,
+	.blog-image4 {
+		position: absolute;
+		width: 130rem;
+		height: 80rem;
+		transform: scaleY(80%);
+		scale: 20%;
+		top: -27rem;
+		left: -47rem;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+}

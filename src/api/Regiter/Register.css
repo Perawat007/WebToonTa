@@ -1,0 +1,712 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+::selection {
+    background: #fa4299;
+    color: #fff;
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+@font-face {
+    font-family: Mitr;
+    src: url(../../font/Mitr/Mitr-Regular.ttf);
+}
+
+.font {
+    font-family: Mitr;
+}
+
+.progressBar {
+    background-color: #d8d8d8;
+    border-radius: 20px;
+    position: relative;
+    margin: 15px 0;
+    height: 30px;
+    width: 600px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transform: translate(31%, 0%);
+}
+
+.progressBar-done {
+    background: linear-gradient(to left, #e11fe7, #b200df);
+    box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 0;
+    opacity: 0;
+    transition: 1s ease 0.3s;
+}
+
+/*----------------------------------------------------------------------------*/
+.displayFooterRegister {
+    position: absolute;
+    display: block;
+    z-index: 5;
+}
+
+.main-Register {
+    min-width: 100vw;
+    overflow-x: hidden;
+    background: linear-gradient(to bottom, #7110af 40%, #2a0bd6 100%);
+    align-items: center;
+}
+
+.wrapperRegister {
+    overflow: hidden;
+    max-width: 1800px;
+    max-height: 2000px;
+    width: 50%;
+    height: 49rem;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    overflow-y: hidden;
+    margin: 10rem auto;
+    position: relative;
+    /* margin-top: 30%;*/
+}
+
+.wrapperRegister .title-textRegister {
+    display: flex;
+    width: 200%;
+}
+
+.wrapperRegister .titleRegister {
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapperRegister .slide-controlsRegister {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 5px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+}
+
+.textTitleRegister {
+    width: 80%;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: left;
+    color: #930bbd;
+    margin: 5px 0 10px 0;
+    margin-left: 22%;
+}
+
+
+.textinputRegister {
+    margin: 5px 0 50px 0;
+}
+
+
+.form-innerRegister form .fieldRegister input::placeholder {
+    color: #ff00ff;
+    transition: all 0.3s ease;
+}
+
+
+.textFrameRegister {
+    background-color: #930bbd;
+    border-radius: 30px;
+    width: 40%;
+    height: 60px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 30%;
+    display: flex;
+}
+
+
+.textFrameHeadersRegister {
+    background-color: #ffffff;
+    border-radius: 10px;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0%;
+    display: flex;
+}
+
+.title-textRegister {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide-controlsRegister .slideRegister {
+    height: 100%;
+    width: 100%;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+    text-align: center;
+    line-height: 48px;
+    cursor: pointer;
+    z-index: 1;
+    transition: all 0.6s ease;
+}
+
+.slide-controlsRegister label.signup {
+    color: #000;
+    display: none;
+}
+
+.slide-controlsRegister .slider-tabRegister {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 0;
+    z-index: 0;
+    border-radius: 5px;
+    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    display: none;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+#signup:checked~.slider-tab {
+    left: 50%;
+}
+
+#signup:checked~label.signup {
+    color: #fff;
+    cursor: default;
+    user-select: none;
+}
+
+#signup:checked~label.login {
+    color: #ffffff;
+}
+
+#login:checked~label.signup {
+    color: #000;
+}
+
+#login:checked~label.login {
+    cursor: default;
+    user-select: none;
+}
+
+.wrapperRegister .form-containerRegister {
+    width: 100%;
+    overflow: hidden;
+}
+
+.textOTP {
+    margin-top: 15px;
+}
+
+.form-containerRegister .form-innerRegister {
+    display: flex;
+    width: 200%;
+}
+
+.form-containerRegister .form-innerRegister form {
+    width: 50%;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+
+.form-innerRegister form .fieldRegister {
+    height: 55px;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form-innerRegister form .fieldRegisterOTP {
+    height: 55px;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.form-innerRegister form .fieldRegisterOTP input {
+    height: 100%;
+    width: 60%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 20px;
+    border-bottom-width: 2px;
+    border: 3px solid rgb(175, 23, 206);
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: rgb(126, 16, 160);
+}
+
+
+.form-innerRegister form .fieldRegister input {
+    height: 100%;
+    width: 60%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 20px;
+    border-bottom-width: 2px;
+    border: 3px solid rgb(175, 23, 206);
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: rgb(126, 16, 160);
+}
+
+
+.form-innerRegister form .fieldDataRegister {
+    height: 55px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-innerRegister form .fieldDataRegister input {
+    height: 100%;
+    width: 60%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 15px;
+    border-bottom-width: 2px;
+    font-size: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background: -webkit-linear-gradient(left, #930bbd, #b31de0, #c244e9, #be3ee6);
+    box-shadow: 5px 0.2px 9px black;
+    color: white;
+}
+
+.form-innerRegister form .fieldDataRegister input:focus {
+    border-color: #fc83bb;
+    /* box-shadow: inset 0 0 3px #fb6aae; */
+}
+
+.form-innerRegister form .fieldDataRegister input::placeholder {
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+form .fieldDataRegister input:focus::placeholder {
+    color: #ffffff;
+}
+
+.form-innerRegister form .pass-link {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.form-innerRegister form .Register-link {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.form-innerRegister form .pass-link a,
+.form-innerRegister form .Register-link a {
+    color: #fa4299;
+    text-decoration: none;
+}
+
+.form-innerRegister form .pass-link a:hover,
+.form-innerRegister form .Register-link a:hover {
+    text-decoration: underline;
+}
+
+form .btn {
+    top: 10px;
+    height: 10px;
+    width: 100%;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+form .btn .btn-layerRegister {
+    height: 210%;
+    width: 0%;
+    position: absolute;
+    left: -100%;
+
+    border-radius: 10px;
+    transition: all 0.4s ease;
+}
+
+form .btn:hover .btn-layerRegister {
+    left: 0;
+}
+
+form .btnsubmitRegister input[type="submit"] {
+    height: 90%;
+    font-size: 20px;
+    width: 60%;
+    z-index: 2;
+    color: #ffffff;
+    background: -webkit-linear-gradient(right, #0148a5, #135199, #1e8cf3, #00b1e7);
+    margin-top: 2%;
+    box-shadow: 5px 0.2px 9px black;
+}
+
+form .btnsubmitRegister input[type="submitri"] {
+    height: 100%;
+    font-size: 25px;
+    width: 62%;
+    z-index: 2;
+    color: #ffffff;
+    background: -webkit-linear-gradient(right, #133869, #135199, #1e8cf3, #00b1e7);
+}
+
+.iconRegister {
+    position: absolute;
+    transform: translate(40%, 50%);
+    font-size: 30px;
+    color: #ffffff;
+    pointer-events: none;
+}
+
+.input-containerRegister {
+    position: relative;
+}
+
+.input-with-iconRegister {
+    padding-left: 40px;
+    /* Add space for the icon */
+}
+
+.input-iconRegister {
+    position: absolute;
+    left: 200px;
+    top: 110%;
+    font-size: 30px;
+    transform: translateY(-50%);
+    color: #aaa;
+    color: #5d0972be;
+    z-index: 10;
+}
+
+.imgWayRegister {
+    width: 500px;
+}
+
+.imgWaycircle {
+    width: 20%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-left: 42%;
+    display: flex;
+}
+
+.scaltimgRegister {
+    position: absolute;
+    width: 40%;
+    scale: 50%;
+    top: 42%;
+    left: 4%;
+    z-index: 4;
+}
+
+.scaltimgRegisterCircleI {
+    position: absolute;
+    width: 51%;
+    scale: 10%;
+    bottom: 20%;
+    left: 50%;
+    z-index: 4;
+}
+
+.scaltimgRegisterCircleII {
+    position: absolute;
+    width: 51%;
+    scale: 30%;
+    bottom: 10%;
+    right: 50%;
+    z-index: 3;
+}
+
+.scaltimgRegisterCircleIII {
+    position: absolute;
+    width: 57%;
+    scale: 35%;
+    bottom : 13%;
+    left: 50%;
+    z-index: 4;
+}
+
+.scaltimgRegisterCircleIIII {
+    position: absolute;
+    width: 35%;
+    scale: 30%;
+    bottom: 10%;
+    right: 55%;
+    z-index: 4;
+    display: block;
+}
+
+.scaltimgRegisterCircleV {
+    position: absolute;
+    width: 52%;
+    scale: 10%;
+    top: 5%;
+    right: 60%;
+    z-index: 4;
+    display: block;
+}
+
+.scaltimgRegisterCircleVI {
+    position: absolute;
+    width: 52%;
+    scale: 30%;
+    top: 50%;
+    left: 60%;
+    z-index: 1;
+    display: block;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    input {
+        font-size: 14px;
+    }
+
+    .wrapperRegister.title-text {
+        display: flex;
+        width: 200%;
+    }
+
+    .wrapperRegister .title {
+        width: 100%;
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapperRegister .slide-controls {
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+        margin: 5px 0 10px 0;
+    }
+
+    .textTitleRegister {
+        width: 100%;
+        font-size: 17px;
+        font-weight: 400;
+        margin: 5px 0 2px 0;
+        margin-left: 10%;
+    }
+
+    .textinputRegister {
+        margin: 5px 0 33px 0;
+    }
+
+    .textFrameRegister {
+        border-radius: 30px;
+        width: 85%;
+        height: 40px;
+        margin-left: 7%;
+    }
+
+
+
+    .form-innerRegister form .fieldRegister input {
+        height: 80%;
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .form-innerRegister form .fieldRegisterOTP {
+        height: 55px;
+        width: 100%;
+        margin-top: 0px;
+        font-size: 25px;
+    }
+
+    .form-innerRegister form .fieldRegisterOTP input {
+        height: 100%;
+        width: 60%;
+    }
+
+    .form-innerRegister form .fieldDataRegister input {
+        height: 80%;
+        width: 80%;
+        font-size: 20px;
+    }
+
+    .form-innerRegister form .fieldRegister input::placeholder {
+        color: #ff00ff;
+        transition: all 0.3s ease;
+    }
+
+    form .btnsubmitRegister input[type="submit"] {
+        height: 70%;
+        font-size: 20px;
+        width: 86%;
+        margin-top: 2%;
+    }
+
+    .main-Register {
+        min-height: 210vw;
+
+    }
+
+    .form-innerRegister form .Register-link {
+        margin-top: 5px;
+    }
+
+    .displayFooterRegister {
+        display: none;
+    }
+
+    .progressBar {
+        background-color: #d8d8d8;
+        border-radius: 20px;
+        height: 30px;
+        width: 300px;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        transform: translate(10%, 0%);
+    }
+}
+
+@media (max-width: 480px) {
+
+    .wrapperRegister {
+        width: 90%;
+        height: 100%;
+        margin-top: 35%;
+    }
+
+    .slide-controlsRegister .slider-tabRegister {
+        display: block;
+    }
+
+    .slide-controlsRegister label.signup {
+        display: block;
+    }
+
+    .imgWayRegister {
+        width: 100px;
+    }
+
+    .imgWaycircle {
+        width: 50%;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-left: 32%;
+        display: flex;
+    }
+
+    .scaltimgRegister {
+        width: 1500px;
+        scale: 28%;
+        top: 50%;
+        left: -125%;
+        z-index: 3;
+        text-align: center;
+        position: fixed;
+    }
+
+    .scaltimgRegisterCircleI {
+        width: 100%;
+        scale: 20%;
+        bottom: 48%;
+        left: 40%;
+        z-index: 3;
+    }
+
+    .scaltimgRegisterCircleII {
+        width: 100%;
+        scale: 20%;
+        bottom: 20%;
+        right: 40%;
+        z-index: 3;
+    }
+
+    .scaltimgRegisterCircleIII {
+        width: 100%;
+        scale: 25%;
+        top: -10%;
+        left: 37%;
+        z-index: 4;
+        display: none;
+    }
+
+    .scaltimgRegisterCircleIIII {
+        display: none;
+    }
+
+    .scaltimgRegisterCircleV {
+        display: none;
+    }
+
+    .scaltimgRegisterCircleVI {
+        display: none;
+    }
+
+    .input-iconRegister {
+        left: 50px;
+        top: 90%;
+        font-size: 30px;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+
+    .scaltimgRegisterCircleI {
+        width: 100%;
+        scale: 20%;
+        bottom: 48%;
+        left: 40%;
+        z-index: 3;
+    }
+
+    .scaltimgRegisterCircleII {
+        width: 100%;
+        scale: 20%;
+        bottom: 20%;
+        right: 40%;
+        z-index: 3;
+    }
+
+    .scaltimgRegisterCircleIII {
+        width: 100%;
+        scale: 25%;
+        bottom: 40%;
+        left: 37%;
+        z-index: 4;
+    }
+}

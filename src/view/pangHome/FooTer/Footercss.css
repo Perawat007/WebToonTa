@@ -1,0 +1,41 @@
+@font-face {
+    font-family: Mitr;
+    src: url(../../../font/Mitr/Mitr-Regular.ttf);
+}
+
+.footerRec {
+    width: 100%;
+
+}
+
+.font {
+    font-family: Mitr;
+}
+
+@media screen and (max-width: 414px) {
+    .footerRec {
+        position: absolute;
+        bottom: -1;
+        left: 0;
+        right: 0;
+        background: #111;
+        height: auto;
+        width: 100vw;
+        padding-top: 40px;
+        color: #fff;
+    }
+}
+
+@media screen and (min-width: 428px) {
+    .footerRec {
+        position: absolute;
+        bottom: -1;
+        left: 0;
+        right: 0;
+        background: #111;
+        height: auto;
+        width: 100vw;
+        padding-top: 40px;
+        color: #fff;
+    }
+}

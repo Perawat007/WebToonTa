@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.showGame{
+    position: relative;
+}
+
+
+.scallGame{
+    scale: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    max-width: 1700px;
+    width: 100%;
+}
+
+.scallButtom{
+    scale: 100%;
+}
+
+
+@media screen and (max-width: 600px) {
+    .scallGame{
+        width: 80%;
+        margin-top: 0%;
+        margin-bottom: 0%;
+    }
+    
+    .scallButtom{
+        scale: 100%;
+    }
+}
