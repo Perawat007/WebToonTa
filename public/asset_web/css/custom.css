@@ -8747,7 +8747,7 @@ a.ui-button:active,
 
 .slick-list {
     position: relative;
-    display: block;
+    
     overflow: hidden;
     margin: 0;
     padding: 0
@@ -8850,10 +8850,6 @@ a.ui-button:active,
     font-family: slick;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
-}
-
-.slick-loading .slick-list {
-    background: url(https://www.siam855.net/asset_web/css/ajax-loader.gif?v=27) center center no-repeat #fff
 }
 
 @font-face {
@@ -10270,7 +10266,7 @@ a.ui-button:active,
 }
 
 .mgt30 {
-    margin-top: -270px
+    margin-top: 50px
 }
 
 .mgt31 {
@@ -10286,7 +10282,7 @@ a.ui-button:active,
 }
 
 .mgt45 {
-    margin-top: 45px
+    margin-top: 30px
 }
 
 .mgt50 {

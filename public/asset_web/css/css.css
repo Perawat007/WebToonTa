@@ -878,9 +878,17 @@
 
 @media screen and (max-width: 480px) {
     .pg-home{
-        padding-top: 105px;
+        padding-top: 80px;
         display: block;
     }
     
   }
+
+   @media screen and (max-width: 600px) {
+    .pg-home{
+        padding-top: 80px;
+        display: block;
+    }
+    
+  } 
   

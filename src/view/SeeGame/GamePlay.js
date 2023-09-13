@@ -92,9 +92,9 @@ function GamePlay() {
                 .then((response) => {
                     const link = response.data.data.data.url;
                     if (mobileOS === 'Android') {
-                        window.open(link);
-                    } else {
                         window.open(link, "_blank");
+                    } else {
+                        window.open(link, "_self");
                     }
                 })
                 .catch(error => {
@@ -112,8 +112,9 @@ function GamePlay() {
     const lastPostIndex = currentPage * postsPerPage;
     const firstPostIndex = lastPostIndex - postsPerPage;
     const currentPosts = items.slice(firstPostIndex, lastPostIndex);
+
     const h4Style = {
-        color: 'green',
+        color : 'white',
         display: 'inline-block',
         cursor: 'pointer',
         marginRight: '10px',
@@ -156,15 +157,15 @@ function GamePlay() {
                 </div>
             )}
             <React.Fragment>
-                <Container maxWidth="xl" sx={{ p: 2 }}>
+                <Container maxWidth="xl" sx={{ p: 3 }}>
                     <Box display={'flex'}>
                         <Typography variant="h6">
-                            <a style={h4Style} onClick={BackPang}>ย้อนกลับ</a>
+                            <a style={h4Style} className='grount font' onClick={BackPang}>ย้อนกลับ</a>
                         </Typography>
                     </Box>
                     <div className="card-font">รายชื่อเกม</div>
                     <br />
-                    <div className="game-container game vGameList">
+                    <div className=" game vGameList">
                         <div className="list">
                             {currentPosts.map((row) => (
                                 <div key={row.name} className="box">
@@ -177,10 +178,10 @@ function GamePlay() {
                                     <img src={row.img} alt='' style={{
                                         cursor: 'pointer',
                                     }} />
-                                    <span className="name">
+                                     <span className="name">
                                         <span>{row.name}</span>
                                     </span>
-                                    <div className="provider-name">{row.name}</div>
+                                    {/* <div className="provider-name">{row.name}</div> */}
                                     <div className="box-play">
                                         <div className="button-play boxGoPlay" data-gameid={row.providerCode} data-name={row.name}
                                             data-pid="191" onClick={() => PlayGame(row.code)}>เล่น</div>

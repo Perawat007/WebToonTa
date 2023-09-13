@@ -10,8 +10,8 @@ WORKDIR /app
 COPY --from=builder /app/build /app/build
 # COPY --from=builder /app/build/* /app/build/
 RUN npm install -g serve
-EXPOSE 3000
-CMD serve -p 3000 -s build
+EXPOSE 4000
+CMD serve -p 4000 -s build
 
 
 # COPY package*.json ./

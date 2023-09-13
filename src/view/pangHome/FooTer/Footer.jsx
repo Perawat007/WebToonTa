@@ -136,13 +136,14 @@ const Footer = () => {
               >
                 เว็บเกมออนไลน์อันดับ 1
               </h4>
-              <h5 className="font">
+              <h5 className="font" style={{ color: "#ffffff" }}>
                 Toonta ผู้นำด้านเกมครบวงจร
                 เรารวบรวมเกมไว้อย่างครบครัน
                 ทั้งเกมสล็อต ยิงปลา ฯลฯ นำโดย
                 PG slot Dogzilla และค่ายเกมชั้นนำ
                 ซึ่งรวมเกมอีกกว่า 10,000 เกม
               </h5>
+              <br />
             </div>
 
             <hr className="w-100 clearfix d-md-none" />
@@ -154,7 +155,7 @@ const Footer = () => {
               >
                 Tags
               </h5>
-              <div className="d-flex flex-wrap">
+              <div className="d-flex flex-wrap footerCenter">
                 <a
                   href="/"
                   className="btn btn-sm btn-primary m-1 font"
@@ -290,6 +291,8 @@ const Footer = () => {
               ))}
             </div>
           </div>
+          <br />
+            <br />
         </section>
         <div
           className="text-center p-3"

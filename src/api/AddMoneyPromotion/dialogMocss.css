@@ -9,29 +9,74 @@
     overflow-y: hidden;
     touch-action: pan-y;
     touch-action: pan-x;
+    z-index: 101;
 }
 
 .modalContainerMoney {
-    max-width: 600px;
-    width: 100%;
-    position: fixed;
-    top: 50%;
-    left: 51%;
-    transform: translate(-50%, -50%);
+    width: 30%;
+    margin: 2% auto;
     display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
     background-color: #560499;
     box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
     border-radius: 8px;
+    position: relative;
 }
 
+.modalContainerMoneyImg {
+    width: 35%;
+    margin: -7% auto;
+    position: relative;
+}
+
+
+.imgMoneyRes {
+    width: 15%;
+    margin: 5% auto;
+    object-fit: contain;
+}
 
 .imgMoney {
-    width: 250px;
-    object-fit: cover;
+    width: 15%;
+    margin: 5% auto;
+    object-fit: contain;
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
-    transform: translate(160%, 25%);
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transform: translateY(20%);
 }
+
+.imgMoneyCartoon {
+    width: 15%;
+    margin: 3% auto;
+    object-fit: contain;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    transform: translateY(20%);
+}
+
+
+.imgMoneyGit {
+    width: 45%;
+    margin: 5% auto;
+    object-fit: contain;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
 
 .modalRightMoney {
     width: 100%;
@@ -177,8 +222,110 @@
     padding: 0px 0;
     text-align: center;
     z-index: 5;
-  }
+}
+
 /*---------------------------------------------------------------*/
+
+
+/* <select> styles */
+select {
+
+    border: 0;
+    outline: 0;
+    text-align: center;
+    /* Personalize */
+    width: 60%;
+    height: 100%;
+    font-size: 30px;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center/1.4em, linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
+    color: rgb(159, 0, 180);
+    border: 3px solid rgb(121, 0, 158);
+    border-radius: 15px;
+    box-shadow: 5px 0.2px 9px black;
+    cursor: pointer;
+    /*background: -webkit-linear-gradient(left, #930bbd, #b31de0, #c244e9, #be3ee6);*/
+
+}
+
+select option {
+    color: inherit;
+    background-color: #7f0ab6;
+    color: rgb(255, 255, 255);
+}
+
+select:focus {
+    outline: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select .lang_menu option[value="ธนาคารไทยพาณิชย์"] {
+    background-image: url(https://asset.cloudigame.co/build/admin/img/wt_theme/ezc/payment-logo-scb.png);
+}
+
+@media (max-width: 1200px) {
+    select {
+        width: 90%;
+        height: 80%;
+        font-size: 20px;
+    }
+
+    .modalContainerMoneyImg {
+        width: 60%;
+        margin: -7% auto;
+    } 
+}
+
+@media screen and (max-width: 1024px) {
+
+    .overlayMoney {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        z-index: 12;
+        text-align: center;
+    }
+
+    .modalContainerMoney {
+        width: 80%;
+
+        margin: 5% auto;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgMoney {
+        width: 25%;
+        object-fit: contain;
+    }
+
+    .headingMoney {
+        margin: 1rem;
+    }
+
+    select {
+        width: 90%;
+        height: 80%;
+        font-size: 20px;
+
+    }
+
+    .imgMoneyCartoon {
+        width: 30%;
+        margin: 3% auto;
+        transform: translateY(20%);
+    }
+
+    .modalContainerMoneyImg {
+        width: 55%;
+        margin: -7% auto;
+    } 
+}
+
 @media screen and (max-width: 500px) {
 
     .overlayMoney {
@@ -190,22 +337,40 @@
     }
 
     .modalContainerMoney {
-        flex-direction: column;
-        top: 20%;
-        left: 3%;
-        transform: none;
-        width: 63%;
-        height: 50vh;
+        width: 80%;
+        margin: 3% auto;
+        display: flex;
         text-align: center;
+        align-items: center;
+        justify-content: center;
     }
 
     .imgMoney {
-        width: 10%;
-        max-height: 70vh;
-        object-fit: cover;
+        width: 45%;
+        object-fit: contain;
     }
 
     .headingMoney {
         margin: 1rem;
     }
+
+    select {
+        width: 90%;
+        height: 80%;
+        font-size: 20px;
+
+    }
+
+    .imgMoneyCartoon {
+        width: 50%;
+        margin: 5% auto;
+        transform: translateY(10%);
+        margin-top: auto;
+    }
+
+    .modalContainerMoneyImg {
+        width: 100%;
+        margin: -7% auto;
+    } 
+
 }

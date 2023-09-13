@@ -128,29 +128,29 @@ const LoginBar = () => {
   return (
     <>
       {showPopupA && (
-        <div className="overlayLogin">
-          <div className="modalContainerLogin">
-            <div className="imgLogin">
-              <img src={cartoon} alt="/" />
-            </div>
-            <div className="modalRightLogin">
-              <div className="contentLogin">
-                <p className="titleDialogLogin font">Username หรือ Password ไม่ถูกต้อง</p>
-                <br />
-                <h3 className="detailDialog font">
-                  กรุณากรอกUsername หรือ Password ใหม่อีกครั้ง
-                </h3>
+          <div className="overlayLogin">
+            <div className="modalContainerLogin">
+              <div className="imgLogin">
+                <img src={cartoon} alt="/" />
               </div>
-              <div className="btnContainerLogin">
-                <button className="btnPrimaryLogin" onClick={togglePopup}>
-                  ตกลง
-                </button>
+              <div className="modalRightLogin">
+                <div className="contentLogin">
+                  <p className="titleDialogLogin font">Username หรือ Password ไม่ถูกต้อง</p>
+                  <br />
+                  <h3 className="detailDialogLogin font">
+                    กรุณากรอกUsername หรือ Password ใหม่อีกครั้ง
+                  </h3>
+                </div>
+                <div className="btnContainerLogin">
+                  <button className="btnPrimaryLogin" onClick={togglePopup}>
+                    ตกลง
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-        </div>
       )}
-      <nav id="topBar-holder" className="topBar-holder">
+      <nav >
         <Headers />
       </nav>
       <div className="main-Login">
@@ -174,30 +174,33 @@ const LoginBar = () => {
 
                 <div className="fieldDataLogin font textinputLogin input-containerLogin">
                   <p className="textTitleLogin font">เบอร์โทรศัพท์</p>
-                  <input
-                    type="text"
-                    placeholder="กรอกเบอร์โทรศัพท์"
-                    value={phoneNumber}
-                    onChange={(e) => setUser(e.target.value)}
-                    required
-                    className="input-with-iconLogin"
-                  />
-                  <BsPhoneFill className="input-iconLogin" />
+                  <div className="wrapInput">
+                    <input
+                      type="text"
+                      placeholder="กรอกเบอร์โทรศัพท์"
+                      value={phoneNumber}
+                      onChange={(e) => setUser(e.target.value)}
+                      required
+                      className="input-with-iconLogin"
+                    />
+                    <BsPhoneFill className="input-iconLogin" />
+                  </div>
                 </div>
 
                 <div className="fieldDataLogin font textinputLogin input-containerLogin">
                   <p className="textTitleLogin font">password</p>
-                  <input
-                    type="password"
-                    placeholder="กรอกรหัสผ่าน"
-                    value={password}
-                    onChange={(e) => setPwd(e.target.value)}
-                    required
-                    className="input-with-iconLogin"
-                  />
-                  <BsUnlockFill className="input-iconLogin" />
+                  <div className="wrapInput">
+                    <input
+                      type="password"
+                      placeholder="กรอกรหัสผ่าน"
+                      value={password}
+                      onChange={(e) => setPwd(e.target.value)}
+                      required
+                      className="input-with-iconLogin"
+                    />
+                    <BsUnlockFill className="input-iconLogin" />
+                  </div>
                 </div>
-
                 <div className="pass-link font">
                   <a className="font" href="#">Forgot password?</a>
                 </div>
@@ -209,12 +212,12 @@ const LoginBar = () => {
                 </div>
 
                 <div className="Login-link font">
-                  พบปัญหา <a className="font" href="">ติดต่อฝ่ายบริการลูกค้า</a>
+                   <a className="font" href=""> พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                 </div>
               </form>
             </div>
           </div>
-        </div>
+        </div >
         <div className="displayFooterLogin">
           <MenuDown />
           <div className="section-footer mid-footer d-dev">
@@ -251,8 +254,7 @@ const LoginBar = () => {
         <div className="imgWayLogin">
           <img className="scaltimgLoginCircleIIII" src={imgcartoon} alt="" />
         </div>
-
-      </div>
+      </div >
     </>
   );
 };

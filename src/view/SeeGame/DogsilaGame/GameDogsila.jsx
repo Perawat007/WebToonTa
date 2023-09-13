@@ -78,11 +78,11 @@ export default function GameDogsila() {
           const tokenEn = encodeURIComponent(token);
           if (linkGame !== null) {
             const link = linkGame + `?token=${tokenEn}`;
-            if (mobileOS === "Android") {
-              window.open(link);
-            } else {
+            if (mobileOS === 'Android') {
               window.open(link, "_blank");
-            }
+          } else {
+              window.open(link, "_self");
+          }
           }
         }
       })

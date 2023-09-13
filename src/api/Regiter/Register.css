@@ -25,16 +25,17 @@
     background-color: #d8d8d8;
     border-radius: 20px;
     position: relative;
-    margin: 15px 0;
+    margin: 15px auto;
     height: 30px;
-    width: 600px;
+    width: 400px;
+    display: flex;
     text-align: center;
     align-items: center;
-    justify-content: center;
-    transform: translate(31%, 0%);
+    justify-content: left;
 }
 
 .progressBar-done {
+    position: absolute;
     background: linear-gradient(to left, #e11fe7, #b200df);
     box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
     border-radius: 20px;
@@ -67,7 +68,7 @@
     max-width: 1800px;
     max-height: 2000px;
     width: 50%;
-    height: 49rem;
+    height: 59rem;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -80,7 +81,7 @@
     overflow-y: hidden;
     margin: 10rem auto;
     position: relative;
-    /* margin-top: 30%;*/
+    margin-top: 3%;
 }
 
 .wrapperRegister .title-textRegister {
@@ -138,7 +139,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-left: 30%;
+    margin: auto;
     display: flex;
 }
 
@@ -384,6 +385,12 @@ form .btnsubmitRegister input[type="submitri"] {
     background: -webkit-linear-gradient(right, #133869, #135199, #1e8cf3, #00b1e7);
 }
 
+.wrapInputRegiter{
+    position: relative;
+    max-width: 100%;
+    height: 50px;
+    margin: auto;
+}
 .iconRegister {
     position: absolute;
     transform: translate(40%, 50%);
@@ -403,11 +410,10 @@ form .btnsubmitRegister input[type="submitri"] {
 
 .input-iconRegister {
     position: absolute;
-    left: 200px;
-    top: 110%;
+    left: 22%;
+    top: 50%;
     font-size: 30px;
     transform: translateY(-50%);
-    color: #aaa;
     color: #5d0972be;
     z-index: 10;
 }
@@ -427,74 +433,245 @@ form .btnsubmitRegister input[type="submitri"] {
 
 .scaltimgRegister {
     position: absolute;
-    width: 40%;
-    scale: 50%;
-    top: 42%;
-    left: 4%;
+    width: 15%;
+    top: 30%;
+    left: 15%;
     z-index: 4;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 .scaltimgRegisterCircleI {
     position: absolute;
-    width: 51%;
-    scale: 10%;
-    bottom: 20%;
-    left: 50%;
+    width: 15%;
+    bottom: 25%;
+    right: 15%;
     z-index: 4;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 .scaltimgRegisterCircleII {
     position: absolute;
-    width: 51%;
-    scale: 30%;
-    bottom: 10%;
-    right: 50%;
+    width: 15%;
+    bottom: 23%;
+    left: 12%;
     z-index: 3;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 .scaltimgRegisterCircleIII {
     position: absolute;
-    width: 57%;
-    scale: 35%;
-    bottom : 13%;
-    left: 50%;
+    width: 20%;
+    bottom: 5%;
+    right: 10%;
     z-index: 4;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 .scaltimgRegisterCircleIIII {
     position: absolute;
-    width: 35%;
-    scale: 30%;
+    width: 10%;
     bottom: 10%;
-    right: 55%;
+    left: 20%;
     z-index: 4;
     display: block;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 .scaltimgRegisterCircleV {
     position: absolute;
-    width: 52%;
-    scale: 10%;
+    width: 8%;
     top: 5%;
-    right: 60%;
+    left: 10%;
     z-index: 4;
     display: block;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 .scaltimgRegisterCircleVI {
     position: absolute;
-    width: 52%;
-    scale: 30%;
+    width: 15%;
     top: 50%;
     left: 60%;
     z-index: 1;
     display: block;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+
+
+@media only screen and (max-width: 1024px) {
+    .wrapperRegister {
+        width: 80%;
+        height: 50rem;
+        z-index: 4;
+        background: #ffffff;
+        padding: 10px;
+        margin-top: 8%;
+    }
+
+    .wrapperRegister.title-text {
+        display: flex;
+        width: 200%;
+    }
+
+    .wrapperRegister .title {
+        width: 100%;
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapperRegister .slide-controls {
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+        margin: 5px 0 10px 0;
+    }
+
+    .textTitleRegister {
+        width: 100%;
+        font-size: 17px;
+        font-weight: 400;
+        margin: 5px 0 2px 0;
+        margin-left: 20%;
+    }
+
+    .textinputRegister {
+        margin: 5px 0 33px 0;
+    }
+
+    .textFrameRegister {
+        width: 70%;
+        height: 40px;
+    }
+
+    .form-innerRegister form .fieldRegister input {
+        height: 80%;
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .form-innerRegister form .fieldRegisterOTP {
+        height: 55px;
+        width: 100%;
+        margin-top: 0px;
+        font-size: 25px;
+    }
+
+    .form-innerRegister form .fieldRegisterOTP input {
+        height: 100%;
+        width: 60%;
+    }
+
+    .form-innerRegister form .fieldDataRegister input {
+        height: 80%;
+        width: 70%;
+        font-size: 20px;
+    }
+
+    .form-innerRegister form .fieldRegister input::placeholder {
+        color: #ff00ff;
+        transition: all 0.3s ease;
+    }
+
+    form .btnsubmitRegister input[type="submit"] {
+        height: 70%;
+        font-size: 20px;
+        width: 70%;
+        margin-top: 2%;
+    }
+
+    .form-innerRegister form .Register-link {
+        margin-top: 5px;
+    }
+
+    .displayFooterRegister {
+        display: none;
+    }
+
+    .progressBar {
+        background-color: #d8d8d8;
+        border-radius: 20px;
+        height: 30px;
+        width: 300px;
+    } 
+
+    .input-iconRegister {
+        left: 18%;
+        top: 45%;
+        font-size: 30px;
+        transform: translateY(-50%);
+    }   
+
+    .scaltimgRegister {
+        width: 22%;
+        top: 35%;
+        left: 0%;
+        z-index: 4;
+    }
+    
+    .scaltimgRegisterCircleI {
+        width: 25%;
+        bottom: 25%;
+        right: 0%;
+        z-index: 3;
+    }
+    
+    .scaltimgRegisterCircleII {
+        width: 28%;
+        bottom: 23%;
+        left: 0%;
+        z-index: 3;
+    }
+    
+    .scaltimgRegisterCircleIII {
+        width: 20%;
+        top: 15%;
+        left: 80%;
+        z-index: 4;
+    }
+    
+    .scaltimgRegisterCircleIIII {
+        width: 20%;
+        bottom: 20%;
+        left: 1%;
+        z-index: 4;
+        display: block;
+    }
+    
+    .scaltimgRegisterCircleV {
+        width: 8%;
+        top: 5%;
+        left: 5%;
+        z-index: 4;
+        display: block;
+    }
+    .scaltimgcirclesm{
+        width: 100%;
+        bottom: 5%;
+        left: 70%;
+        z-index: 4;
+    }
 }
 
 /* Responsive Styles */
-@media (max-width: 768px) {
+@media (max-width: 760px) {
     input {
         font-size: 14px;
+    }
+
+    .wrapperRegister {
+        width: 90%;
+        height: 100%;
+        margin-top: 25%;
     }
 
     .wrapperRegister.title-text {
@@ -535,9 +712,6 @@ form .btnsubmitRegister input[type="submitri"] {
         height: 40px;
         margin-left: 7%;
     }
-
-
-
     .form-innerRegister form .fieldRegister input {
         height: 80%;
         width: 90%;
@@ -575,10 +749,16 @@ form .btnsubmitRegister input[type="submitri"] {
     }
 
     .main-Register {
-        min-height: 210vw;
-
+        min-height: 120vw;
     }
 
+     .scaltimgRegisterCircleI {
+        width: 50%;
+        bottom: 48%;
+        left: 40%;
+        z-index: 3;
+        object-fit: contain;
+    }
     .form-innerRegister form .Register-link {
         margin-top: 5px;
     }
@@ -592,19 +772,73 @@ form .btnsubmitRegister input[type="submitri"] {
         border-radius: 20px;
         height: 30px;
         width: 300px;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        transform: translate(10%, 0%);
+    } 
+
+    .scaltimgRegister {
+        width: 30%;
+        top: 47%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
+    }
+
+    .scaltimgRegisterCircleI {
+        width: 50%;
+        bottom: 20%;
+        left: 40%;
+        z-index: 3;
+        object-fit: contain;
+    }
+
+    .scaltimgRegisterCircleII {
+        width: 50%;
+        top: 30%;
+        right: 40%;
+        z-index: 3;
+        object-fit: contain;
+        display: block;
+    }
+
+    .scaltimgRegisterCircleIII {
+        width: 100%;
+        top: -10%;
+        left: 37%;
+        z-index: 4;
+        display: none;
+    }
+
+    .scaltimgRegisterCircleIIII {
+        display: none;
+    }
+
+    .scaltimgRegisterCircleV {
+        display: block;
+    }
+
+    .scaltimgRegisterCircleVI {
+        width: 100%;
+        top: -10%;
+        left: 37%;
+        z-index: 4;
+        display: none;
+    }
+
+    .scaltimgcirclesm{
+        width: 70%;
+        left: 70%;
+        z-index: 4;
     }
 }
 
 @media (max-width: 480px) {
 
+    .main-Register {
+        min-height: 200vw;
+    }
     .wrapperRegister {
         width: 90%;
-        height: 100%;
-        margin-top: 35%;
+        height: 50%;
+        margin-top: 45%;
     }
 
     .slide-controlsRegister .slider-tabRegister {
@@ -629,34 +863,32 @@ form .btnsubmitRegister input[type="submitri"] {
     }
 
     .scaltimgRegister {
-        width: 1500px;
-        scale: 28%;
-        top: 50%;
-        left: -125%;
-        z-index: 3;
-        text-align: center;
-        position: fixed;
+        width: 30%;
+        top: 47%;
+        left: 50%;
+        transform: translateX(-50%);
+        display: none;
     }
 
     .scaltimgRegisterCircleI {
         width: 100%;
-        scale: 20%;
         bottom: 48%;
         left: 40%;
         z-index: 3;
+        object-fit: contain;
     }
 
     .scaltimgRegisterCircleII {
         width: 100%;
-        scale: 20%;
         bottom: 20%;
         right: 40%;
         z-index: 3;
+        object-fit: contain;
+        display: none;
     }
 
     .scaltimgRegisterCircleIII {
         width: 100%;
-        scale: 25%;
         top: -10%;
         left: 37%;
         z-index: 4;
@@ -677,15 +909,18 @@ form .btnsubmitRegister input[type="submitri"] {
 
     .input-iconRegister {
         left: 50px;
-        top: 90%;
+        top: 40%;
         font-size: 30px;
+        transform: translateY(-50%);
     }
-
+    .scaltimgcirclesm{
+        width: 70%;
+        left: 70%;
+        z-index: 4;
+    }
 }
 
 @media (max-width: 400px) {
-
-
     .scaltimgRegisterCircleI {
         width: 100%;
         scale: 20%;
@@ -707,6 +942,167 @@ form .btnsubmitRegister input[type="submitri"] {
         scale: 25%;
         bottom: 40%;
         left: 37%;
+        z-index: 4;
+    }
+}
+
+@media only screen and (max-width: 390px) {
+    .wrapperRegister {
+        width: 90%;
+        height: 59rem;
+        z-index: 4;
+        background: #ffffff;
+        padding: 5px;
+        margin-top: 35%;
+    }
+
+    .wrapperRegister.title-text {
+        display: flex;
+        width: 200%;
+    }
+
+    .wrapperRegister .title {
+        width: 100%;
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .wrapperRegister .slide-controls {
+        height: 50px;
+        width: 100%;
+        overflow: hidden;
+        margin: 5px 0 10px 0;
+    }
+
+    .textTitleRegister {
+        width: 100%;
+        font-size: 17px;
+        font-weight: 400;
+        margin: 5px 0 2px 0;
+        margin-left: 20%;
+    }
+
+    .textinputRegister {
+        margin: 5px 0 33px 0;
+    }
+
+    .textFrameRegister {
+        width: 70%;
+        height: 40px;
+        margin: auto;
+    }
+
+    .form-innerRegister form .fieldRegister input {
+        height: 80%;
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .form-innerRegister form .fieldRegisterOTP {
+        height: 55px;
+        width: 100%;
+        margin-top: 0px;
+        font-size: 25px;
+    }
+
+    .form-innerRegister form .fieldRegisterOTP input {
+        height: 100%;
+        width: 60%;
+    }
+
+    .form-innerRegister form .fieldDataRegister input {
+        height: 80%;
+        width: 90%;
+        font-size: 20px;
+    }
+
+    .form-innerRegister form .fieldRegister input::placeholder {
+        color: #ff00ff;
+        transition: all 0.3s ease;
+    }
+
+    form .btnsubmitRegister input[type="submit"] {
+        height: 70%;
+        font-size: 20px;
+        width: 90%;
+        margin-top: 2%;
+    }
+
+    .form-innerRegister form .Register-link {
+        margin-top: 5px;
+    }
+
+    .displayFooterRegister {
+        display: none;
+    }
+
+    .progressBar {
+        background-color: #d8d8d8;
+        border-radius: 20px;
+        height: 30px;
+        width: 200px;
+    } 
+
+    .input-iconRegister {
+        left: 10%;
+        top: 45%;
+        font-size: 30px;
+        transform: translateY(-50%);
+    }   
+
+    .scaltimgRegister {
+        width: 28%;
+        top: 35%;
+        left: 0%;
+        z-index: 4;
+        display: none;
+    }
+    
+    .scaltimgRegisterCircleI {
+        width: 30%;
+        bottom: 25%;
+        right: 0%;
+        z-index: 3;
+        display: none;
+    }
+    
+    .scaltimgRegisterCircleII {
+        width: 30%;
+        bottom: 23%;
+        left: 0%;
+        z-index: 3;
+        
+    }
+    
+    .scaltimgRegisterCircleIII {
+        width: 30%;
+        bottom: 5%;
+        left: 70%;
+        z-index: 4;
+        display: none;
+    }
+    
+    .scaltimgRegisterCircleIIII {
+        width: 20%;
+        bottom: 10%;
+        left: 1%;
+        z-index: 4;
+        display: none;
+    }
+    
+    .scaltimgRegisterCircleV {
+        width: 8%;
+        top: 5%;
+        left: 5%;
+        z-index: 4;
+        display: block;
+    }
+    .scaltimgcirclesm{
+        width: 100%;
+        bottom: 5%;
+        left: 70%;
         z-index: 4;
     }
 }

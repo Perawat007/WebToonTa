@@ -3,15 +3,6 @@
     position: relative;
 }
 
-
-.slick-slider {
-    width: 100%;
-}
-
-.slick-list {
-    width: 100% !important;
-}
-
 img {
     width: 100%;
     height: 100%;
@@ -66,13 +57,9 @@ img {
 /*Item*/
 .boxGame {
     width: 100%;
-    border-radius: 3px;
-    padding: 8px 7.5px;
-    font-size: 8px;
-    text-transform: uppercase;
-    font-weight: bold;
-    top: 6px;
-    right: 4px;
+    border-radius: 1px;
+    padding: 10px 4px;
+    object-fit: contain;
 }
 
 .boxCampGame {
@@ -124,10 +111,12 @@ img {
 }
 
 .testdata {
+    max-width: 400px;
+    margin-left: 6%;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 30px;
     font-weight: 700;
-    margin-top: 3%;
+    margin-top: 3%;    
 }
 
 .testdataV {
@@ -159,7 +148,6 @@ img {
 
 .product-lottery-categoryMobile {
     border-radius: 1.5rem;
-    background-image: url(../.././img/home/bg-lottery.png);
     background-size: cover;
     background-position: center;
     position: relative;
@@ -177,10 +165,10 @@ img {
     justify-content: space-between;
 }
 
+
 @media screen and (max-width: 1280px) {
     .testdata {
         font-size: 20px;
-        transform: translate(37%, 50%);
     }
 
     .holderTradig {
@@ -194,22 +182,15 @@ img {
     .positionSideBar {
         transform: translate(1%, 50%);
     }
-
     
     .L-dev {
         width: 25%;
         display: block !important;
         z-index: 1000;
     }
-
 }
 
 @media screen and (max-width: 400px) {
-    .testdata {
-        font-size: 20px;
-        transform: translate(37.2%, 50%);
-    }
-
     .holderTradig {
         transform: translate(15%, 1%);
     }
@@ -217,9 +198,6 @@ img {
     .lotteryScant {
         scale: 300%;
     }
-
-
-
     .positionSideBar {
         transform: translate(1%, 50%);
     }
@@ -227,18 +205,12 @@ img {
 
 @media screen and (max-width: 414px) {
     .testdata {
-        font-size: 20px;
-        transform: translate(40%, 50%);
+        font-size: 16px;
     }
 
     .holderTradig {
         transform: translate(13.5%, 1%);
     }
-
-    .lotteryScant {
-        scale: 300%;
-    }
-
 
     .positionSideBar {
         transform: translate(1%, 50%);
@@ -264,8 +236,7 @@ img {
 
 @media screen and (max-width: 390px) {
     .testdata {
-        font-size: 20px;
-        transform: translate(37.2%, 50%);
+        font-size: 16px;
     }
 
     .holderTradig {
@@ -302,8 +273,9 @@ img {
     }
 
     .testdata {
-        font-size: 20px;
-        transform: translate(39%, 100%);
+        font-size: 17px;
+        margin-top: 10%;
+        margin-bottom: -6%;
     }
 
     .testdataV {
@@ -316,5 +288,26 @@ img {
     .imgGamepromo {
         height: 100px;
         width: 240px;
+    }
+}
+@media only screen and (max-width: 280px) {
+    .testdata {
+        font-size: 17px;
+    }
+
+    .exclusive-prevTs {
+        scale: 80%;
+        transform: translate(-50rem, 25px);
+    }
+
+    .exclusive-nextTs {
+        scale: 80%;
+        transform: translate(-51rem, 25px);
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .testdata {
+        font-size: 17px;
     }
 }

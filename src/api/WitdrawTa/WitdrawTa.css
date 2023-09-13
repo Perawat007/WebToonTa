@@ -20,14 +20,14 @@
     z-index: 4;
 }
 
-.main-AddMoneyPromo {
+.main-Witdraw {
     min-width: 100vw;
     overflow-x: hidden;
     background: linear-gradient(to bottom, #7110af 40%, #2a0bd6 100%);
     align-items: center;
 }
 
-.wrapperMoney {
+.wrapperWitdraw {
     overflow: hidden;
     max-width: 1800px;
     max-height: 1000px;
@@ -48,12 +48,12 @@
     /* margin-top: 30%;*/
 }
 
-.wrapperMoney .title-text {
+.wrapperWitdraw .title-text {
     display: flex;
     width: 200%;
 }
 
-.wrapperMoney .title {
+.wrapperWitdraw .title {
     width: 50%;
     font-size: 35px;
     font-weight: 600;
@@ -61,7 +61,7 @@
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.wrapperMoney .slide-controls {
+.wrapperWitdraw .slide-controls {
     position: relative;
     display: flex;
     height: 50px;
@@ -83,18 +83,18 @@
     margin-left: 22%;
 }
 
-.textinput {
+.textinputWitdarw {
     margin: 5px 0 50px 0;
 }
 
 
-.form-inner form .fieldMoney input::placeholder {
+.form-inner form .fieldWitdraw input::placeholder {
     color: #ff00ff;
     transition: all 0.3s ease;
 }
 
 
-.textFrame {
+.textFrameWitdraw {
     background-color: #930bbd;
     border-radius: 30px;
     width: 40%;
@@ -106,7 +106,7 @@
     display: flex;
 }
 
-.title-textDeposit {
+.title-textWitdraw {
     font-size: 22px;
     color: #ffffff;
     text-align: center;
@@ -171,7 +171,7 @@ input[type="radio"] {
     user-select: none;
 }
 
-.wrapperMoney .form-container {
+.wrapperWitdraw .form-container {
     width: 100%;
     overflow: hidden;
 }
@@ -187,14 +187,14 @@ input[type="radio"] {
 }
 
 
-.form-inner form .fieldMoney {
+.form-innerw form .fieldWitdraw {
     height: 55px;
     width: 100%;
     margin-top: 20px;
     text-align: center;
 }
 
-.form-inner form .fieldMoney input {
+.form-innerw form .fieldWitdraw input {
     height: 100%;
     width: 60%;
     outline: none;
@@ -209,14 +209,14 @@ input[type="radio"] {
 }
 
 
-.form-inner form .fieldDataDeposit {
+.form-innerw form .fieldDataWitdraw {
     height: 55px;
     width: 100%;
     margin-top: 20px;
     text-align: center;
 }
 
-.form-inner form .fieldDataDeposit input {
+.form-inner form .fieldDataWitdraw input {
     height: 100%;
     width: 60%;
     outline: none;
@@ -231,17 +231,17 @@ input[type="radio"] {
     color: white;
 }
 
-.form-inner form .fieldDataDeposit input:focus {
+.form-inner form .fieldDataWitdraw input:focus {
     border-color: #fc83bb;
     /* box-shadow: inset 0 0 3px #fb6aae; */
 }
 
-.form-inner form .fieldDataDeposit input::placeholder {
+.form-inner form .fieldDataWitdraw input::placeholder {
     color: #ffffff;
     transition: all 0.3s ease;
 }
 
-form .fieldDataDeposit input:focus::placeholder {
+form .fieldDataWitdraw input:focus::placeholder {
     color: #ffffff;
 }
 
@@ -250,19 +250,19 @@ form .fieldDataDeposit input:focus::placeholder {
     text-align: center;
 }
 
-.form-inner form .money-link {
+.form-inner form .Witdraw-link {
     text-align: center;
     margin-top: 30px;
 }
 
 .form-inner form .pass-link a,
-.form-inner form .money-link a {
+.form-inner form .Witdraw-link a {
     color: #fa4299;
     text-decoration: none;
 }
 
 .form-inner form .pass-link a:hover,
-.form-inner form .money-link a:hover {
+.form-inner form .Witdraw-link a:hover {
     text-decoration: underline;
 }
 
@@ -301,7 +301,7 @@ form .btnsubmit input[type="submit"] {
 }
 
 
-.iconMoney {
+.iconWitdraw {
     position: absolute;
     transform: translate(40%, 50%);
     font-size: 30px;
@@ -328,11 +328,11 @@ form .btnsubmit input[type="submit"] {
     color: #ffffff;
 }
 
-.imgWayDeposit{
+.imgWayWitdraw{
     width: 500px;
 }
 
-.scaltimgDeposit {
+.scaltimgWitdraw {
     position: absolute;
     width: 29%;
     scale: 50%;
@@ -341,7 +341,7 @@ form .btnsubmit input[type="submit"] {
     z-index: 4;
 }
 
-.scaltimgDepositCircleI {
+.scaltimgWitdrawCircleI {
     position: absolute;
     width: 51%;
     scale: 10%;
@@ -350,7 +350,7 @@ form .btnsubmit input[type="submit"] {
     z-index: 4;
 }
 
-.scaltimgDepositCircleII {
+.scaltimgWitdrawCircleII {
     position: absolute;
     width: 51%;
     scale: 30%;
@@ -359,7 +359,7 @@ form .btnsubmit input[type="submit"] {
     z-index: 3;
 }
 
-.scaltimgDepositCircleIII {
+.scaltimgWitdrawCircleIII {
     position: absolute;
     width: 48%;
     scale: 35%;
@@ -368,7 +368,7 @@ form .btnsubmit input[type="submit"] {
     z-index: 4;
 }
 
-.scaltimgDepositCircleIIII {
+.scaltimgWitdrawCircleIIII {
     position: absolute;
     width: 58%;
     scale: 35%;
@@ -378,7 +378,7 @@ form .btnsubmit input[type="submit"] {
     display: block;
 }
 
-.scaltimgDepositCircleV {
+.scaltimgWitdrawCircleV {
     position: absolute;
     width: 52%;
     scale: 10%;
@@ -388,7 +388,7 @@ form .btnsubmit input[type="submit"] {
     display: block;
 }
 
-.scaltimgDepositCircleVI {
+.scaltimgWitdrawCircleVI {
     position: absolute;
     width: 52%;
     scale: 30%;
@@ -396,29 +396,6 @@ form .btnsubmit input[type="submit"] {
     left : 60%;
     z-index: 1;
     display: block;
-}
-
-.upload-box {
-    font-size: 16px;
-    background: white;
-    border-radius: 50px;
-    box-shadow: 5px 5px 10px black;
-    width: 450px;
-    outline: none;
-}
-
-::-webkit-file-upload-button {
-    color: white;
-    background: #930bbd;
-    padding: 20px;
-    border: none;
-    border-radius: 50px;
-    box-shadow: 1px 0 1px #930bbd;
-    outline: none;
-}
-
-::-webkit-file-upload-button:hover {
-    background: #b31de0;
 }
 
 /* Responsive Styles */
@@ -433,12 +410,12 @@ form .btnsubmit input[type="submit"] {
         transform: translate(-500%, 20%);
     }
 
-    .wrapperMoney .title-text {
+    .wrapperWitdraw .title-text {
         display: flex;
         width: 200%;
     }
 
-    .wrapperMoney .title {
+    .wrapperWitdraw .title {
         width: 50%;
         font-size: 35px;
         font-weight: 600;
@@ -446,7 +423,7 @@ form .btnsubmit input[type="submit"] {
         transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
-    .wrapperMoney .slide-controls {
+    .wrapperWitdraw .slide-controls {
         height: 50px;
         width: 100%;
         overflow: hidden;
@@ -461,11 +438,11 @@ form .btnsubmit input[type="submit"] {
         margin-left: 10%;
     }
 
-    .textinput {
+    .textinputWitdarw {
         margin: 5px 0 33px 0;
     }
 
-    .textFrame {
+    .textFrameWitdraw {
         border-radius: 30px;
         width: 85%;
         height: 40px;
@@ -474,19 +451,19 @@ form .btnsubmit input[type="submit"] {
 
 
 
-    .form-inner form .fieldMoney input {
+    .form-inner form .fieldWitdraw input {
         height: 80%;
         width: 92%;
         font-size: 20px;
     }
 
-    .form-inner form .fieldDataDeposit input {
+    .form-inner form .fieldDataWitdraw input {
         height: 80%;
         width: 92%;
         font-size: 20px;
     }
 
-    .form-inner form .fieldMoney input::placeholder {
+    .form-inner form .fieldWitdraw input::placeholder {
         color: #ff00ff;
         transition: all 0.3s ease;
     }
@@ -498,11 +475,11 @@ form .btnsubmit input[type="submit"] {
         margin-top: 2%;
     }
 
-    .main-AddMoneyPromo {
+    .main-AddWitdrawPromo {
         min-height: 230vw;
     }
 
-    .form-inner form .money-link {
+    .form-inner form .Witdraw-link {
         margin-top: 5px;
     }
 
@@ -513,7 +490,7 @@ form .btnsubmit input[type="submit"] {
 
 @media (max-width: 480px) {
 
-    .wrapperMoney {
+    .wrapperWitdraw {
         width: 90%;
         height: 100%;
         margin-top: 40%;
@@ -527,19 +504,20 @@ form .btnsubmit input[type="submit"] {
         display: block;
     }
 
-    .imgWayDeposit {
+    .imgWayWitdraw {
         width: 100px;
     }
 
-    .scaltimgDeposit {
+    .scaltimgWitdraw {
         width: 90%;
         scale: 25%;
         top: 39%;
         right: 37%;
         z-index: 10;
+        display: none;
     }
 
-    .scaltimgDepositCircleI {
+    .scaltimgWitdrawCircleI {
         width: 100%;
         scale: 20%;
         bottom: 48%;
@@ -547,7 +525,7 @@ form .btnsubmit input[type="submit"] {
         z-index: 3;
     }
 
-    .scaltimgDepositCircleII {
+    .scaltimgWitdrawCircleII {
         width: 100%;
         scale: 20%;
         bottom: 20%;
@@ -555,38 +533,27 @@ form .btnsubmit input[type="submit"] {
         z-index: 3;
     }
 
-    .scaltimgDepositCircleIII {
+    .scaltimgWitdrawCircleIII {
         width: 100%;
         scale: 25%;
         top: -10%;
         left: 37%;
         display: none;
     }
-    .scaltimgDepositCircleIIII {
+    .scaltimgWitdrawCircleIIII {
         display: none;
     }
-    .scaltimgDepositCircleV {
+    .scaltimgWitdrawCircleV {
         display: none;
     }
-    .scaltimgDepositCircleVI {
+    .scaltimgWitdrawCircleVI {
         display: none;
-    }
-
-    .upload-box {
-        width: 280px;
-        margin-top: 5%;
-        text-align: center;
-        transition: all 0.3s ease;
-    }
-
-    ::-webkit-file-upload-button {
-        height: 90px;
     }
 }
 
 @media (max-width: 400px) {
 
-    .scaltimgDeposit {
+    .scaltimgWitdraw {
         width: 90%;
         scale: 30%;
         top: 36%;
@@ -594,7 +561,7 @@ form .btnsubmit input[type="submit"] {
         z-index: 10;
     }
 
-    .scaltimgDepositCircleI {
+    .scaltimgWitdrawCircleI {
         width: 100%;
         scale: 20%;
         bottom: 48%;
@@ -602,7 +569,7 @@ form .btnsubmit input[type="submit"] {
         z-index: 3;
     }
 
-    .scaltimgDepositCircleII {
+    .scaltimgWitdrawCircleII {
         width: 100%;
         scale: 20%;
         bottom: 20%;
@@ -610,7 +577,7 @@ form .btnsubmit input[type="submit"] {
         z-index: 3;
     }
 
-    .scaltimgDepositCircleIII {
+    .scaltimgWitdrawCircleIII {
         width: 100%;
         scale: 25%;
         bottom: 40%;

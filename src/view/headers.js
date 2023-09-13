@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Login.css'
+import './HomePang/Login.css'
 import './pangHome/Modal.css'
 import nft from "../img/toonta.png";
 import nftLogin from "./pangHome/nft.jpg";
@@ -262,10 +262,6 @@ function Headers() {
                                                                     <li><a className="box addfont" data-type="fish" data-v="game" data-name="เกมส์ยิงปลา">
                                                                         <span className="icon-fish"></span>
                                                                         <span className='addfont' style={{ color: '#FFFFFF' }}>เกมส์ยิงปลา</span>
-                                                                    </a></li>
-                                                                    <li><a className="box addfont" data-type="vip" data-v="game" data-name="วีไอพี" >
-                                                                        <span className="icon-vip"></span>
-                                                                        <span className='addfont' style={{ color: '#FFFFFF' }}>วีไอพี</span>
                                                                     </a></li>
                                                                 </ul>
                                                             </Box>

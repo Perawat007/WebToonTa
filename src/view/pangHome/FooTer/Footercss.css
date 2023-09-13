@@ -5,16 +5,18 @@
 
 .footerRec {
     width: 100%;
-
 }
 
 .font {
     font-family: Mitr;
 }
 
+.footerCenter{
+    display: flex;
+}
 @media screen and (max-width: 414px) {
     .footerRec {
-        position: absolute;
+        position: relative;
         bottom: -1;
         left: 0;
         right: 0;
@@ -24,18 +26,26 @@
         padding-top: 40px;
         color: #fff;
     }
+
+    .footerCenter{
+        justify-content: center;
+    }
 }
 
 @media screen and (min-width: 428px) {
     .footerRec {
-        position: absolute;
+        position: relative;
         bottom: -1;
         left: 0;
         right: 0;
         background: #111;
         height: auto;
-        width: 100vw;
+        width: 100%;
         padding-top: 40px;
         color: #fff;
+    }
+
+    .footerCenter{
+        justify-content: left;
     }
 }

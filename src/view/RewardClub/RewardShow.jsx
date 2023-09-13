@@ -1,8 +1,8 @@
 import React from "react";
 import "./RewardShow.css";
-import picpic from "../../img/banner2.png";
-import imgMoney from "../../img/banner3.png"
-import imgpanpa from "../../img/banner1.png"
+import picpic from "../../img/banner2.jpg";
+import imgMoney from "../../img/banner3.jpg"
+import imgpanpa from "../../img/banner1.jpg"
 import imgcartton from "../../img/reward/toad.png"
 const RewardShowBronze = (card) => {
   return (

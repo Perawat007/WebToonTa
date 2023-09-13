@@ -4,9 +4,9 @@ import "./PromotionShow.css";
 import logo from "../../img/toonta.png";
 import rightLogin from "../../img/login.png";
 import cartoon from "../../img/imgDiralog.png";
-import picpic from "../../img/banner2.png";
-import imgMoney from "../../img/banner3.png"
-import imgpanpa from "../../img/banner1.png"
+import picpic from "../../img/banner2.jpg";
+import imgMoney from "../../img/banner3.jpg"
+import imgpanpa from "../../img/banner1.jpg"
 import imgcartoon from "../../img/2.png"
 import circle1 from "../../img/circle1.png"
 import circle2 from "../../img/circle2.png"
@@ -75,7 +75,7 @@ const PromotionShow = () => {
           </div>
         </div>
       )}
-      <nav id="topBar-holder" className="topBar-holder">
+      <nav>
         <Headers />
       </nav>
       <div className="main-Promotion">
@@ -192,7 +192,7 @@ const PromotionShow = () => {
             })()}
           </div>
         </div>
-        <div className="displayFooterLogin">
+        <div className="">
           <MenuDown />
           <div className="section-footer mid-footer d-dev">
             <div className="section-footer-inner">

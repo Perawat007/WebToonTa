@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import banner_01 from '../../../img/banner1.png'
-import banner_02 from '../../../img/banner2.png'
-import banner_03 from '../../../img/banner3.png'
+import banner_01 from '../../../img/banner1.jpg'
+import banner_02 from '../../../img/banner2.jpg'
+import banner_03 from '../../../img/banner3.jpg'
 import axios from '../../../api/axios';
 import "./dialogcssPromotion.css";
 function SliderContent({ activeIndex, sliderImage }) {
@@ -92,7 +92,7 @@ function SliderContent({ activeIndex, sliderImage }) {
 
   return (
     <>
-      <section className="testy">
+      <section className='sectionSlider'>
         {data && (
           <>
             {populargame.map((slide, index) => (

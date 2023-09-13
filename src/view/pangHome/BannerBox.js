@@ -3,10 +3,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import SliderH from './Slider/Slider';
-import imgsport from '../../img/icon_bar/01/new_tab_menu_webgame01.png'
-import imglive from '../../img/icon_bar/01/new_tab_menu_webgame02.png'
-import imgslot from '../../img/icon_bar/01/new_tab_menu_webgame03.png'
-import imgcard from '../../img/icon_bar/01/new_tab_menu_webgame04.png'
+import imgsport from '../../img/icon_bar/01/tab_menu_1.png'
+import imglive from '../../img/icon_bar/01/tab_menu_2.png'
+import imgslot from '../../img/icon_bar/01/tab_menu_3.png'
+import imgcard from '../../img/icon_bar/01/tab_menu_4.png'
 
 function BannerBox() {
   useEffect(() => {
@@ -50,37 +50,33 @@ function BannerBox() {
     ]
   };
 
-  //<SliderH />
+  const SeeGameCamp = (codeGame) => {
+    window.location.href = `Game/${codeGame}`;
+}
   return (
     <>
-    
-      <div className="product-category mgt30 d-dev">
-        <a data-type="sport"  className="list"
+      <div className="product-category mgt30 d-dev ">
+        <a data-type="sport" className="list"
           style={{
             backgroundImage: `url(${imgsport})`,
-
-          }}>
+          }} href="/Gameslot">
         </a>
-        <a data-type="live"  className="list"
+        <a data-type="live" className="list "
           style={{
             backgroundImage: `url(${imglive})`,
-
-          }}>
+          }}href="/Gamefishing">
         </a>
-        <a data-type="slot"  className="list"
+        <a data-type="slot" className="list"
           style={{
             backgroundImage: `url(${imgslot})`,
-
-          }}>
+          }}href="/Gameskill">
         </a>
-        <a data-type="card"  className="list"
+        <a data-type="card" className="list"
           style={{
             backgroundImage: `url(${imgcard})`,
-
-          }}>
+          }} href="/Gametable">
         </a>
       </div>
-    
     </>
   );
 }

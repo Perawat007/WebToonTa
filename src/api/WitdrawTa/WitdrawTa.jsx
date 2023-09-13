@@ -145,7 +145,7 @@ BootstrapDialogTitle.propTypes = {};
 
 const WitdrawTa = () => {
   const [iduse, setidUser] = useState();
-  const [depositamount, setdepositamount] = useState();
+  const [Witdrawamount, setWitdrawamount] = useState();
   const [accountNumber, setaccountNumber] = useState("");
   const [accountName, setaccountName] = useState("");
   const [errMsg, setErrMsg] = useState("");
@@ -189,12 +189,12 @@ const WitdrawTa = () => {
 
   const handleSubmit = async (e) => {
     console.log(pathSegments);
-    if (depositamount !== "" && depositamount !== undefined && accountNumber !== "") {
+    if (Witdrawamount !== "" && Witdrawamount !== undefined && accountNumber !== "") {
       try {
-        const response = await axios.post("/post/depositUserPromotion", {
+        const response = await axios.post("/post/WitdrawUserPromotion", {
           id: iduse,
-          type: "deposit",
-          quantity: depositamount,
+          type: "Witdraw",
+          quantity: Witdrawamount,
           accountNumber: accountNumber,
           accountName: accountName,
           idPromotion: pathSegments[2],
@@ -230,14 +230,14 @@ const WitdrawTa = () => {
     setShowPopup(!showPopupA);
   };
 
-  const inputMoney = (number) => {
-    setdepositamount(number);
+  const inputWitdraw = (number) => {
+    setWitdrawamount(number);
   };
 
   const handleClickOpen = () => {
     setOpen(true);
   };
-  const handleSubmitdeposit = () => {
+  const handleSubmitWitdraw = () => {
     handleSubmit();
     setOpen(false);
   };
@@ -249,22 +249,22 @@ const WitdrawTa = () => {
   return (
     <>
       {open && (
-        <div className="overlayMoney">
-          <div className="imgMoney">
+        <div className="overlayWitdraw">
+          <div className="imgWitdraw">
             <img src={cartoon} alt="/" />
           </div>
-          <div className="modalContainerMoney">
-            <div className="modalRightMoney">
-              <div className="contentMoney">
+          <div className="modalContainerWitdraw">
+            <div className="modalRightWitdraw">
+              <div className="contentWitdraw">
                 <p className="titleDialog font">แจ้งเตือน ยืนยันการถอนเงิน</p>
                 <br />
-                <h3 className="detailDialog font">คุณต้องการถอนเงิน จำนวน {depositamount} ไปที่เลขที่บัญชี {accountNumber}</h3>
+                <h3 className="detailDialog font">คุณต้องการถอนเงิน จำนวน {Witdrawamount} ไปที่เลขที่บัญชี {accountNumber}</h3>
               </div>
-              <div className="btnContainerMoney">
-                <button className="btnPrimaryMoney" onClick={handleClose}>
+              <div className="btnContainerWitdraw">
+                <button className="btnPrimaryWitdraw" onClick={handleClose}>
                   ยืนยันการฝากเงิน
                 </button>
-                <button className="btnPrimaryMoney" onClick={handleClose}>
+                <button className="btnPrimaryWitdraw" onClick={handleClose}>
                   ยกเลิก
                 </button>
               </div>
@@ -300,43 +300,43 @@ const WitdrawTa = () => {
         <Headers />
       </div>
 
-      <div className="main-AddMoneyPromo">
-        <div className="wrapperMoney">
+      <div className="main-Witdraw">
+        <div className="wrapperWitdraw">
           <div className="textFrame">
-            <div className="title-textDeposit font">ระบบถอนเงิน</div>
+            <div className="title-textWitdraw font">ระบบถอนเงิน</div>
           </div>
           <div className="form-container">
             <div className="form-inner">
 
               <form action="#" className="login">
 
-                <div className="fieldMoney font textinput input-container">
+                <div className="fieldWitdraw font textinput input-container">
                   <p className="textTitle font">ชื่อธนาคาร</p>
                   <input
                     type="text"
                     placeholder="ธนาคาร"
-                    value={depositamount}
-                    onChange={(e) => setdepositamount(e.target.value)}
+                    value={Witdrawamount}
+                    onChange={(e) => setWitdrawamount(e.target.value)}
                     className="input-with-icon"
                     required
                   />
                   <BsCoin className="input-icon" />
                 </div>
 
-                <div className="fieldDataDeposit font textinput input-container">
+                <div className="fieldDataWitdraw font textinput input-container">
                   <p className="textTitle font">ชื่อบัญชี</p>
                   <input
                     type="text"
                     placeholder="ชื่อ - นามสกุล"
-                    value={depositamount}
-                    onChange={(e) => setdepositamount(e.target.value)}
+                    value={Witdrawamount}
+                    onChange={(e) => setWitdrawamount(e.target.value)}
                     required
                     className="input-with-icon"
                   />
                   <BsCoin className="input-icon" />
                 </div>
 
-                <div className="fieldDataDeposit font textinput input-container">
+                <div className="fieldDataWitdraw font textinput input-container">
                   <p className="textTitle font">เลขที่บัญชี</p>
                   <input
                     type="Number"
@@ -349,7 +349,7 @@ const WitdrawTa = () => {
                   <BsCoin className="input-icon" />
                 </div>
 
-                <div className="fieldMoney font textinput input-container">
+                <div className="fieldWitdraw font textinput input-container">
                   <p className="textTitle font">จำนวนเงินที่ต้องการถอน</p>
                   <input
                     type="Number"
@@ -366,7 +366,7 @@ const WitdrawTa = () => {
                   <div className="btn-layer"> </div>
                   <input type="submit" value="เติมเงิน" onClick={handleClickOpen} />
                 </div>
-                <div className="money-link font">
+                <div className="Witdraw-link font">
                   พบปัญหา <a className="font" href="">ติดต่อฝ่ายบริการลูกค้า</a>
                 </div>
               </form>
@@ -386,28 +386,28 @@ const WitdrawTa = () => {
           <NavicationBar />
         </div>
 
-        <div className="imgWayDeposit">
-          <img className="scaltimgDeposit" src={imgwomen} id="wel-img-id" alt="" />
+        <div className="imgWayWitdraw">
+          <img className="scaltimgWitdraw" src={imgwomen} id="wel-img-id" alt="" />
         </div>
 
-        <div className="imgWayDeposit">
-          <img className="scaltimgDepositCircleI" src={circle1} alt="" />
+        <div className="imgWayWitdraw">
+          <img className="scaltimgWitdrawCircleI" src={circle1} alt="" />
         </div>
-        <div className="imgWayDeposit">
-          <img className="scaltimgDepositCircleV" src={circle1} alt="" />
+        <div className="imgWayWitdraw">
+          <img className="scaltimgWitdrawCircleV" src={circle1} alt="" />
         </div>
-        <div className="imgWayDeposit">
-          <img className="scaltimgDepositCircleVI" src={circle1} alt="" />
+        <div className="imgWayWitdraw">
+          <img className="scaltimgWitdrawCircleVI" src={circle1} alt="" />
         </div>
-        <div className="imgWayDeposit">
-          <img className="scaltimgDepositCircleII" src={circle2} alt="" />
+        <div className="imgWayWitdraw">
+          <img className="scaltimgWitdrawCircleII" src={circle2} alt="" />
         </div>
-        <div className="imgWayDeposit">
-          <img className="scaltimgDepositCircleIII" src={imgpanpa} alt="" />
+        <div className="imgWayWitdraw">
+          <img className="scaltimgWitdrawCircleIII" src={imgpanpa} alt="" />
         </div>
 
-        <div className="imgWayDeposit">
-          <img className="scaltimgDepositCircleIIII" src={imgpanpaII} alt="" />
+        <div className="imgWayWitdraw">
+          <img className="scaltimgWitdrawCircleIIII" src={imgpanpaII} alt="" />
         </div>
 
       </div>

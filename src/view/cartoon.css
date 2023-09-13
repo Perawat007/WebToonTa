@@ -216,3 +216,18 @@
         display: block;
     }
   }
+
+  @media only screen and (max-width: 512px) and (max-height: 926px) {
+    .imgWaymonterHomeIIIMobile {
+        width: 150px;
+        z-index: 100;
+        margin-top: 0px;
+        display: block;
+    }
+    
+    .scaltimgmonterHomeIIIMobile {
+        /*margin-left: 340%;*/
+        transform: translate(600%, 0%);
+        display: block;
+    }
+  }

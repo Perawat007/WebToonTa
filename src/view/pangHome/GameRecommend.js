@@ -162,141 +162,141 @@ function GameRecommend() {
 
         {
             id: 1, name: 'CowBoys VS Aliens', provider_name: 'CowBoys VS Aliens', data_gameid: 'CowBoys VS Aliens',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game8.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_1.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_CowboyVSAlien/index.html',
         },
         {
             id: 2, name: 'Fruity-Candy', provider_name: 'fruity-candy', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/a/a4.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_8.jpg',
             link: '',
         },
         {
             id: 3, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game11.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_3.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
         {
             id: 4, name: 'RoBo FARM', provider_name: 'RoBo FARM', data_gameid: 'RoBo FARM', data_name: 'RoBo FARM',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game12.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_4.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_RoboFarm/index.html?fbclid=IwAR3KxC_GlFFdk3D_LoB6NXGpt5KtLwysKqnfjUTZAMxsBbAFoI-OYvUyce0',
         },
 
         {
             id: 5, name: 'Cruise-Royale', provider_name: 'cruise-royale', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/a/a1.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_5.jpg',
             link: '',
         },
         {
-            id: 6, name: 'AmbDefender', provider_name: 'fortune-mouse', data_gameid: 'AMB', data_name: 'AMB',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/a/a2.png',
+            id: 6, name: 'AmbDefender', provider_name: 'AMBDEFENDER', data_gameid: 'AMBSLOT2', data_name: 'AMBSLOT2',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_6.jpg',
             link: '',
         },
         {
             id: 7, name: 'Go Gold Planet', provider_name: 'Go Gold Planet', data_gameid: 'Go Gold Planet', data_name: 'Go Gold Planet',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game10.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_2.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_GoGoldPlanet/index.html',
         },
         {
-            id: 8, name: 'Lucky Fishing', provider_name: 'AT05', data_gameid: 'CQ9', data_name: 'CQ9',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/a/a3.png',
+            id: 8, name: 'Lucky Fishing', provider_name: 'AT05', data_gameid: 'CQ9V2', data_name: 'CQ9V2',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_7.jpg',
             link: '',
         },
         {
             id: 9, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game11.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_3.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
 
         {
             id: 10, name: 'CowBoys VS Aliens', provider_name: 'CowBoys VS Aliens', data_gameid: 'CowBoys VS Aliens',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game8.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_1.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_CowboyVSAlien/index.html',
         },
         {
-            id: 11, name: 'Fruity-Candy', provider_name: 'fruity-candy', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/a/a4.png',
+            id: 11,  name: 'Fruity-Candy', provider_name: 'fruity-candy', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_8.jpg',
             link: '',
         },
         {
             id: 12, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game11.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_3.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
         {
             id: 13, name: 'RoBo FARM', provider_name: 'RoBo FARM', data_gameid: 'RoBo FARM', data_name: 'RoBo FARM',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game12.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_4.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_RoboFarm/index.html?fbclid=IwAR3KxC_GlFFdk3D_LoB6NXGpt5KtLwysKqnfjUTZAMxsBbAFoI-OYvUyce0',
         },
 
         {
             id: 14, name: 'Cruise-Royale', provider_name: 'cruise-royale', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/a/a1.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_5.jpg',
             link: '',
         },
         {
-            id: 15, name: 'AmbDefender', provider_name: 'fortune-mouse', data_gameid: 'AMB', data_name: 'AMB',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/a/a2.png',
+            id: 15, name: 'AmbDefender', provider_name: 'AMBDEFENDER', data_gameid: 'AMBSLOT2', data_name: 'AMBSLOT2',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_6.jpg',
             link: '',
         },
         {
             id: 16, name: 'Go Gold Planet', provider_name: 'Go Gold Planet', data_gameid: 'Go Gold Planet', data_name: 'Go Gold Planet',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game10.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_2.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_GoGoldPlanet/index.html',
         },
         {
-            id: 17, name: 'Lucky Fishing', provider_name: 'AT05', data_gameid: 'CQ9', data_name: 'CQ9',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/a/a3.png',
+            id: 17, name: 'Lucky Fishing', provider_name: 'AT05', data_gameid: 'CQ9V2', data_name: 'CQ9V2',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_7.jpg',
             link: '',
         },
         {
             id: 18, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game11.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_3.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
         {
             id: 19, name: 'CowBoys VS Aliens', provider_name: 'CowBoys VS Aliens', data_gameid: 'CowBoys VS Aliens',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game8.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_1.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_CowboyVSAlien/index.html',
         },
         {
             id: 20, name: 'Fruity-Candy', provider_name: 'fruity-candy', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/a/a4.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_8.jpg',
             link: '',
         },
         {
             id: 21, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game11.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_3.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
         {
             id: 22, name: 'RoBo FARM', provider_name: 'RoBo FARM', data_gameid: 'RoBo FARM', data_name: 'RoBo FARM',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game12.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_4.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_RoboFarm/index.html?fbclid=IwAR3KxC_GlFFdk3D_LoB6NXGpt5KtLwysKqnfjUTZAMxsBbAFoI-OYvUyce0',
         },
 
         {
             id: 23, name: 'Cruise-Royale', provider_name: 'cruise-royale', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/a/a1.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_5.jpg',
             link: '',
         },
         {
-            id: 24, name: 'AmbDefender', provider_name: 'fortune-mouse', data_gameid: 'AMB', data_name: 'AMB',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/a/a2.png',
+            id: 24, name: 'AmbDefender', provider_name: 'AMBDEFENDER', data_gameid: 'AMBSLOT2', data_name: 'AMBSLOT2',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_6.jpg',
             link: '',
         },
         {
             id: 25, name: 'Go Gold Planet', provider_name: 'Go Gold Planet', data_gameid: 'Go Gold Planet', data_name: 'Go Gold Planet',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game10.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_2.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_GoGoldPlanet/index.html',
         },
         {
-            id: 26, name: 'Lucky Fishing', provider_name: 'AT05', data_gameid: 'CQ9', data_name: 'CQ9',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/a/a3.png',
+            id: 26, name: 'Lucky Fishing', provider_name: 'AT05', data_gameid: 'CQ9V2', data_name: 'CQ9V2',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_7.jpg',
             link: '',
         },
         {
             id: 27, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game11.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_3.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
 
@@ -324,9 +324,9 @@ function GameRecommend() {
                             if (linkGame !== null) {
                                 const link = linkGame + `?token=${tokenEn}`;
                                 if (mobileOS === 'Android') {
-                                    window.open(link);
-                                } else {
                                     window.open(link, "_blank");
+                                } else {
+                                    window.open(link, "_self");
                                 }
                             }
                         }
@@ -346,9 +346,9 @@ function GameRecommend() {
                     .then((response) => {
                         const link = response.data.data.data.url;
                         if (mobileOS === 'Android') {
-                            window.open(link);
-                        } else {
                             window.open(link, "_blank");
+                        } else {
+                            window.open(link, "_self");
                         }
                     })
                     .catch(error => {
@@ -401,8 +401,8 @@ function GameRecommend() {
 
             <div className="testdata addfont">เกมใหม่มาแรง</div>
             <div className="features-game posRel mgt45 showGame">
-                <div className="game vGameList">
-                    <div className="list">
+                <div className=" game vGameList">
+                    <div className="list scallGame">
                         {/* <Slider {...settings}>
                             {gameType.map((row) => (
                                 <div key={row.name} className="box">
@@ -436,60 +436,75 @@ function GameRecommend() {
                             slidesPerView={8}
                             spaceBetween={5}
                             loop={true}
-
+               
 
                             breakpoints={{
                                 428: {
-                                    slidesPerView: 9.5,
+                                    slidesPerView: 3.2,
+                                    spaceBetween: 1,
+                                },
+                                414: {
+                                    slidesPerView: 3.2,
                                     spaceBetween: 1,
                                 },
                                 390: {
-                                    slidesPerView: 9.5,
+                                    slidesPerView: 3.2,
+                                    spaceBetween: 1,
+                                },
+                                280: {
+                                    slidesPerView: 2.8,
                                     spaceBetween: 1,
                                 },
                                 576: {
-                                    slidesPerView: 8,
+                                    slidesPerView: 4,
+                                    spaceBetween: 5,
                                 },
                                 768: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 5,
+                                },
+                                800: {
+                                    slidesPerView: 5,
+                                    spaceBetween: 5,
+                                },
+                                1000: {
                                     slidesPerView: 8,
                                     spaceBetween: 5,
-                                }
+                                },
+                                1200: {
+                                    slidesPerView: 8,
+                                    spaceBetween: 5,
+                                },
                             }}
 
                             modules={[FreeMode, Pagination, Navigation]}
-                            className="mySwiper2 scallGame"
+                            className="mySwiper2 "
                             navigation={false}
                         >
                             {gameType.map((row) => (
                                 <SwiperSlide>
-                                    <div key={row.name} className="box ">
+                                    <div key={row.id} className="box ">
                                         <div className="boxGame">
-                                            <div className="card-image"
-                                                role="img" alt="" style={{
-                                                    backgroundImage: `url(${row.img})`,
-                                                    transform: "scale(1)"
-                                                }}
+                                            <div className="card-image "
                                                 onClick={() => PlayGame(row.data_gameid)}>
                                             </div>
-                                            <img className='shadowImage ' src={row.img} alt='' style={{
+                                            <img className='shadowImage' src={row.img} alt='' style={{
                                                 cursor: 'pointer',
                                                 transform: "scale(1)"
                                             }} onClick={() => PlayGame(row.data_gameid)} />
                                         </div>
-
-                                        <span className="name">
+                                        {/* <span className="name">
                                             <span className='scallButtom'>{row.name}</span>
                                         </span>
-                                        <div className="provider-name scallButtom">{row.name}</div>
+                                        <div className="provider-name ">{row.name}</div> */}
                                         <div className="box-play">
-                                            <div className="button-play boxGoPlay scallButtom" data-gameid={row.providerCode} data-name={row.name}
+                                            <div className="button-play boxGoPlay " data-gameid={row.providerCode} data-name={row.name}
                                                 data-pid="191" onClick={() => PlayGame(row.provider_name, row.data_gameid, row.link)} >เล่น</div>
                                         </div>
                                     </div>
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-
                     </div>
                 </div>
             </div>

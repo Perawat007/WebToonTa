@@ -13,9 +13,7 @@
 
 .modalContainerLogin {
     width: 50%;
-    margin-top: 20%;
-    margin-left: 25%;
-    margin-bottom: 90%;
+    margin: 20% auto;
     justify-content: center;
     text-align: center;
     align-items: center;
@@ -90,26 +88,59 @@
     color: crimson;
 }
 
-.detailDialog {
+.detailDialogLogin {
     font-size: 20px;
     color: rgb(255, 255, 255);
 }
 
 
+@media screen and (max-width: 1024px) {
+
+    .overlayLogin {
+        width: 100%;
+        height: 100%
+    }
+
+    .modalContainerLogin {
+        width: 80%;
+        height: 55vh;
+        margin: 30% auto;
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .imgLogin {
+        width: 30%;
+        max-height: 150vh;
+    }
+
+    .headingLogin {
+        margin: 1rem;
+    }
+
+    .btnPrimaryLogin {
+        font-size: 20px;
+    }
+
+    .titleDialogLogin {
+        font-size: 25px;
+    }
+}
+
 @media screen and (max-width: 600px) {
 
     .overlayLogin {
         width: 100%;
-        height: 100%;
-        z-index: 12;
+        height: 100%
     }
 
     .modalContainerLogin {
-        width: 85%;
-        height: 40vh;
-        margin-top: 65%;
-        margin-left: 8%;
-        margin-bottom: 90%;
+        width: 80%;
+        height: 55vh;
+        margin: 50% auto;
+        display: flex;
         text-align: center;
         align-items: center;
         justify-content: center;
@@ -132,3 +163,37 @@
         font-size: 25px;
     }
 }
+
+@media only screen and (max-width: 280px) {
+    .titleDialogLogin {
+        position: absolute;
+        font-size: 19px;
+        color: crimson;
+        top: 1%;
+        left: 1%;
+    }
+
+    .detailDialogLogin {
+        font-size: 18px;
+        margin-top: 90%;
+        left: 1%;
+        color: rgb(255, 255, 255);
+    }
+    
+    .btnContainerLogin button {
+        width: 100%;
+        margin: .5rem;
+        scale: 70%;
+        margin-top: -20%;
+    }
+    
+    .imgLogin {
+        position: absolute;
+        transform: translate(0rem, -1.2rem);
+        width: 100px;
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;
+        z-index: 21;
+    }
+
+  }

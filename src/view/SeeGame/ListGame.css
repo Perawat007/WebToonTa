@@ -109,10 +109,11 @@ body.active-modal {
 
 .card-font {
     display: flex;
-    font-size: 19px;
-    transform: translate(40%, 50%);
+    font-size: 30px;
+
     font-family: Mitr;
     color: #ffffff;
+    justify-content: center;
 }
 
 .card-image img {

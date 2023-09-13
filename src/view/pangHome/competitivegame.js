@@ -3,6 +3,15 @@ import '../pangHome/test.css';
 import axios from '../../api/axios';
 import Slider from "react-slick";
 import "react-multi-carousel/lib/styles.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import "swiper/css/free-mode";
+import "bootstrap/dist/css/bootstrap.min.css"
+import { useSwiper, Swiper, SwiperSlide } from 'swiper/react';
+import SwiperCore from 'swiper/core';
+import 'swiper/swiper-bundle.css';
+import { Autoplay, Navigation, Pagination, FreeMode } from 'swiper';
 
 function Competitivegame() {
     const token = localStorage.getItem("token");
@@ -133,7 +142,7 @@ function Competitivegame() {
                     slidesToShow: 1,
                     slidesPerRow: 1,
                     centerMode: true,
-                    centerPadding: "590px",
+                    centerPadding: "10px",
                 },
             },
             {
@@ -142,17 +151,17 @@ function Competitivegame() {
                     slidesToShow: 1,
                     slidesPerRow: 1,
                     centerMode: true,
-                    centerPadding: "570px",
+                    centerPadding: "10px",
                 },
             },
 
             {
-                breakpoint: 390,
+                breakpoint: 512,
                 settings: {
                     slidesToShow: 1,
                     slidesPerRow: 1,
                     centerMode: true,
-                    centerPadding: "580px",
+                    centerPadding: "10px",
                 },
             },
 
@@ -162,16 +171,27 @@ function Competitivegame() {
                     slidesToShow: 1,
                     slidesPerRow: 1,
                     centerMode: true,
-                    centerPadding: "560px",
+                    centerPadding: "10px",
                 },
             },
+
+            {
+                breakpoint: 280,
+                settings: {
+                    slidesToShow: 1,
+                    slidesPerRow: 1,
+                    centerMode: true,
+                    centerPadding: "10px",
+                },
+            },
+
             {
                 breakpoint: 390,
                 settings: {
                     slidesToShow: 1,
                     slidesPerRow: 1,
                     centerMode: true,
-                    centerPadding: "660px",
+                    centerPadding: "10px",
                 },
             },
             {
@@ -181,7 +201,7 @@ function Competitivegame() {
                     slidesPerRow: 1,
                     centerMode: true,
                     speed: 500,
-                    centerPadding: "450px",
+                    centerPadding: "10px",
                 },
             },
         ],
@@ -189,63 +209,45 @@ function Competitivegame() {
 
     return (
         <>
-            <div className="product-upcoming mgt45">
-                <div className="vp-title testdataV addfont">ฟิเจอร์เกมที่น่าสนใจ</div>
-                <div className="casino-container fam-list" style={{ display: 'block' }}>
-                    <div className="slick-list draggable">
-                        <div className="slick-track">
+            <div style={{marginBottom : "5%"}} className="testdata addfont">ฟิเจอร์เกมที่น่าสนใจ</div>
+            <div className="product-upcoming mgt45 showADS" >
+                <div className="fam-list scallASD">
+                    <div className="slick-list">
+                        <div className="slick-track" >
                             <Slider {...settings}>
-                                <div className="lc-holder slick-slide slick-cloned" data-slick-index="-1" aria-hidden="true" style={{ width: '500px' }} tabIndex="-1">
-                                    <div >
-                                        <img className="img-responsive board imgGame"
-                                            src="https://websitehui.s3.ap-southeast-1.amazonaws.com/tiny_ad_banner/banner_for_promote_game_slot-1.png" alt='' 
-                                            onClick={() => PlayGame('fortune-ox', 'PGSOFT2', '')}/>
-                                    </div>
+
+                                <div className="lc-holder slick-slide">
+                                    <img className="imgGame shadowImage"
+                                        src="https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/InterestingGameIeatures/banner_for_promote_game_slot-1.jpg" alt=''
+                                        onClick={() => PlayGame('fortune-ox', 'PGSOFT2', '')} />
                                 </div>
-                                <div className="lc-holder slick-slide"
-                                    data-slick-index="0" aria-hidden="true" style={{ width: '548px' }}
-                                    role="tabpanel" id="slick-slide90" aria-describedby="slick-slide-control90">
-                                    <div>
-                                        <img className="img-responsive board imgGame"
-                                            src="https://websitehui.s3.ap-southeast-1.amazonaws.com/tiny_ad_banner/banner_for_promote_game_slot-2.png" alt='' 
-                                            onClick={() => PlayGame('lucky-piggy', 'PGSOFT2', '')}/>
-                                    </div>
+                                <div className="lc-holder slick-slide">
+                                    <img className="board imgGame"
+                                        src="https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/InterestingGameIeatures/banner_for_promote_game_slot-2.jpg" alt=''
+                                        onClick={() => PlayGame('lucky-piggy', 'PGSOFT2', '')} />
                                 </div>
                                 <div className="lc-holder slick-slide slick-current slick-active"
                                     data-slick-index="1" aria-hidden="false"
-                                    style={{ width: '548px' }} tabIndex="-1" role="tabpanel" id="slick-slide91"
+                                    tabIndex="-1" role="tabpanel" id="slick-slide91"
                                     aria-describedby="slick-slide-control91">
                                     <div>
-                                        <img className="img-responsive board imgGame"
-                                            src="https://websitehui.s3.ap-southeast-1.amazonaws.com/tiny_ad_banner/banner_for_promote_game_slot-3.png" alt='' 
-                                            onClick={() => PlayGame('Bounty BallOon', 'Bounty BallOon', 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_BountyBalloon/index.html')}/>
+                                        <img className="board imgGame"
+                                            src="https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/InterestingGameIeatures/banner_for_promote_game_slot-3.jpg" alt=''
+                                            onClick={() => PlayGame('Bounty BallOon', 'Bounty BallOon', 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_BountyBalloon/index.html')} />
                                     </div>
                                 </div>
                                 <div className="lc-holder slick-slide"
-                                    data-slick-index="2" aria-hidden="true" style={{ width: '548px' }} tabIndex="-1"
+                                    data-slick-index="2" aria-hidden="true" tabIndex="-1"
                                     role="tabpanel" id="slick-slide92" aria-describedby="slick-slide-control92">
                                     <div>
-                                        <img className="img-responsive board imgGame"
-                                            src="https://websitehui.s3.ap-southeast-1.amazonaws.com/tiny_ad_banner/banner_for_promote_game_slot-4.png" alt='' 
-                                            onClick={() => PlayGame('Lucky Bunny Gold', 'Lucky Bunny Gold', 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html')}/>
+                                        <img className="board imgGame"
+                                            src="https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/InterestingGameIeatures/banner_for_promote_game_slot-4.jpg" alt=''
+                                            onClick={() => PlayGame('Lucky Bunny Gold', 'Lucky Bunny Gold', 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html')} />
                                     </div>
                                 </div>
+
                             </Slider>
                         </div>
-                        <ul className="slick-dots" role="tablist">
-                            <li className="" role="presentation"><button type="button" role="tab"
-                                id="slick-slide-control90" aria-controls="slick-slide90" aria-label="1 of 4"
-                                tabIndex="0" aria-selected="true">1</button></li>
-                            <li role="presentation" className="slick-active"><button type="button" role="tab"
-                                id="slick-slide-control91" aria-controls="slick-slide91" aria-label="2 of 4"
-                                tabIndex="-1">2</button></li>
-                            <li role="presentation" className=""><button type="button" role="tab"
-                                id="slick-slide-control92" aria-controls="slick-slide92" aria-label="3 of 4"
-                                tabIndex="-1">3</button></li>
-                            <li role="presentation" className=""><button type="button" role="tab"
-                                id="slick-slide-control93" aria-controls="slick-slide93" aria-label="4 of 4"
-                                tabIndex="-1">4</button></li>
-                        </ul>
                     </div>
                 </div>
             </div>

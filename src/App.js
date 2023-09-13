@@ -1,7 +1,7 @@
 import './App.css';
 import React, { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Home from './view/Home';
+import Home from './view/HomePang/Home';
 import GameAll from './view/SeeGame/GameAll';
 import GameDogsila from './view/SeeGame/DogsilaGame/GameDogsila';
 import LoginBar from './api/Login/Login';
@@ -14,8 +14,11 @@ import BannerBox from './view/pangHome/Slider/Slider';
 import RegiterBarForm from './api/RegiterForm/RegiterForm';
 import { Link } from 'react-router-dom';
 import TestShow from './view/testshow';
+import HeadersII from './view/headersII';
 import PromotionShow from './view/PromotionAll/PromotionShow';
 import RewardShowBronze from './view/RewardClub/RewardShow';
+import GameAllType from './view/SeeGame/TypeGame/GameAllType';
+import DataUser from './api/DataUser/DataUser'
 function App() {
   const token = localStorage.getItem("token");
   const styles = {
@@ -39,10 +42,12 @@ function App() {
     if (pathSegments[1] === "Deposit") {
       window.location.href = "/Home";
     }
+    if (pathSegments[1] === "DataUser") {
+      window.location.href = "/Home";
+    }
   }
 
   return (
-    <div>
       <div className='Home-container'>
         <div>
           {(() => {
@@ -55,9 +60,15 @@ function App() {
                     <Route path="/:name" element={<GameAll />} />
                     <Route path="/GameDogsila" element={<GameDogsila />} />
                     <Route path="/Deposit" element={<AddMoneyPromotion />} />
+                    <Route path="/DataUser" element={<DataUser />} />
                     <Route path="/Witdraw" element={<WitdrawTa />} />
                     <Route path="/PromotionShow" element={<PromotionShow />} />
                     <Route path="/RewardShow/:nameCard" element={<RewardShowBronze />} />
+                    <Route path="/Game/:typegame" element={<GameAllType />} />
+                    <Route path="/Gameslot" element={<GameAllType />} />
+                    <Route path="/Gamefishing" element={<GameAllType />} />
+                    <Route path="/Gametable" element={<GameAllType />} />
+                    <Route path="/Gameskill" element={<GameAllType />} />
                   </Routes>
                 </>
               );
@@ -73,6 +84,10 @@ function App() {
                     <Route path="/Register" element={<RegiterBar />} />
                     <Route path="/PromotionShow" element={<PromotionShow />} />
                     <Route path="/RewardShow" element={<RewardShowBronze />} />
+                    <Route path="/Gameslot" element={<GameAllType />} />
+                    <Route path="/Gamefishing" element={<GameAllType />} />
+                    <Route path="/Gametable" element={<GameAllType />} />
+                    <Route path="/Gameskill" element={<GameAllType />} />
                   </Routes>
                 </>
               );
@@ -80,7 +95,12 @@ function App() {
           })()}
         </div>
       </div>
-      {/* <div className="bottom-nav font">
+  );
+}
+
+export default App;
+
+ {/* <div className="bottom-nav font">
         <Link to="/" className="nav-item font">
           <span className="icon-promotion"></span>
           .บ้าน
@@ -98,8 +118,3 @@ function App() {
           .ข้อมูล
         </Link>
       </div>*/}
-    </div>
-  );
-}
-
-export default App;

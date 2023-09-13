@@ -161,123 +161,123 @@ function GameShow() {
     const gameType = [
         {
             id: 1, name: 'Honey Trap of Diao Chan', provider_name: 'diaochan', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game1.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_1.jpg',
             link: '',
         },
         {
-            id: 2, name: 'Fortune Mouse', provider_name: 'fortune-mouse', data_gameid: 'PGSOFT2', data_name: 'PG Soft',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game2.png',
+            id: 2, name: 'Fortune Mouse', provider_name: 'fortune-mouse', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_2.jpg',
             link: '',
         },
         {
             id: 3, name: 'The Great IceScape', provider_name: 'the-great-icescape', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game3.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_3.jpg',
             link: '',
         },
         {
-            id: 4, name: 'Sweet Bonanza', provider_name: 'vs20fruitsw', data_gameid: 'vs20fruitsw', data_name: 'EGAMES',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game4.png',
+            id: 4, name: 'Sweet Bonanza', provider_name: 'vs20fruitsw', data_gameid: 'PRAGMATIC_SLOT', data_name: 'PRAGMATIC_SLOT',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_4.jpg',
             link: '',
         },
         {
             id: 5, name: 'Bounty BallOon', provider_name: 'Bounty BallOon', data_gameid: 'Bounty BallOon', data_name: 'Bounty BallOon',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game5.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_5.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_BountyBalloon/index.html',
         },
         {
             id: 6, name: 'Football Strike', provider_name: '602813', data_gameid: 'FUNKY', data_name: 'FUNKY',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game6.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_6.jpg',
             link: '',
         },
         {
             id: 7, name: 'Win Win Won', provider_name: 'win-win-won', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game7.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_7.jpg',
             link: '',
         },
         {
             id: 8, name: 'CowBoys VS Aliens', provider_name: 'CowBoys VS Aliens', data_gameid: 'CowBoys VS Aliens',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game8.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_8.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_CowboyVSAlien/index.html',
         },
         {
             id: 9, name: 'Lucky Neko', provider_name: 'lucky-neko', data_gameid: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game9.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_9.jpg',
             link: '',
         },
         {
             id: 10, name: 'Go Gold Planet', provider_name: 'Go Gold Planet', data_gameid: 'Go Gold Planet', data_name: 'Go Gold Planet',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game10.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_10.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_GoGoldPlanet/index.html',
         },
         {
             id: 11, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game11.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_11.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
         {
             id: 12, name: 'RoBo FARM', provider_name: 'RoBo FARM', data_gameid: 'RoBo FARM', data_name: 'RoBo FARM',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game12.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_12.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_RoboFarm/index.html?fbclid=IwAR3KxC_GlFFdk3D_LoB6NXGpt5KtLwysKqnfjUTZAMxsBbAFoI-OYvUyce0',
         },
 
         {
             id: 13, name: 'Honey Trap of Diao Chan', provider_name: 'diaochan', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game1.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_1.jpg',
             link: '',
         },
         {
-            id: 14, name: 'Fortune Mouse', provider_name: 'fortune-mouse', data_gameid: 'PGSOFT2', data_name: 'PG Soft',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game2.png',
+            id: 14, name: 'Fortune Mouse', provider_name: 'fortune-mouse', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_2.jpg',
             link: '',
         },
         {
             id: 15, name: 'The Great IceScape', provider_name: 'the-great-icescape', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game3.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_3.jpg',
             link: '',
         },
         {
-            id: 16, name: 'Sweet Bonanza', provider_name: 'vs20fruitsw', data_gameid: 'vs20fruitsw', data_name: 'EGAMES',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game4.png',
+            id: 16, name: 'Sweet Bonanza', provider_name: 'vs20fruitsw', data_gameid: 'PRAGMATIC_SLOT', data_name: 'PRAGMATIC_SLOT',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_4.jpg',
             link: '',
         },
         {
             id: 17, name: 'Bounty BallOon', provider_name: 'Bounty BallOon', data_gameid: 'Bounty BallOon', data_name: 'Bounty BallOon',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game5.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_5.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_BountyBalloon/index.html',
         },
         {
             id: 18, name: 'Football Strike', provider_name: '602813', data_gameid: 'FUNKY', data_name: 'FUNKY',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game6.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_6.jpg',
             link: '',
         },
         {
             id: 19, name: 'Win Win Won', provider_name: 'win-win-won', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game7.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_7.jpg',
             link: '',
         },
         {
             id: 20, name: 'CowBoys VS Aliens', provider_name: 'CowBoys VS Aliens', data_gameid: 'CowBoys VS Aliens',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game8.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_8.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_CowboyVSAlien/index.html',
         },
         {
             id: 21, name: 'Lucky Neko', provider_name: 'lucky-neko', data_gameid: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game9.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_9.jpg',
             link: '',
         },
         {
             id: 22, name: 'Go Gold Planet', provider_name: 'Go Gold Planet', data_gameid: 'Go Gold Planet', data_name: 'Go Gold Planet',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game10.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_10.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_GoGoldPlanet/index.html',
         },
         {
             id: 23, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game11.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_11.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
         {
             id: 24, name: 'RoBo FARM', provider_name: 'RoBo FARM', data_gameid: 'RoBo FARM', data_name: 'RoBo FARM',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/tall_game/game12.png',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_12.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_RoboFarm/index.html?fbclid=IwAR3KxC_GlFFdk3D_LoB6NXGpt5KtLwysKqnfjUTZAMxsBbAFoI-OYvUyce0',
         },
     ]
@@ -304,9 +304,9 @@ function GameShow() {
                             if (linkGame !== null) {
                                 const link = linkGame + `?token=${tokenEn}`;
                                 if (mobileOS === 'Android') {
-                                    window.open(link);
-                                } else {
                                     window.open(link, "_blank");
+                                } else {
+                                    window.open(link, "_self");
                                 }
                             }
                         }
@@ -326,9 +326,9 @@ function GameShow() {
                     .then((response) => {
                         const link = response.data.data.data.url;
                         if (mobileOS === 'Android') {
-                            window.open(link);
-                        } else {
                             window.open(link, "_blank");
+                        } else {
+                            window.open(link, "_self");
                         }
                     })
                     .catch(error => {
@@ -381,7 +381,7 @@ function GameShow() {
             <div className="testdata addfont">เกมติดอันดับ</div>
             <div className="features-game posRel mgt45 showGame">
                 <div className="game vGameList">
-                    <div className="list">
+                    <div className="list scallGame">
                         {/* <Slider {...settings}>
                             {gameType.map((row) => (
                                 <div key={row.name} className="box">
@@ -415,33 +415,50 @@ function GameShow() {
                             slidesPerView={8}
                             spaceBetween={5}
                             loop={true}
-               
+
 
                             breakpoints={{
                                 428: {
-                                    slidesPerView: 9.5,
+                                    slidesPerView: 3.2,
+                                    spaceBetween: 1,
+                                },
+                                414: {
+                                    slidesPerView: 3.2,
                                     spaceBetween: 1,
                                 },
                                 390: {
-                                    slidesPerView: 9.5,
+                                    slidesPerView: 3.2,
+                                    spaceBetween: 1,
+                                },
+                                280: {
+                                    slidesPerView: 2.8,
                                     spaceBetween: 1,
                                 },
                                 576: {
-                                    slidesPerView: 8,
+                                    slidesPerView: 4,
+                                    spaceBetween: 5,
                                 },
                                 768: {
+                                    slidesPerView: 4,
+                                    spaceBetween: 5,
+                                },
+                                1000: {
+                                    slidesPerView: 8,
+                                    spaceBetween: 5,
+                                },
+                                1200: {
                                     slidesPerView: 8,
                                     spaceBetween: 5,
                                 }
                             }}
 
                             modules={[FreeMode, Pagination, Navigation]}
-                            className="mySwiper2 scallGame"
+                            className="mySwiper2"
                             navigation={false}
                         >
                             {gameType.map((row) => (
                                 <SwiperSlide>
-                                    <div key={row.name} className="box ">
+                                    <div key={row.id} className="box ">
                                         <div className="boxGame">
                                             <div className="card-image"
                                                 role="img" alt="" style={{
@@ -456,10 +473,10 @@ function GameShow() {
                                             }} onClick={() => PlayGame(row.data_gameid)} />
                                         </div>
 
-                                        <span className="name">
+                                        {/* <span className="name">
                                             <span className='scallButtom'>{row.name}</span>
-                                        </span>
-                                        <div className="provider-name scallButtom">{row.name}</div>
+                                        </span> */}
+                                        {/* <div className="provider-name scallButtom">{row.name}</div> */}
                                         <div className="box-play">
                                             <div className="button-play boxGoPlay scallButtom" data-gameid={row.providerCode} data-name={row.name}
                                                 data-pid="191" onClick={() => PlayGame(row.provider_name, row.data_gameid, row.link)} >เล่น</div>

@@ -3,8 +3,8 @@ import '../pangHome/test.css';
 import axios from '../../api/axios';
 import Slider from "react-slick";
 import "react-multi-carousel/lib/styles.css";
-import vipimg from '../../img/home/02.png'
-import promo from '../../img/home/01.png'
+import vipimg from '../../img/home/002.png'
+import promo from '../../img/home/001.png'
 function SitiGame() {
     const [data, setData] = useState([])
     useEffect(() => {
@@ -57,6 +57,19 @@ function SitiGame() {
                 },
             },
             {
+                breakpoint: 280,
+                settings: {
+                    dots: true,
+                    className: "center",
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesPerRow: 2,
+                    centerMode: true,
+                    speed: 200,
+                    centerPadding: "600px",
+                },
+            },
+            {
                 breakpoint: 414,
                 settings: {
                     dots: true,
@@ -67,6 +80,20 @@ function SitiGame() {
                     centerMode: true,
                     speed: 200,
                     centerPadding: "560px",
+                },
+            },
+
+            {
+                breakpoint: 512,
+                settings: {
+                    dots: true,
+                    className: "center",
+                    infinite: true,
+                    slidesToShow: 1,
+                    slidesPerRow: 2,
+                    centerMode: true,
+                    speed: 200,
+                    centerPadding: "520px",
                 },
             },
 
@@ -87,9 +114,6 @@ function SitiGame() {
             {
                 breakpoint: 428,
                 settings: {
-                    dots: true,
-                    className: "center",
-                    infinite: true,
                     slidesToShow: 1,
                     slidesPerRow: 2,
                     centerMode: true,
@@ -126,29 +150,21 @@ function SitiGame() {
 
     return (
         <>
-            <div className="list">
-                <Slider {...settings}>
-                    <div className="lc-holder slick-slide"
-                        data-slick-index="0" aria-hidden="true"
-                        role="tabpanel" id="slick-slide90" aria-describedby="slick-slide-control90">
-                        <div style={{ marginRight: '10px' }} onClick={GoShowPromotion}>
-                            <img className="img-responsive board "
-                                src={vipimg} alt='' />
-                        </div>
-                    </div>
-
-                    <div className="lc-holder slick-slide"
-                        data-slick-index="0" aria-hidden="true"
-                        role="tabpanel" id="slick-slide90" aria-describedby="slick-slide-control90">
-                        <div style={{ marginRight: '10px' }}>
-                            <img className="img-responsive board "
-                                src={promo} alt='' />
-                        </div>
-                    </div>
-                </Slider>
+            <div className="bannerBoxMobile" >
+                <div style={{ marginRight: '10px' }} onClick={GoShowPromotion}>
+                    <img className="img-responsive cardAbs"
+                        src={vipimg} alt='' />
+                </div>
             </div>
 
-
+            <div className="bannerBoxMobile"
+                data-slick-index="0" aria-hidden="true"
+                role="tabpanel" id="slick-slide90" aria-describedby="slick-slide-control90">
+                <div style={{ marginRight: '10px' }}>
+                    <img className="img-responsive cardAbs"
+                        src={promo} alt='' />
+                </div>
+            </div>
         </>
     );
 }

@@ -5,9 +5,9 @@ import promotionimg from '../../img/home/022.png'
 import rewardsclubimg from '../../img/home/011.png'
 const Gamepromotion = () => {
 
-    useEffect(() => {
-
-    }, [])
+    const GoShowPromotion = () => {
+        window.location.href = `/PromotionShow`;
+    }
     return (
         <>
             <div className="d-dev">
@@ -15,21 +15,21 @@ const Gamepromotion = () => {
                     <div className="list">
                         <div className="vp-title addfont">โปรโมชั่นล่าสุด</div>
                         <div className="sub-img"><img
-                                src={promotionimg}
-                                alt="promotions" /></div>
+                            src={promotionimg}
+                            alt="promotions"
+                            className='shadowImage'
+                            onClick={GoShowPromotion} /></div>
                     </div>
                     <div className="list">
                         <div className="vp-title addfont">RewardsClub</div>
                         <div className="sub-img"><img
-                                src={rewardsclubimg}
-                                alt="promotions" /></div>
+                            src={rewardsclubimg}
+                            alt="promotions" 
+                            className='shadowImage'
+                            /></div>
                     </div>
                 </div>
             </div>
-            
-            <div className="chat-widget-container"></div>
-            <div id="lineLoad" className="hide"></div>
-            <div id="lineLoadOpt2" className="hide"></div>
         </>
     );
 }

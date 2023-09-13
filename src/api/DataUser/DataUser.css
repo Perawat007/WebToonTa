@@ -1,0 +1,298 @@
+/*==================================================
+  Nearby People CSS
+  ==================================================*/
+.containerBank {
+    width: 60%;
+    height:36%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(255, 255, 255);   
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(96, 0, 151);
+}
+
+.headerDeposit{
+    position: absolute;
+    width: 75%;
+    bottom: 60%;
+    left: 0;
+}
+
+.nearby-user {
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(96, 0, 151);
+    text-align: left;
+    margin: 1.5% auto;
+}
+
+.lineDeposit{
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    border-top: 3px solid rgb(96, 0, 151);
+}
+
+img .profile-photo-lg {
+    height: 80px;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.profile-link{
+    display: inline-block;
+    color: rgb(74, 0, 143);
+    margin-right: 5%;
+    position: relative;
+    margin-right: 0;
+}
+.profile-photo-lg{
+    width: 15%;
+    border-radius: 50%;
+    margin-bottom: 1%;
+}
+
+.rowDeposit {
+    width: 100%;
+    height: 100%;
+}
+.nameDeposit{
+    position: relative;
+    margin-left: 0;
+    color: rgb(74, 0, 143);
+}
+
+.text-mutedNumber{
+    position: relative;
+    margin-left: 0;
+    color: rgb(74, 0, 143);
+}
+
+.positionButton{
+    margin-left: 70%;
+
+}
+.buttonCopyTest{
+    height: 35px;
+    font-size: 16px;
+    width: 25%;
+    z-index: 2;
+    color: #ffffff;
+    background: -webkit-linear-gradient(right, #ce1bd4, #b020db, #a31bc5, #a118bd);
+    box-shadow: 3px 5px 15px black;
+    border-radius: 15px;
+    bottom: 15%;
+    position: absolute;
+}
+
+.boostaem{
+    position: relative;
+    width: 100%;
+    margin-top: 2% ;
+    margin: auto;
+}
+
+@media (min-width:768px) {
+    .boostaem{
+        /* -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75% */
+    }
+}
+
+@media (max-width: 1300px) {
+    .containerBank {
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .nearby-user {
+        position: relative;
+        width: 100%;
+        padding: 15px 0;
+        margin-bottom: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        border-style: solid;
+        border-color: rgb(96, 0, 151);
+    }  
+
+    .boostaem{
+        width: 100%;
+    }
+    
+
+    img .profile-photo-lg {
+        height: 80px;
+        width: 100%;
+        border-radius: 50%;
+    }
+    
+    .profile-link{
+        display: inline-block;
+        color: rgb(74, 0, 143);
+    }
+    .profile-photo-lg{
+        display: inline-block;
+        width: 15%;
+        border-radius: 50%;
+    }
+    
+    .rowDeposit {
+        width: 100%;
+        height: 100%;
+    }
+    .nameDeposit{
+        color: rgb(74, 0, 143);
+    }
+    
+    .text-mutedNumber{
+        color: rgb(74, 0, 143);
+    }
+    
+    .positionButton{
+        margin-left: 73%;
+        margin-top: 0%;
+    }
+    .buttonCopyTest{
+        position: absolute;
+        height: 35px;
+        font-size: 16px;
+        width: 23%;
+        bottom: 13%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .containerBank {
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .boostaem{
+        width: 100%;
+    }
+    
+    .nearby-user {
+        position: relative;
+        max-width: 1000px;
+        width: 90%;
+        padding: 15px 0;
+        margin-bottom: 10px;
+        border-radius: 20px;
+    }
+
+    img .profile-photo-lg {
+        height: 80px;
+        width: 50%;
+        border-radius: 50%;
+    }
+    
+    .profile-link{
+        display: inline-block;
+        color: rgb(74, 0, 143);
+        margin-right: 5%;
+        position: relative;
+        margin-right: 0;
+    }
+
+    .profile-photo-lg{
+        display: inline-block;
+        width: 15%;
+        border-radius: 50%;
+    }
+    
+    .rowDeposit {
+        width: 100%;
+        height: 100%;
+    }
+
+    .positionButton{
+        margin-left: 73%;
+        margin-top: 0%;
+    }
+    .buttonCopyTest{
+        position: absolute;
+        height: 35px;
+        font-size: 16px;
+        width: 23%;
+        bottom: 13%;
+    }
+}
+
+@media (max-width: 500px) {
+    .containerBank {
+        width: 100%;
+        height:43%;
+        margin-top: 3%;
+        margin-bottom: -3%;
+    }
+
+    .boostaem{
+        width: 100%;
+    }
+    
+    .nearby-user {
+        width: 90%;
+        padding: 10px 0;
+        margin-bottom: 0%;
+        border-radius: 20px;
+        text-align: left;
+    }
+
+    img .profile-photo-lg {
+        height: 80px;
+        width: 50%;
+        border-radius: 50%;
+    }
+    
+    .profile-link{
+        color: rgb(74, 0, 143);
+        font-size: 18px;
+    }
+
+    .profile-photo-lg{
+        display: inline-block;
+        width: 15%;
+        border-radius: 50%;
+    }
+    
+    .rowDeposit {
+        width: 100%;
+        height: 100%;
+    }
+    .nameDeposit{
+        font-size: 16px;
+    }
+    .text-mutedNumber{
+        font-size: 16px;
+    }
+
+    .positionButton{
+        margin-left: 73%;
+        margin-top: 0%;
+    }
+    .buttonCopyTest{
+        position: absolute;
+        height: 35px;
+        font-size: 16px;
+        width: 23%;
+        bottom: 13%;
+    }
+
+    .lineDeposit{
+        width: 100%;
+        margin-top: 10%;
+        margin-bottom: 1%;
+    }
+}

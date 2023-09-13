@@ -31,7 +31,7 @@ function Slider(props) {
 
   return (
     <>
-      {data && (
+       {data && (
         <div className="slider-container">
           <SliderContent activeIndex={activeIndex} sliderImage={data} />
           <Arrows
@@ -48,7 +48,7 @@ function Slider(props) {
             onclick={(activeIndex) => setActiveIndex(activeIndex)}
           />
         </div>
-      )}
+      )} 
     </>
   );
 }

@@ -172,6 +172,7 @@ const RegiterBar = () => {
       width: `25%`,
     };
     setStyle(newStyle);
+    setsetBank('ธนาคารไทยพาณิชย์')
   }, []);
 
   BootstrapDialogTitle.propTypes = {
@@ -183,6 +184,7 @@ const RegiterBar = () => {
     setShowPopupB(true);
   };
   const handleSubmitRegiter = () => {
+    console.log(bank);
     if (bank !== "" && bank !== undefined) {
       if (nameBank !== "" && nameBank !== undefined) {
         if (numberBank.length > 9 && numberBank.length < 14) {
@@ -226,8 +228,8 @@ const RegiterBar = () => {
     setShowPopupB(false);
   };
 
-  const handleChange = (selectedOption) => {
-    setsetBank(selectedOption.value);
+  const handleChange = (event) => {
+    setsetBank(event.target.value);
   };
 
   const handleSubmitA = async (e) => {
@@ -237,7 +239,7 @@ const RegiterBar = () => {
         const requestBody = {
           phoneNumber: phoneNumber,
         };
-        axios.post("https://relaxtimecafe.fun/otpRequest", requestBody, {
+        axios.post("otpRequest", requestBody, {
           headers: {
             "Content-Type": "application/json",
           },
@@ -349,9 +351,9 @@ const RegiterBar = () => {
             </div>
             <div className="modalRightRegiter">
               <div className="contentRegiter">
-                <p className="titleDialog font">ยืนยันการสมัคร</p>
+                <p className="titleDialogRegiter font">ยืนยันการสมัคร</p>
                 <br />
-                <h3 className="detailDialog font">
+                <h3 className="detailDialogRegiter font">
                   คุณต้องการสมัครสมาชิกตามนี้ใช่หรือไม่
                 </h3>
               </div>
@@ -376,9 +378,9 @@ const RegiterBar = () => {
             </div>
             <div className="modalRightRegiter">
               <div className="contentRegiter">
-                <p className="titleDialog font">เบอร์โทรไม่ถูกต้อง</p>
+                <p className="titleDialogRegiter font">เบอร์โทรไม่ถูกต้อง</p>
                 <br />
-                <h3 className="detailDialog font">
+                <h3 className="detailDialogRegiter font">
                   กรุณากรอกเบอร์โทรให้ถูกต้อง โดยเบอร์โทรศัพท์หลักแรก
                   ต้องเป็นเลข 0 และต่อจากนั้น จะเป็นเลข 9 ตัว เช่น 0XXXXXXXXX
                 </h3>
@@ -401,9 +403,9 @@ const RegiterBar = () => {
             </div>
             <div className="modalRightRegiter">
               <div className="contentRegiter">
-                <p className="titleDialog font">เบอร์โทรศัพท์มีผู้ใช้งานแล้ว</p>
+                <p className="titleDialogRegiter font">เบอร์โทรศัพท์มีผู้ใช้งานแล้ว</p>
                 <br />
-                <h3 className="detailDialog font">
+                <h3 className="detailDialogRegiter font">
                   กรุณากรอกเบอร์โทรใหม่ เบอร์โทรมีผู้ใช้งานแล้ว
                 </h3>
               </div>
@@ -425,10 +427,10 @@ const RegiterBar = () => {
             </div>
             <div className="modalRightRegiter">
               <div className="contentRegiter">
-                <p className="titleDialog font">แจ้งเตือนการกรอกบัญชี</p>
+                <p className="titleDialogRegiter font">แจ้งเตือนการกรอกบัญชี</p>
                 <br />
-                <h3 className="detailDialog font">
-                  คุณกรอก เลขบัญชี หรือ ชื่อบัญไม่ถูกต้อง กรุณากรอกใหม่
+                <h3 className="detailDialogRegiter font">
+                  คุณกรอก เลขบัญชี หรือ ชื่อบัญชีไม่ถูกต้อง กรุณากรอกใหม่
                 </h3>
               </div>
               <div className="btnContainerRegiter">
@@ -449,16 +451,16 @@ const RegiterBar = () => {
             </div>
             <div className="modalRightRegiter">
               <div className="contentRegiter">
-                <p className="titleDialog font">Username ไม่ถูกต้อง</p>
+                <p className="titleDialogRegiter font">Username ไม่ถูกต้อง</p>
                 <br />
-                <h3 className="detailDialog font">
+                <h3 className="detailDialogRegiter font">
                   กรุณากรอก Username ใหม่ โดย Username ต้องเป็น
                   ภาษาอังกฤษพิมพ์เล็ก
                 </h3>
-                <h3 className="detailDialog font">
+                <h3 className="detailDialogRegiter font">
                   เท่านั้น และมีจำนวน ไม่น้อยกว่า 8 ตัวอักษร และไม่มากกว่า 16
                 </h3>
-                <h3 className="detailDialog font">
+                <h3 className="detailDialogRegiter font">
                   ตัวอักษร เช่น toontawebgame
                 </h3>
               </div>
@@ -480,9 +482,9 @@ const RegiterBar = () => {
             </div>
             <div className="modalRightRegiter">
               <div className="contentRegiter">
-                <p className="titleDialog font">Username นี้มีผู้ใช้งานแล้ว</p>
+                <p className="titleDialogRegiter font">Username นี้มีผู้ใช้งานแล้ว</p>
                 <br />
-                <h3 className="detailDialog font">
+                <h3 className="detailDialogRegiter font">
                   กรุณากรอก Username ใหม่ Username นี้มีผู้ใช้งานแล้ว
                 </h3>
               </div>
@@ -504,9 +506,9 @@ const RegiterBar = () => {
             </div>
             <div className="modalRightRegiter">
               <div className="contentRegiter">
-                <p className="titleDialog font">Password ไม่ถูกต้อง</p>
+                <p className="titleDialogRegiter font">Password ไม่ถูกต้อง</p>
                 <br />
-                <h3 className="detailDialog font">
+                <h3 className="detailDialogRegiter font">
                   กรุณากรอก Password ให้เหมือนกันทั้ง 2 ช่อง
                 </h3>
               </div>
@@ -528,9 +530,9 @@ const RegiterBar = () => {
             </div>
             <div className="modalRightRegiter">
               <div className="contentRegiter">
-                <p className="titleDialog font">Password ไม่ถูกต้อง</p>
+                <p className="titleDialogRegiter font">Password ไม่ถูกต้อง</p>
                 <br />
-                <h3 className="detailDialog font">
+                <h3 className="detailDialogRegiter font">
                   กรุณาตั้ง Password 6 ตัวอักษรขึ้นไป
                 </h3>
               </div>
@@ -550,7 +552,7 @@ const RegiterBar = () => {
           <div className="modalContainerRegiter">
             <div className="modalRightRegiter">
               <div className="contentRegiter">
-                <p className="titleDialog font">ยืนยัน OTP</p>
+                <p className="titleDialogRegiter font">ยืนยัน OTP</p>
               </div>
               <div className="form-innerRegister">
                 <div className="DialogImg">
@@ -558,14 +560,16 @@ const RegiterBar = () => {
                 </div>
                 <form action="#" className="Register">
                   <div className="fieldDataRegister font textinputRegister input-containerRegister">
-                    <input
-                      type="text"
-                      placeholder="กรุณากรอก OTP"
-                      value={otpPin}
-                      onChange={(e) => setotppin(e.target.value)}
-                      required
-                      className="input-with-iconRegister"
-                    />
+                    <div className="wrapInputRegiter">
+                      <input
+                        type="text"
+                        placeholder="กรุณากรอก OTP"
+                        value={otpPin}
+                        onChange={(e) => setotppin(e.target.value)}
+                        required
+                        className="input-with-iconRegister"
+                      />
+                    </div>
                     <BsPhoneFill className="input-iconRegister" style={{ top: '22px' }} />
                     <div className="textOTP" style={{ color: '#FFFFFF' }}>
                       <h6>กรุณาใส่ OTP ของ Ref:.....</h6>
@@ -595,7 +599,7 @@ const RegiterBar = () => {
         </div>
       )}
 
-      <nav className="topBar-holder marginLogo">
+      <nav >
         <Headers />
       </nav>
 
@@ -642,22 +646,24 @@ const RegiterBar = () => {
                       <form className="Register" onSubmit={handleSubmitA}>
                         <div className="fieldDataRegister font textinputRegister input-containerRegister">
                           <p className="textTitleRegister font">เบอร์โทรศัพท์</p>
-                          <input
-                            type="text"
-                            placeholder="กรอกเบอร์โทรศัพท์"
-                            value={phoneNumber}
-                            onChange={(e) => setphoneNumber(e.target.value)}
-                            required
-                            className="input-with-iconRegister"
-                          />
-                          <BsPhoneFill className="input-iconRegister" />
+                          <div className="wrapInputRegiter">
+                            <input
+                              type="text"
+                              placeholder="กรอกเบอร์โทรศัพท์"
+                              value={phoneNumber}
+                              onChange={(e) => setphoneNumber(e.target.value)}
+                              required
+                              className="input-with-iconRegister"
+                            />
+                            <BsPhoneFill className="input-iconRegister" />
+                          </div>
                         </div>
                         <div className="fieldRegister btnsubmitRegister font">
                           <div className="btn-layerRegister"> </div>
                           <input type="submit" value="ยืนยัน" onClick={handleSubmitA} />
                         </div>
                         <div className="Register-link font">
-                          พบปัญหา <a>ติดต่อฝ่ายบริการลูกค้า</a>
+                           <a>พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                         </div>
                       </form>
                     </>
@@ -670,28 +676,32 @@ const RegiterBar = () => {
 
                         <div className="fieldDataRegister font textinputRegister input-containerRegister">
                           <p className="textTitleRegister font">รหัสผ่าน</p>
-                          <input
-                            type="password"
-                            placeholder="กรุณากรอก Password"
-                            value={password}
-                            onChange={(e) => setPwd(e.target.value)}
-                            required
-                            className="input-with-iconRegister"
-                          />
-                          <BsUnlockFill className="input-iconRegister" />
+                          <div className="wrapInputRegiter">
+                            <input
+                              type="password"
+                              placeholder="กรุณากรอก Password"
+                              value={password}
+                              onChange={(e) => setPwd(e.target.value)}
+                              required
+                              className="input-with-iconRegister"
+                            />
+                            <BsUnlockFill className="input-iconRegister" />
+                          </div>
                         </div>
 
                         <div className="fieldDataRegister font textinputRegister input-containerRegister">
                           <p className="textTitleRegister font">ยืนยันรหัสผ่าน</p>
-                          <input
-                            type="password"
-                            placeholder="กรุณายื่นยัน Password"
-                            value={Confrimpassword}
-                            onChange={(e) => setPwdConfrim(e.target.value)}
-                            required
-                            className="input-with-iconRegister"
-                          />
-                          <BsUnlockFill className="input-iconRegister" />
+                          <div className="wrapInputRegiter">
+                            <input
+                              type="password"
+                              placeholder="กรุณายืนยัน Password"
+                              value={Confrimpassword}
+                              onChange={(e) => setPwdConfrim(e.target.value)}
+                              required
+                              className="input-with-iconRegister"
+                            />
+                            <BsUnlockFill className="input-iconRegister" />
+                          </div>
                         </div>
 
                         <div className="buttomDown">
@@ -700,7 +710,7 @@ const RegiterBar = () => {
                           </div>
                         </div>
                         <div className="Register-link font">
-                          พบปัญหา <a>ติดต่อฝ่ายบริการลูกค้า</a>
+                           <a>พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                         </div>
                       </form>
                     </>
@@ -710,38 +720,51 @@ const RegiterBar = () => {
                   return (
                     <>
                       <form className="login" onSubmit={handleConfrimSubmit}>
-                        <div style={{ zIndex: 5 }}>
+                        {/* <div style={{ zIndex: 5 }}>
                           <Select
                             options={usedforOptions}
                             onChange={handleChange}
                             isSearchable={false} // Enable search functionality
                           />
+                        </div> */}
+                        <div className="fieldDataRegister font textinputRegister input-containerRegister">
+                          <select className="lang_menu font" value={bank} onChange={handleChange}>
+                            {usedforOptions.map((option) => (
+                              <option key={option.value} value={option.value} data-imagesrc={option.imgPath}>
+                                {option.label}
+                              </option>
+                            ))}
+                          </select>
                         </div>
 
                         <div className="fieldDataRegister font textinputRegister input-containerRegister">
                           <p className="textTitleRegister font">ชื่อบัญชีธนาคาร</p>
-                          <input
-                            type="text"
-                            placeholder="กรุณากรอก ชื่อบัญชี"
-                            value={nameBank}
-                            onChange={(e) => setNameBank(e.target.value)}
-                            required
-                            className="input-with-iconRegister"
-                          />
-                          <BsPhoneFill className="input-iconRegister" />
+                          <div className="wrapInputRegiter">
+                            <input
+                              type="text"
+                              placeholder="กรุณากรอก ชื่อบัญชี"
+                              value={nameBank}
+                              onChange={(e) => setNameBank(e.target.value)}
+                              required
+                              className="input-with-iconRegister"
+                            />
+                            <BsPhoneFill className="input-iconRegister" />
+                          </div>
                         </div>
 
                         <div className="fieldDataRegister font textinputRegister input-containerRegister">
                           <p className="textTitleRegister font">เลขบัญชีธนาคาร</p>
-                          <input
-                            type="number"
-                            placeholder="กรุณากรอก เลขที่บัญชี"
-                            value={numberBank}
-                            onChange={(e) => setNumberBank(e.target.value)}
-                            required
-                            className="input-with-iconRegister"
-                          />
-                          <BsUnlockFill className="input-iconRegister" />
+                          <div className="wrapInputRegiter">
+                            <input
+                              type="number"
+                              placeholder="กรุณากรอก เลขที่บัญชี"
+                              value={numberBank}
+                              onChange={(e) => setNumberBank(e.target.value)}
+                              required
+                              className="input-with-iconRegister"
+                            />
+                            <BsUnlockFill className="input-iconRegister" />
+                          </div>
                         </div>
 
                         <div className="buttomDown">
@@ -751,7 +774,7 @@ const RegiterBar = () => {
                         </div>
 
                         <div className="Register-link font">
-                          พบปัญหา <a>ติดต่อฝ่ายบริการลูกค้า</a>
+                           <a>พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                         </div>
                       </form>
                     </>

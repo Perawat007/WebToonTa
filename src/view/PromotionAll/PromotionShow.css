@@ -9,20 +9,21 @@
 	        box-sizing: border-box;
 }
 .main-Promotion {
-    min-height: 120vh;
+    min-height: 140vh;
     min-width: 100vw;
     overflow-x: hidden;
-    background: linear-gradient(to bottom, #7110af 40%, #2a0bd6 100%);
     align-items: center;
 }
 
 .listPromotion {
+	position: relative;
     margin-top: 6%;
 }
 
 .ulPromotion {
     list-style-type: none;
-    width: 800px;
+	max-width: 800px;
+	width: 100%;
 }
 
 .h3Promotion {
@@ -51,10 +52,11 @@
 
 
 .wrapper{
+	position: relative;
 	width: 1500px;
 	height: 100%;
 	margin: 0px auto 0;
-	margin-top: 7%;
+	margin-top: 3%;
 }
 
 .wrapper .title{
@@ -79,15 +81,16 @@
 }
 
 .wrapper .tabs_wrap ul li{
-	width: 135px;
+	width: 100%;
     text-align: center;
-    background: #e9ecf1;
+    background: #37006b;
     border-right: 1px solid #c1c4c9;
-    padding: 13px 15px;
+    padding: 15px 0px;
 	cursor: pointer;
 	-webkit-transition: all 0.2s ease;
 	-o-transition: all 0.2s ease;
 	transition: all 0.2s ease;
+	margin: auto;
 }
 
 .wrapper .tabs_wrap ul li:first-child{
@@ -104,7 +107,7 @@
 .wrapper .tabs_wrap ul li:hover,
 .wrapper .tabs_wrap ul li.active{
 	background: #8c00ff;
-	color: #fff;
+	color: #ffffff;
 
 }
 
@@ -178,14 +181,28 @@
 	margin-top: -5%;
 }
 
-@media (max-width: 480px) {
-    .listPromotion {
-        margin-top: 35%;
-        margin-left: -4%;
+@media (max-width: 1500px) {
+	.wrapper{
+		width: 100%;
+		height: 100%;
+		margin:4% auto;
+	}
+
+	.main-Promotion {
+		min-height: 170vh;
+	}
+	
+}
+
+
+@media (max-width: 1000px) {
+	.listPromotion {
+        margin-top:2%;
     }
     
     .ulPromotion {
-        width: 400px;
+        width: 90%;
+		margin: auto;
     }
     
     .h3Promotion {
@@ -207,15 +224,69 @@
     }
 
 	.wrapper{
-		width: 420px;
+		width: 100%;
 		height: 100%;
-		margin: 15px auto 0;
-		margin-top: 30%;
-		margin-left: -2%;
+		margin:18% auto;
 	}
 
 	.containerPromotion{
+
+		margin-top: -20%;
+	}
+	.wrapper .tabs_wrap ul li{
+		margin: auto;
+	}
+
+	.main-Promotion {
+		min-height: 170vh;
+	}
+	
+}
+
+
+@media (max-width: 480px) {
+    .listPromotion {
+        margin-top:2%;
+    }
+    
+    .ulPromotion {
+        width: 90%;
+		margin: auto;
+    }
+    
+    .h3Promotion {
+    
+        margin-top: 10px;
+    }
+    
+    .liPromotion img {
+        margin: 0 15px 0 0;
+        margin-top: 10px;
+    }
+    
+    .liPromotion p {
+        font: 200 12px/1.5
+    }
+    
+    .liPromotion {
+        padding: 2px;
+    }
+
+	.wrapper{
 		width: 100%;
-		height: 45vh;
+		height: 100%;
+		margin:20% auto;
+	}
+
+	.containerPromotion{
+
+		margin-top: -20%;
+	}
+	.wrapper .tabs_wrap ul li{
+		margin: auto;
+	}
+
+	.main-Promotion {
+		min-height: 170vh;
 	}
 }

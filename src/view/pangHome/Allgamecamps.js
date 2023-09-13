@@ -3,7 +3,7 @@ import '../pangHome/Modal.css';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import dogzilaLogo from "../../img/logo_dogzilla_ver_color_font.png"
 const Allgamecamps = () => {
     useEffect(() => {
         //DataGet();
@@ -285,7 +285,12 @@ const Allgamecamps = () => {
                             <div className="footer-prov-list slick-slide" data-slick-index="41" aria-hidden="true"
                                 tabIndex="-1">
                                 <img className="img-responsive"
-                                    src="https://siam855-pub.s3.ap-southeast-1.amazonaws.com/frontend/web/provider-big/Bottom-Icon-34.png?v=27" alt='Slide 2' />
+                                    src="https://siam855-pub.s3.ap-southeast-1.amazonaws.com/frontend/web/provider-big/Bottom-Icon-34.png?v=27" alt='' />
+                            </div>
+                            <div className="footer-prov-list slick-slide" data-slick-index="42" aria-hidden="true"
+                                tabIndex="-1">
+                                <img className="img-responsive"
+                                    src={dogzilaLogo} alt='Slide 2' style={{width : "50%" , top : "-5%"}}/>
                             </div>
                         </Slider>
                     </div>
