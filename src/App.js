@@ -19,6 +19,7 @@ import PromotionShow from './view/PromotionAll/PromotionShow';
 import RewardShowBronze from './view/RewardClub/RewardShow';
 import GameAllType from './view/SeeGame/TypeGame/GameAllType';
 import DataUser from './api/DataUser/DataUser'
+import GameTypeSlot from './view/SeeGame/SlotGame/GameTypeSlot';
 function App() {
   const token = localStorage.getItem("token");
   const styles = {
@@ -65,7 +66,7 @@ function App() {
                     <Route path="/PromotionShow" element={<PromotionShow />} />
                     <Route path="/RewardShow/:nameCard" element={<RewardShowBronze />} />
                     <Route path="/Game/:typegame" element={<GameAllType />} />
-                    <Route path="/Gameslot" element={<GameAllType />} />
+                    <Route path="/Gameslot" element={<GameTypeSlot />} />
                     <Route path="/Gamefishing" element={<GameAllType />} />
                     <Route path="/Gametable" element={<GameAllType />} />
                     <Route path="/Gameskill" element={<GameAllType />} />
@@ -84,7 +85,7 @@ function App() {
                     <Route path="/Register" element={<RegiterBar />} />
                     <Route path="/PromotionShow" element={<PromotionShow />} />
                     <Route path="/RewardShow" element={<RewardShowBronze />} />
-                    <Route path="/Gameslot" element={<GameAllType />} />
+                    <Route path="/Gameslot" element={<GameTypeSlot/>} />
                     <Route path="/Gamefishing" element={<GameAllType />} />
                     <Route path="/Gametable" element={<GameAllType />} />
                     <Route path="/Gameskill" element={<GameAllType />} />

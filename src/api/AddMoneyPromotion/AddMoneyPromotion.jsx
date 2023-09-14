@@ -12,7 +12,6 @@ import imgpanpa from "../../img/panda1.png"
 import imgpanpaII from "../../img/panda2.png"
 import circle1 from "../../img/circle1.png"
 import circle2 from "../../img/circle2.png"
-import { Link } from "react-router-dom";
 import Headers from "../../view/headersII";
 import Footer from "../../view/pangHome/FooTer/Footer";
 import Allgamecamps from "../../view/pangHome/Allgamecamps";
@@ -79,7 +78,7 @@ const AddMoneyPromotion = () => {
   let PromotionList = [];
 
   let baseURL = 'https://relaxtimecafe.fun/';
-  //const baseURL: 'http://localhost:5000/';
+  //const baseURL = 'http://localhost:5000/';
 
   useEffect(() => {
     if (token) {
@@ -502,7 +501,7 @@ const AddMoneyPromotion = () => {
 
 
                 <div className="fieldDataDeposit font textinput input-container">
-                  <p className="textTitle font">โปรโมชั่น</p>
+                  <p className="textTitle font">กรุณาเลือกโปรโมชั่น</p>
                   <select className="lang_menu font" value={selectedValue} onChange={selectElement}>
                     {datapromotion.map((option) => (
                       <option key={option.id} >
@@ -569,7 +568,7 @@ const AddMoneyPromotion = () => {
                   <input type="submitDeposit" value="เติมเงิน" onClick={() => handleSubmitdeposit()} />
                 </div>
                 <br />
-                <div className="money-link membermagin">
+                <div className="money-link ">
                   <a className="font" href=""> พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                 </div>
               </form>

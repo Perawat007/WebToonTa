@@ -49,6 +49,48 @@
     border-radius: 8px;
 }
 
+.modalContainerDataProfile {
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+    margin-top: 15%;
+    display: flex;
+    justify-content: center;
+}
+
+.btnContainerDataUsers {
+    display: flex;
+    padding: 1rem 1rem;
+}
+
+.btnContainerDataUsers button {
+    width: 70%;
+    margin: auto;
+    padding: 16px 0;
+    border: 1px solid #411b57;
+    z-index: 20;
+}
+
+.fontcolor{
+    margin: auto;
+    color: #fff;
+}
+.btnPrimaryData{
+    border-radius: 50px;
+    background: linear-gradient(to right, #b71bff 40%, #a200ff 100%);
+    color: white;
+    font-size: 25px;
+}
+
+.modalData {
+    width: 100%;
+}
+.contentData{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
 
 .imgHome {
     width: 250px;
@@ -216,8 +258,8 @@
         height: 100%;
         z-index: 12;
         text-align: center;
-        overflow-x:hidden;
-        overflow-y :hidden;
+        overflow-x: hidden;
+        overflow-y: hidden;
         touch-action: pan-y;
         touch-action: auto;
     }
@@ -242,8 +284,8 @@
 
 
     .btnContainerRe button {
-        position:relative;
-        width: 70%; 
+        position: relative;
+        width: 70%;
         margin-left: -21%;
         margin-top: -20%;
         padding: 16px 0;
@@ -252,5 +294,12 @@
         /* color: #ffffff; */
     }
 
-
+    .modalContainerDataProfile {
+        max-width: 550px;
+        width: 100%;
+        margin: auto;
+        margin-top: 25%;
+        display: flex;
+        justify-content: center;
+    }    
 }

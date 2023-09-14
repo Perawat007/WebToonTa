@@ -22,7 +22,7 @@
     display: inline-block;
     margin-right: 10px;
     width: calc(100%/8.5 - 10px);
-    background-size: 150%;
+    background-size: 100%;
     background-position: center
 }
 
@@ -39,6 +39,43 @@
     grid-template-columns: repeat(6,1fr)
 }
 
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
+.features-game .game .listSlot {
+    white-space: nowrap;
+    overflow: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    display: block
+}
+
+.features-game .game .listSlot .holder {
+    width: 100%;
+    white-space: normal;
+    display: inline-grid;
+    flex-wrap: wrap;
+    gap: 15px;
+    grid-template-columns: repeat(6,1fr)
+}
+
+.features-game .v-gameshow.game .listSlot .box,.features-game .v-inswin.game .listSlot .box {
+    display: inline-block;
+    margin-right: 10px;
+    width: calc(100%/8.5 - 10px);
+    background-size: 100%;
+    background-position: center
+}
+
+.game-show.features-game .v-gameshow.game .listSlot,.game-inswin.features-game .v-inswin.game .listSlot {
+    overflow-x: scroll
+}
+
+.game .listSlot,.game .app_list {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(5,1fr)
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------*/
 .game .box {
     position: relative;
     vertical-align: top;
@@ -47,18 +84,6 @@
     cursor: pointer;
     background-size: cover;
     background-position: center
-}
-
-.features-game .v-gameshow.game .list .box,.features-game .v-inswin.game .list .box {
-    display: inline-block;
-    margin-right: 10px;
-    width: calc(100%/8.5 - 10px);
-    background-size: 150%;
-    background-position: center
-}
-
-.game-show.features-game .v-gameshow.game .list,.game-inswin.features-game .v-inswin.game .list {
-    overflow-x: scroll
 }
 
 .game-show .v-gameshow.game .box .image,.game-inswin .v-inswin.game .box .image {
@@ -481,6 +506,11 @@
     .features-game .game .list .holder,.game .list,.game .app_list {
         grid-template-columns: repeat(2,1fr)
     }
+
+    .game .listSlot,.game .app_list {
+        grid-template-columns: repeat(2,1fr)
+    }
+    
 }
 
 @media screen and (max-width:470px) {

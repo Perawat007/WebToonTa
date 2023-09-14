@@ -172,8 +172,7 @@ function Home() {
           </div>
         </div>
       )}
-
-
+      
       <nav >
         <div id="preloder">
           <div className="loader"></div>

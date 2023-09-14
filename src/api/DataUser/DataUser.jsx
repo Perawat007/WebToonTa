@@ -47,7 +47,7 @@ const customModalStyles = {
   },
 };
 
-const AddMoneyPromotion = () => {
+const DataUser = () => {
   const [iduse, setidUser] = useState();
   const [depositamount, setdepositamount] = useState();
   const [accountNumber, setaccountNumber] = useState("");
@@ -56,6 +56,7 @@ const AddMoneyPromotion = () => {
   const [showPopupA, setShowPopup] = useState(false);
   const token = localStorage.getItem("token");
   const user = localStorage.getItem("user");
+  const credit = localStorage.getItem("credit");
   const [data, setData] = useState([]);
   const [open, setOpen] = React.useState(false);
   const [openDialogdialog, setOpenDialogdialog] = React.useState(false);
@@ -89,28 +90,7 @@ const AddMoneyPromotion = () => {
           })
           .then((response) => {
             setidUser(response.data.data[0]);
-
-            axios
-              .get(`post/getDepositaccount/TOONTA`)
-              .then((response) => {
-                setaccountNumber(response.data.data[0].accountNumber);
-                setaccountName(response.data.data[0].accountName);
-
-                for (let i = 0; i < response.data.data.length; i++) {
-                  depositaccountlite.push({
-                    value: response.data.data[i].bankName,
-                    label: response.data.data[i].bankName,
-                    imgPath: response.data.data[i].imgbank,
-                    name: response.data.data[i].accountName,
-                    number: response.data.data[i].accountNumber,
-                  });
-                  setdepositaccount(depositaccountlite);
-                }
-                console.log(depositaccountlite);
-              })
-              .catch((error) => {
-                console.log("error", error);
-              });
+            console.log(response.data.data[0]);
           })
           .catch((error) => {
             localStorage.removeItem("token");
@@ -344,61 +324,51 @@ const AddMoneyPromotion = () => {
         </div>
       )}
 
-      <div>
-        <Headers />
-      </div>
-      <div className="wrapperMoney">
-        <div className="containerBank">
-          <div className="col-md-8">
-            <div className="people-nearby">
-              <div className="nearby-user">
-                <div className="lineDeposit">
-                  <div className="headerDeposit">
-                    <img
-                      src="https://asset.cloudigame.co/build/admin/img/wt_theme/ezc/payment-logo-scb.png"
-                      alt="user"
-                      className="profile-photo-lg"
-                    />
-                    <h5 className="profile-link font">ธนาคารไทยพาณิชย์</h5>
-                  </div>
-                </div>
-                <div className="col-md-7 col-sm-7">
-                  <div>
-                    <h5 className="nameDeposit font">นาย พีรวัส ขวัญแก้ว</h5>
-                  </div>
-                  <div>
-                    <h5 className="text-mutedNumber font">123-4-56789-0</h5>
-                  </div>
-                </div>
-                <div className="positionButton">
-                  <button className="buttonCopyTest font">คัดลอก</button>
-                </div>
+      <div className="wrapperData">
+        <div className="containerPor">
+          <div className="containerProfile">
+            <div className="profile-card-1">
+              <div className="img">
+                <img src={cartoon} />
               </div>
+              <div className="mid-section">
+              <div className="titleData font">ข้อมูลบัญชี</div>
+                <div className="nameData font">username : {user}</div>
+                <div className="description font">เปลี่ยนรหัสผ่าน <a className="font" href="#">คลิก</a></div>
 
-              <div className="nearby-user">
-                <div className="lineDeposit">
-                  <div className="headerDeposit">
-                    <img
-                      src="https://asset.cloudigame.co/build/admin/img/wt_theme/ezc/payment-logo-scb.png"
-                      alt="user"
-                      className="profile-photo-lg"
-                    />
-                    <h5 className="profile-link font">ธนาคารไทยพาณิชย์</h5>
+                <div className="line"></div>
+                <div className="stats">
+                  <div className="stat font">{credit}
+                    <h4 className="subtext font">ยอด credit</h4>
+                  </div>
+                  <div className="stat font">0
+                    <h4 className="subtext font">ยอดที่สามารถถอนได้</h4>
                   </div>
                 </div>
-                <div className="col-md-7 col-sm-7">
-                  <div>
-                    <h5 className="nameDeposit font">นาย พีรวัส ขวัญแก้ว</h5>
+                <div className="nearby-userData">
+                  <div >
+                    <div className="headerUser">
+                      <img
+                        src="https://asset.cloudigame.co/build/admin/img/wt_theme/ezc/payment-logo-scb.png"
+                        alt="user"
+                        className="profile-photo-lgUser"
+                      />
+                    </div>
                   </div>
-                  <div>
-                    <h5 className="text-mutedNumber font">123-4-56789-0</h5>
+                  <div className="positiontext">
+                    <div>
+                      <h5 className="nameUser font">นาย พีรวัส ขวัญแก้ว</h5>
+                    </div>
+                    <div>
+                      <h5 className="text-mutedNumberUser font">123-4-56789-0</h5>
+                    </div>
                   </div>
                 </div>
-                <div className="positionButton">
-                  <button className="buttonCopyTest font">คัดลอก</button>
+                <div className="positiontextsubpost">
+                  <h4 className="font colorfont">*ต้องการเปลี่ยนบัญชี กรุณา</h4>
+                  <h4 className="font colorfont">ติดต่อฝ่ายบริการลูกค้า</h4>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
@@ -406,4 +376,4 @@ const AddMoneyPromotion = () => {
     </>
   );
 };
-export default AddMoneyPromotion;
+export default DataUser;

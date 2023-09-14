@@ -157,13 +157,13 @@ function GamePlay() {
                 </div>
             )}
             <React.Fragment>
+            <div className="card-font">รายชื่อเกม</div>
                 <Container maxWidth="xl" sx={{ p: 3 }}>
                     <Box display={'flex'}>
                         <Typography variant="h6">
                             <a style={h4Style} className='grount font' onClick={BackPang}>ย้อนกลับ</a>
                         </Typography>
                     </Box>
-                    <div className="card-font">รายชื่อเกม</div>
                     <br />
                     <div className=" game vGameList">
                         <div className="list">

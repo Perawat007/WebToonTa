@@ -8,31 +8,25 @@
 .font {
     font-family: Mitr;
 }
-
+Deposit
 ::selection {
     background: #fa4299;
     color: #fff;
 }
 
-.displayFooter {
-    position: absolute;
+.displayFooterWitdraw {
     display: block;
-    z-index: 4;
+    z-index: 5;
 }
 
-.main-Witdraw {
+.main-AddWitdraw {
     min-width: 100vw;
-    overflow-x: hidden;
-    background: linear-gradient(to bottom, #7110af 40%, #2a0bd6 100%);
-    align-items: center;
 }
 
 .wrapperWitdraw {
     overflow: hidden;
-    max-width: 1800px;
-    max-height: 1000px;
     width: 50%;
-    height: 90%;
+    height: 550px;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -42,18 +36,17 @@
     border-radius: 30px;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
     overflow-x: hidden;
-    overflow-y: hidden;
     margin: 9rem auto;
     position: relative;
-    /* margin-top: 30%;*/
+    margin-top: 4%;
 }
 
-.wrapperWitdraw .title-text {
+.wrapperWitdraw .title-textWitdraw {
     display: flex;
-    width: 200%;
+    width: 100%;
 }
 
-.wrapperWitdraw .title {
+.wrapperWitdraw .titleWitdraw {
     width: 50%;
     font-size: 35px;
     font-weight: 600;
@@ -61,7 +54,7 @@
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.wrapperWitdraw .slide-controls {
+.wrapperWitdraw .slide-controlsWitdraw {
     position: relative;
     display: flex;
     height: 50px;
@@ -73,37 +66,37 @@
     border-radius: 30px;
 }
 
-.textTitle {
+.textTitleWitdraw {
     width: 80%;
     font-size: 17px;
     font-weight: 400;
     text-align: left;
     color: #930bbd;
     margin: 5px 0 2px 0;
-    margin-left: 22%;
+    margin-left: 20%;
 }
 
-.textinputWitdarw {
+.textinputWitdraw {
     margin: 5px 0 50px 0;
 }
 
 
-.form-inner form .fieldWitdraw input::placeholder {
+.form-innerWitdraw form .fieldWitdraw input::placeholder {
     color: #ff00ff;
     transition: all 0.3s ease;
 }
 
 
 .textFrameWitdraw {
-    background-color: #930bbd;
+    background: -webkit-linear-gradient(left, #0148a5, #135199, #1e8cf3, #00b1e7);
     border-radius: 30px;
-    width: 40%;
-    height: 60px;
+    width: 50%;
+    height: 50px;
     text-align: center;
     justify-content: center;
     align-items: center;
-    margin-left: 30%;
     display: flex;
+    margin: auto;
 }
 
 .title-textWitdraw {
@@ -112,9 +105,10 @@
     text-align: center;
     justify-content: center;
     align-items: center;
+    
 }
 
-.slide-controls .slide {
+.slide-controlsWitdraw .slideWitdraw {
     height: 100%;
     width: 100%;
     color: #ffffff;
@@ -127,74 +121,53 @@
     transition: all 0.6s ease;
 }
 
-.slide-controls label.signup {
+.slide-controlsWitdraw label.signup {
     color: #000;
     display: none;
 }
 
-.slide-controls .slider-tab {
+.slide-controlsWitdraw .slider-tabWitdraw {
     position: absolute;
     height: 100%;
     width: 50%;
     left: 0;
     z-index: 0;
     border-radius: 5px;
-    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     display: none;
 }
 
-input[type="radio"] {
-    display: none;
+.wrapInputWitdraw {
+    position: relative;
+    max-width: 100%;
+    height: 50px;
+    margin: auto;
 }
 
-#signup:checked~.slider-tab {
-    left: 50%;
-}
-
-#signup:checked~label.signup {
-    color: #fff;
-    cursor: default;
-    user-select: none;
-}
-
-#signup:checked~label.login {
-    color: #ffffff;
-}
-
-#login:checked~label.signup {
-    color: #000;
-}
-
-#login:checked~label.login {
-    cursor: default;
-    user-select: none;
-}
-
-.wrapperWitdraw .form-container {
+.wrapperWitdraw .form-containerWitdraw {
     width: 100%;
     overflow: hidden;
 }
 
-.form-container .form-inner {
+.form-containerWitdraw .form-innerWitdraw {
     display: flex;
     width: 200%;
 }
 
-.form-container .form-inner form {
+.form-containerWitdraw .form-innerWitdraw form {
     width: 50%;
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 
-.form-innerw form .fieldWitdraw {
+.form-innerWitdraw form .fieldWitdraw {
     height: 55px;
     width: 100%;
     margin-top: 20px;
     text-align: center;
 }
 
-.form-innerw form .fieldWitdraw input {
+.form-innerWitdraw form .fieldWitdraw input {
     height: 100%;
     width: 60%;
     outline: none;
@@ -209,14 +182,14 @@ input[type="radio"] {
 }
 
 
-.form-innerw form .fieldDataWitdraw {
+.form-innerWitdraw form .fieldDataWitdraw {
     height: 55px;
     width: 100%;
     margin-top: 20px;
     text-align: center;
 }
 
-.form-inner form .fieldDataWitdraw input {
+.form-innerWitdraw form .fieldDataWitdraw input {
     height: 100%;
     width: 60%;
     outline: none;
@@ -226,17 +199,17 @@ input[type="radio"] {
     font-size: 30px;
     text-align: center;
     transition: all 0.3s ease;
-    background: -webkit-linear-gradient(left, #930bbd, #b31de0, #c244e9, #be3ee6);
+    background: -webkit-linear-gradient(right, #0148a5, #135199, #1e8cf3, #00b1e7);
     box-shadow: 5px 0.2px 9px black;
     color: white;
 }
 
-.form-inner form .fieldDataWitdraw input:focus {
+.form-innerWitdraw form .fieldDataWitdraw input:focus {
     border-color: #fc83bb;
     /* box-shadow: inset 0 0 3px #fb6aae; */
 }
 
-.form-inner form .fieldDataWitdraw input::placeholder {
+.form-innerWitdraw form .fieldDataWitdraw input::placeholder {
     color: #ffffff;
     transition: all 0.3s ease;
 }
@@ -245,24 +218,71 @@ form .fieldDataWitdraw input:focus::placeholder {
     color: #ffffff;
 }
 
-.form-inner form .pass-link {
+
+.form-innerWitdraw form .fieldDataWitdrawNoColor {
+    height: 55px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.form-innerWitdraw form .fieldDataWitdrawNoColor input {
+    height: 100%;
+    width: 60%;
+    outline: none;
+    padding-left: 15px;
+    border-radius: 15px;
+    border-bottom-width: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 5px 0.2px 9px black;
+    border: 3px solid rgb(37, 88, 255);
+
+}
+
+.colorFontWindarw{
+    color: rgb(0, 162, 255);
+    font-size: 25px;
+}
+
+.colorFontWindarwcredit{
+    color: rgb(0, 38, 255);
+    font-size: 25px;
+}
+
+.form-innerWitdraw form .fieldDataWitdrawNoColor input:focus {
+    border-color: #fc83bb;
+}
+
+.form-innerWitdraw form .fieldDataWitdrawNoColor input::placeholder {
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
+
+form .fieldDataWitdrawNoColor input:focus::placeholder {
+    color: #ffffff;
+}
+
+
+.form-innerWitdraw form .pass-link {
     margin-top: 5px;
     text-align: center;
 }
 
-.form-inner form .Witdraw-link {
+.form-innerWitdraw form .Witdraw-link {
     text-align: center;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: 5%;
 }
 
-.form-inner form .pass-link a,
-.form-inner form .Witdraw-link a {
+.form-innerWitdraw form .pass-link a,
+.form-innerWitdraw form .Witdraw-link a {
     color: #fa4299;
     text-decoration: none;
 }
 
-.form-inner form .pass-link a:hover,
-.form-inner form .Witdraw-link a:hover {
+.form-innerWitdraw form .pass-link a:hover,
+.form-innerWitdraw form .Witdraw-link a:hover {
     text-decoration: underline;
 }
 
@@ -280,8 +300,7 @@ form .btn .btn-layer {
     width: 0%;
     position: absolute;
     left: -100%;
-
-    border-radius: 10px;
+    border-radius: 5px;
     transition: all 0.4s ease;
 }
 
@@ -289,119 +308,154 @@ form .btn:hover .btn-layer {
     left: 0;
 }
 
-form .btnsubmit input[type="submit"] {
-    height: 90%;
+form .btnsubmitWitdraw input[type="submitWitdraw"] {
+    height: 100%;
     font-size: 20px;
     width: 60%;
     z-index: 2;
+    border-radius: 10px;
     color: #ffffff;
-    background: -webkit-linear-gradient(right, #0148a5, #135199, #1e8cf3, #00b1e7);
-    margin-top: 2%;
+    background: -webkit-linear-gradient(right, #930bbd, #b31de0, #c244e9, #be3ee6);
+    margin-top: 0%;
     box-shadow: 5px 0.2px 9px black;
-}
-
-
-.iconWitdraw {
-    position: absolute;
-    transform: translate(40%, 50%);
-    font-size: 30px;
-    color: #ffffff;
-    pointer-events: none;
+    cursor: pointer;
 }
 
 .input-container {
     position: relative;
 }
 
-.input-with-icon {
+.input-with-iconReposit {
     padding-left: 40px;
     /* Add space for the icon */
 }
 
-.input-icon {
+.input-iconWitdraw {
     position: absolute;
-    left: 20px;
-    top: 90%;
+    left: 22%;
+    top: 50%;
     font-size: 30px;
     transform: translateY(-50%);
-    color: #aaa;
-    color: #ffffff;
+    color: #ffffffbe;
+    z-index: 10;
 }
 
-.imgWayWitdraw{
+.imgWayWitdraw {
     width: 500px;
+    object-fit: contain;
 }
 
 .scaltimgWitdraw {
     position: absolute;
-    width: 29%;
-    scale: 50%;
-    top: 35%;
-    right : 79%;
-    z-index: 4;
+    width: 10%;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+    object-fit: contain;
+    pointer-events: none;
 }
 
-.scaltimgWitdrawCircleI {
+/*---------------------------------------------------------*/
+.WitdrawimgShadowCircleI {
+    width: 11%;
+    box-shadow: 15px 4px 15px rgba(0, 0, 0, 0.712);
+    border-radius: 50%;
+    overflow: hidden;
     position: absolute;
-    width: 51%;
-    scale: 10%;
-    bottom: 20%;
-    left: 50%;
-    z-index: 4;
+    bottom: 75%;
+    left: 70%;
+    z-index: 10;
 }
 
-.scaltimgWitdrawCircleII {
+.scaltimgWitdrawCircle {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: none;
+}
+
+/*---------------------------------------------------------*/
+.WitdrawimgShadowCircleII {
+    width: 30%;
+    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
+    border-radius: 50%;
+    overflow: hidden;
     position: absolute;
-    width: 51%;
-    scale: 30%;
-    bottom: 10%;
-    right: 50%;
+    bottom: 58%;
+    left: 10%;
     z-index: 3;
 }
 
+/*---------------------------------------------------------*/
+.WitdrawimgShadowCircleV {
+    width: 15%;
+    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 40%;
+    left: 17%;
+    z-index: 4;
+    display: block;
+}
+
+/*---------------------------------------------------------*/
+.WitdrawimgShadowCircleVI {
+    width: 15%;
+    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 40%;
+    left: 66%;
+    z-index: 3;
+    display: block;
+}
+
+/*---------------------------------------------------------*/
 .scaltimgWitdrawCircleIII {
     position: absolute;
-    width: 48%;
-    scale: 35%;
-    top: 35%;
-    left : 50%;
+    overflow: hidden;
+    width: 15%;
+    bottom: 10%;
+    left: 65%;
     z-index: 4;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 .scaltimgWitdrawCircleIIII {
     position: absolute;
-    width: 58%;
-    scale: 35%;
-    bottom: 10%;
-    right : 45%;
+    width: 18%;
+    bottom: 20%;
+    left: 15%;
     z-index: 4;
     display: block;
-}
-
-.scaltimgWitdrawCircleV {
-    position: absolute;
-    width: 52%;
-    scale: 10%;
-    top: 5%;
-    right : 60%;
-    z-index: 4;
-    display: block;
+    object-fit: contain;
+    pointer-events: none;
 }
 
 .scaltimgWitdrawCircleVI {
     position: absolute;
-    width: 52%;
-    scale: 30%;
-    top: 50%;
-    left : 60%;
+    width: 15%;
+    top: 2%;
+    left: 68%;
     z-index: 1;
     display: block;
+    object-fit: contain;
+    pointer-events: none;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+
+@media (max-width: 1200px) {
     input {
         font-size: 14px;
+    }
+
+    .wrapperWitdraw {
+        width: 90%;
+        height: 550px;
+        margin-top: 5%;
     }
 
     .scaltimgcartoon7Login {
@@ -438,32 +492,30 @@ form .btnsubmit input[type="submit"] {
         margin-left: 10%;
     }
 
-    .textinputWitdarw {
+    .textinput {
         margin: 5px 0 33px 0;
     }
 
-    .textFrameWitdraw {
+    .textFrame {
         border-radius: 30px;
         width: 85%;
         height: 40px;
         margin-left: 7%;
     }
 
-
-
-    .form-inner form .fieldWitdraw input {
+    .form-innerWitdraw form .fieldWitdraw input {
         height: 80%;
-        width: 92%;
+        width: 72%;
         font-size: 20px;
     }
 
-    .form-inner form .fieldDataWitdraw input {
+    .form-innerWitdraw form .fieldDataWitdraw input {
         height: 80%;
-        width: 92%;
+        width: 70%;
         font-size: 20px;
     }
 
-    .form-inner form .fieldWitdraw input::placeholder {
+    .form-innerWitdraw form .fieldWitdraw input::placeholder {
         color: #ff00ff;
         transition: all 0.3s ease;
     }
@@ -476,24 +528,121 @@ form .btnsubmit input[type="submit"] {
     }
 
     .main-AddWitdrawPromo {
-        min-height: 230vw;
+        min-height: 140vw;
     }
 
-    .form-inner form .Witdraw-link {
+    .form-innerWitdraw form .Witdraw-link {
         margin-top: 5px;
     }
 
-    .displayFooter {
+    .displayFooterWitdraw {
         display: none;
+    }
+
+    .scaltimgWitdraw {
+        width: 50%;
+        top: 39%;
+        right: 37%;
+        z-index: 10;
+        display: none;
+    }
+
+    .WitdrawimgShadowCircleI {
+        width: 20%;
+        position: absolute;
+        bottom: 67%;
+        left: 80%;
+        z-index: 3;
+    }
+
+    .WitdrawimgShadowCircleII {
+        width: 40%;
+        bottom: 50%;
+        left: 0%;
+        z-index: 3;
+    }
+
+    .WitdrawimgShadowCircleVI {
+        width: 20%;
+        bottom: 15%;
+        left: 80%;
+        z-index: 3;
+        display: block;
+    }
+
+    .WitdrawimgShadowCircleV {
+        width: 25%;
+        bottom: 8%;
+        left: 0%;
+        z-index: 3;
+        display: block;
+    }
+
+    .scaltimgWitdrawCircleIII {
+        width: 22%;
+        top: 38%;
+        left: 75%;
+        display: block;
+    }
+
+    .scaltimgWitdrawCircleIIII {
+        width: 20%;
+        top: 8%;
+        left: 0%;
+        z-index: 4;
+    }
+
+    .scaltimgWitdraw {
+        width: 90%;
+        scale: 30%;
+        top: 36%;
+        right: 35%;
+        z-index: 10;
+        display: none;
+    }
+
+    .input-iconWitdraw {
+        left: 18%;
+        top: 44%;
+    }
+
+    .buttonCopy {
+        height: 80%;
+        font-size: 15px;
+        width: 10%;
+        margin-left: auto;
+        right: 14%;
     }
 }
 
-@media (max-width: 480px) {
-
+/* Responsive Styles */
+@media (max-width: 768px) {
     .wrapperWitdraw {
-        width: 90%;
-        height: 100%;
-        margin-top: 40%;
+        width: 80%;
+        height: 500px;
+        margin-top: 28%;
+    }
+
+    .textFrameWitdraw {
+        width: 85%;
+        height: 40px;
+        margin-top: 5%;
+    }
+
+    .textTitleWitdraw {
+        margin-left: 12%;
+    }
+
+    .textinputWitdraw {
+        margin: 5px 0 35px 0;
+    }
+
+    .colorFontWindarw{
+        font-size: 20px;
+    }
+    
+    .colorFontWindarwcredit{
+        font-size: 20px;
     }
 
     .slide-controls .slider-tab {
@@ -508,50 +657,89 @@ form .btnsubmit input[type="submit"] {
         width: 100px;
     }
 
+
+    .form-innerWitdraw form .fieldWitdraw input {
+        height: 80%;
+        width: 92%;
+        font-size: 22px;
+    }
+
+    .form-innerWitdraw form .fieldDataWitdraw input {
+        height: 80%;
+        width: 85%;
+        font-size: 16px;
+    }
+    .form-innerWitdraw form .fieldDataWitdrawNoColor input {
+        height: 80%;
+        width: 85%;
+        border-radius: 10px;
+    }
+    
+
+    form .btnsubmitWitdraw input[type="submit"] {
+        height: 100%;
+        font-size: 20px;
+        width: 80%;
+        z-index: 2;
+        color: #ffffff;
+        background: -webkit-linear-gradient(right, #0148a5, #135199, #1e8cf3, #00b1e7);
+        margin-top: 5%;
+        box-shadow: 5px 0.2px 9px black;
+        border-radius: 10px;
+    }
+
     .scaltimgWitdraw {
-        width: 90%;
-        scale: 25%;
+        width: 100%;
         top: 39%;
-        right: 37%;
+        right: 0%;
         z-index: 10;
         display: none;
     }
 
-    .scaltimgWitdrawCircleI {
-        width: 100%;
-        scale: 20%;
-        bottom: 48%;
-        left: 40%;
+    .WitdrawimgShadowCircleI {
+        width: 25%;
+        bottom: 72%;
+        left: 75%;
         z-index: 3;
     }
 
-    .scaltimgWitdrawCircleII {
-        width: 100%;
-        scale: 20%;
-        bottom: 20%;
-        right: 40%;
+    .WitdrawimgShadowCircleII {
+        width: 40%;
+        bottom: 63%;
+        left: 0%;
         z-index: 3;
+    }
+
+    .WitdrawimgShadowCircleVI {
+        width: 20%;
+        bottom: 34%;
+        left: 80%;
+        z-index: 3;
+        display: block;
+    }
+
+    .WitdrawimgShadowCircleV {
+        width: 25%;
+        bottom: 48%;
+        left: 0%;
+        z-index: 3;
+        display: none;
     }
 
     .scaltimgWitdrawCircleIII {
-        width: 100%;
-        scale: 25%;
-        top: -10%;
-        left: 37%;
-        display: none;
+        width: 30%;
+        top: 40%;
+        left: 68%;
+        display: block;
     }
+
     .scaltimgWitdrawCircleIIII {
         display: none;
     }
-    .scaltimgWitdrawCircleV {
-        display: none;
-    }
+
     .scaltimgWitdrawCircleVI {
         display: none;
     }
-}
-
-@media (max-width: 400px) {
 
     .scaltimgWitdraw {
         width: 90%;
@@ -559,29 +747,71 @@ form .btnsubmit input[type="submit"] {
         top: 36%;
         right: 35%;
         z-index: 10;
+        display: none;
+    }
+    .input-iconWitdraw {
+        position: absolute;
+        left: 10%;
+        top: 40%;
+        font-size: 30px;
+        transform: translateY(-50%);
+        color: #ffffffbe;
+        z-index: 10;
     }
 
-    .scaltimgWitdrawCircleI {
-        width: 100%;
-        scale: 20%;
-        bottom: 48%;
-        left: 40%;
-        z-index: 3;
+    .main-AddWitdraw {
+        min-height: 140vw;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+
+    .wrapperWitdraw {
+        width: 90%;
+        height: 100%;
+        margin-top: 40%;
     }
 
-    .scaltimgWitdrawCircleII {
-        width: 100%;
-        scale: 20%;
-        bottom: 20%;
-        right: 40%;
-        z-index: 3;
+    .textTitle {
+        width: 80%;
+        font-size: 15px;
+        font-weight: 400;
+        margin: 5px 0 2px 0;
+        margin: auto;
     }
 
-    .scaltimgWitdrawCircleIII {
-        width: 100%;
-        scale: 25%;
-        bottom: 40%;
-        left: 37%;
-        z-index: 5;
+    .title-textWitdraw {
+        font-size: 17px;
+        color: #ffffff;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-innerWitdraw form .fieldDataWitdraw input {
+        height: 80%;
+        width: 90%;
+        padding-left: 10px;
+        border-radius: 15px;
+        border-bottom-width: 2px;
+        font-size: 18px;
+        margin: auto;
+    }
+
+    .input-iconRegister {
+        position: absolute;
+        left: 1%;
+        top: 50%;
+        font-size: 30px;
+        transform: translateY(-50%);
+        color: #5d0972be;
+        z-index: 10;
+    }
+
+    .buttonCopy {
+        height: 80%;
+        font-size: 15px;
+        width: 15%;
+        right: 10px;
     }
 }

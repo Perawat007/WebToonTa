@@ -253,6 +253,7 @@ form .fieldDataDeposit input:focus::placeholder {
 .form-inner form .money-link {
     text-align: center;
     margin-top: 10px;
+    margin-bottom: 5%;
 }
 
 .form-inner form .pass-link a,

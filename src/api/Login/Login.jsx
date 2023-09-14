@@ -93,7 +93,6 @@ const LoginBar = () => {
         phoneNumber: phoneNumber,
         password: password,
       });
-      console.log('onn');
       if (response.data.token !== "undefined") {
         const accessToken = response.data.token;
         await localStorage.setItem("token", accessToken);

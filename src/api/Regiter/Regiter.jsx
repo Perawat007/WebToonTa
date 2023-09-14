@@ -134,12 +134,12 @@ const RegiterBar = () => {
       imgPath:
         "https://asset.cloudigame.co/build/admin/img/wt_theme/ezc/payment-logo-baac.png",
     },
-    {
+    /*{
       value: "ธนาคารสแตนดาร์ดชาร์เตอร์ด (ไทย)",
       label: "ธนาคารสแตนดาร์ดชาร์เตอร์ด (ไทย)",
       imgPath:
         "https://asset.cloudigame.co/build/admin/img/wt_theme/ezc/payment-logo-sc.png",
-    },
+    },*/
   ];
 
   function BootstrapDialogTitle(props) {

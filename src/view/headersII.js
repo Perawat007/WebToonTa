@@ -14,6 +14,7 @@ import { BsPersonFill, BsCreditCardFill, BsPersonCircle } from "react-icons/bs";
 import { HiOutlineLogout } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
 import Mycard from "./pangHome/Mycard";
+import DataUser from "../api/DataUser/DataUser";
 import $ from "jquery";
 
 function HeadersII() {
@@ -21,8 +22,10 @@ function HeadersII() {
     const [password, setPwd] = useState("");
     const [errMsg, setErrMsg] = useState("");
     const [showPopupA, setShowPopup] = useState(false);
+    const [showPopupDataUser, setshowPopupDataUser] = useState(false);
     const token = localStorage.getItem("token");
     const user = localStorage.getItem("user");
+    const credit = localStorage.getItem("credit");
     const pages = ["Products", "Pricing", "Blog"];
     const settings = ["Profile", "Account", "Dashboard", "Logout"];
     const [data, setData] = useState([]);
@@ -58,6 +61,7 @@ function HeadersII() {
                                     response.data.data[0].credit.toLocaleString("en-US");
                                 setCredit(formattedNumber);
                                 localStorage.setItem("user", response.data.data[0].phonenumber);
+                                localStorage.setItem("credit", response.data.data[0].credit.toLocaleString("en-US"))
                             })
                             .catch((error) => {
                                 console.log("error", error);
@@ -66,6 +70,7 @@ function HeadersII() {
                     .catch((error) => {
                         localStorage.removeItem("token");
                         localStorage.removeItem("user");
+                        localStorage.removeItem("credit");
                         window.location.href = "/";
                         console.log("error", error);
                     });
@@ -90,6 +95,7 @@ function HeadersII() {
     const togglePopup = () => {
         // ตกลงแก้ไข
         setShowPopup(!showPopupA);
+        setshowPopupDataUser(!showPopupA);
     };
 
     const goDeposit = () => {
@@ -100,8 +106,12 @@ function HeadersII() {
         window.location.href = `/Witdraw`;
     };
 
-    const goDialogWithdrawMoney = () => {
-        setShowPopup(!showPopupA);
+    const goDialogDataUser = () => {
+        setshowPopupDataUser(!showPopupA);
+    };
+
+    const offDialogDataUser = () => {
+        setshowPopupDataUser(!showPopupDataUser);
     };
 
     const goDialog = () => {
@@ -114,6 +124,7 @@ function HeadersII() {
             .then((response) => {
                 localStorage.removeItem("token");
                 localStorage.removeItem("user");
+                localStorage.removeItem("credit");
                 window.location.href = "/";
             })
             .catch((error) => console.log("error", error));
@@ -156,51 +167,18 @@ function HeadersII() {
                         </div>
                     </div>
                 )}
+            </header>
 
-                {showPopupA && (
-                    <div className="overlay">
-                        <div className="modalContainer">
-                            <img src={nftLogin} alt="/" />
-                            <div className="modalRight">
-                                <div className="content">
-                                    <p style={style}>Username หรือ Password ผิด</p>
-                                    <br />
-                                    <h3>กรุณากรอก</h3>
-                                    <h3>username และ Passwordใหม่</h3>
-                                    <h3>หรือถ้าคุณยังไม่เป็นสมาชิก กรุณาลงทะเบียน</h3>
+            <header>
+                {showPopupDataUser && (
+                    <div className="overlayHome">
+                        <div className="modalContainerDataProfile">
+                            <div className="modalData">
+                                <div className="contentData">
+                                    <DataUser />
                                 </div>
-                                <div className="btnContainer">
-                                    <button className="btnPrimary" onClick={togglePopup}>
-                                        ตกลง
-                                    </button>
-
-                                    <button className="btnPrimary" onClick={togglePopup}>
-                                        ออก
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                )}
-
-                {showPopupA && (
-                    <div className="overlay">
-                        <div className="modalContainer">
-                            <img src={nftLogin} alt="/" />
-                            <div className="modalRight">
-                                <div className="content">
-                                    <p style={style}>Username หรือ Password ผิด</p>
-                                    <br />
-                                    <h3>กรุณากรอก</h3>
-                                    <h3>username และ Passwordใหม่</h3>
-                                    <h3>หรือถ้าคุณยังไม่เป็นสมาชิก กรุณาลงทะเบียน</h3>
-                                </div>
-                                <div className="btnContainer">
-                                    <button className="btnPrimary" onClick={togglePopup}>
-                                        ตกลง
-                                    </button>
-
-                                    <button className="btnPrimary" onClick={togglePopup}>
+                                <div className="btnContainerDataUsers">
+                                    <button className="btnPrimaryData font" onClick={offDialogDataUser}>
                                         ออก
                                     </button>
                                 </div>
@@ -223,11 +201,7 @@ function HeadersII() {
                                         <div className="nav-switch">
                                             <i className="fa fa-bars"></i>
                                         </div>
-                                        <div className="user-panelthai">
-                                            <div>
-                                                <img src={th} alt="th" className="imgborder"/>
-                                            </div>
-                                        </div>
+                                      
                                         <div className="user-panel">
                                             <div
                                                 className="mbtnLoginTop button button-login font"
@@ -236,10 +210,15 @@ function HeadersII() {
                                                 ออกจากระบบ
                                             </div>
                                         </div>
+                                        <div className="user-panelthai">
+                                            <div>
+                                                <img src={th} alt="th" className="imgborder" />
+                                            </div>
+                                        </div>
                                         <div className="user-panel">
                                             <div
                                                 className="mbtnLoginTop button button-login font"
-                                                onClick={handleDataUser}
+                                                onClick={goDialogDataUser}
                                             >
                                                 ข้อมูลส่วนตัว
                                             </div>
@@ -262,7 +241,7 @@ function HeadersII() {
                                                 เติมเงิน
                                             </div>
                                         </div>
- 
+
                                         <div className="controlHeaders usernameolne">
                                             <div style={{ display: "inline-block" }}>
                                                 <div
@@ -287,9 +266,9 @@ function HeadersII() {
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div className="controlHeaders marginData">
-                                            <div style={{ display: "inline-block"}}>
+                                            <div style={{ display: "inline-block" }}>
                                                 <div
                                                     style={{
                                                         color: "#E7CF27",
@@ -353,6 +332,17 @@ function HeadersII() {
                                                             <span className="icon icon-home"></span>
                                                             <span>บ้าน</span>
                                                         </a>
+                                                        <a
+                                                            className="box"
+                                                            data-type="slot"
+                                                            data-v="game"
+                                                            data-name="สล็อต"
+                                                            href="#"
+                                                        >
+                                                            <span className="icon-slot"></span>
+                                                            <span onClick={goDialogDataUser}>ข้อมูลส่วนตัว</span>
+                                                        </a>
+
                                                         <a
                                                             className="box"
                                                             data-type="slot"
@@ -452,6 +442,13 @@ function HeadersII() {
                                         <div className="nav-switch">
                                             <i className="fa fa-bars"></i>
                                         </div>
+
+                                        <div className="user-panelthai">
+                                            <div>
+                                                <img src={th} alt="th" className="imgborder" />
+                                            </div>
+                                        </div>
+
                                         <div className="user-panel">
                                             {/* <a href="#" onClick={handleSubmit}>เข้าสู่ระบบ</a>  /  <a href="#">ลงทะเบียน</a> */}
                                             <div
@@ -503,7 +500,7 @@ function HeadersII() {
                                                             href="/Gametable"
                                                         >
                                                             <span className="icon-card"></span>
-                                                            <span>โต๊ะบนเกม</span>
+                                                            <span>โต๊ะเกม</span>
                                                         </a>
                                                         <a
                                                             className="box"
