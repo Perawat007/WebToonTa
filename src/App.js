@@ -20,6 +20,8 @@ import RewardShowBronze from './view/RewardClub/RewardShow';
 import GameAllType from './view/SeeGame/TypeGame/GameAllType';
 import DataUser from './api/DataUser/DataUser'
 import GameTypeSlot from './view/SeeGame/SlotGame/GameTypeSlot';
+import ResetPassword from './api/ResetPassword/ResetPassword';
+
 function App() {
   const token = localStorage.getItem("token");
   const styles = {
@@ -41,9 +43,12 @@ function App() {
     const pathSegments = pathA.split('/');
 
     if (pathSegments[1] === "Deposit") {
-      window.location.href = "/Home";
+      window.location.href = "/Login";
     }
     if (pathSegments[1] === "DataUser") {
+      window.location.href = "/Login";
+    }
+    if (pathSegments[1] === "ResetPassword") {
       window.location.href = "/Home";
     }
   }
@@ -70,6 +75,7 @@ function App() {
                     <Route path="/Gamefishing" element={<GameAllType />} />
                     <Route path="/Gametable" element={<GameAllType />} />
                     <Route path="/Gameskill" element={<GameAllType />} />
+                    <Route path="/ResetPassword" element={<ResetPassword />} />
                   </Routes>
                 </>
               );
@@ -88,7 +94,7 @@ function App() {
                     <Route path="/Gameslot" element={<GameTypeSlot/>} />
                     <Route path="/Gamefishing" element={<GameAllType />} />
                     <Route path="/Gametable" element={<GameAllType />} />
-                    <Route path="/Gameskill" element={<GameAllType />} />
+                    <Route path="/ResetPassword" element={<ResetPassword />} />
                   </Routes>
                 </>
               );

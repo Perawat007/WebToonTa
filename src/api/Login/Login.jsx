@@ -180,7 +180,7 @@ const LoginBar = () => {
                       value={phoneNumber}
                       onChange={(e) => setUser(e.target.value)}
                       required
-                      className="input-with-iconLogin"
+                      className="input-with-iconLogin font"
                     />
                     <BsPhoneFill className="input-iconLogin" />
                   </div>

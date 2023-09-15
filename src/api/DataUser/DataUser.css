@@ -10,7 +10,7 @@
     background-color: rgb(255, 255, 255);   
     display: flex;
     justify-content: center;
-    margin-top: 2%;
+    margin-top: 1%;
     border-radius: 20px;
     border-style: solid;
     border-color: rgb(96, 0, 151);
@@ -233,9 +233,9 @@ img .profile-photo-lg {
 @media (max-width: 500px) {
     .containerBank {
         width: 100%;
-        height:40%;
+        height:39%;
         margin-top: 3%;
-        margin-bottom: -3%;
+        margin-bottom: -5%;
     }
 
     .boostaem{
@@ -245,7 +245,7 @@ img .profile-photo-lg {
     .nearby-user {
         width: 90%;
         padding: 10px 0;
-        margin-bottom: 0%;
+        margin-bottom: 3%;
         border-radius: 20px;
         text-align: left;
     }

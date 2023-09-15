@@ -27,7 +27,7 @@
 
 .modalContainerMoneyImg {
     width: 35%;
-    margin: -7% auto;
+    margin: -11% auto;
     position: relative;
 }
 
@@ -48,7 +48,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    transform: translateY(20%);
+    transform: translateY(-10%);
 }
 
 .imgMoneyCartoon {
@@ -221,7 +221,7 @@
     color: #fff;
     padding: 0px 0;
     text-align: center;
-    z-index: 5;
+    z-index: 50;
 }
 
 /*---------------------------------------------------------------*/

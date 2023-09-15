@@ -194,7 +194,7 @@ function WinGame() {
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/5.jpg'
         },
         {
-            id: 6, name: 'Spade Gaming', provider_name: 'PP', data_gameid: '4', data_name: 'SlotXO', alt: 'SlotXO',
+            id: 6, name: 'Spade Gaming', provider_name: 'PP', data_gameid: 'SPADE', data_name: 'SlotXO', alt: 'SlotXO',
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/6.jpg'
         },
         {
@@ -206,11 +206,11 @@ function WinGame() {
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/8.jpg'
         },
         {
-            id: 9, name: 'Live22', provider_name: 'Live22', data_gameid: 'Live22', data_name: 'Live22', alt: 'Live22',
+            id: 9, name: 'Live22', provider_name: 'Live22', data_gameid: 'LIVE22', data_name: 'Live22', alt: 'Live22',
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/9.jpg'
         },
         {
-            id: 10, name: 'Allwayspin', provider_name: 'ALLWAYSPIN', data_gameid: 'ALLWAYSPIN', data_name: 'ALLWAYSPIN', alt: 'ALLWAYSPIN',
+            id: 10, name: 'Allwayspin', provider_name: 'Allwayspin', data_gameid: 'ALLWAYSPIN', data_name: 'ALLWAYSPIN', alt: 'ALLWAYSPIN',
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/10.jpg'
         },
         {
@@ -225,7 +225,7 @@ function WinGame() {
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/12.jpg'
         },
         {
-            id: 2, name: 'KA Gaming', provider_name: 'KAGAME', data_gameid: 'KAGAME', data_name: 'KAGAME', alt: 'KAGAME',
+            id: 2, name: 'KA Gaming', provider_name: 'KA Gaming', data_gameid: 'KAGAME', data_name: 'KAGAME', alt: 'KAGAME',
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/13.jpg'
         },
         {

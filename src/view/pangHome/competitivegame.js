@@ -209,7 +209,7 @@ function Competitivegame() {
 
     return (
         <>
-            <div style={{marginBottom : "5%"}} className="testdata addfont">ฟิเจอร์เกมที่น่าสนใจ</div>
+            <div style={{marginBottom : "2%"}} className="testdata addfont">ฟิเจอร์เกมที่น่าสนใจ</div>
             <div className="product-upcoming mgt45 showADS" >
                 <div className="fam-list scallASD">
                     <div className="slick-list">

@@ -67,7 +67,6 @@ function GamePlayType() {
         const pathSegments = pathA.split('/');
         //console.log(pathSegments[2]);
         if(pathSegments[1] === 'Gamefishing'){
-            console.log(gameFisingList);
             setItems(gameFisingList);
         } else if (pathSegments[1] === 'Gametable') {
             setItems(cardGameList);
@@ -77,12 +76,13 @@ function GamePlayType() {
             setItems(gameSkillGame);
         }
     };
-    const PlayGame = (codeGame) => {
+    const PlayGame = (codeGame, productId) => {
         const pathA = window.location.pathname;
         const pathSegments = pathA.split('/');
 
         if (data.phonenumber !== '' && data.phonenumber !== undefined) {
-            axios.get(`seamlesslogIn/${codeGame}/${pathSegments[1]}/${data.phonenumber}`)
+            console.log(codeGame, productId, data.phonenumber)
+            axios.get(`seamlesslogIn/${codeGame}/${productId}/${user}`)
                 .then((response) => {
                     const link = response.data.data.data.url;
                     if (mobileOS === 'Android') {
@@ -151,10 +151,10 @@ function GamePlayType() {
                 </div>
             )}
             <React.Fragment>
-                <Container maxWidth="xl" sx={{ p: 3 }}>
+                <Container maxWidth="xl" sx={{ p: 2}}>
                     <Box display={'flex'}>
                         <Typography variant="h6">
-                            <a style={h4Style} onClick={BackPang}>ย้อนกลับ</a>
+                        <a style={h4Style} className='grount font' onClick={BackPang}>ย้อนกลับ</a>
                         </Typography>
                     </Box>
                     <div className="card-font">รายชื่อเกม</div>
@@ -178,7 +178,7 @@ function GamePlayType() {
                                     <div className="provider-name">{row.name}</div> */}
                                     <div className="box-play">
                                         <div className="button-play boxGoPlay" data-gameid={row.providerCode} data-name={row.name}
-                                            data-pid="191" onClick={() => PlayGame(row.code)}>เล่น</div>
+                                            data-pid="191" onClick={() => PlayGame(row.codeGame, row.productId)}>เล่น</div>
                                     </div>
                                 </div>
                             ))}

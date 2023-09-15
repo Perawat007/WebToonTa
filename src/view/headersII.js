@@ -10,7 +10,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Container, Menu, MenuItem, Button, AppBar } from "@mui/material";
-import { BsPersonFill, BsCreditCardFill, BsPersonCircle } from "react-icons/bs";
+import { BsPersonFill, BsCreditCardFill, BsFillPersonFill } from "react-icons/bs";
 import { HiOutlineLogout } from "react-icons/hi";
 import { NavLink } from "react-router-dom";
 import Mycard from "./pangHome/Mycard";
@@ -62,6 +62,7 @@ function HeadersII() {
                                 setCredit(formattedNumber);
                                 localStorage.setItem("user", response.data.data[0].phonenumber);
                                 localStorage.setItem("credit", response.data.data[0].credit.toLocaleString("en-US"))
+                                localStorage.setItem("id", response.data.data[0].id)
                             })
                             .catch((error) => {
                                 console.log("error", error);
@@ -201,7 +202,7 @@ function HeadersII() {
                                         <div className="nav-switch">
                                             <i className="fa fa-bars"></i>
                                         </div>
-                                      
+
                                         <div className="user-panel">
                                             <div
                                                 className="mbtnLoginTop button button-login font"
@@ -253,7 +254,7 @@ function HeadersII() {
                                                         scale: "100%",
                                                     }}
                                                 >
-                                                    <BsCreditCardFill />
+                                                    <BsFillPersonFill />
                                                 </div>
                                                 <div
                                                     style={{
@@ -388,7 +389,7 @@ function HeadersII() {
                                                             <span>โปรโมชั่น</span>
                                                         </a>
 
-                                                        <a className="box" href="/contact-us">
+                                                        <a className="box" href="#">
                                                             <i className="fa-regular fa-user-headset"></i>
                                                             <span>ติดต่อพวกเรา</span>
                                                         </a>
@@ -526,11 +527,11 @@ function HeadersII() {
                                                             <span className="icon icon-promotion"></span>
                                                             <span>โปรโมชั่น</span>
                                                         </a>
-                                                        <a className="box" href="/about-us">
+                                                        <a className="box" href="#">
                                                             <i className="fa-regular fa-circle-info"></i>
                                                             <span>ศูนย์ข้อมูล</span>
                                                         </a>
-                                                        <a className="box" href="/contact-us">
+                                                        <a className="box" href="#">
                                                             <i className="fa-regular fa-user-headset"></i>
                                                             <span>ติดต่อพวกเรา</span>
                                                         </a>
@@ -555,7 +556,7 @@ function HeadersII() {
                                                 </li>
                                                 <li>
                                                     <a className="font" href="/Gametable">
-                                                        โต๊ะบนเกม
+                                                        โต๊ะเกม
                                                     </a>
                                                 </li>
                                                 <li>

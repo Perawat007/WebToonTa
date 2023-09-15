@@ -1,11 +1,42 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
 import "./navicationcssHome.css";
 import { BsCoin, BsBank2 } from "react-icons/bs";
+import DataUser from "../../api/DataUser/DataUser";
 
 const NavicationBarHome = () => {
 
+    const [showPopupDataUser, setshowPopupDataUser] = useState(true);
+
+    const goDialogDataUser = () => {
+        setshowPopupDataUser(!showPopupDataUser);
+    };
+
+    const offDialogDataUser = () => {
+        setshowPopupDataUser(!showPopupDataUser);
+    };
+
     return (
         <>
+
+            <header>
+                {showPopupDataUser && (
+                    <div className="overlayHome">
+                        <div className="modalContainerDataProfile">
+                            <div className="modalData">
+                                <div className="contentData">
+                                    <DataUser />
+                                </div>
+                                <div className="btnContainerDataUsers">
+                                    <button className="btnPrimaryData font" onClick={offDialogDataUser}>
+                                        ออก
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                )}
+            </header>
+
             <nav className="navigation-barHome">
                 <ul className="list-items">
                     <span className="pointer"></span>
@@ -30,7 +61,7 @@ const NavicationBarHome = () => {
                     <li className="item">
                         <a className="link" href="#">
                             <i className="fas fa-user fa-2x"></i>
-                            <p className="textnavigattionbarHome font">ข้อมูลส่วนตัว</p>
+                            <p className="textnavigattionbarHome font" onClick={goDialogDataUser}>ข้อมูลส่วนตัว</p>
                         </a>
                     </li>
                 </ul>

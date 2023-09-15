@@ -41,7 +41,7 @@
 .profile-card-1 .img {
     height: 130px;
     width: 100%;
-    background-image: linear-gradient(rgba(46, 204, 113, 0.4), rgba(46, 204, 113, 0.95)), url("../../img/3.png");
+    background-image: url("../../img/bg_tiger.jpg");
     padding: 20px;
     box-sizing: border-box;
     position: relative;

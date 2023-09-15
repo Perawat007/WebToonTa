@@ -23,6 +23,22 @@
     touch-action: pan-x;
 }
 
+.overlaynavication {
+    background-color: rgba(51, 49, 49, 0.733);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: 150;
+    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    touch-action: pan-y;
+    touch-action: pan-x;
+}
+
+
 .modalContainerHome {
     max-width: 600px;
     width: 100%;
@@ -51,12 +67,24 @@
 
 .modalContainerDataProfile {
     max-width: 550px;
+    scale: 100%;
     width: 100%;
     margin: auto;
-    margin-top: 15%;
+    margin-top: 10%;
     display: flex;
     justify-content: center;
 }
+
+.modalContainerDataProfileNav {
+    scale: 90%;
+    max-width: 550px;
+    width: 100%;
+    margin: auto;
+    margin-top: 60%;
+    display: flex;
+    justify-content: center;
+}
+
 
 .btnContainerDataUsers {
     display: flex;
@@ -249,7 +277,7 @@
         position: fixed;
         width: 100%;
         height: 100%;
-        z-index: 12;
+        z-index: 200;
         text-align: center;
     }
 
@@ -297,9 +325,11 @@
     .modalContainerDataProfile {
         max-width: 550px;
         width: 100%;
+        scale: 90%;
         margin: auto;
         margin-top: 25%;
         display: flex;
         justify-content: center;
+        z-index: 250;
     }    
 }

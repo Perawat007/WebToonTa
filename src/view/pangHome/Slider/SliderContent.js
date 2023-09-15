@@ -17,6 +17,18 @@ function SliderContent({ activeIndex, sliderImage }) {
     {
       id: 3,
       img: banner_03
+    },
+    {
+      id: 4,
+      img: banner_01
+    },
+    {
+      id: 5,
+      img: banner_02
+    },
+    {
+      id: 6,
+      img: banner_03
     }
   ]
 

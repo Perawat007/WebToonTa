@@ -6,16 +6,18 @@ import sliderImage from "./sliderImage";
 import "./slider.css";
 import axios from "../../../api/axios";
 
+const len = sliderImage.length  - 1;
+
 function Slider(props) {
+
   const [activeIndex, setActiveIndex] = useState(0);
   const [data, setData] = useState([]);
 
-  const len = sliderImage - 1;
   useEffect(() => {
     fetchData();
     const interval = setInterval(() => {
-      setActiveIndex(activeIndex === len ? 0 : activeIndex + 0);
-    }, 2000);
+      setActiveIndex(activeIndex === len ? 0 : activeIndex + 1);
+    }, 5000);
     return () => clearInterval(interval);
   }, [activeIndex]);
 
@@ -33,7 +35,7 @@ function Slider(props) {
     <>
        {data && (
         <div className="slider-container">
-          <SliderContent activeIndex={activeIndex} sliderImage={data} />
+          <SliderContent activeIndex={activeIndex} sliderImage={sliderImage} />
           <Arrows
             prevSlide={() =>
               setActiveIndex(activeIndex < 1 ? len : activeIndex - 1)

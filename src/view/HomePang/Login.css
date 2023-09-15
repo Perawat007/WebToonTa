@@ -236,7 +236,7 @@ img {
   z-index: 1;
 }
 
-.textButton{
+.textButton {
   -webkit-text-stroke: 1px #420079;
   color: #ffb320;
   text-shadow:
@@ -245,7 +245,7 @@ img {
     1px -1px 0 #420079,
     -1px 1px 0 #420079,
     1px 1px 0 #420079;
-  
+
   margin-left: 12%;
 }
 
@@ -259,8 +259,9 @@ img {
 
 .control-btn {
   max-width: 1700px;
-  /* transform: translate(0%, -230px); */
+  transform: translate( -1px, 0%);
   display: none;
+  z-index: 100;
 }
 
 .control-promo {
@@ -337,7 +338,7 @@ img {
   border: 2px solid #b516ff;
 }
 
-.user-panelthai{
+.user-panelthai {
   float: right;
   width: 40px;
   font-weight: 200;
@@ -350,9 +351,10 @@ img {
   margin-right: 1%;
 }
 
-.marginData{
+.marginData {
   margin-right: 10px;
 }
+
 /*---------------------------------------------------------------------------------------*/
 /* .news-container */
 .news-container {
@@ -491,7 +493,7 @@ img {
     margin-top: 0px;
   }
 
-  .user-panelthai{
+  .user-panelthai {
     width: 40px;
     display: block;
     transform: translateY(-20%);
@@ -592,7 +594,7 @@ img {
     font-size: 13px;
   }
 
-  .user-panelthai{
+  .user-panelthai {
     float: right;
     width: 33px;
     font-weight: 200;
@@ -604,9 +606,10 @@ img {
     border: 2px solid #b516ff;
   }
 
-  .marginData{
+  .marginData {
     margin-right: -5px;
   }
+
   img {
     width: 100%;
     max-height: 70vh;
@@ -850,7 +853,7 @@ img {
     display: block;
   }
 
-  .user-panelthai{
+  .user-panelthai {
     width: 25px;
     display: block;
     transform: translateY(-25%);

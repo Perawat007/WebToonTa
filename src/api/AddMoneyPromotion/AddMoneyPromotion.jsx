@@ -20,11 +20,13 @@ import { BsCoin, BsBank2 } from "react-icons/bs";
 import NavicationBar from "../../view/NavicationBar/navicationbar";
 import Modal from 'react-modal';
 import gitDeposit from '../../img/icon/money.gif'
-import nottifocationimgOne from '../../img/lang/11.png'
-import nottifocationimgTwo from '../../img/lang/22.png'
-import nottifocationimgThree from '../../img/lang/33.png'
-import nottifocationimgFour from '../../img/lang/44.png'
-import nottifocationimgFive from '../../img/lang/55.png'
+import nottifocationimgOne from '../../img/icon/pop_up1.png'
+import nottifocationimgTwo from '../../img/icon/pop_up2.png'
+import nottifocationimgThree from '../../img/icon/pop_up3.png'
+import nottifocationimgFour from '../../img/icon/pop_up4.png'
+import nottifocationimgFive from '../../img/icon/pop_up5.png'
+import nottifocationimgSix from '../../img/icon/pop_up6.png'
+import nottifocationimgSaven from '../../img/icon/pop_up7.png'
 
 import { ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
 
@@ -74,6 +76,8 @@ const AddMoneyPromotion = () => {
 
   const [depositaccount, setdepositaccount] = useState([]);
   const [inputValue, setInputValue] = useState('');
+  const [imgnofidication, setimgnofidication] = useState();
+
   let depositaccountlite = [];
   let PromotionList = [];
 
@@ -122,7 +126,7 @@ const AddMoneyPromotion = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get('/post/');
-        console.log(response.data.img)
+        //console.log(response.data.img)
         for (let i = 0; i < response.data.img.length; i++) {
           PromotionList.push({
             value: response.data.img[i].namepromotion,
@@ -185,24 +189,35 @@ const AddMoneyPromotion = () => {
           })
             .then((response) => response.json())
             .then(async (data) => {
+              //console.log(data.message);
               switch (data.message) {
                 case "ไม่มีชื่อบัญชีธนาคารของเว็บ Toonta ในระบบเงินฝาก":
+                  setimgnofidication(nottifocationimgSaven);
                   setresOpenFive(true);
                   break;
                 case "สลิปนี้เคยถูกใช้งานแล้ว":
-                  setresOpen(true);
+                  setimgnofidication(nottifocationimgTwo);
+                  setresOpenFive(true);
                   break;
                 case "ชื่อบัญชีที่ได้ลงทะเบียนไม่ถูกต้อง กรุณาตรวจสอบ สลิปโอนเงิน ":
-                  setresOpenTwo(true);
+                  setimgnofidication(nottifocationimgThree);
+                  setresOpenFive(true);
                   break;
-                case "สลิปนี้เคยถูกใช้งานแล้ว หรือ ข้อมูลไม่ถูกต้องกรุณาลองใหม่อีกครั้ง":
-                  setresOpenFour(true);
+                case "ล้มเหลวในการทำรายการ":
+                  setimgnofidication(nottifocationimgFour);
+                  setresOpenFive(true);
                   break;
                 case "ฝากเงินสำเสร็จ":
-                  setresOpenThree(true);
+                  setimgnofidication(nottifocationimgFive);
+                  setresOpenFive(true);
+                  break;
+                case "QR Code หมดอายุ หรือ ไม่มีรายการอยู่จริง":
+                  setimgnofidication(nottifocationimgSix);
+                  setresOpenFive(true);
                   break;
                 default:
-                  setresOpenFour(true);
+                  setimgnofidication(nottifocationimgTwo);
+                  setresOpenFive(true);
                   break;
               }
               setreaSleepData(data.message)
@@ -400,7 +415,7 @@ const AddMoneyPromotion = () => {
           </div>
           <div className="modalContainerMoneyImg">
             <div className="modalRightMoney">
-              <img src={nottifocationimgFive} alt="/" onClick={handleClose} />
+              <img src={imgnofidication} alt="/" onClick={handleClose} />
             </div>
           </div>
         </div>
@@ -452,7 +467,7 @@ const AddMoneyPromotion = () => {
       </div>
       <div className="main-AddMoneyPromo">
         <div className="wrapperMoney">
-          <div className="textFrame">
+          <div className="textFrameDeposit">
             <div className="title-textDeposit font">เติมเงิน</div>
           </div>
           <div className="form-container">
@@ -461,10 +476,10 @@ const AddMoneyPromotion = () => {
 
                 <div className="containerBank">
                   <ImageList sx={{
-                    width: 450, height: 210,
+                    width: 450, height: 200,
                     '@media (min-width: 768px)': {
                       width: '450',
-                      height: '250',
+                      height: '260',
                     },
                   }} cols={1}>
                     {depositaccount.map((option) => (
@@ -565,7 +580,7 @@ const AddMoneyPromotion = () => {
                   )}
                 </div>
                 <div className="fieldMoney btnsubmitDeposit font">
-                  <input type="submitDeposit" value="เติมเงิน" onClick={() => handleSubmitdeposit()} />
+                  <input type="submitDeposit" defaultValue="เติมเงิน" onClick={() => handleSubmitdeposit()} />
                 </div>
                 <br />
                 <div className="money-link ">

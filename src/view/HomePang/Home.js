@@ -12,10 +12,6 @@ import Allgamecamps from '../pangHome/Allgamecamps';
 import Mycard from '../pangHome/Mycard';
 import MenuDown from '../pangHome/MenuDown';
 import { useTheme } from '@mui/material/styles';
-import PaymentMethod from '../pangHome/PaymentMethod';
-import Box from '@mui/material/Box';
-import TopDown from '../pangHome/TopDown';
-import NavicationBarHome from '../NavicationBarHome/navicationbarHome';
 import NavicationBar from '../NavicationBar/navicationbar';
 import './Login.css'
 import '../cartoon.css'
@@ -28,6 +24,7 @@ import cartoon from "../../img/2.png";
 import cartoonII from "../../img/3.png";
 import cartoonIII from "../../img/6.png";
 import circleI from "../../img/circle1.png";
+import circleII from "../../img/circle2.png";
 import rewardfile from "../../img/reward/rewardfileB.png"
 import SitiGame from "../pangHome/SitiGame"
 import axios from '../../api/axios';
@@ -39,6 +36,7 @@ import announce from "../../img/icon_bar/announce_for_PC.png"
 import imgDeposit from "../../img/icon_bar/DepositCartoon.png"
 import imgWitdraw from "../../img/icon_bar/WitdrawCartoon.png"
 import style from './style.scss'
+import DataUser from "../../api/DataUser/DataUser";
 import './styleweb.css'
 function Home() {
   const theme = useTheme();
@@ -48,6 +46,7 @@ function Home() {
   const [data, setData] = React.useState([])
   const [showPopupA, setShowPopup] = React.useState(false);
   const [datacard, setDatacard] = React.useState('')
+  const [showPopupDataUser, setshowPopupDataUser] = useState(true);
 
   const [tickerItems] = React.useState([
     { text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.', className: 'new' },
@@ -97,6 +96,16 @@ function Home() {
     // setShowPopup(true);
     // setDatacard(dataCard);
   }
+
+
+
+  const goDialogDataUser = () => {
+    setshowPopupDataUser(true);
+  };
+
+  const offDialogDataUser = () => {
+    setshowPopupDataUser(!showPopupDataUser);
+  };
 
   const togglePopup = () => {
     setShowPopup(!showPopupA);
@@ -172,7 +181,24 @@ function Home() {
           </div>
         </div>
       )}
-      
+{/* 
+      {showPopupDataUser && (
+        <div className="overlayHome">
+          <div className="modalContainerDataProfile">
+            <div className="modalData">
+              <div className="contentData">
+                <DataUser />
+              </div>
+              <div className="btnContainerDataUsers">
+                <button className="btnPrimaryData font" onClick={offDialogDataUser}>
+                  ออก
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )} */}
+
       <nav >
         <div id="preloder">
           <div className="loader"></div>
@@ -189,12 +215,12 @@ function Home() {
           </div>
 
           <ul className="uL">
-            <li className="nt-item LII font"><span className="new font">Welcome</span>ยินดีต้อนรับทุกท่าน สู่เว็บ ToonTa ศูนย์รวมเกมออนไลน์ที่ดีที่สุดในประเทศไทย. </li>
-            <li className="nt-item LII font"><span className="strategy font">Promotion</span>เติมเงินครั้งแรกรับไปเลย 30% โบนัสจากยอดเติมครั้งแรก. </li>
-            <li className="nt-item LII font"><span className="racing font">New</span>เล่นเสียไม่เป็นไร เรามียอดคืนสูงสุดถึง 70% ของยอดเสีย. </li>
-            <li className="nt-item LII font"><span className="new font">Welcome</span>ยินดีต้อนรับทุกท่าน สู่เว็บ ToonTa ศูนย์รวมเกมออนไลน์ที่ดีที่สุดในประเทศไทย. </li>
-            <li className="nt-item LII font"><span className="strategy font">Promotion</span>เติมเงินครั้งแรกรับไปเลย 30% โบนัสจากยอดเติมครั้งแรก. </li>
-            <li className="nt-item LII font"><span className="racing font">New</span>เล่นเสียไม่เป็นไร เรามียอดคืนสูงสุดถึง 70% ของยอดเสีย. </li>
+            <li className="nt-item LII font"><span className="new font">Welcome </span> ยินดีต้อนรับทุกท่าน สู่เว็บ ToonTa ศูนย์รวมเกมออนไลน์ที่ดีที่สุดในประเทศไทย. </li>
+            <li className="nt-item LII font"><span className="strategy font">Promotion </span> เติมเงินครั้งแรกรับไปเลย 30% โบนัสจากยอดเติมครั้งแรก. </li>
+            <li className="nt-item LII font"><span className="racing font">New </span> เล่นเสียไม่เป็นไร เรามียอดคืนสูงสุดถึง 70% ของยอดเสีย. </li>
+            <li className="nt-item LII font"><span className="new font">Welcome </span> ยินดีต้อนรับทุกท่าน สู่เว็บ ToonTa ศูนย์รวมเกมออนไลน์ที่ดีที่สุดในประเทศไทย. </li>
+            <li className="nt-item LII font"><span className="strategy font">Promotion </span> เติมเงินครั้งแรกรับไปเลย 30% โบนัสจากยอดเติมครั้งแรก. </li>
+            <li className="nt-item LII font"><span className="racing font">New </span> เล่นเสียไม่เป็นไร เรามียอดคืนสูงสุดถึง 70% ของยอดเสีย. </li>
           </ul>
         </div>
         <div className="topHome">
@@ -219,8 +245,8 @@ function Home() {
                   alt=""
                   className="imgButton"
                 />
-               <span className="textButton font">ฝาก</span>
-                </button>
+                <span className="textButton font">ฝาก</span>
+              </button>
               <button className="custom-btn btn-14 font" onClick={gowithdraw}>
                 <img
                   src={imgWitdraw}
@@ -228,7 +254,7 @@ function Home() {
                   className="imgButton"
                 />
                 <span className="textButton font">ถอน</span>
-                </button>
+              </button>
             </div>
           )}
           <div className='control-promo'>
@@ -293,16 +319,29 @@ function Home() {
           </div>
         </div>
 
+        <div className="imgWayDeposit">
+          <img className="imgWaymonterHomeIII" src={cartoonIII} id="wel-img-id" alt="" />
+          <img className="imgWaymonterHomeII" src={cartoon} id="wel-img-id" alt="" />
+          <img className="imgWaymonterHomeI" src={cartoonII} id="wel-img-id" alt="" />
+
+          <div className="imgWaymonterHomeIIIC">
+            <img className="scaltimgDepositCircle" src={circleI} id="wel-img-id" alt="" />
+          </div>
+
+          <div className="imgWaymonterHomeIIIIC">
+            <img className="scaltimgDepositCircle" src={circleII} id="wel-img-id" alt="" />
+          </div>
+
+          <div className="imgWaymonterHomeVC">
+            <img className="scaltimgDepositCircle" src={circleII} id="wel-img-id" alt="" />
+          </div>
+
+        </div>
+
+
         <div className='marginT'>
           <Competitivegame />
-          {/* <div className="imgWaymonterHomeIII">
-                <img className="scaltimgmonterHomeIII" src={cartoonIII} id="wel-img-id" alt="" />
-              </div>
-              <div className="imgcircleV">
-                <img className="scaltimgcircleV" src={circleI} id="wel-img-id" alt="" />
-              </div> */}
           <Gamepromotion />
-
         </div>
         <br />
         <br />
