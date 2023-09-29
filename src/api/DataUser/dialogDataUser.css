@@ -60,8 +60,8 @@
 
 .profile-card-1 .mid-section .nameData {
     color: #ffffff;
-    font-size: 1.7em;
-    padding-top: 5px;
+    font-size: 1.5em;
+    padding-top: -10px;
     font-weight: bold;
 }
 
@@ -72,6 +72,14 @@
     font-weight: bold;
     margin-bottom: 3%;
 }
+
+.titleDataUser{
+    color: #ffffff;
+    font-size: 25px;
+    padding-top: 1px;
+    font-weight: bold;
+    margin-bottom: 3%;
+} 
 .profile-card-1 .mid-section .description {
     color: gray;
     text-decoration: none;

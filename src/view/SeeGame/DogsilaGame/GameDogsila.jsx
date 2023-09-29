@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import { Container } from "@mui/material";
 import Paper from "@mui/material/Paper";
 import axios from "../../../api/axios";
-import Headers from "../../headers";
+import Headers from "../../headersII";
 import Mycard from "../../pangHome/Mycard";
 import MenuHome from "../../pangHome/MenuHome";
 import Allgamecamps from "../../pangHome/Allgamecamps";
@@ -13,10 +13,12 @@ import PaymentMethod from "../../pangHome/PaymentMethod";
 import TopDown from "../../pangHome/TopDown";
 import "../ListGame.css";
 import Footer from "../../pangHome/FooTer/Footer";
+import PaginationJS from "../Pagination";
+import cartoon from '../../../img/3.png';
 export default function GameDogsila() {
   const [items, setItems] = React.useState([]);
   const token = localStorage.getItem("token");
-
+  const [show, setShow] = React.useState(false);
   const [isPressed, setIsPressed] = React.useState(false);
 
   const handleMouseDown = () => {
@@ -76,13 +78,14 @@ export default function GameDogsila() {
       .then((response) => {
         if (response.data.message === "TokenOn") {
           const tokenEn = encodeURIComponent(token);
+          console.log(linkGame)
           if (linkGame !== null) {
             const link = linkGame + `?token=${tokenEn}`;
             if (mobileOS === 'Android') {
               window.open(link, "_blank");
-          } else {
+            } else {
               window.open(link, "_self");
-          }
+            }
           }
         }
       })
@@ -93,102 +96,105 @@ export default function GameDogsila() {
       });
   };
 
+  const BackPang = () => {
+    window.location.href = `/`;
+  }
+
+
+  const h4Style = {
+    color: 'white',
+    display: 'inline-block',
+    cursor: 'pointer',
+    marginRight: '10px',
+  };
+
+  const handleClose = () => {
+    setShow(false);
+  };
+
+  const cilckLogin = () => {
+    window.location.href = `/Login`;
+  }
   return (
     <>
-      <div className="containerDogsila">
-        <div className="main-content">
-          <Mycard />
-          <div id="topBar-holder" className="topBar-holder">
-            <Headers />
-            <MenuHome />
+      {show && (
+        <div className="overlayLoginGame">
+          <div className="imgLoginGame">
+            <img src={cartoon} alt="/" />
           </div>
-          <div className="buttonToTop">
-            <i className="fa-regular fa-arrow-up-to-line"></i>
+          <div className="modalContainerLoginGame">
+            <div className="modalRightLoginGame">
+              <div className="contentLoginGame">
+                <p className="titleDialog font">คุณยังไม่ได้ Login</p>
+                <br />
+                <h3 className="detailDialog font">
+                  กรุณา Login เพื่อเข้าเล่นเกม
+                </h3>
+              </div>
+              <div className="btnContainerLoginGame">
+                <button className="btnPrimaryLoginGame font" onClick={cilckLogin}>
+                  ไปหน้า Login
+                </button>
+                <button className="btnPrimaryLoginGame font" onClick={handleClose}>
+                  ยกเลิก
+                </button>
+              </div>
+            </div>
           </div>
-          <div className="common-holder" style={{ display: "block" }}>
-            <div className="content-holder">
-              <React.Fragment>
-                <Container maxWidth="xl" sx={{ p: 2 }}>
-                  <Box display={"flex"}>
-                    <Box
-                      flexGrow={1}
-                      sx={{
-                        width: 2,
-                        height: "500px",
-                        "@media (max-width: 414px)": {
-                          height: 620,
-                        },
-                        "@media (max-width: 390px)": {
-                          height: 620,
-                        },
-                        "@media (max-width: 375px)": {
-                          height: 700,
-                        },
-                        "@media (min-width: 428px)": {
-                          height: 600,
-                        },
-                        "@media (min-width: 1280px)": {
-                          height: 750,
-                        },
-                      }}
-                    ></Box>
-                  </Box>
-                  <div className="card-font">รายชื่อเกม</div>
-                  <br />
-                  <div className="game-container game vGameList">
-                    <div className="list">
-                      {items.map((row) => (
-                        <div key={row.id} className="box">
-                          <div
-                            className="card-image"
-                            role="img"
-                            alt=""
-                            style={{
-                              backgroundImage: `url(${row.img})`,
-                              transform: "scale(1)",
-                            }}
-                          ></div>
-                          <img
-                            src={row.img}
-                            alt=""
-                            style={{
-                              cursor: "pointer",
-                            }}
-                          />
-                          <span className="name">
-                            <span>{row.namegame}</span>
-                          </span>
-                          <div className="provider-name">{row.namegame}</div>
-                          <div className="box-play">
-                            <div
-                              className="button-play boxGoPlay"
-                              data-gameid={row.providerCode}
-                              data-name={row.namegame}
-                              data-pid="191"
-                              onClick={() => PlayGame(row.linkgame)}
-                            >
-                              เล่น
-                            </div>
-                          </div>
-                        </div>
-                      ))}
+        </div>
+      )}
+      <div>
+        <Headers />
+      </div>
+      <div className="pg-home common-holder">
+        <React.Fragment>
+          <Container maxWidth="xl" sx={{ p: 3 }}>
+            <Box display={'flex'}>
+              <Typography variant="h6">
+                <a style={h4Style} className='grount font' onClick={BackPang}>ย้อนกลับ</a>
+              </Typography>
+            </Box>
+            <div className="card-font">รายชื่อเกม</div>
+            <br />
+            <br />
+            <br />
+            <div className=" game vGameList">
+              <div className="list">
+                {items.map((row) => (
+                  <div key={row.name} className="box">
+                    <div className="card-image"
+                      role="img" alt="" style={{
+                        backgroundImage: `url(${row.img})`,
+                        transform: "scale(1)"
+                      }}>
+                    </div>
+                    <img src={row.img} alt='' style={{
+                      cursor: 'pointer',
+                    }} />
+                    <span className="name">
+                      <span>{row.name}</span>
+                    </span>
+                    {/* <div className="provider-name">{row.name}</div> */}
+                    <div className="box-play">
+                      <div className="button-play boxGoPlay" data-gameid={row.providerCode} data-name={row.name}
+                        data-pid="191" onClick={() => PlayGame(row.linkgame)}>เล่น</div>
                     </div>
                   </div>
-                </Container>
-              </React.Fragment>
+                ))}
+              </div>
             </div>
+          </Container>
+        </React.Fragment>
+      </div>
+      <div>
+        <div className="overlay-mobile"></div>
+        <MenuDown />
+        <div className="section-footer mid-footer d-dev">
+          <div className="section-footer-inner">
+            <Allgamecamps />
           </div>
         </div>
-        <div>
-          <div className="overlay-mobile"></div>
-          <MenuDown />
-          <div className="section-footer mid-footer d-dev">
-            <div className="section-footer-inner">
-              <Allgamecamps />
-            </div>
-          </div>
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </>
   );

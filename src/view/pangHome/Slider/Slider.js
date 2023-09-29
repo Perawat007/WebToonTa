@@ -25,7 +25,7 @@ function Slider(props) {
     try {
       const response = await axios.get('/post/');
       setData(response.data.img);
-
+      
     } catch (error) {
       console.error('Error fetching data:', error);
     }

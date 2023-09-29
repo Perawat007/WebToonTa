@@ -17,10 +17,18 @@ import Mycard from "./pangHome/Mycard";
 import DataUser from "../api/DataUser/DataUser";
 import $ from "jquery";
 
+import imgbronze from "../img/ver.2-20230915T140421Z-001/icon_bronze.png";
+import imgdaimond from "../img/ver.2-20230915T140421Z-001/icon_daimond.png";
+import imggold from "../img/ver.2-20230915T140421Z-001/icon_gold.png";
+import imgnew from "../img/ver.2-20230915T140421Z-001/icon_new.png";
+import imgsilver from "../img/ver.2-20230915T140421Z-001/icon_silver.png";
+
 function HeadersII() {
     const [username, setUser] = useState("");
     const [password, setPwd] = useState("");
     const [errMsg, setErrMsg] = useState("");
+    const [imgRank, setimgRank] = useState();
+    const [rankuser, setrankusers] = useState('');
     const [showPopupA, setShowPopup] = useState(false);
     const [showPopupDataUser, setshowPopupDataUser] = useState(false);
     const token = localStorage.getItem("token");
@@ -63,6 +71,28 @@ function HeadersII() {
                                 localStorage.setItem("user", response.data.data[0].phonenumber);
                                 localStorage.setItem("credit", response.data.data[0].credit.toLocaleString("en-US"))
                                 localStorage.setItem("id", response.data.data[0].id)
+                                localStorage.setItem("rank", response.data.data[0].groupmember)
+                                setrankusers(response.data.data[0].groupmember);
+                                switch (response.data.data[0].groupmember) {
+                                    case "Bronze":
+                                        setimgRank(imgbronze)
+                                        break;
+                                    case "Silver":
+                                        setimgRank(imgsilver)
+                                        break;
+                                    case "Gold":
+                                        setimgRank(imggold)
+                                        break;
+                                    case "Daimond":
+                                        setimgRank(imgdaimond)
+                                        break;
+                                    case "NewMember":
+                                        setimgRank(imgnew)
+                                        break;
+                                    default:
+                                        setimgRank(imgbronze)
+                                        break;
+                                }
                             })
                             .catch((error) => {
                                 console.log("error", error);
@@ -242,7 +272,6 @@ function HeadersII() {
                                                 เติมเงิน
                                             </div>
                                         </div>
-
                                         <div className="controlHeaders usernameolne">
                                             <div style={{ display: "inline-block" }}>
                                                 <div
@@ -254,7 +283,7 @@ function HeadersII() {
                                                         scale: "100%",
                                                     }}
                                                 >
-                                                    <BsFillPersonFill />
+
                                                 </div>
                                                 <div
                                                     style={{
@@ -267,7 +296,11 @@ function HeadersII() {
                                                 </div>
                                             </div>
                                         </div>
-
+                                        <div className="user-panelthaiRank">
+                                            <div>
+                                                <img src={imgRank} alt="th" className="imgborder" />
+                                            </div>
+                                        </div>
                                         <div className="controlHeaders marginData">
                                             <div style={{ display: "inline-block" }}>
                                                 <div
@@ -303,6 +336,11 @@ function HeadersII() {
                                                     />
                                                 </div>
                                                 <h4 className="texttitle">{user}</h4>
+                                                <br/>
+                                                <div>
+                                                     <h5 className="texttitle font" style={{}}>ระดับ : {rankuser}</h5>
+                                                </div>
+                                                <br/>
                                                 <div className="button-signup menuslider">
                                                     <div style={{ display: "inline-block" }}>
                                                         <div

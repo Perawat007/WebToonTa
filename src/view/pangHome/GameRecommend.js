@@ -162,7 +162,7 @@ function GameRecommend() {
 
         {
             id: 1, name: 'CowBoys VS Aliens', provider_name: 'CowBoys VS Aliens', data_gameid: 'CowBoys VS Aliens',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_1.jpg',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_1.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_CowboyVSAlien/index.html',
         },
         {
@@ -172,12 +172,12 @@ function GameRecommend() {
         },
         {
             id: 3, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_3.jpg',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_2.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
         {
             id: 4, name: 'RoBo FARM', provider_name: 'RoBo FARM', data_gameid: 'RoBo FARM', data_name: 'RoBo FARM',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_4.jpg',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_4.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_RoboFarm/index.html?fbclid=IwAR3KxC_GlFFdk3D_LoB6NXGpt5KtLwysKqnfjUTZAMxsBbAFoI-OYvUyce0',
         },
 
@@ -193,7 +193,7 @@ function GameRecommend() {
         },
         {
             id: 7, name: 'Go Gold Planet', provider_name: 'Go Gold Planet', data_gameid: 'Go Gold Planet', data_name: 'Go Gold Planet',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_2.jpg',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_3.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_GoGoldPlanet/index.html',
         },
         {
@@ -203,7 +203,7 @@ function GameRecommend() {
         },
         {
             id: 9, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_3.jpg',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_2.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
 
@@ -224,7 +224,7 @@ function GameRecommend() {
         },
         {
             id: 13, name: 'RoBo FARM', provider_name: 'RoBo FARM', data_gameid: 'RoBo FARM', data_name: 'RoBo FARM',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_4.jpg',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_4.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_RoboFarm/index.html?fbclid=IwAR3KxC_GlFFdk3D_LoB6NXGpt5KtLwysKqnfjUTZAMxsBbAFoI-OYvUyce0',
         },
 
@@ -240,7 +240,7 @@ function GameRecommend() {
         },
         {
             id: 16, name: 'Go Gold Planet', provider_name: 'Go Gold Planet', data_gameid: 'Go Gold Planet', data_name: 'Go Gold Planet',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_2.jpg',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_3.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_GoGoldPlanet/index.html',
         },
         {
@@ -250,7 +250,7 @@ function GameRecommend() {
         },
         {
             id: 18, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_3.jpg',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_2.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
         {
@@ -265,12 +265,12 @@ function GameRecommend() {
         },
         {
             id: 21, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_3.jpg',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_2.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
         {
             id: 22, name: 'RoBo FARM', provider_name: 'RoBo FARM', data_gameid: 'RoBo FARM', data_name: 'RoBo FARM',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_4.jpg',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_4.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_RoboFarm/index.html?fbclid=IwAR3KxC_GlFFdk3D_LoB6NXGpt5KtLwysKqnfjUTZAMxsBbAFoI-OYvUyce0',
         },
 
@@ -286,7 +286,7 @@ function GameRecommend() {
         },
         {
             id: 25, name: 'Go Gold Planet', provider_name: 'Go Gold Planet', data_gameid: 'Go Gold Planet', data_name: 'Go Gold Planet',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_2.jpg',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_3.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_GoGoldPlanet/index.html',
         },
         {
@@ -296,7 +296,7 @@ function GameRecommend() {
         },
         {
             id: 27, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/NewGame/game_3.jpg',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_2.jpg',
             link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
         },
 

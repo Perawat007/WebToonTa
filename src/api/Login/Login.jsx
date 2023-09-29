@@ -79,7 +79,7 @@ const LoginBar = () => {
   const [ipAddress, setIp] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [showPopupA, setShowPopup] = useState(false);
-
+  const [dataRank, setDataRank] = useState([]);
   let browserName = "Unknown";
   useEffect(() => {
     // handleSubmit();
@@ -95,7 +95,7 @@ const LoginBar = () => {
       });
       if (response.data.token !== "undefined") {
         const accessToken = response.data.token;
-        await localStorage.setItem("token", accessToken);
+        localStorage.setItem("token", accessToken);
         setUser("");
         setPwd("");
         window.location.href = "/Home";
@@ -127,27 +127,27 @@ const LoginBar = () => {
   return (
     <>
       {showPopupA && (
-          <div className="overlayLogin">
-            <div className="modalContainerLogin">
-              <div className="imgLogin">
-                <img src={cartoon} alt="/" />
+        <div className="overlayLogin">
+          <div className="modalContainerLogin">
+            <div className="imgLogin">
+              <img src={cartoon} alt="/" />
+            </div>
+            <div className="modalRightLogin">
+              <div className="contentLogin">
+                <p className="titleDialogLogin font">Username หรือ Password ไม่ถูกต้อง</p>
+                <br />
+                <h3 className="detailDialogLogin font">
+                  กรุณากรอกUsername หรือ Password ใหม่อีกครั้ง
+                </h3>
               </div>
-              <div className="modalRightLogin">
-                <div className="contentLogin">
-                  <p className="titleDialogLogin font">Username หรือ Password ไม่ถูกต้อง</p>
-                  <br />
-                  <h3 className="detailDialogLogin font">
-                    กรุณากรอกUsername หรือ Password ใหม่อีกครั้ง
-                  </h3>
-                </div>
-                <div className="btnContainerLogin">
-                  <button className="btnPrimaryLogin" onClick={togglePopup}>
-                    ตกลง
-                  </button>
-                </div>
+              <div className="btnContainerLogin">
+                <button className="btnPrimaryLogin" onClick={togglePopup}>
+                  ตกลง
+                </button>
               </div>
             </div>
           </div>
+        </div>
       )}
       <nav >
         <Headers />
@@ -211,7 +211,7 @@ const LoginBar = () => {
                 </div>
 
                 <div className="Login-link font">
-                   <a className="font" href=""> พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
+                  <a className="font" href=""> พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                 </div>
               </form>
             </div>

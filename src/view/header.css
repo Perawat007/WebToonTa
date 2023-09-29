@@ -238,7 +238,10 @@ i {
 	  background: -webkit-linear-gradient(left, #013170, #008cff);
 	  text-transform: uppercase
   }
-  
+  .imgRank{
+	position: relative;
+	width: 3%;
+  }
   @media (min-width:1600px) {
     .containerHeader {
         max-width: 1920px

@@ -17,17 +17,18 @@ const DataUser = () => {
   const credit = localStorage.getItem("credit");
   const id = localStorage.getItem("id");
   const [data, setData] = useState([]);
-  const [dataimgBank, setdataimg] = useState(""); 
+  const [dataimgBank, setdataimg] = useState("");
   const [imgRank, setimgRank] = useState();
+  const rank = localStorage.getItem("rank");
 
   useEffect(() => {
     if (token) {
       if (data.length === 0) {
-        axios.get("/list_user/"+id, "", {
-            headers: {
-              Authorization: `Bearer ${token}`,
-            },
-          })
+        axios.get("/list_user/" + id, "", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
           .then((response) => {
             setdataimg(response.data.data[0].imgBank)
             setaccountName(response.data.data[0].accountName)
@@ -75,11 +76,15 @@ const DataUser = () => {
           <div className="containerProfile">
             <div className="profile-card-1">
               <div className="img">
-                <img src={imgRank} alt=""/>
+                <img src={imgRank} alt="" />
               </div>
               <div className="mid-section">
-              <div className="titleData font">ข้อมูลบัญชี</div>
+                <div className="titleDataUser font">ข้อมูลบัญชี</div>
                 <div className="nameData font">username : {user}</div>
+
+                <div>
+                  <h5 className="texttitle font" style={{}}>ระดับ : {rank}</h5>
+                </div>
                 <div className="description font">เปลี่ยนรหัสผ่าน <a className="font" href="/ResetPassword">คลิก</a></div>
 
                 <div className="line"></div>

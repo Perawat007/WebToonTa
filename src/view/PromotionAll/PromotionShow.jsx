@@ -23,17 +23,33 @@ const PromotionShow = () => {
   const [ipAddress, setIp] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [showPopupA, setShowPopup] = useState(false);
-
+  const token = localStorage.getItem("token");
   const [activeTab, setActiveTab] = useState('ทั้งหมด');
-
+  const [data, setData] = useState([]);
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
 
   let browserName = "Unknown";
   useEffect(() => {
-    // handleSubmit();
-  }, [phoneNumber, password]);
+    axios.get("/post/", {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
+      .then((response) => {
+        //console.log(response.data.img);
+        setData(response.data.img)
+      })
+      .catch((error) => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        localStorage.removeItem("id");
+        localStorage.removeItem("credit");
+        window.location.href = "/";
+        console.log("error", error);
+      });
+  }, []);
 
 
   const togglePopup = () => {
@@ -91,18 +107,25 @@ const PromotionShow = () => {
                 ทั้งหมด
               </li>
               <li
-                data-tabs="เกม"
-                className={activeTab === 'เกม' ? 'active' : ''}
-                onClick={() => handleTabClick('เกม')}
+                data-tabs="ฝาก"
+                className={activeTab === 'ฝาก' ? 'active' : ''}
+                onClick={() => handleTabClick('ฝาก')}
               >
-                เกม
+                ฝาก
               </li>
               <li
-                data-tabs="เติมเงิน"
-                className={activeTab === 'เติมเงิน' ? 'active' : ''}
-                onClick={() => handleTabClick('เติมเงิน')}
+                data-tabs="มีคืน"
+                className={activeTab === 'มีคืน' ? 'active' : ''}
+                onClick={() => handleTabClick('มีคืน')}
               >
-                เติมเงิน
+                มีคืน
+              </li>
+              <li
+                data-tabs="เทิร์นโอเวอร์"
+                className={activeTab === 'เทิร์นโอเวอร์' ? 'active' : ''}
+                onClick={() => handleTabClick('เทิร์นโอเวอร์')}
+              >
+                เทิร์นโอเวอร์
               </li>
             </ul>
           </div>
@@ -114,45 +137,47 @@ const PromotionShow = () => {
               switch (activeTab) {
                 case 'ทั้งหมด':
                   return <ul className="ulPromotion">
-                    <li className="liPromotion">
-                      <img className="settingImg" src={picpic} alt="" />
-                      <h3 className="h3Promotion font" style={{ color: "#FFFFFF" }}>ผู้เล่นใหม่</h3>
-                      <p className="font">สมาชิกใหม่รับโบนัสต้อนรับพิเศษจากยอดเติมเงิน 30% จากยอดเติม พิเศษที่ ToonTa เท่านั้น!</p>
-                    </li>
-
-                    <li className="liPromotion">
-                      <img src={imgMoney} alt="" />
-                      <h3 className="h3Promotion font" style={{ color: "#FFFFFF" }}>เล่นเสียมีคืน</h3>
-                      <p className="font">เล่นเสียไม่เป็นไร เรามียอดคืนเพื่อให้ผู้เล่นได้แก้มือ</p>
-                    </li>
-
-                    <li className="liPromotion">
-                      <img src={imgMoney} alt="" />
-                      <h3 className="h3Promotion font" style={{ color: "#FFFFFF" }}>เล่นเสียมีคืน</h3>
-                      <p className="font">เล่นเสียไม่เป็นไร เรามียอดคืนเพื่อให้ผู้เล่นได้แก้มือ</p>
-                    </li>
+                    {data.map((row) => (
+                      <div key={row.id}>
+                        <li className="liPromotion">
+                          <img className="settingImg" src={"https://relaxtimecafe.fun/images/" + row.filename} alt="" />
+                          <h3 className="h3Promotion font" style={{ color: "#FFFFFF" }}>{row.namepromotion}</h3>
+                          <p className="font">{row.details}</p>
+                        </li>
+                      </div>
+                    ))}
                   </ul>
-                case 'เกม':
+                case 'ฝาก':
+                  return <ul className="ulPromotion">
+                    {data.map((row) => (
+                      <div key={row.id}>
+                        <li className="liPromotion">
+                          <img className="settingImg" src={"https://relaxtimecafe.fun/images/" + row.filename} alt="" />
+                          <h3 className="h3Promotion font" style={{ color: "#FFFFFF" }}>{row.namepromotion}</h3>
+                          <p className="font">{row.details}</p>
+                        </li>
+                      </div>
+                    ))}
+                  </ul>
+                case 'มีคืน':
                   return <ul className="ulPromotion">
                     <li className="liPromotion">
-                      <img src={imgMoney} alt="" />
+                      <img src={imgpanpa} alt="" />
                       <h3 className="h3Promotion font" style={{ color: "#FFFFFF" }}>เล่นเสียมีคืน</h3>
                       <p className="font">เล่นเสียไม่เป็นไร เรามียอดคืนเพื่อให้ผู้เล่นได้แก้มือ</p>
                     </li>
-
-                    <li className="liPromotion">
-                      <img src={imgMoney} alt="" />
-                      <h3 className="h3Promotion font" style={{ color: "#FFFFFF" }}>เล่นเสียมีคืน</h3>
-                      <p className="font">เล่นเสียไม่เป็นไร เรามียอดคืนเพื่อให้ผู้เล่นได้แก้มือ</p>
-                    </li>
-
                     <li className="liPromotion">
                       <img className="settingImg" src={picpic} alt="" />
                       <h3 className="h3Promotion font" style={{ color: "#FFFFFF" }}>ผู้เล่นใหม่</h3>
                       <p className="font">สมาชิกใหม่รับโบนัสต้อนรับพิเศษจากยอดเติมเงิน 30% จากยอดเติม พิเศษที่ ToonTa เท่านั้น!</p>
                     </li>
+                    <li className="liPromotion">
+                      <img src={imgMoney} alt="" />
+                      <h3 className="h3Promotion font" style={{ color: "#FFFFFF" }}>เล่นเสียมีคืน</h3>
+                      <p className="font">เล่นเสียไม่เป็นไร เรามียอดคืนเพื่อให้ผู้เล่นได้แก้มือ</p>
+                    </li>
                   </ul>
-                case 'เติมเงิน':
+                case 'เทิร์นโอเวอร์':
                   return <ul className="ulPromotion">
                     <li className="liPromotion">
                       <img src={imgpanpa} alt="" />

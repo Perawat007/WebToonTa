@@ -170,7 +170,12 @@ function WinGame() {
     }
 
     const SeeGameCamp = (codeGame) => {
-        window.location.href = `/${codeGame}`;
+        console.log(codeGame);
+        if (codeGame === 'DOGZILLA') {
+            window.location.href = `/GameDogsila`;
+        } else {
+            window.location.href = `/${codeGame}`;
+        }
     }
     const populargame = [
         {
@@ -304,12 +309,135 @@ function WinGame() {
             img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/25.jpg'
         },
     ]
+
+    const populargameAll = [
+        {
+            id: 0, name: 'DOGZILLA', provider_name: 'DOGZILLA', data_gameid: 'DOGZILLA', data_name: 'DOGZILLA', alt: 'DOGZILLA',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/cover_pic_dogzilla.jpg'
+        },
+        {
+            id: 1, name: 'PG', provider_name: 'SEXY', data_gameid: 'PGSOFT2', data_name: 'PG', alt: 'PG',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/1.jpg'
+        },
+        {
+            id: 2, name: 'SlotXO', provider_name: 'PP', data_gameid: 'SLOTXO', data_name: 'SlotXO', alt: 'SlotXO',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/2.jpg'
+        },
+        {
+            id: 3, name: 'JoKer', provider_name: 'PP', data_gameid: 'JOKER', data_name: 'JoKer', alt: 'JoKer',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/3.jpg'
+        },
+        {
+            id: 4, name: 'Ask me Bet', provider_name: 'SPADE', data_gameid: 'ASKMEBET', data_name: 'SPADE', alt: 'SPADE',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/4.jpg'
+        },
+        {
+            id: 5, name: 'HABANERO', provider_name: 'HABANERO', data_gameid: 'HABANERO', data_name: 'HABANERO', alt: 'HABANERO',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/5.jpg'
+        },
+        {
+            id: 6, name: 'Spade Gaming', provider_name: 'PP', data_gameid: 'SPADE', data_name: 'SlotXO', alt: 'SlotXO',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/6.jpg'
+        },
+        {
+            id: 7, name: 'Micro Gaming', provider_name: 'MICRO', data_gameid: 'MICRO', data_name: 'MICRO', alt: 'MICRO',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/7.jpg'
+        },
+        {
+            id: 8, name: 'Simple Play', provider_name: 'SIMPLEPLAY', data_gameid: 'SIMPLEPLAY', data_name: 'SIMPLEPLAY', alt: 'SIMPLEPLAY',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/8.jpg'
+        },
+        {
+            id: 9, name: 'Live22', provider_name: 'Live22', data_gameid: 'LIVE22', data_name: 'Live22', alt: 'Live22',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/9.jpg'
+        },
+        // {
+        //     id: 10, name: 'Allwayspin', provider_name: 'ALLWAYSPIN', data_gameid: 'ALLWAYSPIN', data_name: 'ALLWAYSPIN', alt: 'ALLWAYSPIN',
+        //     img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/10.jpg'
+        // },
+        {
+            id: 11, name: 'Evoplay', provider_name: 'EVOPLAY', data_gameid: 'EVOPLAY', data_name: 'EVOPLAY', alt: 'EVOPLAY',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/11.jpg'
+        },
+        {
+            id: 12, name: 'CQ9', provider_name: 'CQ9V2', data_gameid: 'CQ9V2', data_name: 'CQ9V2', alt: 'CQ9V2',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/12.jpg'
+        },
+        // {
+        //     id: 13, name: 'KA Gaming', provider_name: 'KAGAME', data_gameid: 'KAGAME', data_name: 'KAGAME', alt: 'KAGAME',
+        //     img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/13.jpg'
+        // },
+        {
+            id: 14, name: 'Jili', provider_name: 'JILI', data_gameid: 'JILI', data_name: 'JILI', alt: 'JILI',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/14.jpg'
+        },
+        {
+            id: 15, name: 'Mannaplay', provider_name: 'MANNA', data_gameid: 'MANNA', data_name: 'MANNA', alt: 'MANNA',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/15.jpg'
+        },
+        {
+            id: 16, name: 'Funky Games', provider_name: 'FUNKY', data_gameid: 'FUNKY', data_name: 'FUNKY', alt: 'FUNKY',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/16.jpg'
+        },
+        {
+            id: 17, name: 'Yggdrasil Gaming', provider_name: 'YGGDRASIL', data_gameid: 'YGGDRASIL', data_name: 'YGGDRASIL', alt: 'YGGDRASIL',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/17.jpg'
+        },
+        {
+            id: 18, name: 'UPG Slot', provider_name: 'UPG', data_gameid: 'UPG', data_name: 'UPG', alt: 'UPG',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/18.jpg'
+        },
+        {
+            id: 19, name: 'Ameba', provider_name: 'AMEBA', data_gameid: 'AMEBA', data_name: 'AMEBA', alt: 'AMEBA',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/20.jpg'
+        },
+        {
+            id: 20, name: 'Ambslot', provider_name: 'AMBSLOT2', data_gameid: 'AMBSLOT2', data_name: 'AMBSLOT2', alt: 'AMBSLOT2',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/21.jpg'
+        },
+        {
+            id: 21, name: 'Netent2', provider_name: 'NETENT2', data_gameid: 'NETENT2', data_name: 'NETENT2', alt: 'NETENT2',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/23.jpg'
+        },
+        {
+            id: 23, name: 'Red Tiger', provider_name: 'REDTIGER', data_gameid: 'REDTIGER', data_name: 'REDTIGER', alt: 'REDTIGER',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/24.jpg'
+        },
+        {
+            id: 24, name: 'Dragon Gaming', provider_name: 'DRAGONGAMING', data_gameid: 'DRAGONGAMING', data_name: 'DRAGONGAMING', alt: 'DRAGONGAMING',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/25.jpg'
+        },
+        {
+            id: 25, name: 'Ace333', provider_name: 'ACE333', data_gameid: 'ACE333', data_name: 'ACE333', alt: 'ACE333',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/26.jpg'
+        },
+        {
+            id: 26, name: 'I8', provider_name: 'I8', data_gameid: 'I8', data_name: 'I8', alt: 'I8',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/27.jpg'
+        },
+        {
+            id: 27, name: 'WmSlot', provider_name: 'WMSLOT', data_gameid: 'WMSLOT', data_name: 'WMSLOT', alt: 'WMSLOT',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/28.jpg'
+        },
+        {
+            id: 28, name: 'Spinix', provider_name: 'SPINIX', data_gameid: 'SPINIX', data_name: 'SPINIX', alt: 'SPINIX',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/29.jpg'
+        },
+        {
+            id: 29, name: '918 Kiss', provider_name: '918KISS', data_gameid: '918KISS', data_name: '918KISS', alt: '918KISS',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/31.jpg'
+        },
+        {
+            id: 30, name: 'Pragmatic Play Slot', provider_name: 'PRAGMATIC_SLOT', data_gameid: 'PRAGMATIC_SLOT', data_name: 'PRAGMATIC_SLOT', alt: 'PRAGMATIC_SLOT',
+            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/32.jpg'
+        },
+    ]
     const settings = {
         className: "center",
         centerPadding: "100px",
         infinite: true,
-        slidesToShow: 5,
-        rows: 3,
+        slidesToShow: 0,
+        rows: 4,
         speed: 100,
         // slidesPerRow: 2,
         swipeToSlide: true,
@@ -413,11 +541,11 @@ function WinGame() {
     return (
         <>
             <div className="testdata addfont">ค่ายเกมทั้งหมด</div>
-            <div className="features-game posRel mgt45 showGame">
+            {/* <div className="features-game posRel mgt45 showGame">
                 <div className="game">
-                    <div className="list scallGame">
-                        {/* <Slider {...settings}>
-                            {populargame.map((row) => (
+                    <div className="list scallGame"> */}
+            {/* <Slider {...settings}>
+                            {populargameAll.map((row) => (
                                 <div key={row.id}>
                                     <div className="boxGame">
                                         <div className="box shadowImage">
@@ -437,7 +565,7 @@ function WinGame() {
                             ))}
                         </Slider> */}
 
-                        <Swiper
+            {/* <Swiper
                             slidesPerView={2}
                             spaceBetween={5}
                             loop={true}
@@ -485,14 +613,14 @@ function WinGame() {
                                             </div>
                                             <img className='shadowImage ' src={row.img} alt='' style={{
                                                 cursor: 'pointer',
-                                            }} onClick={() => SeeGameCamp(row.data_gameid)}/>
+                                            }} onClick={() => SeeGameCamp(row.data_gameid)} />
                                         </div>
 
                                         <span className="name">
                                             <span className='scallButtom'>{row.name}</span>
                                         </span>
                                         {/* <div className="provider-name scallButtom">{row.name}</div> */}
-                                        <div className="box-play">
+            {/* <div className="box-play">
                                             <div className="button-play boxGoPlay" data-gameid={row.id} data-name={row.name}
                                                 data-pid="191" onClick={() => SeeGameCamp(row.data_gameid)}>เข้าดูเกม</div>
                                         </div>
@@ -500,7 +628,7 @@ function WinGame() {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-    
+
                         <Swiper
                             slidesPerView={2}
                             spaceBetween={5}
@@ -550,13 +678,13 @@ function WinGame() {
                                             <img className='shadowImage ' src={row.img} alt='' style={{
                                                 cursor: 'pointer',
                                                 transform: "scale(1)"
-                                            }} onClick={() => SeeGameCamp(row.data_gameid)}/>
+                                            }} onClick={() => SeeGameCamp(row.data_gameid)} />
                                         </div>
 
                                         <span className="name">
                                             <span className='scallButtom'>{row.name}</span>
                                         </span>
-                                        {/* <div className="provider-name scallButtom">{row.name}</div> */}
+                                        <div className="provider-name scallButtom">{row.name}</div> 
                                         <div className="box-play">
                                             <div className="button-play boxGoPlay" data-gameid={row.id} data-name={row.name}
                                                 data-pid="191" onClick={() => SeeGameCamp(row.data_gameid)}>เข้าดูเกม</div>
@@ -565,7 +693,7 @@ function WinGame() {
                                 </SwiperSlide>
                             ))}
                         </Swiper>
-                
+
                         <Swiper
                             slidesPerView={2}
                             spaceBetween={5}
@@ -615,13 +743,13 @@ function WinGame() {
                                             <img className='shadowImage ' src={row.img} alt='' style={{
                                                 cursor: 'pointer',
                                                 transform: "scale(1)"
-                                            }} onClick={() => SeeGameCamp(row.data_gameid)}/>
+                                            }} onClick={() => SeeGameCamp(row.data_gameid)} />
                                         </div>
 
                                         <span className="name">
                                             <span className='scallButtom'>{row.name}</span>
                                         </span>
-                                        {/* <div className="provider-name scallButtom">{row.name}</div> */}
+                                        <div className="provider-name scallButtom">{row.name}</div>
                                         <div className="box-play">
                                             <div className="button-play boxGoPlay" data-gameid={row.id} data-name={row.name}
                                                 data-pid="191" onClick={() => SeeGameCamp(row.data_gameid)}>เข้าดูเกม</div>
@@ -631,6 +759,45 @@ function WinGame() {
                             ))}
                         </Swiper>
                     </div>
+                </div> 
+            </div> */}
+            <div className="section-footer mid-footer">
+                <div className="section-footer-inner">
+                    <React.Fragment>
+                        <Container maxWidth="xxl" sx={{ p: 1 }}>
+                            <br />
+                            <br />
+                            <div className=" gameAll vGameList">
+                                <div className="list ">
+                                    {populargameAll.map((row) => (
+                                        <div key={row.id} className="box">
+                                            <div className="boxGame">
+                                                <div className="card-image"
+                                                    role="img" alt="" style={{
+                                                        backgroundImage: `url(${row.img})`,
+                                                        transform: "scale(1)"
+                                                    }}
+                                                    onClick={() => SeeGameCamp(row.data_gameid)}
+                                                    >
+                                                </div>
+                                                <img onClick={() => SeeGameCamp(row.data_gameid)} src={row.img} alt='' style={{
+                                                    cursor: 'pointer',
+                                                }} />
+                                                <span className="name">
+                                                    <span>{row.name}</span>
+                                                </span>
+                                                <div className="box-play">
+                                                    <div className="button-play boxGoPlay" data-gameid={row.id} data-name={row.name}
+                                                        data-pid="191" onClick={() => SeeGameCamp(row.data_gameid)}>เข้าดูเกม</div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    ))}
+                                </div>
+                            </div>
+                        </Container>
+                    </React.Fragment >
                 </div>
             </div>
         </>

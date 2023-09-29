@@ -28,10 +28,10 @@ import circleII from "../../img/circle2.png";
 import rewardfile from "../../img/reward/rewardfileB.png"
 import SitiGame from "../pangHome/SitiGame"
 import axios from '../../api/axios';
-import card1 from "../../img/reward/card1.png"
-import card2 from "../../img/reward/card2.png"
-import card3 from "../../img/reward/card3.png"
-import card4 from "../../img/reward/card4.png"
+import card1 from "../../img/reward/card_1.png"
+import card2 from "../../img/reward/card_2.png"
+import card3 from "../../img/reward/card_3.png"
+import card4 from "../../img/reward/card_4.png"
 import announce from "../../img/icon_bar/announce_for_PC.png"
 import imgDeposit from "../../img/icon_bar/DepositCartoon.png"
 import imgWitdraw from "../../img/icon_bar/WitdrawCartoon.png"
@@ -277,19 +277,19 @@ function Home() {
 
           <div className="image-grid">
             <button onClick={() => handleImageClick('Bronze')}>
-              <img className="img-responsive download-bannerAbs imgCardAbs1 shadowImage" src={card1} alt="benner-img" />
+              <img className="img-responsive download-bannerAbs imgCardAbs1 " src={card1} alt="benner-img" />
               <h4 className='font' style={{ color: '#FF9900', marginTop: '10px' }}>Bronze</h4>
             </button>
             <button onClick={() => handleImageClick('Silver')}>
-              <img className="img-responsive download-bannerAbs imgCardAbs2 shadowImage" src={card2} alt="benner-img" />
+              <img className="img-responsive download-bannerAbs imgCardAbs2 " src={card2} alt="benner-img" />
               <h4 className='font' style={{ color: '#FF9900', marginTop: '10px' }}>Silver</h4>
             </button>
             <button onClick={() => handleImageClick('Gold')}>
-              <img className="img-responsive download-bannerAbs imgCardAbs3 shadowImage" src={card3} alt="benner-img" />
+              <img className="img-responsive download-bannerAbs imgCardAbs3 " src={card3} alt="benner-img" />
               <h4 className='font' style={{ color: '#FF9900', marginTop: '10px' }}>Gold</h4>
             </button>
             <button onClick={() => handleImageClick('Diamond')}>
-              <img className="img-responsive download-bannerAbs imgCardAbs4 shadowImage" src={card4} alt="benner-img" />
+              <img className="img-responsive download-bannerAbs imgCardAbs4 " src={card4} alt="benner-img" />
               <h4 className='font' style={{ color: '#FF9900', marginTop: '10px' }}>Diamond</h4>
             </button>
           </div>
