@@ -6,14 +6,7 @@ import nft from "../img/toonta.png";
 import nftLogin from "./pangHome/nft.jpg";
 import th from "../img/lang/th.svg";
 import axios from "../api/axios";
-import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
-import { Container, Menu, MenuItem, Button, AppBar } from "@mui/material";
-import { BsPersonFill, BsCreditCardFill, BsFillPersonFill } from "react-icons/bs";
-import { HiOutlineLogout } from "react-icons/hi";
-import { NavLink } from "react-router-dom";
-import Mycard from "./pangHome/Mycard";
+import { BsCreditCardFill } from "react-icons/bs";
 import DataUser from "../api/DataUser/DataUser";
 import $ from "jquery";
 
@@ -22,7 +15,7 @@ import imgdaimond from "../img/ver.2-20230915T140421Z-001/icon_daimond.png";
 import imggold from "../img/ver.2-20230915T140421Z-001/icon_gold.png";
 import imgnew from "../img/ver.2-20230915T140421Z-001/icon_new.png";
 import imgsilver from "../img/ver.2-20230915T140421Z-001/icon_silver.png";
-
+import setting from "../img/icon/setting.png"
 function HeadersII() {
     const [username, setUser] = useState("");
     const [password, setPwd] = useState("");
@@ -39,10 +32,11 @@ function HeadersII() {
     const [data, setData] = useState([]);
     const [dataCredit, setCredit] = useState("");
     let test = false;
+
     function animation() {
         $(".nav-switch").on("click", function (event) {
             test = true;
-            $(".main-menu").slideToggle(400);
+            $(".main-menu").slideToggle(100);
             //event.preventDefault();
         });
     }
@@ -230,7 +224,12 @@ function HeadersII() {
                                             <img src={nft} alt="logo" />
                                         </a>
                                         <div className="nav-switch">
-                                            <i className="fa fa-bars"></i>
+                                            {/* <i className="fa fa-bars"></i> */}
+                                            <div className="user-panelthai">
+                                                <div>
+                                                    <img src={setting} alt="th" className="imgborder" />
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div className="user-panel">
@@ -331,16 +330,16 @@ function HeadersII() {
                                                 <div className="sidebar-header">
                                                     <img
                                                         className="logo"
-                                                        src="asset_web/img/toonta.png"
+                                                        src={nft}
                                                         alt="logo"
                                                     />
                                                 </div>
                                                 <h4 className="texttitle">{user}</h4>
-                                                <br/>
+                                                <br />
                                                 <div>
-                                                     <h5 className="texttitle font" style={{}}>ระดับ : {rankuser}</h5>
+                                                    <h5 className="texttitle font" style={{}}>ระดับ : {rankuser}</h5>
                                                 </div>
-                                                <br/>
+                                                <br />
                                                 <div className="button-signup menuslider">
                                                     <div style={{ display: "inline-block" }}>
                                                         <div
@@ -479,7 +478,12 @@ function HeadersII() {
                                             <img src={nft} alt="logo" />
                                         </a>
                                         <div className="nav-switch">
-                                            <i className="fa fa-bars"></i>
+                                            {/* <i className="fa fa-bars"></i> */}
+                                            <div className="user-panelthaiset">
+                                                <div>
+                                                    <img src={setting} alt="th" className="fa imgborder" />
+                                                </div>
+                                            </div>
                                         </div>
 
                                         <div className="user-panelthai">
@@ -511,7 +515,7 @@ function HeadersII() {
                                                 <div className="sidebar-header">
                                                     <img
                                                         className="logo"
-                                                        src="asset_web/img/toonta.png"
+                                                        src={nft}
                                                         alt="logo"
                                                     />
                                                 </div>
@@ -536,7 +540,7 @@ function HeadersII() {
                                                             data-type="card"
                                                             data-v="game"
                                                             data-name="การ์ด"
-                                                            href="/Gametable"
+                                                            href="/Gameskill"
                                                         >
                                                             <span className="icon-card"></span>
                                                             <span>โต๊ะเกม</span>

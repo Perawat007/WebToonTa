@@ -17,7 +17,7 @@ import cartoon from '../../img/3.png'
 function GamePlay() {
     const [items, setItems] = React.useState([]);
     const [currentPage, setCurrentPage] = React.useState(1);
-    const [postsPerPage, setPostsPerPage] = React.useState(18);
+    const [postsPerPage, setPostsPerPage] = React.useState(30);
     const [GameValus, setValus] = React.useState(18);
     const token = localStorage.getItem("token");
     const user = localStorage.getItem("user");

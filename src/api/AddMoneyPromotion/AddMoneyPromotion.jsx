@@ -1,6 +1,5 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
 import axios from "../axios";
-import "./AddMoneyPromotion.scss";
 import "./AddMoneyPromotion.css";
 import "./dialogMocss.css";
 import logo from "../../img/toonta.png";
@@ -477,9 +476,9 @@ const AddMoneyPromotion = () => {
                 <div className="containerBank">
                   <ImageList sx={{
                     width: 450, height: 200,
-                    '@media (min-width: 768px)': {
+                    '@media (max-width: 768px)': {
                       width: '450',
-                      height: '260',
+                      height: '200',
                     },
                   }} cols={1}>
                     {depositaccount.map((option) => (
@@ -514,12 +513,11 @@ const AddMoneyPromotion = () => {
                   </ImageList>
                 </div>
 
-
                 <div className="fieldDataDeposit font textinput input-container">
-                  <p className="textTitle font">กรุณาเลือกโปรโมชั่น</p>
-                  <select className="lang_menu font" value={selectedValue} onChange={selectElement}>
+                  <p className="textTitle font" style={{fontSize:'15px'}}>กรุณาเลือกโปรโมชั่น</p>
+                  <select className="lang_menu font"  style={{fontSize:'17px'}} value={selectedValue} onChange={selectElement}>
                     {datapromotion.map((option) => (
-                      <option key={option.id} >
+                      <option key={option.id} className="lang_menu font"  style={{fontSize:'17px'}}>
                         {option.label}
                       </option>
                     ))}
@@ -570,10 +568,10 @@ const AddMoneyPromotion = () => {
                   {selectedImage && (
                     <div>
                       <br />
-                      <h4 className="font" style={{ display: 'inline-block' }}>ตัวอย่างรูปภาพ</h4>
+                      <h5 className="textTitleimg font" style={{ display: 'inline-block' }}>ตัวอย่างรูปภาพ</h5>
                       <img className="imgSile"
                         src={selectedImage} alt="Uploaded"
-                        style={{ display: 'inline-block', marginLeft: '20px' }}
+                        style={{ display: 'inline-block'}}
                         onClick={() => openModal(selectedImage)}
                       />
                     </div>
@@ -582,7 +580,6 @@ const AddMoneyPromotion = () => {
                 <div className="fieldMoney btnsubmitDeposit font">
                   <input type="submitDeposit" defaultValue="เติมเงิน" onClick={() => handleSubmitdeposit()} />
                 </div>
-                <br />
                 <div className="money-link ">
                   <a className="font" href=""> พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                 </div>

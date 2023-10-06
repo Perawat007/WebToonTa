@@ -19,6 +19,7 @@ import Allgamecamps from "../../view/pangHome/Allgamecamps";
 import MenuDown from "../../view/pangHome/MenuDown";
 import NavicationBar from "../../view/NavicationBar/navicationbar";
 import { BsUnlockFill, BsCreditCardFill, BsPhoneFill, BsCoin } from "react-icons/bs";
+import imgDiralog from "../../img/imgDiralog.png";
 import {
   Box,
   Button,
@@ -36,43 +37,6 @@ import {
   Typography,
 } from "@mui/material";
 
-const BootstrapButton = styled(Button)({
-  boxShadow: "none",
-  textTransform: "none",
-  fontSize: 16,
-  width: 30,
-  padding: "6px 12px",
-  border: "1px solid",
-  lineHeight: 1.5,
-  backgroundColor: "#0063cc",
-  borderColor: "#0063cc",
-  fontFamily: [
-    "-apple-system",
-    "BlinkMacSystemFont",
-    '"Segoe UI"',
-    "Roboto",
-    '"Helvetica Neue"',
-    "Arial",
-    "sans-serif",
-    '"Apple Color Emoji"',
-    '"Segoe UI Emoji"',
-    '"Segoe UI Symbol"',
-  ].join(","),
-  "&:hover": {
-    backgroundColor: "#0069d9",
-    borderColor: "#0062cc",
-    boxShadow: "none",
-  },
-  "&:active": {
-    boxShadow: "none",
-    backgroundColor: "#0062cc",
-    borderColor: "#005cbf",
-  },
-  "&:focus": {
-    boxShadow: "0 0 0 0.2rem rgba(0,123,255,.5)",
-  },
-});
-
 const LoginBar = () => {
   const [phoneNumber, setUser] = useState("");
   const [password, setPwd] = useState("");
@@ -80,6 +44,10 @@ const LoginBar = () => {
   const [errMsg, setErrMsg] = useState("");
   const [showPopupA, setShowPopup] = useState(false);
   const [dataRank, setDataRank] = useState([]);
+  const [showRegiterOTP, setRegiterOTP] = useState(false);
+  const [otpPin, setotppin] = useState("");
+  const [tokenpin, settokenpin] = useState("");
+
   let browserName = "Unknown";
   useEffect(() => {
     // handleSubmit();
@@ -124,6 +92,45 @@ const LoginBar = () => {
     window.location.href = `/Register`;
   }
 
+  const cilckForgotPassword = () => {
+    window.location.href = `/Register`;
+  }
+
+  const handleSubmitOTP = async (e) => {
+    e.preventDefault();
+    fetch("https://relaxtimecafe.fun/otpVerify", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        pin: otpPin,
+        token: tokenpin,
+      }),
+    })
+      .then((response) => {
+        if (response) {
+          return response.json();
+        } else {
+          throw new Error("Error: " + response.statusText);
+        }
+      })
+      .then((data) => {
+        if (
+          data.dataRes.data.status === "success" &&
+          data.dataRes.data.message === "Code is correct."
+        ) {
+        }
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  };
+
+  const handleCancelOTP = async (e) => {
+    setRegiterOTP(false);
+  };
+
   return (
     <>
       {showPopupA && (
@@ -149,6 +156,7 @@ const LoginBar = () => {
           </div>
         </div>
       )}
+
       <nav >
         <Headers />
       </nav>
@@ -182,7 +190,7 @@ const LoginBar = () => {
                       required
                       className="input-with-iconLogin font"
                     />
-                    <BsPhoneFill className="input-iconLogin" />
+                    <BsPhoneFill className="input-iconLogin"/>
                   </div>
                 </div>
 
@@ -201,7 +209,7 @@ const LoginBar = () => {
                   </div>
                 </div>
                 <div className="pass-link font">
-                  <a className="font" href="#">Forgot password?</a>
+                  <a className="font" href="/ForgotPassword">Forgot password?</a>
                 </div>
 
                 <br />
@@ -234,17 +242,18 @@ const LoginBar = () => {
           <img className="scaltimgLogin" src={imgMoney} id="wel-img-id" alt="" />
         </div>
 
-        <div className="imgWayLogin">
-          <img className="scaltimgLoginCircleI" src={circle1} alt="" />
+        <div className="imgWaymonterLoginIIIC">
+          <img className="scaltimgDepositCircle" src={circle1} alt="" />
         </div>
-        <div className="imgWayLogin">
-          <img className="scaltimgLoginCircleV" src={circle1} alt="" />
+
+        <div className="imgWaymonterLoginIII">
+          <img className="scaltimgDepositCircle" src={circle1} alt="" />
         </div>
-        <div className="imgWayLogin">
-          <img className="scaltimgLoginCircleVI" src={circle1} alt="" />
+        <div className="imgWaymonterLoginII">
+          <img className="scaltimgDepositCircle" src={circle2} alt="" />
         </div>
-        <div className="imgWayLogin">
-          <img className="scaltimgLoginCircleII" src={circle2} alt="" />
+        <div className="imgWaymonterLoginI">
+          <img className="scaltimgDepositCircle" src={circle2} alt="" />
         </div>
         <div className="imgWayLogin">
           <img className="scaltimgLoginCircleIII" src={imgpanpa} alt="" />

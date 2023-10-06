@@ -1,0 +1,217 @@
+.wrapperPromotion {
+    overflow: hidden;
+    width: 100%;
+    height: 650px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    padding: 0px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    margin: auto;
+    position: relative;
+}
+
+.profile-card-2 {
+    width: 100%;
+}
+
+.imgPromotionPopup {
+    position: relative;
+    width: 90%;
+    margin: auto;
+}
+
+
+.profile-card-2 .mid-sectionPromotion {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    padding: 10px 20px 0;
+    box-sizing: border-box;
+    margin-left: auto;
+    justify-content: left;
+    margin-top: 2%;
+}
+
+.profile-card-2 .mid-sectionPromotion .namePromotion {
+    color: #ffffff;
+    font-size: 1.8em;
+    justify-content: left;
+    text-align: left;
+    margin-left: 7%;
+}
+
+.titleData {
+    color: #ffffff;
+    font-size: 2.2em;
+    padding-top: 6px;
+    margin-bottom: 3%;
+}
+
+.titlePromotion {
+    color: #ffffff;
+    font-size: 25px;
+    padding-top: 1px;
+    margin-bottom: 3%;
+    
+}
+
+.textButtonPromotion{
+    text-shadow:
+      2px 1px 0 #000000,
+      0px 0px 0 #000000,
+      0px 0px 0 #000000,
+      0px 0px 0 #000000,
+      0px 0px 0 #000000;
+}
+
+.nearby-userPromotion {
+    position: relative;
+    width: 80%;
+    padding: 15px 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(96, 0, 151);
+    margin: auto;
+    margin-top: 2%;
+}
+
+.positiontext {
+    text-align: right;
+    margin-right: 6%;
+}
+
+.nameUser {
+    position: relative;
+    margin-left: 0;
+    color: rgb(74, 0, 143);
+}
+
+.text-mutedNumberPromotion {
+    position: relative;
+    justify-content: left;
+    text-align: left;
+    margin-left: 5%;
+    margin-top: 4%;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.positiontextsubpost {
+    text-align: center;
+    margin-top: 5%;
+}
+
+.colorfont {
+    color: rgb(74, 0, 143);
+    font-size: 17px;
+}
+
+.headerUser {
+    position: absolute;
+    width: 75%;
+    bottom: 9%;
+    right: 42%;
+}
+
+
+@media only screen and (max-width: 600px) {
+    .wrapperPromotion {
+        overflow: hidden;
+        width: 100%;
+        height: 550px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        z-index: 4;
+        padding: 0px;
+        box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+        overflow-x: hidden;
+        margin: auto;
+        position: relative;
+    }
+
+    .titlePromotion {
+        color: #ffffff;
+        font-size: 22px;
+        padding-top: 1px;
+        margin-bottom: 3%;
+    }
+    
+    .wrapperData {
+        width: 100%;
+    }
+
+    .profile-card-2 {
+        width: 100%;
+        height: 550px;
+    }
+
+    .profile-card-2 .img {
+        height: 130px;
+        width: 100%;
+    }
+
+    .nearby-userData {
+        position: relative;
+        width: 100%;
+        padding: 15px 0;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        border-style: solid;
+        border-color: rgb(96, 0, 151);
+        margin: auto;
+        margin-top: 40%;
+    }
+
+    .profile-photo-lgUser {
+        width: 25%;
+        border-radius: 50%;
+        margin-top: 15%;
+    }
+
+    .positiontext {
+        text-align: right;
+        margin-right: 6%;
+    }
+
+    .nameUser {
+        position: relative;
+        margin-left: 0;
+        color: rgb(74, 0, 143);
+        font-size: 16px;
+    }
+
+    .text-mutedNumberUser {
+        position: relative;
+        margin-left: 0;
+        color: rgb(74, 0, 143);
+        font-size: 16px;
+    }
+
+    .positiontextsubpost {
+        text-align: center;
+        margin-top: 5%;
+    }
+
+    .colorfont {
+        color: rgb(74, 0, 143);
+        font-size: 14px;
+    }
+
+    .headerUser {
+        position: absolute;
+        width: 75%;
+        bottom: 22%;
+        right: 42%;
+    }
+
+    .text-mutedNumberPromotion {
+        margin-left: 5%;
+        margin-top: 4%;
+        font-size: 15px;
+    }
+}

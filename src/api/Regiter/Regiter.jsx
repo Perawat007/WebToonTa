@@ -572,7 +572,6 @@ const RegiterBar = () => {
                     </div>
                     <BsPhoneFill className="input-iconRegister" style={{ top: '22px' }} />
                     <div className="textOTP" style={{ color: '#FFFFFF' }}>
-                      <h6>กรุณาใส่ OTP ของ Ref:.....</h6>
                     </div>
                   </div>
 
@@ -655,7 +654,7 @@ const RegiterBar = () => {
                               required
                               className="input-with-iconRegister"
                             />
-                            <BsPhoneFill className="input-iconRegister" />
+                            <BsPhoneFill className="input-iconRegister" style={{ color: '#FFFFFF' }}/>
                           </div>
                         </div>
                         <div className="fieldRegister btnsubmitRegister font">
@@ -685,7 +684,7 @@ const RegiterBar = () => {
                               required
                               className="input-with-iconRegister"
                             />
-                            <BsUnlockFill className="input-iconRegister" />
+                            <BsUnlockFill className="input-iconRegister" style={{ color: '#FFFFFF' }}/>
                           </div>
                         </div>
 
@@ -700,7 +699,7 @@ const RegiterBar = () => {
                               required
                               className="input-with-iconRegister"
                             />
-                            <BsUnlockFill className="input-iconRegister" />
+                            <BsUnlockFill className="input-iconRegister" style={{ color: '#FFFFFF' }}/>
                           </div>
                         </div>
 
@@ -748,7 +747,7 @@ const RegiterBar = () => {
                               required
                               className="input-with-iconRegister"
                             />
-                            <BsPhoneFill className="input-iconRegister" />
+                            <BsPhoneFill className="input-iconRegister" style={{ color: '#FFFFFF' }}/>
                           </div>
                         </div>
 
@@ -763,7 +762,7 @@ const RegiterBar = () => {
                               required
                               className="input-with-iconRegister"
                             />
-                            <BsUnlockFill className="input-iconRegister" />
+                            <BsUnlockFill className="input-iconRegister" style={{ color: '#FFFFFF' }}/>
                           </div>
                         </div>
 

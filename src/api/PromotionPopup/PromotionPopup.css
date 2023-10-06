@@ -1,0 +1,219 @@
+.containerPromotion {
+    width: 90%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    border-radius: 10px;
+    border-style: solid;
+}
+
+.headerDeposit {
+    position: absolute;
+    width: 75%;
+    bottom: 60%;
+    left: 0;
+}
+
+.nearby-userPromotion {
+    position: relative;
+    width: 100%;
+    padding: 15px 0;
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    border-style: solid;
+    border-color: rgb(96, 0, 151);
+    text-align: left;
+    margin: 1.5% auto;
+}
+
+.lineDeposit {
+    width: 100%;
+    margin-top: 10%;
+    margin-bottom: 3%;
+    border-top: 3px solid rgb(96, 0, 151);
+}
+
+.rowDeposit {
+    width: 100%;
+    height: 100%;
+}
+
+.positionButton {
+    margin-left: 70%;
+
+}
+
+.boostaemPro {
+    position: relative;
+    width: 100%;
+    margin-top: 2%;
+    margin: auto;
+}
+
+.textFramePromotionPopup {
+    background-color: #ffffff;
+    border-radius: 30px;
+    width: 70%;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 3%;
+    display: flex;
+}
+
+.title-textPromotionPopup {
+    font-size: 22px;
+    color: #4d0040;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.heantPopup{
+	width: 90%;
+    height: 100px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+	margin-top: 3%;
+	display: flex;
+	position: relative;
+}
+
+.close-button {
+    background-color: transparent;
+    border: none;
+    color: #ffffff; /* Text color for the close icon */
+    font-size: 60px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+  }
+  
+  .close-button:hover {
+    color: #ff0000; /* Text color on hover */
+  }
+  
+@media (min-width:768px) {
+    .boostaemPro {
+        /* -ms-flex: 0 0 75%;
+        flex: 0 0 75%;
+        max-width: 75% */
+    }
+}
+
+@media (max-width: 1300px) {
+    .containerPromotion {
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .nearby-userPromotion {
+        position: relative;
+        width: 100%;
+        padding: 15px 0;
+        margin-bottom: 15px;
+        background-color: rgb(255, 255, 255);
+        border-radius: 20px;
+        border-style: solid;
+        border-color: rgb(96, 0, 151);
+    }
+
+    .boostaemPro {
+        width: 100%;
+    }
+
+    .rowDeposit {
+        width: 100%;
+        height: 100%;
+    }
+
+    .positionButton {
+        margin-left: 73%;
+        margin-top: 0%;
+    }
+}
+
+
+@media (max-width: 768px) {
+    .containerPromotion {
+        width: 100%;
+        margin-top: 3%;
+    }
+
+    .boostaemPro {
+        width: 100%;
+    }
+
+    .nearby-userPromotion {
+        position: relative;
+        max-width: 1000px;
+        width: 90%;
+        padding: 15px 0;
+        margin-bottom: 10px;
+        border-radius: 20px;
+    }
+
+    .rowDeposit {
+        width: 100%;
+        height: 100%;
+    }
+
+    .positionButton {
+        margin-left: 73%;
+        margin-top: 0%;
+    }
+}
+
+@media (max-width: 500px) {
+    .containerPromotion {
+        width: 100%;
+        height: 350px;
+        margin-top: 3%;
+        margin-bottom: -5%;
+    }
+
+    .heantPopup{
+        width: 90%;
+        height: 50px;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 3%;
+        display: flex;
+        position: relative;
+    }
+
+    .nearby-userPromotion {
+        width: 90%;
+        padding: 10px 0;
+        margin-bottom: 3%;
+        border-radius: 20px;
+        text-align: left;
+    }
+    .rowDeposit {
+        width: 100%;
+        height: 100%;
+    }
+    .positionButton {
+        margin-left: 73%;
+        margin-top: 0%;
+    }
+    .lineDeposit {
+        width: 100%;
+        margin-top: 10%;
+        margin-bottom: 1%;
+    }
+}

@@ -76,6 +76,13 @@
     margin-left: 22%;
 }
 
+.textTitleimg {
+    width: 50%;
+    font-size: 17px;
+    color: #930bbd;
+    margin-left: 0%;
+}
+
 .textinput {
     margin: 5px 0 50px 0;
 }
@@ -188,21 +195,23 @@ input[type="radio"] {
 
 
 .form-inner form .fieldMoney {
-    height: 55px;
-    width: 100%;
-    margin-top: 20px;
+    height: 45px;
+    width: 90%;
+    margin-top: 0px;
     text-align: center;
+    justify-content:center;
+    align-items: center;
+    margin: 20px auto;
 }
 
 .form-inner form .fieldMoney input {
     height: 100%;
-    width: 60%;
+    width: 80%;
     outline: none;
     padding-left: 15px;
     border-radius: 20px;
     border-bottom-width: 2px;
-    border: 3px solid rgb(175, 23, 206);
-    font-size: 30px;
+    font-size: 25px;
     text-align: center;
     transition: all 0.3s ease;
     color: rgb(126, 16, 160);
@@ -210,7 +219,7 @@ input[type="radio"] {
 
 
 .form-inner form .fieldDataDeposit {
-    height: 55px;
+    height: 45px;
     width: 100%;
     margin-top: 20px;
     text-align: center;
@@ -451,13 +460,14 @@ form .btnsubmitDeposit input[type="submitDeposit"] {
 }
 
 .imgSile {
-    width: 5%;
+    width: 20%;
     border: 2px solid #ccc;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     cursor: pointer;
     /* Add a pointer cursor */
     transition: transform 0.2s;
     /* Add a smooth transition effect */
+    margin-left: -15%;
 }
 
 .thumbnail {
@@ -691,6 +701,7 @@ form .btnsubmitDeposit input[type="submitDeposit"] {
     .imgWayDeposit {
         width: 100px;
     }
+
     .textFrameDeposit {
         height: 30px;
     }
@@ -782,14 +793,14 @@ form .btnsubmitDeposit input[type="submitDeposit"] {
     }
 
     .upload-box {
-        width: 280px;
-        height: 50px;
+        width: 240px;
+        height: 40px;
         text-align: center;
         transition: all 0.3s ease;
     }
 
     ::-webkit-file-upload-button {
-        height: 50px;
+        height: 40px;
         padding: 10px;
     }
 
@@ -811,7 +822,14 @@ form .btnsubmitDeposit input[type="submitDeposit"] {
     }
 
     .imgSile {
-        width: 8%;
+        width: 10%;
+    }
+
+    .textTitleimg {
+        width: 50%;
+        font-size: 16px;
+        text-align: left;
+        margin-left: 0%;
     }
 }
 
@@ -852,7 +870,7 @@ form .btnsubmitDeposit input[type="submitDeposit"] {
     .upload-box {
         font-size: 16px;
         width: 200px;
-        height: 50px;
+        height: 40px;
         outline: none;
     }
 

@@ -336,6 +336,60 @@ form .btnsubmitLogin input[type="submit"] {
 
 .imgWayLogin {
     width: 500px;
+    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);  
+    border-radius: 50%;
+    overflow: hidden;
+    
+    bottom: 78%;
+    right: 0%;
+    z-index: 0;
+    display: block;
+}
+
+.imgWaymonterLoginIIIC{
+    width: 12%;
+    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 65%;
+    right: 18%;
+    z-index: 4;
+    display: block;
+}
+.imgWaymonterLoginIII{
+    width: 8%;
+    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 30%;
+    left: 10%;
+    z-index: 4;
+    display: block;
+}
+.imgWaymonterLoginII{
+    width: 15%;
+    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 12%;
+    right: 10%;
+    z-index: 4;
+    display: block;
+}
+
+.imgWaymonterLoginI{
+    width: 15%;
+    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 45%;
+    left: 15%;
+    z-index: 2;
+    display: block;
 }
 
 .scaltimgLogin {
@@ -636,6 +690,23 @@ form .btnsubmitLogin input[type="submit"] {
         display: none;
     }
 
+    .imgWaymonterLoginIIIC{
+        width: 15%;
+        bottom: 80%;
+        right: 0%;
+    }
+
+    .imgWaymonterLoginIII{
+        display: none;
+    }
+
+    .imgWaymonterLoginI{
+        width: 30%;
+        bottom: 45%;
+        left: 0%;
+        display: block;
+    }
+
     .scaltimgLogin {
         width: 100%;
         top: 40%;
@@ -792,7 +863,7 @@ form .btnsubmitLogin input[type="submit"] {
         height: 39rem;
         z-index: 4;
         background: #ffffff;
-        margin-top: 35%;
+        margin-top: 30%;
     }
     
     .wrapperLogin.title-text {

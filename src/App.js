@@ -21,6 +21,7 @@ import GameAllType from './view/SeeGame/TypeGame/GameAllType';
 import DataUser from './api/DataUser/DataUser'
 import GameTypeSlot from './view/SeeGame/SlotGame/GameTypeSlot';
 import ResetPassword from './api/ResetPassword/ResetPassword';
+import ForgotPassword from './api/ForgotPassword/ForgotPassword';
 
 function App() {
   const token = localStorage.getItem("token");
@@ -54,60 +55,62 @@ function App() {
   }
 
   return (
-      <div className='Home-container'>
-        <div>
-          {(() => {
-            if (token) {
-              return (
-                <>
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/Home" element={<Home />} />
-                    <Route path="/:name" element={<GameAll />} />
-                    <Route path="/GameDogsila" element={<GameDogsila />} />
-                    <Route path="/Deposit" element={<AddMoneyPromotion />} />
-                    <Route path="/DataUser" element={<DataUser />} />
-                    <Route path="/Witdraw" element={<WitdrawTa />} />
-                    <Route path="/PromotionShow" element={<PromotionShow />} />
-                    <Route path="/RewardShow/:nameCard" element={<RewardShowBronze />} />
-                    <Route path="/Game/:typegame" element={<GameAllType />} />
-                    <Route path="/Gameslot" element={<GameTypeSlot />} />
-                    <Route path="/Gamefishing" element={<GameAllType />} />
-                    <Route path="/Gametable" element={<GameAllType />} />
-                    <Route path="/Gameskill" element={<GameAllType />} />
-                    <Route path="/ResetPassword" element={<ResetPassword />} />
-                  </Routes>
-                </>
-              );
-            } else {
-              return (
-                <>
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/Home" element={<Home />} />
-                    <Route path="/:name" element={<GameAll />} />
-                    <Route path="/GameDogsila" element={<GameDogsila />} />
-                    <Route path="/Login" element={<LoginBar />} />
-                    <Route path="/Register" element={<RegiterBar />} />
-                    <Route path="/PromotionShow" element={<PromotionShow />} />
-                    <Route path="/RewardShow" element={<RewardShowBronze />} />
-                    <Route path="/Gameslot" element={<GameTypeSlot/>} />
-                    <Route path="/Gamefishing" element={<GameAllType />} />
-                    <Route path="/Gametable" element={<GameAllType />} />
-                    <Route path="/ResetPassword" element={<ResetPassword />} />
-                  </Routes>
-                </>
-              );
-            }
-          })()}
-        </div>
+    <div className='Home-container'>
+      <div>
+        {(() => {
+          if (token) {
+            return (
+              <>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/Home" element={<Home />} />
+                  <Route path="/:name" element={<GameAll />} />
+                  <Route path="/GameDogsila" element={<GameDogsila />} />
+                  <Route path="/Deposit" element={<AddMoneyPromotion />} />
+                  <Route path="/DataUser" element={<DataUser />} />
+                  <Route path="/Witdraw" element={<WitdrawTa />} />
+                  <Route path="/PromotionShow" element={<PromotionShow />} />
+                  <Route path="/RewardShow/:nameCard" element={<RewardShowBronze />} />
+                  <Route path="/Game/:typegame" element={<GameAllType />} />
+                  <Route path="/Gameslot" element={<GameTypeSlot />} />
+                  <Route path="/Gamefishing" element={<GameAllType />} />
+                  <Route path="/Gametable" element={<GameAllType />} />
+                  <Route path="/Gameskill" element={<GameAllType />} />
+                  <Route path="/ResetPassword" element={<ResetPassword />} />
+                </Routes>
+              </>
+            );
+          } else {
+            return (
+              <>
+                <Routes>
+                  <Route path="/" element={<Home />} />
+                  <Route path="/Home" element={<Home />} />
+                  <Route path="/:name" element={<GameAll />} />
+                  <Route path="/GameDogsila" element={<GameDogsila />} />
+                  <Route path="/Login" element={<LoginBar />} />
+                  <Route path="/Register" element={<RegiterBar />} />
+                  <Route path="/ForgotPassword" element={<ForgotPassword/>} />
+                  <Route path="/PromotionShow" element={<PromotionShow />} />
+                  <Route path="/RewardShow" element={<RewardShowBronze />} />
+                  <Route path="/Gameslot" element={<GameTypeSlot />} />
+                  <Route path="/Gamefishing" element={<GameAllType />} />
+                  <Route path="/Gametable" element={<GameAllType />} />
+                  <Route path="/Gameskill" element={<GameAllType />} />
+                  <Route path="/ResetPassword" element={<ResetPassword />} />
+                </Routes>
+              </>
+            );
+          }
+        })()}
       </div>
+    </div>
   );
 }
 
 export default App;
 
- {/* <div className="bottom-nav font">
+{/* <div className="bottom-nav font">
         <Link to="/" className="nav-item font">
           <span className="icon-promotion"></span>
           .บ้าน

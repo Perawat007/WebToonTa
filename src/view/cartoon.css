@@ -21,7 +21,7 @@
 .imgWaymonterHomeIII {
     position: absolute;
     width: 8%;
-    top: 9%;
+    top:3%;
     left: 0%;
     z-index: 4;
     object-fit: contain;
@@ -82,7 +82,7 @@
 .imgWaymonterHomeII {
     position: absolute;
     width: 11%;
-    bottom: 82%;
+    bottom: 88%;
     left: 0%;
     z-index: 4;
     object-fit: contain;
