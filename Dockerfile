@@ -85,8 +85,8 @@ RUN yarn install
 
 FROM node:16-alpine
 WORKDIR /app
-COPY --from=builder /app/build /app/build
-# COPY --from=builder /app/build/* /app/build/
+#COPY --from=builder /app/build /app/build
+COPY --from=builder /app/build/* /app/build/
 RUN npm install -g serve
 EXPOSE 4000
 CMD serve -p 4000 -s build
