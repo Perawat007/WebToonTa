@@ -57,7 +57,8 @@ function App() {
   return (
     <div className='Home-container'>
       <div>
-        {(() => {
+        <h1>Hello Word</h1>
+        {/* {(() => {
           if (token) {
             return (
               <>
@@ -102,7 +103,7 @@ function App() {
               </>
             );
           }
-        })()}
+        })()} */}
       </div>
     </div>
   );
