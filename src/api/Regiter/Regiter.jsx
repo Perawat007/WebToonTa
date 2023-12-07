@@ -26,6 +26,7 @@ import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
 import { BsUnlockFill, BsPhoneFill } from "react-icons/bs";
 import NavicationBar from "../../view/NavicationBar/navicationbar";
+import { red } from "@mui/material/colors";
 
 const RegiterBar = () => {
   const [password, setPwd] = useState("");
@@ -38,7 +39,7 @@ const RegiterBar = () => {
   // Dialog
   const [showRegiterA, setRegiterA] = useState(false);
   const [showRegiterOTP, setRegiterOTP] = useState(false);
-  const [showRegiterB, setRegiterB] = useState(false);
+  const [showRegiterB, setRegiterB] = useState(true);
   const [showRegiterC, setRegiterC] = useState(false);
   const [tokenpin, settokenpin] = useState("");
   const [otpPin, setotppin] = useState("");
@@ -68,6 +69,12 @@ const RegiterBar = () => {
   };
 
   const usedforOptions = [
+    {
+      value: "กรุณาเลือกธนาคาร",
+      label: "กรุณาเลือกธนาคาร",
+      imgPath:
+        "https://asset.cloudigame.co/build/admin/img/wt_theme/ezc/payment-logo-scb.png",
+    },
     {
       value: "ธนาคารไทยพาณิชย์",
       label: "ธนาคารไทยพาณิชย์",
@@ -142,50 +149,22 @@ const RegiterBar = () => {
     },*/
   ];
 
-  function BootstrapDialogTitle(props) {
-    const { children, onClose, ...other } = props;
-
-    return (
-      <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-        {children}
-        {onClose ? (
-          <IconButton
-            aria-label="close"
-            onClick={onClose}
-            sx={{
-              position: "absolute",
-              right: 8,
-              top: 8,
-              color: (theme) => theme.palette.grey[500],
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
-        ) : null}
-      </DialogTitle>
-    );
-  }
   useEffect(() => {
-    setRegiterA(true);
+    setRegiterA(false);
     const newStyle = {
       opacity: 3,
       width: `25%`,
     };
     setStyle(newStyle);
-    setsetBank('ธนาคารไทยพาณิชย์')
+    setsetBank('กรุณาเลือกธนาคาร')
   }, []);
-
-  BootstrapDialogTitle.propTypes = {
-    children: PropTypes.node,
-    onClose: PropTypes.func.isRequired,
-  };
 
   const handleConfrimSubmit = () => {
     setShowPopupB(true);
   };
   const handleSubmitRegiter = () => {
-    console.log(bank);
-    if (bank !== "" && bank !== undefined) {
+   //console.log(bank);
+    if (bank !== "กรุณาเลือกธนาคาร" && bank !== undefined) {
       if (nameBank !== "" && nameBank !== undefined) {
         if (numberBank.length > 9 && numberBank.length < 14) {
           axios.post('post/signupMember', {
@@ -273,7 +252,7 @@ const RegiterBar = () => {
 
   const handleSubmitOTP = async (e) => {
     e.preventDefault();
-    fetch("https://relaxtimecafe.fun/otpVerify", {
+    fetch("https://dogzilla.live/otpVerify", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -319,7 +298,8 @@ const RegiterBar = () => {
 
   const handleSubmitB = async (e) => {
     e.preventDefault();
-    if (password.length > 5 && password.length <= 16) {
+    const isValidPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,16}$/.test(password);
+    if (isValidPassword) {
       if (password === Confrimpassword) {
         setRegiterB(false);
         setRegiterC(true);
@@ -533,7 +513,8 @@ const RegiterBar = () => {
                 <p className="titleDialogRegiter font">Password ไม่ถูกต้อง</p>
                 <br />
                 <h3 className="detailDialogRegiter font">
-                  กรุณาตั้ง Password 6 ตัวอักษรขึ้นไป
+                รหัสผ่านควรประกอบไปด้วยตัวอักษรตัวเล็ก ตัวอักษรใหญ่ และตัวเลข กรุณาตั้งรหัสที่ไม่น้อยกว่า 6 ตัวอักษร และไม่เกิน 16 ตัวอักษร
+                เพื่อเพิ่มความปลอดภัยและความแข็งแกร่งให้กับรหัสผ่านของคุณ
                 </h3>
               </div>
               <div className="btnContainerRegiter">
@@ -548,7 +529,6 @@ const RegiterBar = () => {
 
       {showRegiterOTP && (
         <div className="overlayRegiter">
-
           <div className="modalContainerRegiter">
             <div className="modalRightRegiter">
               <div className="contentRegiter">
@@ -570,7 +550,7 @@ const RegiterBar = () => {
                         className="input-with-iconRegister"
                       />
                     </div>
-                    <BsPhoneFill className="input-iconRegister" style={{ top: '22px' }} />
+                    <BsPhoneFill className="input-iconRegister" style={{ top: '22px', color: '#FFFFFF' }} />
                     <div className="textOTP" style={{ color: '#FFFFFF' }}>
                     </div>
                   </div>
@@ -617,7 +597,6 @@ const RegiterBar = () => {
           </div> */}
 
         <div className="wrapperRegister">
-
           <div className="textFrameRegister">
             <div className="title-textRegister font">สมัครสมาชิก</div>
           </div>
@@ -654,7 +633,7 @@ const RegiterBar = () => {
                               required
                               className="input-with-iconRegister"
                             />
-                            <BsPhoneFill className="input-iconRegister" style={{ color: '#FFFFFF' }}/>
+                            <BsPhoneFill className="input-iconRegister" style={{ color: '#FFFFFF' }} />
                           </div>
                         </div>
                         <div className="fieldRegister btnsubmitRegister font">
@@ -662,7 +641,7 @@ const RegiterBar = () => {
                           <input type="submit" value="ยืนยัน" onClick={handleSubmitA} />
                         </div>
                         <div className="Register-link font">
-                           <a>พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
+                          <a>พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                         </div>
                       </form>
                     </>
@@ -678,28 +657,29 @@ const RegiterBar = () => {
                           <div className="wrapInputRegiter">
                             <input
                               type="password"
-                              placeholder="กรุณากรอก Password"
+                              placeholder="รหัสผ่าน A-z 6-16 ตัวอักษร"
                               value={password}
                               onChange={(e) => setPwd(e.target.value)}
                               required
                               className="input-with-iconRegister"
                             />
-                            <BsUnlockFill className="input-iconRegister" style={{ color: '#FFFFFF' }}/>
+                            <BsUnlockFill className="input-iconRegister" style={{ color: '#FFFFFF' }} />
                           </div>
+                          <p className="font">รหัสต้องประกอบไปด้วยตัวอักษรตัวเล็ก ตัวใหญ่ และตัวเลข</p>
                         </div>
-
+                      <br/>
                         <div className="fieldDataRegister font textinputRegister input-containerRegister">
                           <p className="textTitleRegister font">ยืนยันรหัสผ่าน</p>
                           <div className="wrapInputRegiter">
                             <input
                               type="password"
-                              placeholder="กรุณายืนยัน Password"
+                              placeholder="กรุณายืนยัน รหัสผ่าน"
                               value={Confrimpassword}
                               onChange={(e) => setPwdConfrim(e.target.value)}
                               required
                               className="input-with-iconRegister"
                             />
-                            <BsUnlockFill className="input-iconRegister" style={{ color: '#FFFFFF' }}/>
+                            <BsUnlockFill className="input-iconRegister" style={{ color: '#FFFFFF' }} />
                           </div>
                         </div>
 
@@ -709,7 +689,7 @@ const RegiterBar = () => {
                           </div>
                         </div>
                         <div className="Register-link font">
-                           <a>พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
+                          <a>พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                         </div>
                       </form>
                     </>
@@ -741,13 +721,13 @@ const RegiterBar = () => {
                           <div className="wrapInputRegiter">
                             <input
                               type="text"
-                              placeholder="กรุณากรอก ชื่อบัญชี"
+                              placeholder="กรุณากรอก ชื่อ - นามสกุล"
                               value={nameBank}
                               onChange={(e) => setNameBank(e.target.value)}
                               required
                               className="input-with-iconRegister"
                             />
-                            <BsPhoneFill className="input-iconRegister" style={{ color: '#FFFFFF' }}/>
+                            {/* <BsPhoneFill className="input-iconRegister" style={{ color: '#FFFFFF' }} /> */}
                           </div>
                         </div>
 
@@ -762,7 +742,7 @@ const RegiterBar = () => {
                               required
                               className="input-with-iconRegister"
                             />
-                            <BsUnlockFill className="input-iconRegister" style={{ color: '#FFFFFF' }}/>
+                            {/* <BsUnlockFill className="input-iconRegister" style={{ color: '#FFFFFF' }} /> */}
                           </div>
                         </div>
 
@@ -773,7 +753,7 @@ const RegiterBar = () => {
                         </div>
 
                         <div className="Register-link font">
-                           <a>พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
+                          <a>พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                         </div>
                       </form>
                     </>

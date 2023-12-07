@@ -201,7 +201,7 @@ const ResetPassword = () => {
                 </div>
 
                 <div className="fieldDataWitdraw font textinputWitdraw input-containerWitdraw">
-                  <p className="textTitleWitdraw font">รหัสผ่านใหม่</p>
+                  <p className="textTitleReset font">รหัสผ่านใหม่</p>
                   <div className="wrapInputWitdraw">
                     <input
                       type="password"
@@ -217,7 +217,7 @@ const ResetPassword = () => {
                 </div>
 
                 <div className="fieldDataWitdraw font textinputWitdraw input-containerWitdraw">
-                  <p className="textTitleWitdraw font">ยืนยันรหัสผ่าน</p>
+                  <p className="textTitleReset font">ยืนยันรหัสผ่าน</p>
                   <div className="wrapInputWitdraw ">
                     <input
                       type="password"
@@ -231,7 +231,7 @@ const ResetPassword = () => {
                   </div>
                 </div>
                 <br />
-                <div className="fieldWitdraw btnsubmitWitdraw font">
+                <div className="fieldReset btnsubmitWitdraw font">
                   <input type="submitWitdraw" defaultValue="ยืนยันเปลี่ยนรหัสผ่าน" onClick={() => handleSubmitResetPassword()} />
                 </div>
                 <br />

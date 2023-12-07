@@ -44,171 +44,134 @@ function AllSlotGame() {
 
     }, [])
 
-    const PlayGame = (codeGame, name, linkGame) => {
-        if (codeGame === 'Go Gold Planet' || codeGame === 'CowBoys VS Aliens' || codeGame === 'Lucky Bunny Gold' || codeGame === 'Bounty BallOon') {
-            axios.post("/post/token", "", {
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                },
-            })
-                .then((response) => {
-                    if (response.data.message === "TokenOn") {
-                        const tokenEn = encodeURIComponent(token);
-                        if (linkGame !== null) {
-                            const link = linkGame + `?token=${tokenEn}`;
-                            if (mobileOS === 'Android') {
-                                window.open(link, "_blank");
-                            } else {
-                                window.open(link, "_self");
-                            }
-                        }
-                    }
-                })
-                .catch((error) => {
-                    console.log("error", error);
-                    localStorage.removeItem("token");
-                    window.location.reload();
-                });
-        } else {
-            axios.get(`seamlesslogIn/${codeGame}/${name}`)
-                .then((response) => {
-                    const link = response.data.data.data.url;
-                    if (mobileOS === 'Android') {
-                        window.open(link, "_blank");
-                    } else {
-                        window.open(link, "_self");
-                    }
-                })
-                .catch(error => {
-                    console.log('error', error);
-                });
-        }
-    }
-
     const SeeGameCamp = (codeGame) => {
         window.location.href = `/${codeGame}`;
     }
     const populargame = [
         {
+            id: 0, name: 'DOGZILLA', provider_name: 'DOGZILLA', data_gameid: 'GameDogzilla', data_name: 'DOGZILLA', alt: 'DOGZILLA',
+            img: '/GameCamp/33.webp'
+        },
+        {
             id: 1, name: 'PG', provider_name: 'SEXY', data_gameid: 'PGSOFT2', data_name: 'PG', alt: 'PG',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/1.jpg'
+            img: '/GameCamp/1.webp'
         },
         {
             id: 2, name: 'SlotXO', provider_name: 'PP', data_gameid: 'SLOTXO', data_name: 'SlotXO', alt: 'SlotXO',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/2.jpg'
+            img: '/GameCamp/2.webp'
         },
         {
             id: 3, name: 'JoKer', provider_name: 'PP', data_gameid: 'JOKER', data_name: 'JoKer', alt: 'JoKer',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/3.jpg'
+            img: '/GameCamp/3.webp'
         },
         {
             id: 4, name: 'Ask me Bet', provider_name: 'SPADE', data_gameid: 'ASKMEBET', data_name: 'SPADE', alt: 'SPADE',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/4.jpg'
+            img: '/GameCamp/4.webp'
         },
         {
             id: 5, name: 'HABANERO', provider_name: 'HABANERO', data_gameid: 'HABANERO', data_name: 'HABANERO', alt: 'HABANERO',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/5.jpg'
+            img: '/GameCamp/5.webp'
         },
         {
-            id: 6, name: 'Spade Gaming', provider_name: 'PP', data_gameid: '4', data_name: 'SlotXO', alt: 'SlotXO',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/6.jpg'
+            id: 6, name: 'Spade Gaming', provider_name: 'PP', data_gameid: 'SPADE', data_name: 'SlotXO', alt: 'SlotXO',
+            img: '/GameCamp/6.webp'
         },
         {
             id: 7, name: 'Micro Gaming', provider_name: 'MICRO', data_gameid: 'MICRO', data_name: 'MICRO', alt: 'MICRO',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/7.jpg'
+            img: '/GameCamp/7.webp'
         },
         {
             id: 8, name: 'Simple Play', provider_name: 'SIMPLEPLAY', data_gameid: 'SIMPLEPLAY', data_name: 'SIMPLEPLAY', alt: 'SIMPLEPLAY',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/8.jpg'
+            img: '/GameCamp/8.webp'
         },
         {
-            id: 9, name: 'Live22', provider_name: 'Live22', data_gameid: 'Live22', data_name: 'Live22', alt: 'Live22',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/9.jpg'
+            id: 9, name: 'Live22', provider_name: 'Live22', data_gameid: 'LIVE22', data_name: 'Live22', alt: 'Live22',
+            img: '/GameCamp/9.webp'
         },
-        {
-            id: 10, name: 'Allwayspin', provider_name: 'ALLWAYSPIN', data_gameid: 'ALLWAYSPIN', data_name: 'ALLWAYSPIN', alt: 'ALLWAYSPIN',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/10.jpg'
-        },
+        // {
+        //     id: 10, name: 'Allwayspin', provider_name: 'ALLWAYSPIN', data_gameid: 'ALLWAYSPIN', data_name: 'ALLWAYSPIN', alt: 'ALLWAYSPIN',
+        //     img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/10.jpg'
+        // },
         {
             id: 11, name: 'Evoplay', provider_name: 'EVOPLAY', data_gameid: 'EVOPLAY', data_name: 'EVOPLAY', alt: 'EVOPLAY',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/11.jpg'
+            img: '/GameCamp/11.webp'
         },
         {
-            id: 12, name: 'CQ9', provider_name: 'CQ9V2', data_gameid: 'CQ9V2', data_name: 'CQ9V2', alt: 'CQ9V2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/12.jpg'
+            id: 12, name: 'CQ9', provider_name: 'CQ9', data_gameid: 'CQ9', data_name: 'CQ9', alt: 'CQ9',
+            img: '/GameCamp/12.webp'
         },
-        {
-            id: 13, name: 'KA Gaming', provider_name: 'KAGAME', data_gameid: 'KAGAME', data_name: 'KAGAME', alt: 'KAGAME',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/13.jpg'
-        },
+        // {
+        //     id: 13, name: 'KA Gaming', provider_name: 'KAGAME', data_gameid: 'KAGAME', data_name: 'KAGAME', alt: 'KAGAME',
+        //     img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/13.jpg'
+        // },
         {
             id: 14, name: 'Jili', provider_name: 'JILI', data_gameid: 'JILI', data_name: 'JILI', alt: 'JILI',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/14.jpg'
+            img: '/GameCamp/14.webp'
         },
         {
             id: 15, name: 'Mannaplay', provider_name: 'MANNA', data_gameid: 'MANNA', data_name: 'MANNA', alt: 'MANNA',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/15.jpg'
+            img: '/GameCamp/15.webp'
         },
         {
             id: 16, name: 'Funky Games', provider_name: 'FUNKY', data_gameid: 'FUNKY', data_name: 'FUNKY', alt: 'FUNKY',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/16.jpg'
+            img: '/GameCamp/16.webp'
         },
         {
             id: 17, name: 'Yggdrasil Gaming', provider_name: 'YGGDRASIL', data_gameid: 'YGGDRASIL', data_name: 'YGGDRASIL', alt: 'YGGDRASIL',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/17.jpg'
+            img: '/GameCamp/17.webp'
         },
         {
             id: 18, name: 'UPG Slot', provider_name: 'UPG', data_gameid: 'UPG', data_name: 'UPG', alt: 'UPG',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/18.jpg'
+            img: '/GameCamp/18.webp'
         },
         {
             id: 19, name: 'Ameba', provider_name: 'AMEBA', data_gameid: 'AMEBA', data_name: 'AMEBA', alt: 'AMEBA',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/20.jpg'
+            img: '/GameCamp/20.webp'
         },
         {
             id: 20, name: 'Ambslot', provider_name: 'AMBSLOT2', data_gameid: 'AMBSLOT2', data_name: 'AMBSLOT2', alt: 'AMBSLOT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/21.jpg'
+            img: '/GameCamp/21.webp'
         },
         {
             id: 21, name: 'Netent2', provider_name: 'NETENT2', data_gameid: 'NETENT2', data_name: 'NETENT2', alt: 'NETENT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/23.jpg'
+            img: '/GameCamp/23.webp'
         },
         {
             id: 23, name: 'Red Tiger', provider_name: 'REDTIGER', data_gameid: 'REDTIGER', data_name: 'REDTIGER', alt: 'REDTIGER',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/24.jpg'
+            img: '/GameCamp/24.webp'
         },
         {
             id: 24, name: 'Dragon Gaming', provider_name: 'DRAGONGAMING', data_gameid: 'DRAGONGAMING', data_name: 'DRAGONGAMING', alt: 'DRAGONGAMING',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/25.jpg'
+            img: '/GameCamp/25.webp'
         },
         {
             id: 25, name: 'Ace333', provider_name: 'ACE333', data_gameid: 'ACE333', data_name: 'ACE333', alt: 'ACE333',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/26.jpg'
+            img: '/GameCamp/26.webp'
         },
         {
             id: 26, name: 'I8', provider_name: 'I8', data_gameid: 'I8', data_name: 'I8', alt: 'I8',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/27.jpg'
+            img: '/GameCamp/27.webp'
         },
         {
             id: 27, name: 'WmSlot', provider_name: 'WMSLOT', data_gameid: 'WMSLOT', data_name: 'WMSLOT', alt: 'WMSLOT',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/28.jpg'
+            img: '/GameCamp/28.webp'
         },
         {
             id: 28, name: 'Spinix', provider_name: 'SPINIX', data_gameid: 'SPINIX', data_name: 'SPINIX', alt: 'SPINIX',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/29.jpg'
+            img: '/GameCamp/29.webp'
         },
         {
             id: 29, name: '918 Kiss', provider_name: '918KISS', data_gameid: '918KISS', data_name: '918KISS', alt: '918KISS',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/31.jpg'
+            img: '/GameCamp/31.webp'
         },
         {
             id: 30, name: 'Pragmatic Play Slot', provider_name: 'PRAGMATIC_SLOT', data_gameid: 'PRAGMATIC_SLOT', data_name: 'PRAGMATIC_SLOT', alt: 'PRAGMATIC_SLOT',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/gamecamp/32.jpg'
+            img: '/GameCamp/32.webp'
         },
     ]
 
     const h4Style = {
-        color: 'red',
+        color: 'white',
         display: 'inline-block',
         cursor: 'pointer',
         marginRight: '10px',
@@ -222,12 +185,12 @@ function AllSlotGame() {
         <>
             <React.Fragment>
                 <Container maxWidth="xl" sx={{ p: 1 }}>
+                <div className="card-font">ค่ายเกมทั้งหมด</div>
                     <Box display={'flex'}>
                         <Typography variant="h6">
                             <a className='grount font' style={h4Style} onClick={BackPang}>ย้อนกลับ</a>
                         </Typography>
                     </Box>
-                    <div className="card-font">ค่ายเกมทั้งหมด</div>
                     <br />
                     <br />
                     <div className="game">

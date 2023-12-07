@@ -218,12 +218,12 @@ function Competitivegame() {
 
                                 <div className="lc-holder slick-slide">
                                     <img className="imgGame shadowImage"
-                                        src="https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/InterestingGameIeatures/banner_for_promote_game_slot-1.jpg" alt=''
+                                        src="/banner/01.webp" alt=''
                                         onClick={() => PlayGame('fortune-ox', 'PGSOFT2', '')} />
                                 </div>
                                 <div className="lc-holder slick-slide">
                                     <img className="board imgGame"
-                                        src="https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/InterestingGameIeatures/banner_for_promote_game_slot-2.jpg" alt=''
+                                         src="/banner/02.webp" alt=''
                                         onClick={() => PlayGame('lucky-piggy', 'PGSOFT2', '')} />
                                 </div>
                                 <div className="lc-holder slick-slide slick-current slick-active"
@@ -232,8 +232,8 @@ function Competitivegame() {
                                     aria-describedby="slick-slide-control91">
                                     <div>
                                         <img className="board imgGame"
-                                            src="https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/InterestingGameIeatures/banner_for_promote_game_slot-3.jpg" alt=''
-                                            onClick={() => PlayGame('Bounty BallOon', 'Bounty BallOon', 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_BountyBalloon/index.html')} />
+                                             src="/banner/03.webp" alt=''
+                                            onClick={() => PlayGame('Bounty BallOon', 'Bounty BallOon', 'https://bountyballoon.toonta.com')} />
                                     </div>
                                 </div>
                                 <div className="lc-holder slick-slide"
@@ -241,11 +241,19 @@ function Competitivegame() {
                                     role="tabpanel" id="slick-slide92" aria-describedby="slick-slide-control92">
                                     <div>
                                         <img className="board imgGame"
-                                            src="https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/InterestingGameIeatures/banner_for_promote_game_slot-4.jpg" alt=''
-                                            onClick={() => PlayGame('Lucky Bunny Gold', 'Lucky Bunny Gold', 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html')} />
+                                             src="/banner/04.webp" alt=''
+                                            onClick={() => PlayGame('Lucky Bunny Gold', 'Lucky Bunny Gold', 'https://luckybunnygold.toonta.com')} />
                                     </div>
                                 </div>
-
+                                <div className="lc-holder slick-slide"
+                                    data-slick-index="2" aria-hidden="true" tabIndex="-1"
+                                    role="tabpanel" id="slick-slide92" aria-describedby="slick-slide-control92">
+                                    <div>
+                                        <img className="board imgGame"
+                                             src="/banner/05.webp" alt=''
+                                            onClick={() => PlayGame('Lucky Bunny Gold', 'Lucky Bunny Gold', 'https://robofarm.toonta.com')} />
+                                    </div>
+                                </div>
                             </Slider>
                         </div>
                     </div>

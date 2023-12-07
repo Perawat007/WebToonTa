@@ -1,7 +1,7 @@
 .imgWaymonterHomeI {
     position: absolute;
-    width: 12%;
-    bottom: 22%;
+    width: 10%;
+    bottom: 36%;
     right: 0%;
     z-index: 4;
     object-fit: contain;
@@ -17,11 +17,12 @@
     object-fit: contain;
     pointer-events: none;
 }
+
 /*----------------------------------------------*/
 .imgWaymonterHomeIII {
     position: absolute;
     width: 8%;
-    top:3%;
+    top: 3%;
     left: 0%;
     z-index: 4;
     object-fit: contain;
@@ -68,44 +69,135 @@
 
 @media (max-width: 500px) {
 
-/*----------------------------------------------*/
-.imgWaymonterHomeI {
-    position: absolute;
-    width: 14%;
-    bottom: 65.2%;
-    right: 0%;
-    z-index: 4;
-    object-fit: contain;
-    pointer-events: none;
+    /*----------------------------------------------*/
+    .imgWaymonterHomeI {
+        position: absolute;
+        width: 14%;
+        bottom: 65.2%;
+        right: 0%;
+        z-index: 4;
+        object-fit: contain;
+        pointer-events: none;
+    }
+
+    .imgWaymonterHomeII {
+        position: absolute;
+        width: 11%;
+        bottom: 89%;
+        left: 0%;
+        z-index: 4;
+        object-fit: contain;
+        pointer-events: none;
+    }
+
+    .imgWaymonterHomeIII {
+        display: none;
+    }
+
+    .imgWaymonterHomeIIIC {
+        width: 22%;
+        bottom: 82%;
+        right: 30%;
+        z-index: -1;
+        display: block;
+    }
+
+
+    .imgWaymonterHomeIIIIC {
+        width: 28%;
+        bottom: 27%;
+        left: 80%;
+        z-index: -1;
+        display: block;
+    }
 }
 
-.imgWaymonterHomeII {
-    position: absolute;
-    width: 11%;
-    bottom: 88%;
-    left: 0%;
-    z-index: 4;
-    object-fit: contain;
-    pointer-events: none;
-}
-.imgWaymonterHomeIII {
-    display: none;
+@media screen and (max-width: 500px) {
+
+    /*----------------------------------------------*/
+    .imgWaymonterHomeI {
+        position: absolute;
+        width: 14%;
+        bottom: 65.2%;
+        right: 0%;
+        z-index: 4;
+        object-fit: contain;
+        pointer-events: none;
+    }
+
+    .imgWaymonterHomeII {
+        position: absolute;
+        width: 11%;
+        bottom: 89%;
+        left: 0%;
+        z-index: 4;
+        object-fit: contain;
+        pointer-events: none;
+    }
+
+    .imgWaymonterHomeIII {
+        display: none;
+    }
+
+    .imgWaymonterHomeIIIC {
+        width: 22%;
+        bottom: 82%;
+        right: 30%;
+        z-index: -1;
+        display: block;
+    }
+
+
+    .imgWaymonterHomeIIIIC {
+        width: 28%;
+        bottom: 27%;
+        left: 80%;
+        z-index: -1;
+        display: block;
+    }
 }
 
-.imgWaymonterHomeIIIC {
-    width: 22%;
-    bottom: 82%;
-    right: 30%;
-    z-index: -1;
-    display: block;
-}
+@media screen and (max-width: 385px) {
+
+    /*----------------------------------------------*/
+    .imgWaymonterHomeI {
+        position: absolute;
+        width: 14%;
+        bottom: 65.2%;
+        right: 0%;
+        z-index: 4;
+        object-fit: contain;
+        pointer-events: none;
+    }
+
+    .imgWaymonterHomeII {
+        position: absolute;
+        width: 11%;
+        bottom: 87%;
+        left: 0%;
+        z-index: 4;
+        object-fit: contain;
+        pointer-events: none;
+    }
+
+    .imgWaymonterHomeIII {
+        display: none;
+    }
+
+    .imgWaymonterHomeIIIC {
+        width: 22%;
+        bottom: 82%;
+        right: 30%;
+        z-index: -1;
+        display: block;
+    }
 
 
-.imgWaymonterHomeIIIIC {
-    width: 28%;
-    bottom: 27%;
-    left: 80%;
-    z-index: -1;
-    display: block;
-}
+    .imgWaymonterHomeIIIIC {
+        width: 28%;
+        bottom: 27%;
+        left: 80%;
+        z-index: -1;
+        display: block;
+    }
 }

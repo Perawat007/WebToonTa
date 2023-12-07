@@ -48,7 +48,7 @@
     justify-content: center;
     text-align: center;
     align-items: center;
-    transform: translateY(-10%);
+    transform: translateY(50%);
 }
 
 .imgMoneyCartoon {
@@ -348,6 +348,7 @@ select .lang_menu option[value="ธนาคารไทยพาณิชย์
     .imgMoney {
         width: 45%;
         object-fit: contain;
+        transform: translateY(20%);
     }
 
     .headingMoney {

@@ -23,7 +23,7 @@ Deposit
     min-width: 100vw;
 }
 
-.wrapperWitdraw {
+.wrapperWitdrawV{
     overflow: hidden;
     width: 50%;
     height: 550px;
@@ -41,12 +41,12 @@ Deposit
     margin-top: 4%;
 }
 
-.wrapperWitdraw .title-textWitdraw {
+.wrapperWitdrawV.title-textWitdraw {
     display: flex;
     width: 100%;
 }
 
-.wrapperWitdraw .titleWitdraw {
+.wrapperWitdrawV.titleWitdraw {
     width: 50%;
     font-size: 35px;
     font-weight: 600;
@@ -54,7 +54,7 @@ Deposit
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
-.wrapperWitdraw .slide-controlsWitdraw {
+.wrapperWitdrawV.slide-controlsWitdraw {
     position: relative;
     display: flex;
     height: 50px;
@@ -71,7 +71,7 @@ Deposit
     font-size: 17px;
     font-weight: 400;
     text-align: left;
-    color: #930bbd;
+    color: #2A0BD6;
     margin: 5px 0 2px 0;
     margin-left: 20%;
 }
@@ -88,7 +88,7 @@ Deposit
 
 
 .textFrameWitdraw {
-    background: -webkit-linear-gradient(left, #0148a5, #135199, #1e8cf3, #00b1e7);
+    background: -webkit-linear-gradient(right, #1218FF , #0AB3FF  );
     border-radius: 30px;
     width: 50%;
     height: 50px;
@@ -144,7 +144,7 @@ Deposit
     margin: auto;
 }
 
-.wrapperWitdraw .form-containerWitdraw {
+.wrapperWitdrawV.form-containerWitdraw {
     width: 100%;
     overflow: hidden;
 }
@@ -199,7 +199,7 @@ Deposit
     font-size: 30px;
     text-align: center;
     transition: all 0.3s ease;
-    background: -webkit-linear-gradient(right, #0148a5, #135199, #1e8cf3, #00b1e7);
+    background: -webkit-linear-gradient(right, #1218FF, #0AB3FF);
     box-shadow: 5px 0.2px 9px black;
     color: white;
 }
@@ -452,7 +452,7 @@ form .btnsubmitWitdraw input[type="submitWitdraw"] {
         font-size: 14px;
     }
 
-    .wrapperWitdraw {
+    .wrapperWitdrawV{
         width: 90%;
         height: 550px;
         margin-top: 5%;
@@ -464,12 +464,12 @@ form .btnsubmitWitdraw input[type="submitWitdraw"] {
         transform: translate(-500%, 20%);
     }
 
-    .wrapperWitdraw .title-text {
+    .wrapperWitdrawV.title-text {
         display: flex;
         width: 200%;
     }
 
-    .wrapperWitdraw .title {
+    .wrapperWitdrawV.title {
         width: 50%;
         font-size: 35px;
         font-weight: 600;
@@ -477,7 +477,7 @@ form .btnsubmitWitdraw input[type="submitWitdraw"] {
         transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
-    .wrapperWitdraw .slide-controls {
+    .wrapperWitdrawV.slide-controls {
         height: 50px;
         width: 100%;
         overflow: hidden;
@@ -617,8 +617,8 @@ form .btnsubmitWitdraw input[type="submitWitdraw"] {
 
 /* Responsive Styles */
 @media (max-width: 768px) {
-    .wrapperWitdraw {
-        width: 80%;
+    .wrapperWitdrawV{
+        width: 95%;
         height: 500px;
         margin-top: 28%;
     }
@@ -682,7 +682,7 @@ form .btnsubmitWitdraw input[type="submitWitdraw"] {
         width: 80%;
         z-index: 2;
         color: #ffffff;
-        background: -webkit-linear-gradient(right, #0148a5, #135199, #1e8cf3, #00b1e7);
+        background: -webkit-linear-gradient(right, #0AB3FF , #1218FF );
         margin-top: 5%;
         box-shadow: 5px 0.2px 9px black;
         border-radius: 10px;
@@ -766,7 +766,7 @@ form .btnsubmitWitdraw input[type="submitWitdraw"] {
 
 @media only screen and (max-width: 300px) {
 
-    .wrapperWitdraw {
+    .wrapperWitdrawV{
         width: 90%;
         height: 100%;
         margin-top: 40%;

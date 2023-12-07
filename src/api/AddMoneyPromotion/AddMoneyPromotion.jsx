@@ -3,7 +3,6 @@ import axios from "../axios";
 import "./AddMoneyPromotion.css";
 import "./dialogMocss.css";
 import logo from "../../img/toonta.png";
-import rightLogin from "../../img/login.png";
 import cartoon from "../../img/imgDiralog.png";
 import picpic from "../../img/picpic.png";
 import imgwomen from "../../img/1.png"
@@ -26,7 +25,9 @@ import nottifocationimgFour from '../../img/icon/pop_up4.png'
 import nottifocationimgFive from '../../img/icon/pop_up5.png'
 import nottifocationimgSix from '../../img/icon/pop_up6.png'
 import nottifocationimgSaven from '../../img/icon/pop_up7.png'
+import nottifocationimgEight from '../../img/icon/pop_up8.png'
 
+import Select from 'react-select';
 import { ImageList, ImageListItem, ImageListItemBar } from "@mui/material";
 
 const customModalStyles = {
@@ -76,12 +77,21 @@ const AddMoneyPromotion = () => {
   const [depositaccount, setdepositaccount] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [imgnofidication, setimgnofidication] = useState();
+  const [selectedValueId, setSelectedValueId] = useState('0');
 
   let depositaccountlite = [];
-  let PromotionList = [];
 
-  let baseURL = 'https://relaxtimecafe.fun/';
-  //const baseURL = 'http://localhost:5000/';
+  let PromotionList = [
+    {
+      value: '0',
+      label: 'เลือกโปรโมชั่น',
+      imgPath: '',
+      id: '0',
+    }
+  ];
+
+  //let baseURL = 'https://dogzilla.live/';
+  const baseURL = 'http://localhost:5000/';
 
   useEffect(() => {
     if (token) {
@@ -106,6 +116,7 @@ const AddMoneyPromotion = () => {
                 })
                 setdepositaccount(depositaccountlite);
                 fetchData();
+                handleImageChange();
               }
 
             })
@@ -124,14 +135,13 @@ const AddMoneyPromotion = () => {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get('/post/');
-        //console.log(response.data.img)
-        for (let i = 0; i < response.data.img.length; i++) {
+        const response = await axios.get('/post/getlistPromotion');
+        for (let i = 0; i < response.data.data.length; i++) {
           PromotionList.push({
-            value: response.data.img[i].namepromotion,
-            label: response.data.img[i].namepromotion,
-            imgPath: response.data.img[i].filename,
-            id: response.data.img[i].id,
+            value: response.data.data[i].id,
+            label: response.data.data[i].namepromotion,
+            imgPath: response.data.data[i].filename,
+            id: response.data.data[i].id,
           })
           setDatapromotion(PromotionList);
         }
@@ -142,6 +152,7 @@ const AddMoneyPromotion = () => {
   }, []);
 
   const handleImageChange = (event) => {
+    event.preventDefault(); 
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
@@ -168,8 +179,8 @@ const AddMoneyPromotion = () => {
         .then((response) => response.json())
         .then((data) => {
           setUploadedImageUrl(data);
+          console.log(iduse);
           const nameImg = data.nameImg;
-
           fetch(baseURL + 'depositToonta', {
             method: 'POST',
             headers: {
@@ -181,14 +192,15 @@ const AddMoneyPromotion = () => {
               quantity: 250,
               accountNumber: iduse.accountNumber,
               accountName: iduse.accountName,
-              idPromotion: '1',
+              idPromotion: selectedValueId,
               filename: nameImg,
               phonenumber: user,
+              agent_id: '2',
             })
           })
             .then((response) => response.json())
             .then(async (data) => {
-              //console.log(data.message);
+              console.log(data.message);
               switch (data.message) {
                 case "ไม่มีชื่อบัญชีธนาคารของเว็บ Toonta ในระบบเงินฝาก":
                   setimgnofidication(nottifocationimgSaven);
@@ -214,6 +226,10 @@ const AddMoneyPromotion = () => {
                   setimgnofidication(nottifocationimgSix);
                   setresOpenFive(true);
                   break;
+                case "เติมเงินไม่สำเร็จ ไม่สามารถรับโปรโมชั่นได้":
+                  setimgnofidication(nottifocationimgEight);
+                  setresOpenFive(true);
+                  break;
                 default:
                   setimgnofidication(nottifocationimgTwo);
                   setresOpenFive(true);
@@ -232,7 +248,8 @@ const AddMoneyPromotion = () => {
     }
   }
 
-  const handleSubmitdeposit = () => {
+  const handleSubmitdeposit = (e) => {
+    e.preventDefault();
     handleSubmit();
     setOpen(false);
   };
@@ -264,9 +281,10 @@ const AddMoneyPromotion = () => {
     setModalIsOpen(false);
   };
 
-  const [selectedValue, setSelectedValue] = useState(depositaccount.label); // Initialize the state with the default value
-
+  const [selectedValue, setSelectedValue] = useState('กรุณาเลือกโปรโมชั่น'); // Initialize the state with the default value
   const selectElement = (event) => {
+    let id_Promotion = datapromotion.filter(item => item.label === event.target.value);
+    setSelectedValueId(id_Promotion[0].id)
     setSelectedValue(event.target.value);
     // console.log(event.target.value);
     // for (let i = 0; i < depositaccount.length; i++) {
@@ -280,10 +298,28 @@ const AddMoneyPromotion = () => {
   const copyToClipboard = async (accountNumberToonta) => {
     try {
       await navigator.clipboard.writeText(accountNumberToonta);
-      alert('คัดลอกเลขบัญชีธนาคารเรียบะร้อยแล้ว!');
+      alert('คัดลอกเลขบัญชีธนาคารเรียบร้อยแล้ว!');
     } catch (err) {
       console.error('Failed to copy text: ', err);
     }
+  };
+
+  const customStyles = {
+    control: (provided) => ({
+      ...provided,
+      borderRadius: '10px',
+      width: '50%',
+      borderColor: 'purple',
+      boxShadow: 'none',
+      marginLeft: '25%',  // ทำให้ select อยู่ตรงกลาง
+      '&:hover': {
+        borderColor: 'purple',
+      }
+    }),
+    option: (provided, state) => ({
+      ...provided,
+      backgroundColor: state.isSelected ? 'gray' : provided.backgroundColor,  // พื้นหลังของ option ที่ถูกเลือกมีสีเทา
+    }),
   };
 
   return (
@@ -471,7 +507,7 @@ const AddMoneyPromotion = () => {
           </div>
           <div className="form-container">
             <div className="form-inner">
-              <form action="#" className="login">
+              <form action="#"  className="login" >
 
                 <div className="containerBank">
                   <ImageList sx={{
@@ -479,7 +515,7 @@ const AddMoneyPromotion = () => {
                     '@media (max-width: 768px)': {
                       width: '450',
                       height: '200',
-                    },
+                    }, color: '#000000'
                   }} cols={1}>
                     {depositaccount.map((option) => (
                       <ImageListItem key={option.number}>
@@ -513,72 +549,43 @@ const AddMoneyPromotion = () => {
                   </ImageList>
                 </div>
 
-                <div className="fieldDataDeposit font textinput input-container">
-                  <p className="textTitle font" style={{fontSize:'15px'}}>กรุณาเลือกโปรโมชั่น</p>
-                  <select className="lang_menu font"  style={{fontSize:'17px'}} value={selectedValue} onChange={selectElement}>
+                <div className="fieldDataDeposit font  input-container">
+                  <select className="lang_menuPromotionDeposit font" style={{ fontSize: '17px' }} value={selectedValue} onChange={selectElement}>
                     {datapromotion.map((option) => (
-                      <option key={option.id} className="lang_menu font"  style={{fontSize:'17px'}}>
+                      <option key={option.id} className="lang_menuPromotionDeposit font" style={{ fontSize: '17px' }}>
                         {option.label}
                       </option>
                     ))}
                   </select>
                 </div>
-
-                {/* <div className="fieldDataDeposit font textinput input-container">
-                  <p className="textTitle font">ชื่อบัญชี</p>
-                  <div className="wrapInputDeposit">
-                    <input
-                      type="text"
-                      placeholder="ชื่อ - นามสกุล"
-                      value={accountName}
-                      onChange={(e) => setdepositamount(e.target.value)}
-                      required
-                      className="input-with-iconReposit"
-                      disabled
-                    />
-                    <BsCoin className="input-iconDeposit" />
-                  </div>
-                </div>
-
-                <div className="fieldDataDeposit font textinput input-container">
-                  <p className="textTitle font">เลขที่บัญชี</p>
-                  <div className="wrapInputDeposit">
-                    <input
-                      type="Number"
-                      placeholder="เลขที่บัญชี"
-                      value={accountNumber}
-                      onChange={(e) => setaccountNumber(e.target.value)}
-                      required
-                      className="input-with-iconReposit"
-                      disabled
-                    />
-                    <BsCoin className="input-iconDeposit" />
-                  </div>
-                </div>  */}
-
+                <br />
                 <div className=" font">
                   <p className="textTitle font">อัพโหลดหลักฐานการโอน</p>
                   <input
+                    id="fileInput"
                     type="file"
                     placeholder="อัพโหลดรูปภาพ"
                     accept="image/*"
                     onChange={handleImageChange}
                     className="upload-box"
+                    style={{ display: 'none' }} // ซ่อน input file ไว้
                   />
+                  <button type="button" onClick={() => document.getElementById("fileInput").click(handleImageChange)} className="custom-upload-btn">ส่งสลิป</button>
+
                   {selectedImage && (
                     <div>
                       <br />
                       <h5 className="textTitleimg font" style={{ display: 'inline-block' }}>ตัวอย่างรูปภาพ</h5>
                       <img className="imgSile"
                         src={selectedImage} alt="Uploaded"
-                        style={{ display: 'inline-block'}}
+                        style={{ display: 'inline-block' }}
                         onClick={() => openModal(selectedImage)}
                       />
                     </div>
                   )}
                 </div>
                 <div className="fieldMoney btnsubmitDeposit font">
-                  <input type="submitDeposit" defaultValue="เติมเงิน" onClick={() => handleSubmitdeposit()} />
+                <input type="submitDeposit" defaultValue="เติมเงิน" onClick={(e) => handleSubmitdeposit(e)} />
                 </div>
                 <div className="money-link ">
                   <a className="font" href=""> พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>

@@ -76,27 +76,35 @@ function GamePlayType() {
             setItems(gameSkillGame);
         }
     };
-    const PlayGame = (codeGame, productId) => {
+    const PlayGame = async (codeGame, productId, nameGame) => {
         const pathA = window.location.pathname;
         const pathSegments = pathA.split('/');
 
         if (data.phonenumber !== '' && data.phonenumber !== undefined) {
-            console.log(codeGame, productId, data.phonenumber)
-            axios.get(`seamlesslogIn/${codeGame}/${productId}/${user}`)
-                .then((response) => {
+            const response = await axios.post("userplayGame", {
+                username: user,
+                nameGame: nameGame,
+                agent_id: "2",
+              });
+              if (response.data.message === "saveNameGame") {
+                console.log(productId);
+                axios.get(`seamlesslogIn/${codeGame}/${productId}/${data.phonenumber}`)
+                  .then((response) => {
+                    
                     const link = response.data.data.data.url;
                     if (mobileOS === 'Android') {
                         window.open(link, "_blank");
                     } else {
                         window.open(link, "_self");
                     }
-                })
-                .catch(error => {
-                    console.log('error', error);
-                });
-        } else {
-            setShow(true);
-        }
+                  })
+                  .catch((error) => {
+                    console.log("error", error);
+                  });
+              }
+            } else {
+              setShow(true);
+            }
     }
 
     const BackPang = () => {
@@ -108,7 +116,7 @@ function GamePlayType() {
     const currentPosts = items.slice(firstPostIndex, lastPostIndex);
 
     const h4Style = {
-        color: 'red',
+        color: 'white',
         display: 'inline-block',
         cursor: 'pointer',
         marginRight: '10px',
@@ -152,12 +160,12 @@ function GamePlayType() {
             )}
             <React.Fragment>
                 <Container maxWidth="xl" sx={{ p: 2}}>
+                <div className="card-font">รายชื่อเกม</div>
                     <Box display={'flex'}>
                         <Typography variant="h6">
                         <a style={h4Style} className='grount font' onClick={BackPang}>ย้อนกลับ</a>
                         </Typography>
                     </Box>
-                    <div className="card-font">รายชื่อเกม</div>
                     <br />
                     <div className=" game vGameList">
                         <div className="list">
@@ -178,7 +186,7 @@ function GamePlayType() {
                                     <div className="provider-name">{row.name}</div> */}
                                     <div className="box-play">
                                         <div className="button-play boxGoPlay" data-gameid={row.providerCode} data-name={row.name}
-                                            data-pid="191" onClick={() => PlayGame(row.codeGame, row.productId)}>เล่น</div>
+                                            data-pid="191" onClick={() => PlayGame(row.codeGame, row.productId, row.name)}>เล่น</div>
                                     </div>
                                 </div>
                             ))}

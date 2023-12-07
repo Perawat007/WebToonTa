@@ -1,8 +1,6 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
 import axios from "../../api/axios";
 import "./PromotionShow.css";
-import logo from "../../img/toonta.png";
-import rightLogin from "../../img/login.png";
 import cartoon from "../../img/imgDiralog.png";
 import picpic from "../../img/banner2.jpg";
 import imgMoney from "../../img/banner3.jpg"
@@ -58,8 +56,10 @@ const PromotionShow = () => {
   }
 
   const OKPromotion = () => {
+    //console.log(dataPromotion.id)
+    localStorage.setItem("%rootProDataN%", dataPromotion.namepromotion)
     if (token) {
-      window.location.href = `/Deposit`;
+      window.location.href = `/DepositPromotion/${dataPromotion.id}`;
     } else {
       setShowPopup(!showPopupA)
     }
@@ -210,7 +210,7 @@ const PromotionShow = () => {
                               transform: "scale(1)"
                             }}>
                           </div>
-                          <img src={"https://relaxtimecafe.fun/images/" + row.filename} alt="" style={{
+                          <img src={"https://dogzilla.live/images/" + row.filename} alt="" style={{
                             cursor: 'pointer',
                           }} />
                           {/* <div className="provider-name">{row.name}</div> */}
@@ -228,7 +228,7 @@ const PromotionShow = () => {
                   {data.map((row) => (
                     <div key={row.id}>
                       <li className="liPromotion">
-                        <img className="settingImg" src={"https://relaxtimecafe.fun/images/" + row.filename} alt="" />
+                        <img className="settingImg" src={"https://dogzilla.live/images/" + row.filename} alt="" />
                         <h3 className="h3Promotion font" style={{ color: "#FFFFFF" }}>{row.namepromotion}</h3>
                         <p className="font">{row.details}</p>
                       </li>

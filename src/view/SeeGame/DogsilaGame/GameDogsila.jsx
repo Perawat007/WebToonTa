@@ -15,12 +15,13 @@ import "../ListGame.css";
 import Footer from "../../pangHome/FooTer/Footer";
 import PaginationJS from "../Pagination";
 import cartoon from '../../../img/3.png';
+import NavicationBar from "../../NavicationBar/navicationbar";
 export default function GameDogsila() {
   const [items, setItems] = React.useState([]);
   const token = localStorage.getItem("token");
   const [show, setShow] = React.useState(false);
   const [isPressed, setIsPressed] = React.useState(false);
-
+  const [data, setData] = React.useState([])
   const handleMouseDown = () => {
     setIsPressed(true);
   };
@@ -45,12 +46,30 @@ export default function GameDogsila() {
 
   const mobileOS = getMobileOperatingSystem();
   React.useEffect(() => {
+    if (token) {
+      if (data.length === 0) {
+          axios.post("/post/token", '', {
+              headers: {
+                  'Authorization': `Bearer ${token}`
+              }
+          })
+              .then(response => {
+                  setData(response.data.data);
+              })
+              .catch(error => {
+                  localStorage.removeItem("token")
+                  localStorage.removeItem("user")
+                  window.location.href = "/";
+                  console.log('error', error)
+              }
+              );
+      }
+  }
     DataGet();
   }, []);
 
   const DataGet = () => {
-    axios
-      .get("/post/game", {
+    axios.get("/post/game", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -69,8 +88,8 @@ export default function GameDogsila() {
   };
 
   const PlayGame = (linkGame) => {
-    axios
-      .post("/post/token", "", {
+    if (token){
+      axios.post("/post/token", "", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -87,6 +106,8 @@ export default function GameDogsila() {
               window.open(link, "_self");
             }
           }
+        } else {
+          setShow(true);
         }
       })
       .catch((error) => {
@@ -94,6 +115,9 @@ export default function GameDogsila() {
         localStorage.removeItem("token");
         window.location.reload();
       });
+    } else {
+      setShow(true);
+    }
   };
 
   const BackPang = () => {
@@ -149,12 +173,13 @@ export default function GameDogsila() {
       <div className="pg-home common-holder">
         <React.Fragment>
           <Container maxWidth="xl" sx={{ p: 3 }}>
+          <div className="card-font">รายชื่อเกม</div>
             <Box display={'flex'}>
               <Typography variant="h6">
                 <a style={h4Style} className='grount font' onClick={BackPang}>ย้อนกลับ</a>
               </Typography>
             </Box>
-            <div className="card-font">รายชื่อเกม</div>
+           
             <br />
             <br />
             <br />
@@ -195,6 +220,9 @@ export default function GameDogsila() {
           </div>
         </div>
         <Footer />
+        <div className="positionNav">
+          <NavicationBar />
+        </div>
       </div>
     </>
   );

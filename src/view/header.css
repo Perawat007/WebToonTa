@@ -39,6 +39,7 @@
 	font-weight: 200;
 	padding: 8px 9px;
 	border-radius: 30px;
+	margin-top: auto;
 }
 
 .usernameolne{
@@ -226,7 +227,7 @@ i {
   .button-witdarw:active,
   .button-witdarw:hover {
 	  color: var(--generalText);
-	  background: -webkit-linear-gradient(left, #6a0492, #aa1ee2);
+	  background: -webkit-linear-gradient(left, #2B0BD9 , #008DE9);
 	  text-transform: uppercase
   }
 
@@ -235,7 +236,8 @@ i {
   .button-Deposit:active,
   .button-Deposit:hover {
 	  color: var(--generalText);
-	  background: -webkit-linear-gradient(left, #013170, #008cff);
+	  background: -webkit-linear-gradient(left, #7110AF , #C93EDA);
+	 
 	  text-transform: uppercase
   }
   .imgRank{

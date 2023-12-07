@@ -13,7 +13,6 @@
     margin-top: 1%;
     border-radius: 20px;
     border-style: solid;
-    border-color: rgb(96, 0, 151);
 }
 
 .headerDeposit{
@@ -102,6 +101,21 @@ img .profile-photo-lg {
     margin: auto;
 }
 
+.imgฺGound{
+    
+    height: 90px;
+    width: 110%;
+    background-color: rgb(95, 0, 219)
+}
+
+.imgcoupon{
+    position: absolute;
+    left: 85%;
+    bottom: 85%;
+    width: 13%;
+    height: 13%;
+    cursor: pointer;
+}
 @media (min-width:768px) {
     .boostaem{
         /* -ms-flex: 0 0 75%;

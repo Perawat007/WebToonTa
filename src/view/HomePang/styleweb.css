@@ -111,6 +111,7 @@ body {
     user-select: none;
     line-height: 1;
     height: 100%
+    
 }
 
 html.insidemenu {
@@ -150,11 +151,11 @@ fieldset[disabled] .form-control {
 }
 
 html ::-webkit-scrollbar {
-    display: none
+    display: block
 }
 
 html ::-webkit-scrollbar-track {
-    background: #242424
+ 
 }
 
 html ::-webkit-scrollbar-thumb {
@@ -378,9 +379,8 @@ textarea {
 .button-login:active,
 .button-login:hover {
     text-transform: uppercase;
-    color: var(--mainColor);
-    background: 0 0;
-    border: 2px solid var(--mainColor)
+    color: #FFFFFF;
+    background-color: #5702B6;
 }
 
 .button-logout,
@@ -2273,9 +2273,7 @@ textarea {
 .footer-providers .icon {
     width: 100%;
     white-space: nowrap;
-    overflow: scroll;
-    scrollbar-width: none;
-    -ms-overflow-style: none
+  
 }
 
 .footer-providers .icon img {

@@ -15,7 +15,18 @@ import imgdaimond from "../img/ver.2-20230915T140421Z-001/icon_daimond.png";
 import imggold from "../img/ver.2-20230915T140421Z-001/icon_gold.png";
 import imgnew from "../img/ver.2-20230915T140421Z-001/icon_new.png";
 import imgsilver from "../img/ver.2-20230915T140421Z-001/icon_silver.png";
+import imgcoin from "../img/coinimg.png";
 import setting from "../img/icon/setting.png"
+import iconWitdarw from "../img/icon_bar/Windraw.png"
+import iconDeposit from "../img/icon_bar/Deposit.png"
+import imgLogout from "../img/icon_bar/logout.png"
+
+import imgbronzeV2 from "../img/ver.2-20230915T140421Z-001/ver.2/icon_bronze.png";
+import imgdaimondV2 from "../img/ver.2-20230915T140421Z-001/ver.2/icon_daimond.png";
+import imggoldV2 from "../img/ver.2-20230915T140421Z-001/ver.2/icon_gold.png";
+import imgnewV2 from "../img/ver.2-20230915T140421Z-001/ver.2/icon_new.png";
+import imgsilverV2 from "../img/ver.2-20230915T140421Z-001/ver.2/icon_silver.png";
+
 function HeadersII() {
     const [username, setUser] = useState("");
     const [password, setPwd] = useState("");
@@ -40,7 +51,7 @@ function HeadersII() {
             //event.preventDefault();
         });
     }
-
+    
     function sliderMenu() { }
     useEffect(() => {
         animation();
@@ -59,32 +70,34 @@ function HeadersII() {
                             .get(`list_user/${response.data.data.id}`)
                             .then((response) => {
                                 setData(response.data.data[0]);
-                                const formattedNumber =
-                                    response.data.data[0].credit.toLocaleString("en-US");
-                                setCredit(formattedNumber);
+                                const rounded = Math.round(response.data.data[0].credit);        
+                                const formattedNumber = rounded.toLocaleString("en-US");
+                                setCredit(formattedNumber);                            
                                 localStorage.setItem("user", response.data.data[0].phonenumber);
-                                localStorage.setItem("credit", response.data.data[0].credit.toLocaleString("en-US"))
+                                localStorage.setItem("credit", formattedNumber)
                                 localStorage.setItem("id", response.data.data[0].id)
                                 localStorage.setItem("rank", response.data.data[0].groupmember)
+                                localStorage.setItem("%rootTroot%", response.data.data[0].turnover)
+                                //console.log( response.data.data[0]);
                                 setrankusers(response.data.data[0].groupmember);
                                 switch (response.data.data[0].groupmember) {
                                     case "Bronze":
-                                        setimgRank(imgbronze)
+                                        setimgRank(imgbronzeV2)
                                         break;
                                     case "Silver":
-                                        setimgRank(imgsilver)
+                                        setimgRank(imgsilverV2)
                                         break;
                                     case "Gold":
-                                        setimgRank(imggold)
+                                        setimgRank(imggoldV2)
                                         break;
                                     case "Daimond":
-                                        setimgRank(imgdaimond)
+                                        setimgRank(imgdaimondV2)
                                         break;
                                     case "NewMember":
                                         setimgRank(imgnew)
                                         break;
                                     default:
-                                        setimgRank(imgbronze)
+                                        setimgRank(imgnew)
                                         break;
                                 }
                             })
@@ -96,6 +109,7 @@ function HeadersII() {
                         localStorage.removeItem("token");
                         localStorage.removeItem("user");
                         localStorage.removeItem("credit");
+                        localStorage.removeItem("%rootTroot%");
                         window.location.href = "/";
                         console.log("error", error);
                     });
@@ -225,7 +239,7 @@ function HeadersII() {
                                         </a>
                                         <div className="nav-switch">
                                             {/* <i className="fa fa-bars"></i> */}
-                                            <div className="user-panelthai">
+                                            <div className="user-panelthaiset">
                                                 <div>
                                                     <img src={setting} alt="th" className="imgborder" />
                                                 </div>
@@ -233,13 +247,33 @@ function HeadersII() {
                                         </div>
 
                                         <div className="user-panel">
-                                            <div
-                                                className="mbtnLoginTop button button-login font"
-                                                onClick={logout}
-                                            >
-                                                ออกจากระบบ
+                                            <div className="button button-login">
+                                                <div
+                                                    className="font"
+                                                    onClick={logout}
+                                                    style={{
+                                                        display: "inline-block",
+                                                    }}
+                                                >
+                                                    ออกจากระบบ
+
+                                                </div>
+                                                <div
+                                                    style={{
+                                                        color: "white",
+                                                        display: "inline-block",
+                                                    }}
+                                                    className=" font"
+                                                >
+                                                    <div className="user-panelthaiRank">
+                                                        <div>
+                                                            <img src={imgLogout} alt="th" className="imgborder" />
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+
                                         <div className="user-panelthai">
                                             <div>
                                                 <img src={th} alt="th" className="imgborder" />
@@ -255,39 +289,94 @@ function HeadersII() {
                                         </div>
 
                                         <div className="user-panel">
-                                            <div
+                                            {/* <div
                                                 className="mbtnLoginTop button button-witdarw font"
                                                 onClick={gowithdraw}
                                             >
                                                 ถอนเงิน
-                                            </div>
-                                        </div>
-
-                                        <div className="user-panel">
-                                            <div
-                                                className="mbtnLoginTop button button-Deposit font"
-                                                onClick={goDeposit}
-                                            >
-                                                เติมเงิน
-                                            </div>
-                                        </div>
-                                        <div className="controlHeaders usernameolne">
-                                            <div style={{ display: "inline-block" }}>
+                                            </div> */}
+                                            <div className="button  button-witdarw">
                                                 <div
+                                                    className="font"
+                                                    onClick={gowithdraw}
                                                     style={{
-                                                        color: "#E7CF27",
                                                         display: "inline-block",
-                                                        marginRight: "5px",
-                                                        transform: `translate(${-10}px, ${-3}px)`,
-                                                        scale: "100%",
                                                     }}
                                                 >
+                                                    ถอนเงิน
 
                                                 </div>
                                                 <div
                                                     style={{
                                                         color: "white",
                                                         display: "inline-block",
+                                                    }}
+                                                    className=" font"
+                                                >
+                                                    <div className="user-panelthaiRank">
+                                                        <div>
+                                                            <img src={iconWitdarw} alt="th" className="imgborder" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="user-panel">
+                                            {/* <div
+                                                className="mbtnLoginTop button button-Deposit font"
+                                                onClick={goDeposit}
+                                            >
+                                                เติมเงิน
+                                            </div> */}
+
+                                            <div className="button  button-Deposit">
+                                                <div
+                                                    className="font"
+                                                    onClick={goDeposit}
+                                                    style={{
+                                                        display: "inline-block",
+                                                    }}
+                                                >
+                                                    เติมเงิน
+
+                                                </div>
+                                                <div
+                                                    style={{
+                                                        color: "white",
+                                                        display: "inline-block",
+                                                    }}
+                                                    className=" font"
+                                                >
+                                                    <div className="user-panelthaiRank">
+                                                        <div>
+                                                            <img src={iconDeposit} alt="th" className="imgborder"/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="controlHeaders usernameolne">
+                                            <div>
+                                                <div
+                                                    style={{
+                                                        color: "#E7CF27",
+                                                        display: "inline-block",
+                                                        marginRight: "5px",
+                                                        scale: "100%",
+                                                    }}
+                                                >
+                                                    <div className="user-panelthaiRank">
+                                                        <div>
+                                                            <img src={imgRank} alt="th" className="imgborder"  style={{width:'78%'}}/>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div
+                                                    style={{
+                                                        color: "white",
+                                                        display: "inline-block",
+                                                        transform: `translate(${0}px, ${3}px)`,
                                                     }}
                                                     className="font"
                                                 >
@@ -295,31 +384,24 @@ function HeadersII() {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="user-panelthaiRank">
-                                            <div>
-                                                <img src={imgRank} alt="th" className="imgborder" />
-                                            </div>
-                                        </div>
+
                                         <div className="controlHeaders marginData">
-                                            <div style={{ display: "inline-block" }}>
+                                            <div>
                                                 <div
                                                     style={{
                                                         color: "#E7CF27",
                                                         display: "inline-block",
                                                         marginRight: "5px",
-                                                        transform: `translate(${-10}px, ${-3}px)`,
                                                         scale: "100%",
                                                     }}
                                                 >
-                                                    <BsCreditCardFill />
+                                                    <div className="user-panelthaiRank">
+                                                        <div>
+                                                            <img src={imgcoin} alt="th" className="imgborder" />
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div
-                                                    style={{
-                                                        color: "white",
-                                                        display: "inline-block",
-                                                    }}
-                                                    className="font"
-                                                >
+                                                <div style={{ display: "inline-block" }} className="textcoinHeaders font">
                                                     {dataCredit}
                                                 </div>
                                             </div>

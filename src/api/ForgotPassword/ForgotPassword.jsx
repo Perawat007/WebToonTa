@@ -39,7 +39,7 @@ const ForgotPassword = () => {
   const [tokenpin, settokenpin] = useState("");
   const [otpPin, setotppin] = useState("");
   const [open, setOpen] = React.useState(false);
-  const [openlog, setOpenlog] = React.useState(false);
+  const [openlog, setOpenlog] = React.useState(false);//
   const [openlogsuncent, setopenlogsuncent] = React.useState(false);
   const [logResetError, setlogResetError] = useState(false);
 
@@ -49,6 +49,7 @@ const ForgotPassword = () => {
   const [showUsernameCheckvalue, setShowusernameCheckvalue] = useState(false);
   const [showpasswordCheck, setShowpasswordCheck] = useState(false);
   const [showpasswordNot, setShowpasswordNot] = useState(false);
+  const [showOPTError, setshowOPTError] = useState(false);
   const [showBank, setShowBank] = useState(false);
 
   //Img
@@ -67,29 +68,6 @@ const ForgotPassword = () => {
     setShowBank(false);
   };
 
-  function BootstrapDialogTitle(props) {
-    const { children, onClose, ...other } = props;
-
-    return (
-      <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-        {children}
-        {onClose ? (
-          <IconButton
-            aria-label="close"
-            onClick={onClose}
-            sx={{
-              position: "absolute",
-              right: 8,
-              top: 8,
-              color: (theme) => theme.palette.grey[500],
-            }}
-          >
-            <CloseIcon />
-          </IconButton>
-        ) : null}
-      </DialogTitle>
-    );
-  }
   useEffect(() => {
     setRegiterA(true);
     const newStyle = {
@@ -99,17 +77,8 @@ const ForgotPassword = () => {
     setStyle(newStyle);
   }, []);
 
-  BootstrapDialogTitle.propTypes = {
-    children: PropTypes.node,
-    onClose: PropTypes.func.isRequired,
-  };
-
-  const handleConfrimSubmit = () => {
-    setShowPopupB(true);
-  };
-
-  const handleSubmitResetPassword = () => {
-    setOpen(true);
+  const otpError = () => {
+    setshowOPTError(false);
   };
 
   const handleSubmitA = async (e) => {
@@ -117,7 +86,7 @@ const ForgotPassword = () => {
     if (numberPhone !== "" && numberPhone !== undefined) {
       if (/^\d{0,10}$/.test(numberPhone) && numberPhone.length === 10) {
         const requestBody = {
-          numberPhone: numberPhone,
+          phoneNumber: numberPhone,
         };
         axios.post("otpRequestForgotPassword", requestBody, {
           headers: {
@@ -132,8 +101,8 @@ const ForgotPassword = () => {
             }
           })
           .then((dataOTP) => {
-            console.log(dataOTP);
-            if (dataOTP.message === "This numberPhone is not available.") {
+            //console.log(dataOTP.message);
+            if (dataOTP.message === "This phonenumber is not available.") {
               setShowPhoneCheck(true);
             } else {
               settokenpin(dataOTP.dataRes.data.token);
@@ -153,7 +122,7 @@ const ForgotPassword = () => {
 
   const handleSubmitOTP = async (e) => {
     e.preventDefault();
-    fetch("https://relaxtimecafe.fun/otpVerify", {
+    fetch("https://dogzilla.live/otpVerify", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -171,10 +140,10 @@ const ForgotPassword = () => {
         }
       })
       .then((data) => {
-        if (
-          data.dataRes.data.status === "success" &&
-          data.dataRes.data.message === "Code is correct."
-        ) {
+        //console.log(data);
+        if (data.dataRes === "Code is invalid.") {
+          setshowOPTError(true)
+        } else {
           setShowImg(regitercartoonV2);
           setShowprogressBar(50);
           const newStyle = {
@@ -231,6 +200,8 @@ const ForgotPassword = () => {
             idUser: '0',
             idedit: '0',
             typeedit: "member",
+            agent_id: '2',
+            note: 'เปลี่ยนจากเว็บ Toonta.com'
           });
 
           //console.log(response.data);
@@ -257,10 +228,6 @@ const ForgotPassword = () => {
     }
   }
 
-  const togglePopup = () => {
-    setShowPopupB(!showPopupB);
-  };
-
   const PasswordChangedSuccessfully = () => {
     window.location.href = "/Login";
   };
@@ -270,12 +237,12 @@ const ForgotPassword = () => {
       {show && (
         <div className="overlayRegiter">
           <div className="modalContainerRegiter">
-            <div className="imgRegiter">
+            <div className="imgForGet">
               <img src={cartoon} alt="/" />
             </div>
             <div className="modalRightRegiter">
               <div className="contentRegiter">
-                <p className="titleDialogRegiter font">เบอร์โทรไม่ถูกต้อง</p>
+                <p className="titleDialogFor font">เบอร์โทรไม่ถูกต้อง</p>
                 <br />
                 <h3 className="detailDialogRegiter font">
                   กรุณากรอกเบอร์โทรให้ถูกต้อง โดยเบอร์โทรศัพท์หลักแรก
@@ -294,16 +261,16 @@ const ForgotPassword = () => {
 
       {showPhoneCheck && (
         <div className="overlayRegiter">
-          <div className="modalContainerRegiter">
-            <div className="imgRegiter">
-              <img src={cartoon} alt="/" />
-            </div>
-            <div className="modalRightRegiter">
-              <div className="contentRegiter">
-                <p className="titleDialogRegiter font">เบอร์โทรศัพท์มีผู้ใช้งานแล้ว</p>
+          <div className="imgForGet">
+            <img src={cartoon} alt="/" />
+          </div>
+          <div className="modalContainerMoney">
+            <div className="modalRightMoney">
+              <div className="contentMoney">
+                <p className="titleDialogFor font">ไม่พบผู้ใช้ในระบบ</p>
                 <br />
                 <h3 className="detailDialogRegiter font">
-                  กรุณากรอกเบอร์โทรใหม่ เบอร์โทรมีผู้ใช้งานแล้ว
+                  กรุณากรอกเบอร์โทรใหม่ ไม่พบเบอร์โทร {numberPhone} ในระบบ
                 </h3>
               </div>
               <div className="btnContainerRegiter">
@@ -318,13 +285,13 @@ const ForgotPassword = () => {
 
       {showpasswordCheck && (
         <div className="overlayRegiter">
-          <div className="modalContainerRegiter">
-            <div className="imgRegiter">
-              <img src={cartoon} alt="/" />
-            </div>
-            <div className="modalRightRegiter">
-              <div className="contentRegiter">
-                <p className="titleDialogRegiter font">Password ไม่ถูกต้อง</p>
+          <div className="imgForGet">
+            <img src={cartoon} alt="/" />
+          </div>
+          <div className="modalContainerMoney">
+            <div className="modalRightMoney">
+              <div className="contentMoney">
+                <p className="titleDialogFor font">Password ไม่ถูกต้อง</p>
                 <br />
                 <h3 className="detailDialogRegiter font">
                   กรุณากรอก Password ให้เหมือนกันทั้ง 2 ช่อง
@@ -342,13 +309,13 @@ const ForgotPassword = () => {
 
       {showpasswordNot && (
         <div className="overlayRegiter">
-          <div className="modalContainerRegiter">
-            <div className="imgRegiter">
-              <img src={cartoon} alt="/" />
-            </div>
-            <div className="modalRightRegiter">
-              <div className="contentRegiter">
-                <p className="titleDialogRegiter font">Password ไม่ถูกต้อง</p>
+          <div className="imgForGet">
+            <img src={cartoon} alt="/" />
+          </div>
+          <div className="modalContainerMoney">
+            <div className="modalRightMoney">
+              <div className="contentMoney">
+                <p className="titleDialogFor font">Password ไม่ถูกต้อง</p>
                 <br />
                 <h3 className="detailDialogRegiter font">
                   กรุณาตั้ง Password 6 ตัวอักษรขึ้นไป
@@ -366,13 +333,13 @@ const ForgotPassword = () => {
 
       {open && (
         <div className="overlayMoney">
-          <div className="imgMoney">
+          <div className="imgForGet">
             <img src={cartoon} alt="/" />
           </div>
           <div className="modalContainerMoney">
             <div className="modalRightMoney">
               <div className="contentMoney">
-                <p className="titleDialog font">แจ้งเตือน ยืนยันการเปลี่ยนรหัสผ่าน</p>
+                <p className="titleDialogFor font">แจ้งเตือน ยืนยันการเปลี่ยนรหัสผ่าน</p>
                 <br />
                 <h3 className="detailDialog font">คุณต้องการเปลี่ยนรหัสผ่านตามนี้เลยใช่หรือไม่</h3>
               </div>
@@ -391,13 +358,13 @@ const ForgotPassword = () => {
 
       {openlog && (
         <div className="overlayMoney">
-          <div className="imgMoney">
+          <div className="imgForGet">
             <img src={cartoon} alt="/" />
           </div>
           <div className="modalContainerMoney">
             <div className="modalRightMoney">
               <div className="contentMoney">
-                <p className="titleDialog font">แจ้งเตือน ยืนยันการเปลี่ยนรหัสผ่าน</p>
+                <p className="titleDialogFor font">แจ้งเตือน ยืนยันการเปลี่ยนรหัสผ่าน</p>
                 <br />
                 <h3 className="detailDialog font">กรุณากรอกรหัสใหม่กับยืนยันรหัสผ่านให้เหมือนกัน</h3>
               </div>
@@ -413,13 +380,13 @@ const ForgotPassword = () => {
 
       {openlogsuncent && (
         <div className="overlayMoney">
-          <div className="imgMoney">
+          <div className="imgForGet">
             <img src={cartoon} alt="/" />
           </div>
           <div className="modalContainerMoney">
             <div className="modalRightMoney">
               <div className="contentMoney">
-                <p className="titleDialog font">แจ้งเตือน ยืนยันการเปลี่ยนรหัสผ่าน</p>
+                <p className="titleDialogFor font">แจ้งเตือน ยืนยันการเปลี่ยนรหัสผ่าน</p>
                 <br />
                 <h3 className="detailDialog font">เปลี่ยนรหัสผ่านสำเร็จ</h3>
               </div>
@@ -435,13 +402,13 @@ const ForgotPassword = () => {
 
       {logResetError && (
         <div className="overlayMoney">
-          <div className="imgMoneyCartoon">
+          <div className="imgForGet">
             <img src={cartoon} alt="/" />
           </div>
           <div className="modalContainerMoney">
             <div className="modalRightMoney">
               <div className="contentMoney">
-                <p className="titleDialog font">แจ้งเตือน การเปลี่ยนรหัสผ่าน</p>
+                <p className="titleDialogFor font">แจ้งเตือน การเปลี่ยนรหัสผ่าน</p>
                 <br />
                 <h3 className="detailDialog font">คุณกรอกรหัสผ่านไม่ถูกต้อง กรุณาตรวจรหัสผ่านและลองใหมอีกครั้ง</h3>
                 <div className="btnContainerMoney">
@@ -508,6 +475,30 @@ const ForgotPassword = () => {
         </div>
       )}
 
+      {showOPTError && (
+       <div className="overlayRegiter">
+       <div className="imgForGet">
+         <img src={cartoon} alt="/" />
+       </div>
+       <div className="modalContainerMoney">
+         <div className="modalRightMoney">
+           <div className="contentMoney">
+             <p className="titleDialogFor font">OPT ไม่ถูกต้อง</p>
+             <br />
+             <h3 className="detailDialogRegiter font">
+               กรุณากรอก OTP ให้ถูกต้อง
+             </h3>
+           </div>
+           <div className="btnContainerRegiter">
+             <button className="btnPrimaryRegiter" onClick={handleClose}>
+               ตกลง
+             </button>
+           </div>
+         </div>
+       </div>
+     </div>
+      )}
+
       <nav >
         <Headers />
       </nav>
@@ -528,8 +519,8 @@ const ForgotPassword = () => {
             </div>
           </div>
 
-          <div className="imgWaycircle">
-            <img className="scaltimgcirclesm" src={showImg} alt="" />
+          <div className="imgWaycircleForgot">
+            <img className="scaltimgcirclesmForgot" src={showImg} alt="" />
           </div>
 
           <div className="form-containerForgotPassword">
@@ -550,7 +541,7 @@ const ForgotPassword = () => {
                               required
                               className="input-with-iconForgotPassword"
                             />
-                            <BsPhoneFill className="input-iconForgotPassword" />
+                            <BsPhoneFill className="input-iconForgotPassword" style={{ color: '#FFFFFF' }} />
                           </div>
                         </div>
                         <div className="fieldForgotPassword btnsubmitForgotPassword font">
@@ -580,7 +571,7 @@ const ForgotPassword = () => {
                               required
                               className="input-with-iconForgotPassword"
                             />
-                            <BsUnlockFill className="input-iconForgotPassword" />
+                            <BsUnlockFill className="input-iconForgotPassword" style={{ color: '#FFFFFF' }} />
                           </div>
                         </div>
 
@@ -595,7 +586,7 @@ const ForgotPassword = () => {
                               required
                               className="input-with-iconForgotPassword"
                             />
-                            <BsUnlockFill className="input-iconForgotPassword" />
+                            <BsUnlockFill className="input-iconForgotPassword" style={{ color: '#FFFFFF' }} />
                           </div>
                         </div>
 

@@ -22,7 +22,9 @@ import DataUser from './api/DataUser/DataUser'
 import GameTypeSlot from './view/SeeGame/SlotGame/GameTypeSlot';
 import ResetPassword from './api/ResetPassword/ResetPassword';
 import ForgotPassword from './api/ForgotPassword/ForgotPassword';
-
+import StatusWitdrawTa from './api/StatusWithDraw/StatusWitdrawTa';
+import AddPromotionMoney from './api/AddMoneyPromotion/AddPromotionMoney';
+import CouponToonta from './api/Coupon/CouponToonta';
 function App() {
   const token = localStorage.getItem("token");
   const styles = {
@@ -36,6 +38,8 @@ function App() {
       window.location.href = "/Home";
     } else if (pathSegments[1] === "regiteruser") {
       window.location.href = "/Home";
+    } else if (pathSegments[1] !== "DepositPromotion" && pathSegments[1] !== "PromotionShow"){
+      localStorage.removeItem("%rootProDataN%");
     }
   }
 
@@ -52,13 +56,18 @@ function App() {
     if (pathSegments[1] === "ResetPassword") {
       window.location.href = "/Home";
     }
+    if (pathSegments[1] === "DepositPromotion") {
+      window.location.href = "/Home";
+    }
+    if (pathSegments[1] === "CouponWebToonta") {
+      window.location.href = "/Home";
+    }
   }
 
   return (
     <div className='Home-container'>
       <div>
-        <h1>Hello Word</h1>
-        {/* {(() => {
+        {(() => {
           if (token) {
             return (
               <>
@@ -66,7 +75,7 @@ function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="/Home" element={<Home />} />
                   <Route path="/:name" element={<GameAll />} />
-                  <Route path="/GameDogsila" element={<GameDogsila />} />
+                  <Route path="/GameDogzilla" element={<GameDogsila />} />
                   <Route path="/Deposit" element={<AddMoneyPromotion />} />
                   <Route path="/DataUser" element={<DataUser />} />
                   <Route path="/Witdraw" element={<WitdrawTa />} />
@@ -78,6 +87,9 @@ function App() {
                   <Route path="/Gametable" element={<GameAllType />} />
                   <Route path="/Gameskill" element={<GameAllType />} />
                   <Route path="/ResetPassword" element={<ResetPassword />} />
+                  <Route path="/checkStatusWithDraw" element={<StatusWitdrawTa />} />
+                  <Route path="/DepositPromotion/:idPromotion" element={<AddPromotionMoney/>} />
+                  <Route path="/CouponWebToonta" element={<CouponToonta/>} />
                 </Routes>
               </>
             );
@@ -88,7 +100,7 @@ function App() {
                   <Route path="/" element={<Home />} />
                   <Route path="/Home" element={<Home />} />
                   <Route path="/:name" element={<GameAll />} />
-                  <Route path="/GameDogsila" element={<GameDogsila />} />
+                  <Route path="/GameDogzilla" element={<GameDogsila />} />
                   <Route path="/Login" element={<LoginBar />} />
                   <Route path="/Register" element={<RegiterBar />} />
                   <Route path="/ForgotPassword" element={<ForgotPassword/>} />
@@ -103,7 +115,7 @@ function App() {
               </>
             );
           }
-        })()} */}
+        })()}
       </div>
     </div>
   );

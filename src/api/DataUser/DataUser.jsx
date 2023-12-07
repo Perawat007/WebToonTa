@@ -8,6 +8,8 @@ import imgdaimond from "../../img/ver.2-20230915T140421Z-001/icon_daimond.png";
 import imggold from "../../img/ver.2-20230915T140421Z-001/icon_gold.png";
 import imgnew from "../../img/ver.2-20230915T140421Z-001/icon_new.png";
 import imgsilver from "../../img/ver.2-20230915T140421Z-001/icon_silver.png";
+import coupon from "../../img/icon/icon.webp"
+import { Link } from 'react-router-dom';
 
 const DataUser = () => {
   const [accountNumber, setaccountNumber] = useState("");
@@ -20,7 +22,8 @@ const DataUser = () => {
   const [dataimgBank, setdataimg] = useState("");
   const [imgRank, setimgRank] = useState();
   const rank = localStorage.getItem("rank");
-
+  const [namePromotion, setnamePromotion] = useState("");
+  const turnover = localStorage.getItem("%rootTroot%");
   useEffect(() => {
     if (token) {
       if (data.length === 0) {
@@ -29,11 +32,11 @@ const DataUser = () => {
             Authorization: `Bearer ${token}`,
           },
         })
-          .then((response) => {
-            setdataimg(response.data.data[0].imgBank)
+          .then((response) => {  // ใส่ async ที่นี่
             setaccountName(response.data.data[0].accountName)
             setaccountNumber(response.data.data[0].accountNumber)
-
+            GetData(response.data.data[0].bank)
+            setnamePromotion(response.data.data[0].promotionuser)
             switch (response.data.data[0].userrank) {
               case "Bronze":
                 setimgRank(imgbronze)
@@ -69,14 +72,27 @@ const DataUser = () => {
     }
   }, []);
 
+  const GetData = async (nameBank) => {
+    const response = await axios.post("/post/GetOneBank", {  // ใช้ await ได้ที่นี่
+      nameBank: nameBank,
+    });
+    setdataimg(response.data.data[0].images)
+  }
+
+  const WebCoupon = () => {
+    window.location.href = "/CouponWebToonta";
+  }
   return (
     <>
-      <div className="wrapperData">
+      <div className="wrapperDataUser">
         <div className="containerPor">
           <div className="containerProfile">
             <div className="profile-card-1">
               <div className="img">
                 <img src={imgRank} alt="" />
+              </div>
+              <div className="imgcoupon">
+                <img src={coupon} alt="" onClick={WebCoupon}/>
               </div>
               <div className="mid-section">
                 <div className="titleDataUser font">ข้อมูลบัญชี</div>
@@ -90,25 +106,25 @@ const DataUser = () => {
                 <div className="line"></div>
                 <div className="stats">
                   <div className="stat font">{credit}
-                    <h4 className="subtext font">ยอด credit</h4>
+                    <h4 className="subtext font">ยอดเงินคงเหลือ</h4>
                   </div>
-                  <div className="stat font">0
-                    <h4 className="subtext font">ยอดที่สามารถถอนได้</h4>
+                  <div className="stat font">{turnover}
+                    <h4 className="subtext font">ยอดผู้เล่นค้างเล่น</h4>
                   </div>
                 </div>
-                <div className="nearby-userData">
+                <div className="nearby-userDataUser">
                   <div >
-                    <div className="headerUser">
+                    <div className="headerUserData">
                       <img
                         src={dataimgBank}
                         alt="user"
-                        className="profile-photo-lgUser"
+                        className="profile-photo-lgDataUser"
                       />
                     </div>
                   </div>
-                  <div className="positiontext">
+                  <div className="positiontextDataUser">
                     <div>
-                      <h5 className="nameUser font">{accountName}</h5>
+                      <h5 className="nameDataUser font">{accountName}</h5>
                     </div>
                     <div>
                       <h5 className="text-mutedNumberUser font">{accountNumber}</h5>
@@ -118,6 +134,17 @@ const DataUser = () => {
                 <div className="positiontextsubpost">
                   <h4 className="font colorfont">*ต้องการเปลี่ยนบัญชี กรุณา</h4>
                   <h4 className="font colorfont">ติดต่อฝ่ายบริการลูกค้า</h4>
+                </div>
+                <br />
+                <div className="imgฺGound">
+                  <div className="statsII">
+                    <div className="stat font">
+                      <h3 className="subtext font">โปรโมชั่นที่รับ</h3>
+                      <h5 style={{ color: '#ffbb00' }}>
+                        <Link style={{ color: '#ffbb00' }} className="font" to="/PromotionShow">{namePromotion}</Link>
+                      </h5>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

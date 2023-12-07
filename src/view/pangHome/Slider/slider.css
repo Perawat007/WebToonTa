@@ -69,9 +69,10 @@
   top: 100%;
   justify-content: center;
   z-index: 0;
+  display: block;
 }
 
- .dot {
+ /* .dot {
    cursor: pointer;
    height: 1.5rem;
    width: 1.5rem;
@@ -79,7 +80,7 @@
    background-color: transparent;
    border-radius: 50%;
    display: inline-block;
- }
+ } */
 
  .slider-container:hover .dot:hover {
    background-color: rgba(255, 255, 255, 0.5);

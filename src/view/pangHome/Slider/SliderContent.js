@@ -5,6 +5,7 @@ import banner_03 from '../../../img/banner3.jpg'
 import axios from '../../../api/axios';
 import "./dialogcssPromotion.css";
 function SliderContent({ activeIndex, sliderImage }) {
+
   const populargame = [
     {
       id: 1,
@@ -45,8 +46,9 @@ function SliderContent({ activeIndex, sliderImage }) {
 
     const fetchData = async () => {
       try {
-        const response = await axios.get('/post/');
-        setData(response.data.img);
+        const response = await axios.post('post/getlistAbs/banner');
+        //console.log(response.data.data);
+        setData(response.data.data);
 
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -107,24 +109,24 @@ function SliderContent({ activeIndex, sliderImage }) {
       <section className='sectionSlider'>
         {data && (
           <>
-            {populargame.map((slide, index) => (
-              // <div
-              //   key={index}
-              //   className={index === activeIndex ? "slides active" : "inactive"}
-              // >
-              //   <img className="slide-image" src={"https://relaxtimecafe.fun/images/" + slide.filename} alt=""
-              //     style={{
-              //       cursor: 'pointer',
-              //     }}
-              //     onClick={() => clickPromotion(slide.namepromotion, slide.details, slide.filename, slide.id)} />
-              // </div>
-
+            {data.map((slide, index) => (
               <div
-              key={index}
-              className={index === activeIndex ? "slides active" : "inactive"}
-            >
-              <img className="slide-image" src={slide.img} alt="" />
-            </div>
+                key={index}
+                className={index === activeIndex ? "slides active" : "inactive"}
+              >
+                <img className="slide-image" src={"https://dogzilla.live/images/" + slide.filename} alt=""
+                  style={{
+                    cursor: 'pointer',
+                  }}
+                  onClick={() => clickPromotion(slide.namepromotion, slide.details, slide.filename, slide.id)} />
+              </div>
+
+            //   <div
+            //   key={index}
+            //   className={index === activeIndex ? "slides active" : "inactive"}
+            // >
+            //   <img className="slide-image" src={slide.img} alt="" />
+            // </div>
             
             ))}
           </>
@@ -149,7 +151,7 @@ function SliderContent({ activeIndex, sliderImage }) {
                 </h3>
               </div>
               <div className="imgPromotion">
-                <img src={"https://relaxtimecafe.fun/images/" + imgPromotion} alt="/" />
+                <img src={"https://dogzilla.live/images/" + imgPromotion} alt="/" />
               </div>
               <div className="btnContainerPromotion">
                 <button className="btnPrimaryPromotion" onClick={getPromotion}>

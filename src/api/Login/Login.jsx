@@ -3,8 +3,6 @@ import axios from "../axios";
 import "./Login.scss";
 import "./Login.css";
 import "./dialogcssLogin.css";
-import logo from "../../img/toonta.png";
-import rightLogin from "../../img/login.png";
 import cartoon from "../../img/imgDiralog.png";
 import picpic from "../../img/picpic.png";
 import imgMoney from "../../img/picpic.png"
@@ -40,15 +38,9 @@ import {
 const LoginBar = () => {
   const [phoneNumber, setUser] = useState("");
   const [password, setPwd] = useState("");
-  const [ipAddress, setIp] = useState("");
   const [errMsg, setErrMsg] = useState("");
   const [showPopupA, setShowPopup] = useState(false);
-  const [dataRank, setDataRank] = useState([]);
-  const [showRegiterOTP, setRegiterOTP] = useState(false);
-  const [otpPin, setotppin] = useState("");
-  const [tokenpin, settokenpin] = useState("");
 
-  let browserName = "Unknown";
   useEffect(() => {
     // handleSubmit();
   }, [phoneNumber, password]);
@@ -60,6 +52,7 @@ const LoginBar = () => {
       const response = await axios.post("login/member", {
         phoneNumber: phoneNumber,
         password: password,
+        agent_id: '2',
       });
       if (response.data.token !== "undefined") {
         const accessToken = response.data.token;
@@ -91,45 +84,6 @@ const LoginBar = () => {
   const cilckRegiter = () => {
     window.location.href = `/Register`;
   }
-
-  const cilckForgotPassword = () => {
-    window.location.href = `/Register`;
-  }
-
-  const handleSubmitOTP = async (e) => {
-    e.preventDefault();
-    fetch("https://relaxtimecafe.fun/otpVerify", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        pin: otpPin,
-        token: tokenpin,
-      }),
-    })
-      .then((response) => {
-        if (response) {
-          return response.json();
-        } else {
-          throw new Error("Error: " + response.statusText);
-        }
-      })
-      .then((data) => {
-        if (
-          data.dataRes.data.status === "success" &&
-          data.dataRes.data.message === "Code is correct."
-        ) {
-        }
-      })
-      .catch((error) => {
-        console.error("Error:", error);
-      });
-  };
-
-  const handleCancelOTP = async (e) => {
-    setRegiterOTP(false);
-  };
 
   return (
     <>
@@ -190,7 +144,7 @@ const LoginBar = () => {
                       required
                       className="input-with-iconLogin font"
                     />
-                    <BsPhoneFill className="input-iconLogin"/>
+                    <BsPhoneFill className="input-iconLogin" style={{ color: '#FFFFFF' }}/>
                   </div>
                 </div>
 
@@ -205,7 +159,7 @@ const LoginBar = () => {
                       required
                       className="input-with-iconLogin"
                     />
-                    <BsUnlockFill className="input-iconLogin" />
+                    <BsUnlockFill className="input-iconLogin" style={{ color: '#FFFFFF' }} />
                   </div>
                 </div>
                 <div className="pass-link font">

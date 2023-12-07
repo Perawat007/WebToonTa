@@ -3,7 +3,6 @@ import axios from "../axios";
 import "./RegisterForm.scss";
 import "./RegisterForm.css";
 import circle2 from "../../img/circle2.png";
-import liftRegister from "../../img/joinnow.png";
 import cartoon from "../../img/7.png";
 import monterCartoon from "../../img/5.png";
 import rabbitCartoon from "../../img/6.png";

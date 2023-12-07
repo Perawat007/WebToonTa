@@ -20,12 +20,13 @@ import Arkssdider from '../pangHome/Slider/Slider'
 import GamePlay from '../SeeGame/GamePlay';
 import GameRecommend from '../pangHome/GameRecommend';
 import RewardShowBronze from '../RewardClub/RewardShow';
-import cartoon from "../../img/2.png";
+import cartoon from "../../img/8.png";
 import cartoonII from "../../img/3.png";
 import cartoonIII from "../../img/6.png";
 import circleI from "../../img/circle1.png";
 import circleII from "../../img/circle2.png";
 import rewardfile from "../../img/reward/rewardfileB.png"
+import rewardfileMb from "../../img/reward/bg_card_test.png"
 import SitiGame from "../pangHome/SitiGame"
 import axios from '../../api/axios';
 import card1 from "../../img/reward/card_1.png"
@@ -44,6 +45,7 @@ function Home() {
   const [showtoolBarlogincompreat, setshowtoolBarLogincompreat] = React.useState(false);
   const token = localStorage.getItem("token");
   const [data, setData] = React.useState([])
+  const [dataAbs, setDataAbs] = React.useState([])
   const [showPopupA, setShowPopup] = React.useState(false);
   const [datacard, setDatacard] = React.useState('')
   const [showPopupDataUser, setshowPopupDataUser] = useState(true);
@@ -65,6 +67,7 @@ function Home() {
       setshowtoolBarLogincompreat(false)
     }
 
+    absStart();
     const interval = setInterval(() => {
       setCurrentItemIndex((prevIndex) => (prevIndex + 1) % tickerItems.length);
     }, 10000);
@@ -75,8 +78,20 @@ function Home() {
 
   }, [tickerItems.length]);
 
-  const cilckRegiter = () => {
+  const absStart = async () => {
+    try {
+      const response = await axios.post('post/getlistAbs/text');
+      //console.log(response.data.data);
+      setDataAbs(response.data.data);
+
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  }
+
+  const cilckRegiter = async () => {
     window.location.href = `/Register`;
+    //const response = await axios.get('/api/getIp');
   }
 
   const cilckLogin = () => {
@@ -181,7 +196,7 @@ function Home() {
           </div>
         </div>
       )}
-{/* 
+      {/* 
       {showPopupDataUser && (
         <div className="overlayHome">
           <div className="modalContainerDataProfile">
@@ -214,15 +229,38 @@ function Home() {
             </div>
           </div>
 
-          <ul className="uL">
+          {dataAbs && (
+            <>
+              <ul className="uL">
+                {[...Array(5)].flatMap((_, outerIndex) =>
+                  dataAbs.map((slide, index) => (
+                    <div key={index + (outerIndex * dataAbs.length)}>
+                      <li className="nt-item LII font">
+                        <span className="font" style={{ backgroundColor: slide.filename }}>
+                          {slide.name_abs}
+                        </span>{" "}
+                        {slide.details_abs}
+                      </li>
+                    </div>
+                  ))
+                )}
+              </ul>
+            </>
+          )}
+
+          {/* <ul className="uL">
             <li className="nt-item LII font"><span className="new font">Welcome </span> ยินดีต้อนรับทุกท่าน สู่เว็บ ToonTa ศูนย์รวมเกมออนไลน์ที่ดีที่สุดในประเทศไทย. </li>
-            <li className="nt-item LII font"><span className="strategy font">Promotion </span> เติมเงินครั้งแรกรับไปเลย 30% โบนัสจากยอดเติมครั้งแรก. </li>
-            <li className="nt-item LII font"><span className="racing font">New </span> เล่นเสียไม่เป็นไร เรามียอดคืนสูงสุดถึง 70% ของยอดเสีย. </li>
+            <li className="nt-item LII font"><span className="strategy font">PROMOTION  </span> สมาชิกใหม่รับโบนัส 100% </li>
+            <li className="nt-item LII font"><span className="racing font">PROMOTION  </span> ทุกยอดฝากรับโบนัส 10% </li>
+            <li className="nt-item LII font"><span className="new font">PROMOTION  </span> ฝากแรกของวันรับโบนัส 30% </li>
+            <li className="nt-item LII font"><span className="racing font">New </span> เปิดตัวสล็อตค่ายใหม่ DOGZILLA เพียงเข้าเล่นรับโบนัสทันที 50% </li>
             <li className="nt-item LII font"><span className="new font">Welcome </span> ยินดีต้อนรับทุกท่าน สู่เว็บ ToonTa ศูนย์รวมเกมออนไลน์ที่ดีที่สุดในประเทศไทย. </li>
-            <li className="nt-item LII font"><span className="strategy font">Promotion </span> เติมเงินครั้งแรกรับไปเลย 30% โบนัสจากยอดเติมครั้งแรก. </li>
-            <li className="nt-item LII font"><span className="racing font">New </span> เล่นเสียไม่เป็นไร เรามียอดคืนสูงสุดถึง 70% ของยอดเสีย. </li>
-          </ul>
-        </div>
+            <li className="nt-item LII font"><span className="strategy font">PROMOTION  </span> สมาชิกใหม่รับโบนัส 100% </li>
+            <li className="nt-item LII font"><span className="racing font">PROMOTION  </span> ทุกยอดฝากรับโบนัส 10% </li>
+            <li className="nt-item LII font"><span className="new font">PROMOTION  </span> ฝากแรกของวันรับโบนัส 30% </li>
+            <li className="nt-item LII font"><span className="racing font">New </span> เปิดตัวสล็อตค่ายใหม่ DOGZILLA เพียงเข้าเล่นรับโบนัสทันที 50% </li>
+          </ul> */}
+        </div >
         <div className="topHome">
           <Arkssdider />
         </div>
@@ -296,7 +334,7 @@ function Home() {
         </div>
         <div className='a-davMB'>
           <img className="download-bannerAbs"
-            src="https://websitehui.s3.ap-southeast-1.amazonaws.com/bg_card_test.png"
+            src={rewardfileMb}
             alt="benner-img" />
 
           <div className="image-grid">
@@ -355,7 +393,7 @@ function Home() {
         <div className="positionNav">
           <NavicationBar />
         </div>
-      </div>
+      </div >
     </>
   )
 }

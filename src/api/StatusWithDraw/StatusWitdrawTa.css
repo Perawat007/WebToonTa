@@ -1,0 +1,702 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+@font-face {
+    font-family: Mitr;
+    src: url(../../font/Mitr/Mitr-Regular.ttf);
+}
+
+.font {
+    font-family: Mitr;
+}
+
+Deposit::selection {
+    background: #fa4299;
+    color: #fff;
+}
+
+.displayFooterWitdraw {
+    display: block;
+    z-index: 5;
+}
+
+.main-AddStatus {
+    min-width: 100vw;
+}
+
+.wrapperStatus {
+    overflow: hidden;
+    width: 50%;
+    height: 700px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    z-index: 4;
+    background: #ffffff;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+    overflow-x: hidden;
+    margin: 9rem auto;
+    position: relative;
+    margin-top: 4%;
+}
+
+.wrapperStatus .title-textWitdraw {
+    display: flex;
+    width: 100%;
+}
+
+.wrapperStatus .titleWitdraw {
+    width: 50%;
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapperStatus .slide-controlsWitdraw {
+    position: relative;
+    display: flex;
+    height: 50px;
+    width: 100%;
+    overflow: hidden;
+    margin: 5px 0 10px 0;
+    justify-content: space-between;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 30px;
+}
+
+.textTitleStatus {
+    width: 80%;
+    font-size: 17px;
+    font-weight: 400;
+    text-align: left;
+    color: #2A0BD6;
+    margin: 5px 0 2px 0;
+    margin-left: 20%;
+}
+
+.textinputStatus {
+    margin: 5px 0 50px 0;
+}
+
+
+.textFrameStatus {
+    background: -webkit-linear-gradient(right, #1218FF, #0AB3FF);
+    border-radius: 30px;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin: auto;
+}
+
+.title-textStatus {
+    font-size: 22px;
+    color: #ffffff;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.wrapInputStatus {
+    position: relative;
+    max-width: 100%;
+    height: 50px;
+    margin: auto;
+}
+
+.wrapperStatus .form-containerStatus {
+    width: 100%;
+    overflow: hidden;
+}
+
+.colorFontWindarw {
+    color: rgb(0, 162, 255);
+    font-size: 25px;
+}
+
+.colorFontWindarwcredit {
+    color: rgb(0, 38, 255);
+    font-size: 25px;
+}
+
+.imgWayWitdraw {
+    width: 500px;
+    object-fit: contain;
+}
+
+.scaltimgWitdraw {
+    position: absolute;
+    width: 10%;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+/*---------------------------------------------------------*/
+.WitdrawimgShadowCircleI {
+    width: 11%;
+    box-shadow: 15px 4px 15px rgba(0, 0, 0, 0.712);
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 75%;
+    left: 70%;
+    z-index: 10;
+}
+
+.scaltimgWitdrawCircle {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: none;
+}
+
+/*---------------------------------------------------------*/
+.WitdrawimgShadowCircleII {
+    width: 30%;
+    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 58%;
+    left: 10%;
+    z-index: 3;
+}
+
+/*---------------------------------------------------------*/
+.WitdrawimgShadowCircleV {
+    width: 15%;
+    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 40%;
+    left: 17%;
+    z-index: 4;
+    display: block;
+}
+
+/*---------------------------------------------------------*/
+.WitdrawimgShadowCircleVI {
+    width: 15%;
+    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    bottom: 40%;
+    left: 66%;
+    z-index: 3;
+    display: block;
+}
+
+/*---------------------------------------------------------*/
+.scaltimgWitdrawCircleIII {
+    position: absolute;
+    overflow: hidden;
+    width: 15%;
+    bottom: 10%;
+    left: 65%;
+    z-index: 4;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.scaltimgWitdrawCircleIIII {
+    position: absolute;
+    width: 18%;
+    bottom: 20%;
+    left: 15%;
+    z-index: 4;
+    display: block;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.scaltimgWitdrawCircleVI {
+    position: absolute;
+    width: 15%;
+    top: 2%;
+    left: 68%;
+    z-index: 1;
+    display: block;
+    object-fit: contain;
+    pointer-events: none;
+}
+
+.imgCardtoonCharacter {
+    width: 55%;
+}
+
+.containerStatus {
+    width: 80%;
+    height: 80%;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
+    border-radius: 20px;
+    border: 3px solid rgb(10, 96, 255);
+}
+
+.cardStatus {
+    width: 60%;
+    padding: 0px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+    margin-bottom: 3%;
+    margin-top: 5%;
+    border: 3px solid rgb(10, 96, 255);
+}
+
+.headerStatus {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #D4D4D4;
+    color: #000;
+    padding: 5px 10px;
+}
+
+.headerStatus h5 {
+    flex-grow: 1;
+    font-size: 20px;
+    text-align: left;
+    color: #1218FF;
+
+}
+
+.headerStatus button {
+    background: -webkit-linear-gradient(right, #1218FF, #0AB3FF);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.cardvalus {
+    background: -webkit-linear-gradient(right, #1218FF, #0AB3FF);
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.cardvalus h5,
+.cardvalus h6 {
+    margin: 0;
+    color: #ffffff;
+}
+
+.cardvalus h5 {
+    text-align: left;
+}
+
+.cardvalus h6 {
+    text-align: right;
+}
+
+
+.circle-iconStatus {
+    width: 40px;
+    height: 40px;
+    box-shadow: 0.5px 5px 25px rgba(0, 0, 0, 0.712);
+}
+.infoStatus {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding-top: 15px;
+    font-size: 16px;
+    color: #1218FF;
+    line-height: 1.5em; 
+}
+
+.infoStatus label {
+    font-weight: bold;
+    color: #000000;
+}
+
+.infoStatus span {
+    font-weight: bold;
+    color: #000000;
+}
+
+.accountNumberPosition {
+    margin-top: 2%;
+}
+.accountNumberText{
+    margin-left: 20%;
+    font-size: 20px;
+}
+
+.accountNameText{
+    font-size: 20px;
+}
+.more-buttonStatus br {
+    line-height: 5em; /* คุณสามารถปรับค่านี้ได้ตามที่ต้องการ */
+}
+
+@media (max-width: 1200px) {
+    input {
+        font-size: 14px;
+    }
+
+    .wrapperStatus {
+        width: 90%;
+        height: 650px;
+        margin-top: 5%;
+    }
+
+    .scaltimgcartoon7Login {
+        position: relative;
+        width: 150px;
+        transform: translate(-500%, 20%);
+    }
+
+    .wrapperStatus .title-text {
+        display: flex;
+        width: 200%;
+    }
+
+    .wrapperStatus .title {
+        width: 50%;
+        font-size: 35px;
+        font-weight: 600;
+        text-align: center;
+        transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .textTitle {
+        width: 80%;
+        font-size: 17px;
+        font-weight: 400;
+        margin: 5px 0 2px 0;
+        margin-left: 10%;
+    }
+
+
+    .textFrame {
+        border-radius: 30px;
+        width: 85%;
+        height: 40px;
+        margin-left: 7%;
+    }
+    .main-AddStatus {
+        min-height: 140vw;
+    }
+
+    .displayFooterWitdraw {
+        display: none;
+    }
+
+    .scaltimgWitdraw {
+        width: 50%;
+        top: 39%;
+        right: 37%;
+        z-index: 10;
+        display: none;
+    }
+
+    .WitdrawimgShadowCircleI {
+        width: 20%;
+        position: absolute;
+        bottom: 67%;
+        left: 80%;
+        z-index: 3;
+    }
+
+    .WitdrawimgShadowCircleII {
+        width: 40%;
+        bottom: 50%;
+        left: 0%;
+        z-index: 3;
+    }
+
+    .WitdrawimgShadowCircleVI {
+        width: 20%;
+        bottom: 15%;
+        left: 80%;
+        z-index: 3;
+        display: block;
+    }
+
+    .WitdrawimgShadowCircleV {
+        width: 25%;
+        bottom: 8%;
+        left: 0%;
+        z-index: 3;
+        display: block;
+    }
+
+    .scaltimgWitdrawCircleIII {
+        width: 22%;
+        top: 38%;
+        left: 75%;
+        display: block;
+    }
+
+    .scaltimgWitdrawCircleIIII {
+        width: 20%;
+        top: 8%;
+        left: 0%;
+        z-index: 4;
+    }
+
+    .scaltimgWitdraw {
+        width: 90%;
+        scale: 30%;
+        top: 36%;
+        right: 35%;
+        z-index: 10;
+        display: none;
+    }
+    .imgCardtoonCharacter {
+        width: 40%;
+    }
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    .wrapperStatus {
+        width: 90%;
+        height: 650px;
+        margin-top: 20%;
+    }
+
+    .textFrameStatus {
+        width: 85%;
+        height: 40px;
+        margin-top: 5%;
+    }
+
+    .textTitleStatus {
+        margin-left: 12%;
+    }
+
+    .textinputStatus {
+        margin: 5px 0 35px 0;
+    }
+
+    .colorFontStatus {
+        font-size: 20px;
+    }
+
+    .imgWayWitdraw {
+        width: 100px;
+    }
+
+    .scaltimgWitdraw {
+        width: 100%;
+        top: 39%;
+        right: 0%;
+        z-index: 10;
+        display: none;
+    }
+
+    .WitdrawimgShadowCircleI {
+        width: 25%;
+        bottom: 72%;
+        left: 75%;
+        z-index: 3;
+    }
+
+    .WitdrawimgShadowCircleII {
+        width: 40%;
+        bottom: 63%;
+        left: 0%;
+        z-index: 3;
+    }
+
+    .WitdrawimgShadowCircleVI {
+        width: 20%;
+        bottom: 34%;
+        left: 80%;
+        z-index: 3;
+        display: block;
+    }
+
+    .WitdrawimgShadowCircleV {
+        width: 25%;
+        bottom: 48%;
+        left: 0%;
+        z-index: 3;
+        display: none;
+    }
+
+    .scaltimgWitdrawCircleIII {
+        width: 30%;
+        top: 40%;
+        left: 68%;
+        display: block;
+    }
+
+    .scaltimgWitdrawCircleIIII {
+        display: none;
+    }
+
+    .scaltimgWitdrawCircleVI {
+        display: none;
+    }
+
+    .scaltimgWitdraw {
+        width: 90%;
+        scale: 30%;
+        top: 36%;
+        right: 35%;
+        z-index: 10;
+        display: none;
+    }
+
+    .input-iconWitdraw {
+        position: absolute;
+        left: 10%;
+        top: 40%;
+        font-size: 30px;
+        transform: translateY(-50%);
+        color: #ffffffbe;
+        z-index: 10;
+    }
+
+    .main-AddWitdraw {
+        min-height: 140vw;
+    }
+
+    .imgCardtoonCharacter {
+        width: 55%;
+    }
+
+    .cardStatus {
+        width: 80%;
+    }
+
+    .headerStatus button {
+        background: -webkit-linear-gradient(right, #1218FF, #0AB3FF);
+        border: none;
+        padding: 5px 10px;
+        border-radius: 15px;
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    .headerStatus h5 {
+        padding: 5px 0px;
+        font-size: 20px;
+    }
+
+    .headerStatus button {
+        padding: 10px 15px;
+        font-size: 22px;
+    }
+    
+    .cardvalus {
+        width: 100%;
+        height: 50px;
+    }
+    
+    .infoStatus {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 0.8fr 0.5fr;
+        gap: 10px;
+        padding-top: 15px;
+        font-size: 17px;
+        color: #1218FF;
+        line-height: 1em; 
+    }
+    .accountNumberText{
+        margin-left: 0%;
+    }
+    .accountNumberText{
+        margin-left: 10%;
+        font-size: 16px;
+    }
+    .accountNameText{
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .wrapperStatus {
+        width: 95%;
+        height: 500px;
+        margin-top: 26%;
+    }
+
+    .textTitle {
+        width: 80%;
+        font-size: 15px;
+        font-weight: 400;
+        margin: 5px 0 2px 0;
+        margin: auto;
+    }
+
+    .title-textWitdraw {
+        font-size: 17px;
+        color: #ffffff;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .headerStatus button {
+        background: -webkit-linear-gradient(right, #1218FF, #0AB3FF);
+        border: none;
+        padding: 5px 10px;
+        border-radius: 15px;
+        color: #ffffff;
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .headerStatus h5 {
+        padding: 5px 0px;
+        font-size: 17px;
+    }
+
+    .headerStatus button {
+        padding: 10px 15px;
+        font-size: 17px;
+    }
+    .cardStatus {
+        width: 100%;
+    }
+    .cardvalus {
+        width: 100%;
+        height: 40px;
+    }
+    .infoStatus {
+        width: 100%;
+        grid-template-columns: 0.6fr 0.5fr;
+        gap: 10px;
+        padding-top: 15px;
+        font-size: 17px;
+        line-height: 1em; 
+    }
+    .accountNumberText{
+        margin-left: 0%;
+    }
+
+    .imgCardtoonCharacter {
+        width: 70%;
+    }
+}

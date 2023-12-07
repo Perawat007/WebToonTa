@@ -78,7 +78,7 @@
     text-align: left;
     color: #930bbd;
     margin: 5px 0 10px 0;
-    margin-left: 22%;
+    margin-left: 15%;
 }
 
 .textinputLogin {
@@ -293,7 +293,7 @@ form .btnsubmitLogin input[type="submit"] {
     width: 60%;
     z-index: 2;
     color: #ffffff;
-    background: -webkit-linear-gradient(right, #0148a5, #135199, #1e8cf3, #00b1e7);
+    background: -webkit-linear-gradient(right, #1218FF , #0AB3FF);
     margin-top: 2%;
     box-shadow: 5px 0.2px 9px black;
 }
@@ -884,13 +884,6 @@ form .btnsubmitLogin input[type="submit"] {
         width: 100%;
         overflow: hidden;
         margin: 5px 0 10px 0;
-    }
-
-    .textTitleLogin {
-        width: 100%;
-        font-size: 17px;
-        font-weight: 400;
-        margin: 5px 0 2px 0;
     }
 
     .textinputLogin {

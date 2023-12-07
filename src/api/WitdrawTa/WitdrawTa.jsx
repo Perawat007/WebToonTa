@@ -1,12 +1,8 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
 import axios from "../axios";
-import "./WitdrawTa.scss";
 import "./WitdrawTa.css";
 import "./dialogWitdrawTa.css";
-import logo from "../../img/toonta.png";
-import rightLogin from "../../img/login.png";
 import cartoon from "../../img/imgDiralog.png";
-import picpic from "../../img/picpic.png";
 import imgwomen from "../../img/1.png"
 import imgpanpa from "../../img/9.png"
 import imgpanpaII from "../../img/10.png"
@@ -17,45 +13,19 @@ import Headers from "../../view/headersII";
 import Footer from "../../view/pangHome/FooTer/Footer";
 import Allgamecamps from "../../view/pangHome/Allgamecamps";
 import MenuDown from "../../view/pangHome/MenuDown";
-import {DialogTitle, IconButton} from "@mui/material";
 import { BsCoin, BsBank2 } from "react-icons/bs";
 import NavicationBar from "../../view/NavicationBar/navicationbar";
 import gitWitdraw from '../../img/icon/money.gif'
-import nottifocationimgOne from '../../img/lang/11.png'
-import nottifocationimgTwo from '../../img/lang/22.png'
-import nottifocationimgThree from '../../img/lang/33.png'
-import nottifocationimgFour from '../../img/lang/44.png'
-import nottifocationimgFive from '../../img/lang/55.png'
+import nottifocationimgOne from '../../img/lang/pop1.png'
+import nottifocationimgTwo from '../../img/lang/pop2.png'
+import nottifocationimgThree from '../../img/lang/pop_up3.png'
 
-function BootstrapDialogTitle(props) {
-  const { children, onClose, ...other } = props;
-
-  return (
-    <DialogTitle sx={{ m: 0, p: 2 }} {...other}>
-      {children}
-      {onClose ? (
-        <IconButton
-          aria-label="close"
-          onClick={onClose}
-          sx={{
-            position: "absolute",
-            right: 8,
-            top: 8,
-            color: (theme) => theme.palette.grey[500],
-          }}
-        ></IconButton>
-      ) : null}
-    </DialogTitle>
-  );
-}
-
-BootstrapDialogTitle.propTypes = {};
+import StatusWitdrawTa from "../StatusWithDraw/StatusWitdrawTa";
 
 const WitdrawTa = () => {
-  const [iduse, setidUser] = useState();
   const [Witdrawamount, setWitdrawamount] = useState();
   const [accountNumber, setaccountNumber] = useState("");
-  const [accountName, setaccountName] = useState("");
+  const [creditusers, setcreditusers] = useState("");
   const [valueWitDraw, setvalueWitDraw] = useState(0.00);
   const [amountWitDraw, setamountWitDraw] = useState("");
   const [datapromotion, setDatapromotion] = useState([]);
@@ -64,6 +34,7 @@ const WitdrawTa = () => {
   const token = localStorage.getItem("token");
   const user = localStorage.getItem("user");
   const credit = localStorage.getItem("credit");
+  const turnover = localStorage.getItem("%rootTroot%");
   const [data, setData] = useState([]);
   const [open, setOpen] = React.useState(false);
   const [openDialogdialog, setOpenDialogdialog] = React.useState(false);
@@ -71,8 +42,7 @@ const WitdrawTa = () => {
   const pathSegments = pathA.split('/');
 
   const [selectedImage, setSelectedImage] = useState(null);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
-  const [selectedImageUrl, setSelectedImageUrl] = useState('');
+
   const [selectedImageUrlshow, setSelectedImageUrlshow] = useState('');
   const [uploadedImageUrl, setUploadedImageUrl] = useState('');
   const [uploadStatus, setUploadStatus] = useState('');
@@ -87,71 +57,59 @@ const WitdrawTa = () => {
   const [resOpenFour, setresOpenFour] = useState(false);
   const [resOpenFive, setresOpenFive] = useState(false);
 
-  const [Witdrawaccount, setWitdrawaccount] = useState([]);
-  const [inputValue, setInputValue] = useState('');
-  let Witdrawaccountlite = [];
-  let PromotionList = [];
 
-  let baseURL = 'https://relaxtimecafe.fun/';
+  let baseURL = 'https://dogzilla.live/';
   //const baseURL: 'http://localhost:5000/';
+  const convertedCredituser = parseFloat(credit.replace(/,/g, '')).toFixed(2);
+  const convertedCreditturnover = parseFloat(turnover.replace(/,/g, '')).toFixed(2);
 
-  /*useEffect(() => {
+  const numberValuecredit = parseFloat(convertedCredituser);
+  const numberValueTurnover = parseFloat(convertedCreditturnover);
+
+  useEffect(() => {
+    startWithDraw();
+  }, []);
+
+  const startWithDraw = async () => {
     if (token) {
       if (data.length === 0) {
-        axios.get("/list_userWeb/" + user, "", {
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }).then((response) => {
-          setidUser(response.data.data[0]);
-          axios.get(`post/getWitdrawaccount/TOONTA`)
-            .then((response) => {
-              setaccountNumber(response.data.data[0].accountNumber);
-              setaccountName(response.data.data[0].accountName)
-              for (let i = 0; i < response.data.data.length; i++) {
-                Witdrawaccountlite.push({
-                  value: response.data.data[i].bankName,
-                  label: response.data.data[i].bankName,
-                  imgPath: response.data.data[i].imgbank,
-                  name: response.data.data[i].accountName,
-                  number: response.data.data[i].accountNumber
-                })
-                setWitdrawaccount(Witdrawaccountlite);
-                fetchData();
-              }
-
-            })
-            .catch((error) => {
-              console.log("error", error);
-            });
-        })
-          .catch((error) => {
-            localStorage.removeItem("token");
-            localStorage.removeItem("user");
-            window.location.href = "/";
-            console.log("error", error);
+        try {
+          const response = await axios.post("post/GetWithdrawStatus", {
+            phonenumber: user,
+            agent_id: '2',
           });
+          //console.log(response.data.message);
+          if (response.data.message === 'sentData') {
+            window.location.href = "/checkStatusWithDraw";
+          } else {
+
+            setcreditusers(response.data.credit)
+            let moneyWithDraw = 0
+            if (numberValueTurnover !== 0){
+              moneyWithDraw = 0;
+            } else {
+              moneyWithDraw = numberValuecredit
+            }
+            let floorValue = Math.floor(moneyWithDraw);
+            let formattedValue = floorValue.toLocaleString();
+            //console.log(formattedValue);
+            if (floorValue < 0) {
+              formattedValue = 0;
+              setamountWitDraw(formattedValue)
+            } else {
+              setamountWitDraw(formattedValue)
+            }
+          }
+        } catch (err) {
+          setShowPopup(!showPopupA);
+          // localStorage.removeItem("token");
+          // localStorage.removeItem("user");
+          // window.location.href = "/";
+          console.log("error", err);
+        }
       }
     }
-
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('/post/');
-        console.log(response.data.img)
-        for (let i = 0; i < response.data.img.length; i++) {
-          PromotionList.push({
-            value: response.data.img[i].namepromotion,
-            label: response.data.img[i].namepromotion,
-            imgPath: response.data.img[i].filename,
-            id: response.data.img[i].id,
-          })
-          setDatapromotion(PromotionList);
-        }
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-  }, []);*/
+  }
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
@@ -167,75 +125,67 @@ const WitdrawTa = () => {
   };
 
   const handleSubmit = () => {
-    if (selectedImageUrlshow !== '') {
-      setlogTime(true)
-      setUploadStatus('Uploading...');
-      const formData = new FormData();
-      formData.append('file', selectedImageUrlshow);
-
-      fetch(baseURL + 'image-upload', {
+    let moneyWithDraw = numberValuecredit - numberValueTurnover
+    const numberWithoutComma = valueWitDraw.replace(/,/g, ''); // "1000"
+    const numberValue = parseFloat(numberWithoutComma); // 1000
+    console.log(numberValue, valueWitDraw);
+    if (numberValue >= 100.00 && numberValue <= moneyWithDraw) {
+      console.log(numberValue);
+      fetch(baseURL + 'post/WinhdrawUser', {
         method: 'POST',
-        body: formData
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          quantity: numberValue,
+          phonenumber: user,
+          agent_id: 2,
+          actualize: 'ถอนโดย member จากหน้าเว็บไซต์',
+        })
       })
         .then((response) => response.json())
-        .then((data) => {
-          setUploadedImageUrl(data);
-          const nameImg = data.nameImg;
+        .then(async (data) => {
 
-          fetch(baseURL + 'WitdrawToonta', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-              id: iduse.id,
-              type: "Witdraw",
-              quantity: 250,
-              accountNumber: iduse.accountNumber,
-              accountName: iduse.accountName,
-              idPromotion: '1',
-              filename: nameImg,
-              phonenumber: user,
-            })
-          })
-            .then((response) => response.json())
-            .then(async (data) => {
-              switch (data.message) {
-                case "ไม่มีชื่อบัญชีธนาคารของเว็บ Toonta ในระบบเงินฝาก":
-                  setresOpenFive(true);
-                  break;
-                case "สลิปนี้เคยถูกใช้งานแล้ว":
-                  setresOpen(true);
-                  break;
-                case "ชื่อบัญชีที่ได้ลงทะเบียนไม่ถูกต้อง กรุณาตรวจสอบ สลิปโอนเงิน ":
-                  setresOpenTwo(true);
-                  break;
-                case "สลิปนี้เคยถูกใช้งานแล้ว หรือ ข้อมูลไม่ถูกต้องกรุณาลองใหม่อีกครั้ง":
-                  setresOpenFour(true);
-                  break;
-                case "ฝากเงินสำเสร็จ":
-                  setresOpenThree(true);
-                  break;
-                default:
-                  setresOpenFour(true);
-                  break;
-              }
-              setreaSleepData(data.message)
-              setlogTime(false);
-              setresOpen(true);
-            })
+          // switch (data.message) {
+          //   case "ไม่มีชื่อบัญชีธนาคารของเว็บ Toonta ในระบบเงินฝาก":
+          //     setresOpenFive(true);
+          //     break;
+          //   case "สลิปนี้เคยถูกใช้งานแล้ว":
+          //     setresOpen(true);
+          //     break;
+          //   case "ชื่อบัญชีที่ได้ลงทะเบียนไม่ถูกต้อง กรุณาตรวจสอบ สลิปโอนเงิน ":
+          //     setresOpenTwo(true);
+          //     break;
+          //   case "สลิปนี้เคยถูกใช้งานแล้ว หรือ ข้อมูลไม่ถูกต้องกรุณาลองใหม่อีกครั้ง":
+          //     setresOpenFour(true);
+          //     break;
+          //   case "ถอน":
+          //     setresOpenThree(true);
+          //     break;
+          //   default:
+          //     setresOpenFour(true);
+          //     break;
+          // }
+          // setreaSleepData(data.message)
+          // setlogTime(false);
+          // setresOpen(true);
+          if (data.message === 'รอการอนุมัติการถอนเงิน') {
+            setresOpenTwo(true);
+          }
         })
-        .catch((error) => {
-          console.error(error);
-        });
     } else {
-      setlogImgNo(true)
+      setresOpen(true);
+      //console.log('no');
     }
   }
 
   const handleSubmitWitdraw = () => {
     handleSubmit();
     setOpen(false);
+  };
+
+  const goWithDrawStatus = () => {
+    window.location.href = "/checkStatusWithDraw";
   };
 
   const handleClose = () => {
@@ -256,23 +206,14 @@ const WitdrawTa = () => {
     }
   };
 
-  const openModal = (imageUrl) => {
-    setSelectedImageUrl(imageUrl);
-    setModalIsOpen(true);
-  };
-
-  const closeModal = () => {
-    setModalIsOpen(false);
-  };
-
-  const [selectedValue, setSelectedValue] = useState(Witdrawaccount.label); // Initialize the state with the default value
-
-  const copyToClipboard = async (accountNumberToonta) => {
-    try {
-      await navigator.clipboard.writeText(accountNumberToonta);
-      alert('คัดลอกเลขบัญชีธนาคารเรียบะร้อยแล้ว!');
-    } catch (err) {
-      console.error('Failed to copy text: ', err);
+  const handleChange = (e) => {
+    let val = e.target.value;
+    val = val.replace(/,/g, ''); // ลบ comma ที่มีอยู่แล้ว
+    if (/^\d+$/.test(val) || val === '') {
+      if (val !== '') {
+        val = parseInt(val).toLocaleString(); // แปลงเป็นรูปแบบที่มี comma
+      }
+      setvalueWitDraw(val);
     }
   };
 
@@ -365,7 +306,7 @@ const WitdrawTa = () => {
           </div>
           <div className="modalContainerMoneyImg">
             <div className="modalRightMoney">
-              <img src={nottifocationimgTwo} alt="/" onClick={handleClose} />
+              <img src={nottifocationimgTwo} alt="/" onClick={goWithDrawStatus} />
             </div>
           </div>
         </div>
@@ -383,33 +324,6 @@ const WitdrawTa = () => {
           </div>
         </div>
       )}
-
-      {resOpenFour && (
-        <div className="overlayMoney">
-          <div className="imgMoney">
-            <img src={cartoon} alt="/" />
-          </div>
-          <div className="modalContainerMoneyImg">
-            <div className="modalRightMoney">
-              <img src={nottifocationimgFour} alt="/" onClick={handleClose} />
-            </div>
-          </div>
-        </div>
-      )}
-
-      {resOpenFive && (
-        <div className="overlayMoney">
-          <div className="imgMoney">
-            <img src={cartoon} alt="/" />
-          </div>
-          <div className="modalContainerMoneyImg">
-            <div className="modalRightMoney">
-              <img src={nottifocationimgFive} alt="/" onClick={handleClose} />
-            </div>
-          </div>
-        </div>
-      )}
-
       {resOpenOne && (
         <div className="overlayMoney">
           <div className="imgMoney">
@@ -437,7 +351,7 @@ const WitdrawTa = () => {
         <Headers />
       </div>
       <div className="main-AddWitdraw">
-        <div className="wrapperWitdraw">
+        <div className="wrapperWitdrawV">
           <div className="textFrameWitdraw">
             <div className="title-textWitdraw font">ถอนเงิน</div>
           </div>
@@ -445,7 +359,7 @@ const WitdrawTa = () => {
             <div className="form-innerWitdraw">
               <form action="#" className="login">
 
-              <div className="fieldDataWitdrawNoColor font textinputWitdraw input-containerWitdraw">
+                <div className="fieldDataWitdrawNoColor font textinputWitdraw input-containerWitdraw">
                   <p className="textTitleWitdraw font">ยอดเงินคงเหลือ</p>
                   <div className="wrapInputWitdraw">
                     <input
@@ -461,10 +375,10 @@ const WitdrawTa = () => {
                 </div>
 
                 <div className="fieldDataWitdraw font textinputWitdraw input-containerWitdraw">
-                <p className="textTitleWitdraw font">จำนวนเงินที่ถอนได้</p>
+                  <p className="textTitleWitdraw font">จำนวนเงินที่ถอนได้</p>
                   <div className="wrapInputWitdraw">
                     <input
-                      type="Number"
+                      type="text"
                       placeholder="จำนวนเงินที่ถอนได้"
                       value={amountWitDraw}
                       required
@@ -476,26 +390,27 @@ const WitdrawTa = () => {
                 </div>
 
                 <div className="fieldDataWitdrawNoColor font textinputWitdraw input-containerWitdraw">
-                <p className="textTitleWitdraw font">จำนวนเงินที่ต้องการถอน</p>
+                  <p className="textTitleWitdraw font">จำนวนเงินที่ต้องการถอน</p>
                   <div className="wrapInputWitdraw ">
                     <input
-                      type="fo"
+                      type="text"
                       placeholder="จำนวนเงินที่ต้องการถอน"
                       value={valueWitDraw}
-                      onChange={(e) => setvalueWitDraw(e.target.value)}
+                      onChange={handleChange}
                       required
                       className="input-with-iconReposit colorFontWindarw font"
                     />
                     <BsCoin className="input-iconWitdraw" />
                   </div>
+                  <p className=" money-link font" style={{ color: 'red' }}>กรุณาใส่ยอดเงินเป็นจำนวนเต็มไม่มีจุดทศนิยม</p>
                 </div>
-                <br/>
+                <br />
                 <div className="fieldWitdraw btnsubmitWitdraw font">
                   <input type="submitWitdraw" value="ถอนเงิน" onClick={() => handleSubmitWitdraw()} />
                 </div>
                 <br />
                 <div className="money-link ">
-                  <a className="font" href=""> พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
+                  <a className="font" href="" style={{ color: 'red' }}> พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                 </div>
               </form>
             </div>
@@ -533,9 +448,9 @@ const WitdrawTa = () => {
             <img className="scaltimgWitdrawCircle" src={circle1} alt="" />
           </div>
 
-          
+
           <img className="scaltimgWitdrawCircleIII" src={imgpanpa} alt="" />
-          
+
           <img className="scaltimgWitdrawCircleIIII" src={imgpanpaII} alt="" />
 
         </div>

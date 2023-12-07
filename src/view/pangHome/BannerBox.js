@@ -3,10 +3,10 @@ import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 import SliderH from './Slider/Slider';
-import imgsport from '../../img/icon_bar/01/tab_menu_1.png'
-import imglive from '../../img/icon_bar/01/tab_menu_2.png'
-import imgslot from '../../img/icon_bar/01/tab_menu_3.png'
-import imgcard from '../../img/icon_bar/01/tab_menu_4.png'
+import imgsport from '../../img/icon_bar/01/tab_menu_1.webp'
+import imglive from '../../img/icon_bar/01/tab_menu_2.webp'
+import imgslot from '../../img/icon_bar/01/tab_menu_3.webp'
+import imgcard from '../../img/icon_bar/01/tab_menu_4.webp'
 
 function BannerBox() {
   useEffect(() => {

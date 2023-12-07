@@ -281,7 +281,7 @@
 	background-color: rgba(0, 0, 0, 0.733);
 	position: fixed;
 	width: 100%;
-	z-index: 30;
+	z-index: 160;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	touch-action: pan-y;
@@ -406,6 +406,12 @@
 	.wrapper {
 		margin-top: 0%;
 	}
+
+	.heant{
+		width:70%;
+		height: 100px;
+		margin-top: -1%;
+	}
 }
 
 @media (max-width: 1000px) {
@@ -497,8 +503,34 @@
         width: 95%;
         text-align: center;
 	}
+
+	.heant{
+		width:70%;
+		height: 100px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		margin-top: 0%;
+		display: flex;
+		position: relative;
+	}
 }
 
+@media (max-width: 800px) {
+
+	.heant{
+		width:70%;
+		height: 100px;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		margin-top: 8%;
+		display: flex;
+		position: relative;
+	}
+}
 
 @media (max-width: 600px) {
 	.listPromotion {

@@ -2,8 +2,6 @@ import React, { useRef, useState, useEffect, useContext } from "react";
 import axios from "../axios";
 import "./AddMoney.scss";
 import "./AddMoney.css";
-import logo from "../../img/toonta.png";
-import rightLogin from "../../img/login.png";
 import cartoon from "../../img/7.png";
 import picpic from "../../img/picpic.png";
 import cartoonshark from "../../img/4.png";

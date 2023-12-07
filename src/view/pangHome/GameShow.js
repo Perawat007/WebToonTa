@@ -10,13 +10,25 @@ import SwiperCore from 'swiper/core';
 import 'swiper/swiper-bundle.css';
 import { A11y, Navigation, Pagination, FreeMode } from 'swiper';
 import '../pangHome/test.css';
-import Slider from "react-slick";
 import "react-multi-carousel/lib/styles.css";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "react-icons/ri";
 import "./Card.css";
 import "../dialogHomecss.css"
 import axios from '../../api/axios';
 import cartoon from '../../img/3.png'
+import GameimgDiao from '../../img/GameShowImg/game_1.webp'
+import GameimgFortune from '../../img/GameShowImg/game_2.webp'
+import GameimgIceScape from '../../img/GameShowImg/game_3.webp'
+import GameimgSweetBonaza from '../../img/GameShowImg/game_4.webp'
+import GameimgBoynty from '../../img/GameShowImg/game_Boynty.webp'
+import GameimgToWerRush from '../../img/GameShowImg/game_6.webp'
+import GameimgWinWinWon from '../../img/GameShowImg/game_7.webp'
+import GameimgCowBoys from '../../img/GameShowImg/game_CowBoys.webp'
+import GameimgLucky from '../../img/GameShowImg/game_9.webp'
+import GameimgGoGolo from '../../img/GameShowImg/game_GOGOLO.webp'
+import GameimgLuckyBunny from '../../img/GameShowImg/game_LuckyBunny.webp'
+import GameimgRoBoFarm from '../../img/GameShowImg/game_RoBoFarm.webp'
+
 SwiperCore.use([Navigation, Pagination]);
 
 function GameShow() {
@@ -46,239 +58,127 @@ function GameShow() {
         //DataGet();
     },)
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 8,
-        initialSlide: 0,
-        swipeToSlide: true,
-        nextArrow: <NextIcon />,
-        prevArrow: <PrevIcon />,
-        afterChange: (index) => {
-            setProgressWidth((100 / 5) * (index + 1));
-        },
-        responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    className: "center",
-                    infinite: true,
-                    slidesToShow: 2,
-                    slidesPerRow: 2,
-                    centerMode: true,
-                    centerPadding: "350px",
-                },
-            },
-            {
-                breakpoint: 768,
-                settings: {
-                    className: "center",
-                    infinite: true,
-                    slidesToShow: 2,
-                    slidesPerRow: 2,
-                    centerMode: true,
-                    centerPadding: "350px",
-                },
-            },
-
-            {
-                breakpoint: 375,
-                settings: {
-                    className: "center",
-                    infinite: true,
-                    slidesToShow: 1,
-                    slidesPerRow: 3,
-                    centerMode: true,
-                    centerPadding: "580px",
-                },
-            },
-            {
-                breakpoint: 414,
-                settings: {
-                    dots: true,
-                    className: "center",
-                    infinite: true,
-                    slidesToShow: 1,
-                    slidesPerRow: 2,
-                    centerMode: true,
-                    speed: 200,
-                    centerPadding: "600px",
-                },
-            },
-
-            {
-                breakpoint: 390,
-                settings: {
-                    className: "center",
-                    infinite: true,
-                    slidesToShow: 1,
-                    slidesPerRow: 3,
-                    centerMode: true,
-                    centerPadding: "575px",
-                },
-            },
-
-            {
-                breakpoint: 428,
-                settings: {
-                    infinite: true,
-                    slidesToShow: 1,
-                    slidesToScroll: 3,
-                    focusOnSelect: true,
-                    centerMode: true,
-                    speed: 400,
-                    centerPadding: "700px",
-                },
-            },
-            {
-                breakpoint: 720,
-                settings: {
-                    dots: true,
-                    className: "center",
-                    infinite: true,
-                    slidesToShow: 2,
-                    slidesPerRow: 2,
-                    centerMode: true,
-                    speed: 200,
-                    centerPadding: "550px",
-                },
-            },
-
-            {
-                breakpoint: 810,
-                settings: {
-                    slidesToShow: 4,
-                    slidesPerRow: 4,
-                    centerMode: true,
-                    speed: 500,
-                    centerPadding: "480px",
-                },
-            },
-        ],
-    };
-
     const gameType = [
         {
             id: 1, name: 'Honey Trap of Diao Chan', provider_name: 'diaochan', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_1.jpg',
+            img: GameimgDiao,
             link: '',
         },
         {
             id: 2, name: 'Fortune Mouse', provider_name: 'fortune-mouse', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_2.jpg',
+            img: GameimgFortune,
             link: '',
         },
         {
             id: 3, name: 'The Great IceScape', provider_name: 'the-great-icescape', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_3.jpg',
+            img: GameimgIceScape,
             link: '',
         },
         {
             id: 4, name: 'Sweet Bonanza', provider_name: 'vs20fruitsw', data_gameid: 'PRAGMATIC_SLOT', data_name: 'PRAGMATIC_SLOT',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_4.jpg',
+            img: GameimgSweetBonaza,
             link: '',
         },
         {
-            id: 5, name: 'Bounty BallOon', provider_name: 'Bounty BallOon', data_gameid: 'Bounty BallOon', data_name: 'Bounty BallOon',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_5.jpg',
-            link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_BountyBalloon/index.html',
+            id: 5, name: 'Bounty BallOon', provider_name: 'Dogzilla', data_gameid: 'Bounty BallOon', data_name: 'Bounty BallOon',
+            img: GameimgBoynty,
+            link: 'https://bountyballoon.toonta.com',
         },
         {
-            id: 6, name: 'Football Strike', provider_name: '602813', data_gameid: 'FUNKY', data_name: 'FUNKY',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_6.jpg',
-            link: '',
+            id: 6, name: 'Tower Rush', provider_name: 'Dogzilla', data_gameid: 'Tower Rush', data_name: 'Tower Rush',
+            img: GameimgToWerRush,
+            link: 'https://towerrush.toonta.com',
         },
         {
             id: 7, name: 'Win Win Won', provider_name: 'win-win-won', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_7.jpg',
+            img: GameimgWinWinWon,
             link: '',
         },
         {
-            id: 8, name: 'CowBoys VS Aliens', provider_name: 'CowBoys VS Aliens', data_gameid: 'CowBoys VS Aliens',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_1.jpg',
-            link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_CowboyVSAlien/index.html',
+            id: 8, name: 'CowBoys VS Aliens', provider_name: 'Dogzilla', data_gameid: 'CowBoys VS Aliens',
+            img: GameimgCowBoys,
+            link: 'https://cowboyvsalien.toonta.com',
         },
         {
             id: 9, name: 'Lucky Neko', provider_name: 'lucky-neko', data_gameid: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_9.jpg',
+            img: GameimgLucky,
             link: '',
         },
         {
-            id: 10, name: 'Go Gold Planet', provider_name: 'Go Gold Planet', data_gameid: 'Go Gold Planet', data_name: 'Go Gold Planet',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_3.jpg',
-            link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_GoGoldPlanet/index.html',
+            id: 10, name: 'Go Gold Planet', provider_name: 'Dogzilla', data_gameid: 'Go Gold Planet', data_name: 'Go Gold Planet',
+            img: GameimgGoGolo,
+            link: 'https://gogoldplanet.toonta.com',
         },
         {
-            id: 11, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_2.jpg',
-            link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
+            id: 11, name: 'Lucky Bunny Gold', provider_name: 'Dogzilla', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
+            img: GameimgLuckyBunny,
+            link: 'https://luckybunnygold.toonta.com',
         },
         {
-            id: 12, name: 'RoBo FARM', provider_name: 'RoBo FARM', data_gameid: 'RoBo FARM', data_name: 'RoBo FARM',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_4.jpg',
-            link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_RoboFarm/index.html?fbclid=IwAR3KxC_GlFFdk3D_LoB6NXGpt5KtLwysKqnfjUTZAMxsBbAFoI-OYvUyce0',
+            id: 12, name: 'RoBo FARM', provider_name: 'Dogzilla', data_gameid: 'RoBo FARM', data_name: 'RoBo FARM',
+            img: GameimgRoBoFarm,
+            link: 'https://robofarm.toonta.com',
         },
 
         {
             id: 13, name: 'Honey Trap of Diao Chan', provider_name: 'diaochan', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_1.jpg',
+            img: GameimgDiao,
             link: '',
         },
         {
             id: 14, name: 'Fortune Mouse', provider_name: 'fortune-mouse', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_2.jpg',
+            img: GameimgFortune,
             link: '',
         },
         {
             id: 15, name: 'The Great IceScape', provider_name: 'the-great-icescape', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_3.jpg',
+            img: GameimgIceScape,
             link: '',
         },
         {
             id: 16, name: 'Sweet Bonanza', provider_name: 'vs20fruitsw', data_gameid: 'PRAGMATIC_SLOT', data_name: 'PRAGMATIC_SLOT',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_4.jpg',
+            img: GameimgSweetBonaza,
             link: '',
         },
         {
-            id: 17, name: 'Bounty BallOon', provider_name: 'Bounty BallOon', data_gameid: 'Bounty BallOon', data_name: 'Bounty BallOon',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_5.jpg',
-            link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_BountyBalloon/index.html',
+            id: 17, name: 'Bounty BallOon', provider_name: 'Dogzilla', data_gameid: 'Bounty BallOon', data_name: 'Bounty BallOon',
+            img: GameimgBoynty,
+            link: 'https://bountyballoon.toonta.com',
         },
         {
-            id: 18, name: 'Football Strike', provider_name: '602813', data_gameid: 'FUNKY', data_name: 'FUNKY',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_6.jpg',
-            link: '',
+            id: 18, name: 'Tower Rush', provider_name: 'Dogzilla', data_gameid: 'Tower Rush', data_name: 'Tower Rush',
+            img: GameimgToWerRush,
+            link: 'https://towerrush.toonta.com',
         },
         {
             id: 19, name: 'Win Win Won', provider_name: 'win-win-won', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_7.jpg',
+            img: GameimgWinWinWon,
             link: '',
         },
         {
-            id: 20, name: 'CowBoys VS Aliens', provider_name: 'CowBoys VS Aliens', data_gameid: 'CowBoys VS Aliens',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_1.jpg',
-            link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_CowboyVSAlien/index.html',
+            id: 20, name: 'CowBoys VS Aliens', provider_name: 'Dogzilla', data_gameid: 'CowBoys VS Aliens',
+            img: GameimgCowBoys,
+            link: 'https://cowboyvsalien.toonta.com',
         },
         {
             id: 21, name: 'Lucky Neko', provider_name: 'lucky-neko', data_gameid: 'PGSOFT2',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/GameWin/game_9.jpg',
+            img: GameimgLucky,
             link: '',
         },
         {
-            id: 22, name: 'Go Gold Planet', provider_name: 'Go Gold Planet', data_gameid: 'Go Gold Planet', data_name: 'Go Gold Planet',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_3.jpg',
-            link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_GoGoldPlanet/index.html',
+            id: 22, name: 'Go Gold Planet', provider_name: 'Dogzilla', data_gameid: 'Go Gold Planet', data_name: 'Go Gold Planet',
+            img: GameimgGoGolo,
+            link: 'https://gogoldplanet.toonta.com',
         },
         {
-            id: 23, name: 'Lucky Bunny Gold', provider_name: 'Lucky Bunny Gold', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_2.jpg',
-            link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_LuckyBunnyGold/index.html',
+            id: 23, name: 'Lucky Bunny Gold', provider_name: 'Dogzilla', data_gameid: 'Lucky Bunny Gold', data_name: 'Lucky Bunny Gold',
+            img: GameimgLuckyBunny,
+            link: 'https://luckybunnygold.toonta.com',
         },
         {
-            id: 24, name: 'RoBo FARM', provider_name: 'RoBo FARM', data_gameid: 'RoBo FARM', data_name: 'RoBo FARM',
-            img: 'https://websitehui.s3.ap-southeast-1.amazonaws.com/new_size/size_tall/game_4.jpg',
-            link: 'https://testconstruct3games.s3.ap-southeast-1.amazonaws.com/Test_RoboFarm/index.html?fbclid=IwAR3KxC_GlFFdk3D_LoB6NXGpt5KtLwysKqnfjUTZAMxsBbAFoI-OYvUyce0',
+            id: 24, name: 'RoBo FARM', provider_name: 'Dogzilla', data_gameid: 'RoBo FARM', data_name: 'RoBo FARM',
+            img: GameimgRoBoFarm,
+            link: 'https://robofarm.toonta.com',
         },
     ]
 
@@ -290,54 +190,63 @@ function GameShow() {
         }
     }*/
 
-    const PlayGame = (codeGame, name, linkGame) => {
-        if (codeGame === 'Go Gold Planet' || codeGame === 'CowBoys VS Aliens' || codeGame === 'Lucky Bunny Gold' || codeGame === 'Bounty BallOon' || codeGame === 'RoBo FARM') {
-            if (token) {
-                axios.post("/post/token", "", {
-                    headers: {
-                        Authorization: `Bearer ${token}`,
-                    },
-                })
-                    .then((response) => {
-                        if (response.data.message === "TokenOn") {
-                            const tokenEn = encodeURIComponent(token);
-                            if (linkGame !== null) {
-                                const link = linkGame + `?token=${tokenEn}`;
-                                if (mobileOS === 'Android') {
-                                    window.open(link, "_blank");
+    const PlayGame = async (codeGame, name, linkGame, nameGame) => {
+        const tokenEn = encodeURIComponent(token);
+
+        const response = await axios.post("userplayGame", {
+            username: user,
+            nameGame: nameGame,
+            agent_id: "2",
+        });
+        if (response.data.message === "saveNameGame") {
+            if (codeGame === 'Dogzilla') {
+                if (token) {
+                    axios.post("/post/token", "", {
+                        headers: {
+                            Authorization: `Bearer ${token}`,
+                        },
+                    })
+                        .then((response) => {
+                            if (response.data.message === "TokenOn") {
+                                if (response && response.data.message === "saveNameGame") {
+                                    const link = linkGame + `?token=${tokenEn}`;
+                                    if (mobileOS === 'Android') {
+                                        window.open(link, "_blank");
+                                    } else {
+                                        window.open(link, "_self");
+                                    }
                                 } else {
-                                    window.open(link, "_self");
+                                    console.log(response?.status.JSON);
                                 }
                             }
-                        }
-                    })
-                    .catch((error) => {
-                        console.log("error", error);
-                        localStorage.removeItem("token");
-                        window.location.reload();
-                    });
-            } else {
-                setShow(true);
-            }
+                        })
+                        .catch((error) => {
+                            console.log("error", error);
+                            localStorage.removeItem("token");
+                            setShow(true); // Set your show state for UI notification
+                        });
+                } else {
+                    setShow(true);
+                }
 
-        } else {
-            if (token) {
-                axios.get(`seamlesslogIn/${codeGame}/${name}/${user}`)
-                    .then((response) => {
-                        const link = response.data.data.data.url;
+            } else {
+                if (token) {
+                    try {
+                        const responseGet = await axios.get(`seamlesslogIn/${codeGame}/${name}/${user}`);
+                        const link = responseGet.data.data.data.url;
                         if (mobileOS === 'Android') {
                             window.open(link, "_blank");
                         } else {
                             window.open(link, "_self");
                         }
-                    })
-                    .catch(error => {
+                    } catch (error) {
                         console.log("error", error);
-                        localStorage.removeItem("token");
-                        window.location.reload();
-                    });
-            } else {
-                setShow(true);
+                        // localStorage.removeItem("token");
+                        // window.location.reload();
+                    }
+                } else {
+                    setShow(true);
+                }
             }
         }
     }
@@ -382,35 +291,6 @@ function GameShow() {
             <div className="features-game posRel mgt45 showGame">
                 <div className="game vGameList">
                     <div className="list scallGame">
-                        {/* <Slider {...settings}>
-                            {gameType.map((row) => (
-                                <div key={row.name} className="box">
-                                    <div className="boxGame">
-                                        <div className="card-image"
-                                            role="img" alt="" style={{
-                                                backgroundImage: `url(${row.img})`,
-                                                transform: "scale(1)"
-                                            }}
-                                            onClick={() => PlayGame(row.data_gameid)}>
-                                        </div>
-                                        <img className='shadowImage' src={row.img} alt='' style={{
-                                            cursor: 'pointer',
-                                            transform: "scale(1)"
-                                        }} onClick={() => PlayGame(row.data_gameid)} />
-                                    </div>
-
-                                    <span className="name">
-                                        <span>{row.name}</span>
-                                    </span>
-                                    <div className="provider-name">{row.name}</div>
-                                    <div className="box-play">
-                                        <div className="button-play boxGoPlay" data-gameid={row.providerCode} data-name={row.name}
-                                            data-pid="191" onClick={() => PlayGame(row.provider_name, row.data_gameid, row.link)} >เล่น</div>
-                                    </div>
-                                </div>
-                            ))}
-                        </Slider>  */}
-
                         <Swiper
                             slidesPerView={8}
                             spaceBetween={5}
@@ -458,7 +338,7 @@ function GameShow() {
                         >
                             {gameType.map((row) => (
                                 <SwiperSlide>
-                                     <div key={row.id} className="box ">
+                                    <div key={row.id} className="box ">
                                         <div className="boxGame">
                                             <div className="card-image"
                                                 role="img" alt="" style={{
@@ -479,7 +359,7 @@ function GameShow() {
                                         {/* <div className="provider-name scallButtom">{row.name}</div> */}
                                         <div className="box-play">
                                             <div className="button-play boxGoPlay scallButtom" data-gameid={row.providerCode} data-name={row.name}
-                                                data-pid="191" onClick={() => PlayGame(row.provider_name, row.data_gameid, row.link)} >เล่น</div>
+                                                data-pid="191" onClick={() => PlayGame(row.provider_name, row.data_gameid, row.link, row.name)} >เล่น</div>
                                         </div>
                                     </div>
                                 </SwiperSlide>
@@ -491,32 +371,4 @@ function GameShow() {
         </>
     );
 }
-
-const PrevIcon = ({ onClick }) => {
-    return (
-        <div>
-            <div className="testdata addfont">เกมติดอันดับ</div>
-            <br />
-            <br />
-            <div className="exclusive-prevTs">
-                <div className="next-btn">
-                    <div className="slick-icons slick-icons--left ">
-                        <RiArrowLeftSLine className="slick-icons--left" onClick={onClick} />
-                    </div>
-                </div>
-            </div>
-        </div>
-    );
-};
-
-const NextIcon = ({ onClick }) => {
-    return (
-        <div className="exclusive-nextTs">
-            <div className="slick-icons">
-                <RiArrowRightSLine className="slick-icons--right" onClick={onClick} />
-            </div>
-        </div>
-    );
-};
-
 export default GameShow;
