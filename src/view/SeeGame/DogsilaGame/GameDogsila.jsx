@@ -19,6 +19,7 @@ import NavicationBar from "../../NavicationBar/navicationbar";
 export default function GameDogsila() {
   const [items, setItems] = React.useState([]);
   const token = localStorage.getItem("token");
+  const user = localStorage.getItem("user");
   const [show, setShow] = React.useState(false);
   const [isPressed, setIsPressed] = React.useState(false);
   const [data, setData] = React.useState([])
@@ -48,32 +49,32 @@ export default function GameDogsila() {
   React.useEffect(() => {
     if (token) {
       if (data.length === 0) {
-          axios.post("/post/token", '', {
-              headers: {
-                  'Authorization': `Bearer ${token}`
-              }
+        axios.post("/post/token", '', {
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        })
+          .then(response => {
+            setData(response.data.data);
           })
-              .then(response => {
-                  setData(response.data.data);
-              })
-              .catch(error => {
-                  localStorage.removeItem("token")
-                  localStorage.removeItem("user")
-                  window.location.href = "/";
-                  console.log('error', error)
-              }
-              );
+          .catch(error => {
+            localStorage.removeItem("token")
+            localStorage.removeItem("user")
+            window.location.href = "/";
+            console.log('error', error)
+          }
+          );
       }
-  }
+    }
     DataGet();
   }, []);
 
   const DataGet = () => {
     axios.get("/post/game", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    })
       .then((response) => {
         if (response.data.message === "gameAll") {
           console.log(response.data.data);
@@ -87,34 +88,43 @@ export default function GameDogsila() {
       });
   };
 
-  const PlayGame = (linkGame) => {
-    if (token){
-      axios.post("/post/token", "", {
-        headers: {
-          Authorization: `Bearer ${token}`,
-        },
-      })
-      .then((response) => {
-        if (response.data.message === "TokenOn") {
-          const tokenEn = encodeURIComponent(token);
-          console.log(linkGame)
-          if (linkGame !== null) {
-            const link = linkGame + `?token=${tokenEn}`;
-            if (mobileOS === 'Android') {
-              window.open(link, "_blank");
+  const PlayGame = async (linkGame, namegame) => {
+    const response = await axios.post("userplayGame", {
+      username: user,
+      nameGame: namegame,
+      agent_id: "2",
+    });
+    if (response.data.message === "saveNameGame") {
+      if (token) {
+        axios.post("/post/token", "", {
+          headers: {
+            Authorization: `Bearer ${token}`,
+          },
+        })
+          .then((response) => {
+            if (response.data.message === "TokenOn") {
+              const tokenEn = encodeURIComponent(token);
+              console.log(linkGame)
+              if (linkGame !== null) {
+                const link = linkGame + `?token=${tokenEn}`;
+                if (mobileOS === 'Android') {
+                  window.open(link, "_blank");
+                } else {
+                  window.open(link, "_self");
+                }
+              }
             } else {
-              window.open(link, "_self");
+              setShow(true);
             }
-          }
-        } else {
-          setShow(true);
-        }
-      })
-      .catch((error) => {
-        console.log("error", error);
-        localStorage.removeItem("token");
-        window.location.reload();
-      });
+          })
+          .catch((error) => {
+            console.log("error", error);
+            localStorage.removeItem("token");
+            window.location.reload();
+          });
+      } else {
+        setShow(true);
+      }
     } else {
       setShow(true);
     }
@@ -173,13 +183,13 @@ export default function GameDogsila() {
       <div className="pg-home common-holder">
         <React.Fragment>
           <Container maxWidth="xl" sx={{ p: 3 }}>
-          <div className="card-font">รายชื่อเกม</div>
+            <div className="card-font">รายชื่อเกม</div>
             <Box display={'flex'}>
               <Typography variant="h6">
                 <a style={h4Style} className='grount font' onClick={BackPang}>ย้อนกลับ</a>
               </Typography>
             </Box>
-           
+
             <br />
             <br />
             <br />
@@ -200,9 +210,9 @@ export default function GameDogsila() {
                       <span>{row.name}</span>
                     </span>
                     {/* <div className="provider-name">{row.name}</div> */}
-                    <div className="box-play">
-                      <div className="button-play boxGoPlay" data-gameid={row.providerCode} data-name={row.name}
-                        data-pid="191" onClick={() => PlayGame(row.linkgame)}>เล่น</div>
+                    <div className="box-play" onClick={() => PlayGame(row.linkgame, row.namegame)}>
+                      <div className="button-play boxGoPlay scallButtom" data-gameid={row.providerCode} data-name={row.name}
+                        data-pid="191" onClick={() => PlayGame(row.linkgame, row.namegame)}>เล่น</div>
                     </div>
                   </div>
                 ))}

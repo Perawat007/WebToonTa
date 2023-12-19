@@ -108,7 +108,7 @@ function GameRecommend() {
             link: 'https://cowboyvsalien.toonta.com',
         },
         {
-            id: 11,  name: 'Fruity-Candy', provider_name: 'fruity-candy', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
+            id: 11, name: 'Fruity-Candy', provider_name: 'fruity-candy', data_gameid: 'PGSOFT2', data_name: 'PGSOFT2',
             img: GameimgFruity,
             link: '',
         },
@@ -124,7 +124,7 @@ function GameRecommend() {
         },
 
         {
-            id: 14,  name: 'Tower Rush', provider_name: 'Dogzilla', data_gameid: 'Tower Rush', data_name: 'Tower Rush',
+            id: 14, name: 'Tower Rush', provider_name: 'Dogzilla', data_gameid: 'Tower Rush', data_name: 'Tower Rush',
             img: GameimgToWerRush,
             link: 'https://towerrush.toonta.com',
         },
@@ -170,7 +170,7 @@ function GameRecommend() {
         },
 
         {
-            id: 23,  name: 'Tower Rush', provider_name: 'Dogzilla', data_gameid: 'Tower Rush', data_name: 'Tower Rush',
+            id: 23, name: 'Tower Rush', provider_name: 'Dogzilla', data_gameid: 'Tower Rush', data_name: 'Tower Rush',
             img: GameimgToWerRush,
             link: 'https://towerrush.toonta.com',
         },
@@ -206,33 +206,33 @@ function GameRecommend() {
                         Authorization: `Bearer ${token}`,
                     },
                 })
-                .then((response) => {
-                    if (response.data.message === "TokenOn") {
-                        return axios.post("userplayGame", {
-                            username: user,
-                            nameGame: nameGame,
-                            agent_id: '2',
-                        });
-                    }
-                })
-                .then((gameResponse) => {
-                    if (gameResponse && gameResponse.data.message === "saveNameGame") {
-                        const link = linkGame + `?token=${tokenEn}`;
-                        if (mobileOS === 'Android') {
-                            window.open(link, "_blank");
-                        } else {
-                            window.open(link, "_self");
+                    .then((response) => {
+                        if (response.data.message === "TokenOn") {
+                            return axios.post("userplayGame", {
+                                username: user,
+                                nameGame: nameGame,
+                                agent_id: '2',
+                            });
                         }
-                    } else {
-                        console.log(gameResponse?.status.JSON);
-                    }
-                })
-                .catch((error) => {
-                    console.log("error", error);
-                    // Show an error message to the user or perform necessary actions
-                    localStorage.removeItem("token");
-                    setShow(true); // Set your show state for UI notification
-                });
+                    })
+                    .then((gameResponse) => {
+                        if (gameResponse && gameResponse.data.message === "saveNameGame") {
+                            const link = linkGame + `?token=${tokenEn}`;
+                            if (mobileOS === 'Android') {
+                                window.open(link, "_blank");
+                            } else {
+                                window.open(link, "_self");
+                            }
+                        } else {
+                            console.log(gameResponse?.status.JSON);
+                        }
+                    })
+                    .catch((error) => {
+                        console.log("error", error);
+                        // Show an error message to the user or perform necessary actions
+                        localStorage.removeItem("token");
+                        setShow(true); // Set your show state for UI notification
+                    });
             } else {
                 setShow(true);
             }
@@ -246,7 +246,7 @@ function GameRecommend() {
                         nameGame: nameGame,
                         agent_id: '2',
                     });
-    
+
                     if (responsePost.data.message === "saveNameGame") {
                         const link = responseGet.data.data.data.url;
                         if (mobileOS === 'Android') {
@@ -304,85 +304,86 @@ function GameRecommend() {
                     </div>
                 </div>
             )}
+            <div>
+            <div style={{marginBottom : "0%"}} className="testdata addfont">เกมใหม่มาแรง</div>
+                <div className="features-game posRel mgt45 showGame">
+                    <div className=" game vGameList">
+                        <div className="list scallGame">
 
-            <div className="testdata addfont">เกมใหม่มาแรง</div>
-            <div className="features-game posRel mgt45 showGame">
-                <div className=" game vGameList">
-                    <div className="list scallGame">
-                
-                        <Swiper
-                            slidesPerView={8}
-                            spaceBetween={5}
-                            loop={true}
-               
+                            <Swiper
+                                slidesPerView={8}
+                                spaceBetween={5}
+                                loop={true}
 
-                            breakpoints={{
-                                428: {
-                                    slidesPerView: 3.2,
-                                    spaceBetween: 1,
-                                },
-                                414: {
-                                    slidesPerView: 3.2,
-                                    spaceBetween: 1,
-                                },
-                                390: {
-                                    slidesPerView: 3.2,
-                                    spaceBetween: 1,
-                                },
-                                280: {
-                                    slidesPerView: 2.8,
-                                    spaceBetween: 1,
-                                },
-                                576: {
-                                    slidesPerView: 4,
-                                    spaceBetween: 5,
-                                },
-                                768: {
-                                    slidesPerView: 4,
-                                    spaceBetween: 5,
-                                },
-                                800: {
-                                    slidesPerView: 5,
-                                    spaceBetween: 5,
-                                },
-                                1000: {
-                                    slidesPerView: 8,
-                                    spaceBetween: 5,
-                                },
-                                1200: {
-                                    slidesPerView: 8,
-                                    spaceBetween: 5,
-                                },
-                            }}
 
-                            modules={[FreeMode, Pagination, Navigation]}
-                            className="mySwiper2 "
-                            navigation={false}
-                        >
-                            {gameType.map((row) => (
-                                <SwiperSlide>
-                                    <div key={row.id} className="box ">
-                                        <div className="boxGame">
-                                            <div className="card-image "
-                                                onClick={() => PlayGame(row.data_gameid)}>
+                                breakpoints={{
+                                    428: {
+                                        slidesPerView: 3.2,
+                                        spaceBetween: 1,
+                                    },
+                                    414: {
+                                        slidesPerView: 3.2,
+                                        spaceBetween: 1,
+                                    },
+                                    390: {
+                                        slidesPerView: 3.2,
+                                        spaceBetween: 1,
+                                    },
+                                    280: {
+                                        slidesPerView: 2.8,
+                                        spaceBetween: 1,
+                                    },
+                                    576: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 5,
+                                    },
+                                    768: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 5,
+                                    },
+                                    800: {
+                                        slidesPerView: 5,
+                                        spaceBetween: 5,
+                                    },
+                                    1000: {
+                                        slidesPerView: 8,
+                                        spaceBetween: 5,
+                                    },
+                                    1200: {
+                                        slidesPerView: 8,
+                                        spaceBetween: 5,
+                                    },
+                                }}
+
+                                modules={[FreeMode, Pagination, Navigation]}
+                                className="mySwiper2 "
+                                navigation={false}
+                            >
+                                {gameType.map((row) => (
+                                    <SwiperSlide>
+                                        <div key={row.id} className="box ">
+                                            <div className="boxGame">
+                                                <div className="card-image "
+                                                    onClick={() => PlayGame(row.data_gameid)}>
+                                                </div>
+                                                <img className='shadowImage' src={row.img} alt='' style={{
+                                                    cursor: 'pointer',
+                                                    transform: "scale(1)"
+                                                }} onClick={() => PlayGame(row.data_gameid)} />
                                             </div>
-                                            <img className='shadowImage' src={row.img} alt='' style={{
-                                                cursor: 'pointer',
-                                                transform: "scale(1)"
-                                            }} onClick={() => PlayGame(row.data_gameid)} />
-                                        </div>
-                                        {/* <span className="name">
+                                            {/* <span className="name">
                                             <span className='scallButtom'>{row.name}</span>
                                         </span>
                                         <div className="provider-name ">{row.name}</div> */}
-                                        <div className="box-play">
-                                            <div className="button-play boxGoPlay " data-gameid={row.providerCode} data-name={row.name}
-                                                data-pid="191" onClick={() => PlayGame(row.provider_name, row.data_gameid, row.link, row.name)} >เล่น</div>
+                                            <div className="box-play">
+                                                <div className="button-play boxGoPlay " data-gameid={row.providerCode} data-name={row.name}
+                                                    data-pid="191" onClick={() => PlayGame(row.provider_name, row.data_gameid, row.link, row.name)} >เล่น</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
                     </div>
                 </div>
             </div>

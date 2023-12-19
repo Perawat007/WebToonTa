@@ -16,7 +16,8 @@ import Footer from "../../view/pangHome/FooTer/Footer";
 import Allgamecamps from "../../view/pangHome/Allgamecamps";
 import MenuDown from "../../view/pangHome/MenuDown";
 import NavicationBar from "../../view/NavicationBar/navicationbar";
-import { BsUnlockFill, BsCreditCardFill, BsPhoneFill, BsCoin } from "react-icons/bs";
+import { FaUnlockAlt } from "react-icons/fa";
+import { MdPhoneIphone } from "react-icons/md";
 import imgDiralog from "../../img/imgDiralog.png";
 import {
   Box,
@@ -85,6 +86,10 @@ const LoginBar = () => {
     window.location.href = `/Register`;
   }
 
+  const inputStyle = {
+    color: 'red' // สีแดง
+  };
+
   return (
     <>
       {showPopupA && (
@@ -120,8 +125,8 @@ const LoginBar = () => {
           <div className="slide-controlsLogin">
             <input type="radio" name="slide" id="login" />
             <input type="radio" name="slide" id="signup" />
-            <label className="slideLogin login">เข้าสู่ระบบ</label>
-            <label className="slideLogin signup" onClick={cilckRegiter}>สมัครสมาชิก</label>
+            <label className="slideLogin login font">เข้าสู่ระบบ</label>
+            <label className="slideLogin signup font" onClick={cilckRegiter}>สมัครสมาชิก</label>
             <div className="slider-tabLogin"></div>
           </div>
 
@@ -144,7 +149,7 @@ const LoginBar = () => {
                       required
                       className="input-with-iconLogin font"
                     />
-                    <BsPhoneFill className="input-iconLogin" style={{ color: '#FFFFFF' }}/>
+                    <MdPhoneIphone  className="input-iconLogin" style={{ color: '#1218ff' }}/>
                   </div>
                 </div>
 
@@ -157,9 +162,9 @@ const LoginBar = () => {
                       value={password}
                       onChange={(e) => setPwd(e.target.value)}
                       required
-                      className="input-with-iconLogin"
+                      className="input-with-iconLogin font"
                     />
-                    <BsUnlockFill className="input-iconLogin" style={{ color: '#FFFFFF' }} />
+                    <FaUnlockAlt className="input-iconLogin" style={{ color: '#1218ff' }} />
                   </div>
                 </div>
                 <div className="pass-link font">

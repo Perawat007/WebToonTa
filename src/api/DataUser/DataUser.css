@@ -7,12 +7,10 @@
     margin: auto;
     overflow: hidden;
     position: relative;
-    background-color: rgb(255, 255, 255);   
     display: flex;
     justify-content: center;
     margin-top: 1%;
     border-radius: 20px;
-    border-style: solid;
 }
 
 .headerDeposit{
@@ -26,10 +24,10 @@
     position: relative;
     width: 100%;
     padding: 15px 0;
-    background-color: rgb(255, 255, 255);
+    background-color: #0005c5;
     border-radius: 20px;
     border-style: solid;
-    border-color: rgb(96, 0, 151);
+    border-color: #0ab3ff;
     text-align: left;
     margin: 1.5% auto;
 }
@@ -38,7 +36,7 @@
     width: 100%;
     margin-top: 10%;
     margin-bottom: 3%;
-    border-top: 3px solid rgb(96, 0, 151);
+    border-top: 3px solid #0ab3ff;
 }
 
 img .profile-photo-lg {
@@ -49,7 +47,7 @@ img .profile-photo-lg {
 
 .profile-link{
     display: inline-block;
-    color: rgb(74, 0, 143);
+    color: #ffffff;
     margin-right: 5%;
     position: relative;
     margin-right: 0;
@@ -68,13 +66,13 @@ img .profile-photo-lg {
 .nameDeposit{
     position: relative;
     margin-left: 0;
-    color: rgb(74, 0, 143);
+    color: #ffffff;
 }
 
 .text-mutedNumber{
     position: relative;
     margin-left: 0;
-    color: rgb(74, 0, 143);
+    color: #ffffff;
 }
 
 .positionButton{
@@ -87,7 +85,7 @@ img .profile-photo-lg {
     width: 25%;
     z-index: 2;
     color: #ffffff;
-    background: -webkit-linear-gradient(right, #ce1bd4, #b020db, #a31bc5, #a118bd);
+    background-color: #f431ee;
     box-shadow: 3px 5px 15px black;
     border-radius: 15px;
     bottom: 15%;
@@ -135,10 +133,8 @@ img .profile-photo-lg {
         width: 100%;
         padding: 15px 0;
         margin-bottom: 15px;
-        background-color: rgb(255, 255, 255);
         border-radius: 20px;
         border-style: solid;
-        border-color: rgb(96, 0, 151);
     }  
 
     .boostaem{
@@ -154,7 +150,6 @@ img .profile-photo-lg {
     
     .profile-link{
         display: inline-block;
-        color: rgb(74, 0, 143);
     }
     .profile-photo-lg{
         display: inline-block;
@@ -167,11 +162,11 @@ img .profile-photo-lg {
         height: 100%;
     }
     .nameDeposit{
-        color: rgb(74, 0, 143);
+        color: #ffffff;
     }
     
     .text-mutedNumber{
-        color: rgb(74, 0, 143);
+        color: #ffffff;
     }
     
     .positionButton{
@@ -215,7 +210,6 @@ img .profile-photo-lg {
     
     .profile-link{
         display: inline-block;
-        color: rgb(74, 0, 143);
         margin-right: 5%;
         position: relative;
         margin-right: 0;
@@ -249,8 +243,8 @@ img .profile-photo-lg {
     .containerBank {
         width: 100%;
         height:44%;
-        margin-top: 2%;
-        margin-bottom: -6%;
+        margin-top: 8%;
+        margin-bottom: -20%;
     }
 
     .boostaem{
@@ -273,7 +267,6 @@ img .profile-photo-lg {
     }
     
     .profile-link{
-        color: rgb(74, 0, 143);
         font-size: 17px;
     }
 

@@ -93,8 +93,8 @@ const AddPromotionMoney = () => {
     }
   ];
 
-  //let baseURL = 'https://dogzilla.live/';
-  const baseURL = 'http://localhost:5000/';
+  let baseURL = 'https://dogzilla.live/';
+  //const baseURL = 'http://localhost:5000/';
 
   useEffect(() => {
     if (token) {

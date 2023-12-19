@@ -90,8 +90,8 @@ const AddMoneyPromotion = () => {
     }
   ];
 
-  //let baseURL = 'https://dogzilla.live/';
-  const baseURL = 'http://localhost:5000/';
+  let baseURL = 'https://dogzilla.live/';
+  //const baseURL = 'http://localhost:5000/';
 
   useEffect(() => {
     if (token) {
@@ -508,7 +508,6 @@ const AddMoneyPromotion = () => {
           <div className="form-container">
             <div className="form-inner">
               <form action="#"  className="login" >
-
                 <div className="containerBank">
                   <ImageList sx={{
                     width: 450, height: 200,

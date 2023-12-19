@@ -24,6 +24,8 @@ const CouponToonta = () => {
   const [openlog, setOpenlog] = React.useState(false);
   const [openlogsuncent, setopenlogsuncent] = React.useState(false);
   const [logResetError, setlogResetError] = useState(false);
+  const [logResetErrorI, setlogResetErrorI] = useState('');
+  const [logConponconditions, setlogConponconditions] = useState(false);
 
   const handleSubmit = async () => {
     if (passwordConfirm !== '') {
@@ -37,8 +39,28 @@ const CouponToonta = () => {
         if (response.data.message === "คุณรับคูปองสำเร็จ") {
           setopenlogsuncent(true)
 
-        } else {
-          setlogResetError(true);
+        } if (response.data.message === "คุณไม่สามารถใช้คูปองได้ เนื่องจากคุณไม่เข้าเงือนไขการใช้งานคูปอง") {
+          setlogConponconditions(true)
+        }
+        if (response.data.message === "คุณไม่สามารถใช้คูปองได้ เนื่องจากคุณกรอกรหัสคูปองไม่ถูกต้อง") {
+          setlogResetErrorI(response.data.message)
+          setlogResetError(true)
+        }
+        if (response.data.message === "คุณไม่สามารถใช้คูปองได้ เนื่องจากคุณได้ใช้คูปองนี้ไปแล้ว") {
+          setlogResetErrorI(response.data.message)
+          setlogResetError(true)
+        }
+        if (response.data.message === "คุณไม่สามารถใช้คูปองได้ เนื่องจากคุณได้รับโปรโมชั่นไว้แล้ว") {
+          setlogResetErrorI(response.data.message)
+          setlogResetError(true)
+        }
+        if (response.data.message === "คุณไม่สามารถใช้คูปองได้ เนื่องจากคูปองถูกใช้ครบทุกสิทธิ์แล้ว") {
+          setlogResetErrorI(response.data.message)
+          setlogResetError(true)
+        }
+        if (response.data.message === "คุณไม่สามารถใช้คูปองได้ เนื่องจากคุณได้รับโปรโมชั่นหรือได้ใช้คูปองนี้ไปแล้วไว้แล้ว") {
+          setlogResetErrorI(response.data.message)
+          setlogResetError(true)
         }
       } catch (err) {
         setShowPopup(!showPopupA);
@@ -77,6 +99,7 @@ const CouponToonta = () => {
     setOpen(false);
     setlogResetError(false);
     setOpenlog(false);
+    setlogConponconditions(false)
   };
 
   return (
@@ -138,7 +161,7 @@ const CouponToonta = () => {
               <div className="contentMoney">
                 <p className="titleDialog font">แจ้งเตือน การใช้งานคูปอง</p>
                 <br />
-                <h3 className="detailDialog font">คุณกรอกคูปองไม่ถูกต้อง กรุณาตรวจคูปองและลองใหมอีกครั้ง</h3>
+                <h3 className="detailDialog font">{logResetErrorI}</h3>
                 <div className="btnContainerMoney">
                   <button className="btnPrimaryMoney" onClick={handleClose}>
                     ตกลง
@@ -150,12 +173,33 @@ const CouponToonta = () => {
         </div>
       )}
 
+      {logConponconditions && (
+        <div className="overlayMoney">
+          <div className="imgMoneyCartoon">
+            <img src={cartoon} alt="/" />
+          </div>
+          <div className="modalContainerMoney">
+            <div className="modalRightMoney">
+              <div className="contentMoney">
+                <p className="titleDialog font">แจ้งเตือน การใช้งานคูปอง</p>
+                <br />
+                <h3 className="detailDialog font">คุณไม่เข้าเงื่อนการใช้งานคูปองนี้ กรุณาตรวจสอบสิทธิ์การใช้คูปอง</h3>
+                <div className="btnContainerMoney">
+                  <button className="btnPrimaryMoney" onClick={handleClose}>
+                    ตกลง
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       <div>
         <Headers />
       </div>
       <div className="main-AddWitdraw">
         <div className="wrapperCoupon">
-          <div className="form-containerWitdraw">
+          <div className="form-containerConpon">
             <div className="form-innerCoupon">
               <form action="#" className="login">
                 <div className="fieldDataCoupon font textinputWitdraw ">

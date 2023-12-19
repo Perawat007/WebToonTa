@@ -29,36 +29,43 @@ const ResetPassword = () => {
 
 
   const handleSubmit = async () => {
+    const isValidPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,16}$/.test(passwordNew);
     if (passwordOle !== '' && passwordNew !== '' && passwordConfirm !== '') {
       if (passwordNew === passwordConfirm) {
-        try {
-          const response = await axios.put("post/resetPasswordUserToontaWeb", {
-            passwordOle: passwordOle,
-            passwordConfirm: passwordConfirm,
-            useranme: user,
-            typeedit: "member",
-          });
-          if (response.data.message === "เปลียนรหัสผ่านสำเร็จ") {
-            setopenlogsuncent(true)
+        if (isValidPassword) {
+          try {
+            const response = await axios.put("post/resetPasswordUserToontaWeb", {
+              passwordOle: passwordOle,
+              passwordConfirm: passwordConfirm,
+              useranme: user,
+              typeedit: "member",
+            });
+            if (response.data.message === "เปลียนรหัสผ่านสำเร็จ") {
+              setopenlogsuncent(true)
 
-          } else {
-            setlogResetError(true);
+            } else {
+              setlogResetError(true);
+            }
+          } catch (err) {
+            setShowPopup(!showPopupA);
+            if (!err?.response) {
+              setErrMsg("No Server Response");
+            } else if (err.response?.status === 400) {
+              setErrMsg("Missing Username or Password");
+            } else if (err.response?.status === 401) {
+              setErrMsg("Unauthorized");
+            } else {
+              setErrMsg("Login Failed");
+            }
           }
-        } catch (err) {
-          setShowPopup(!showPopupA);
-          if (!err?.response) {
-            setErrMsg("No Server Response");
-          } else if (err.response?.status === 400) {
-            setErrMsg("Missing Username or Password");
-          } else if (err.response?.status === 401) {
-            setErrMsg("Unauthorized");
-          } else {
-            setErrMsg("Login Failed");
-          }
+        } else {
+          setlogResetError(true);
         }
       } else {
         setOpenlog(true);
       }
+    } else {
+      setOpenlog(true);
     }
   }
   const handleSubmitResetPassword = () => {
@@ -176,9 +183,9 @@ const ResetPassword = () => {
         <Headers />
       </div>
       <div className="main-AddWitdraw">
-        <div className="wrapperWitdraw">
-          <div className="textFrameWitdraw">
-            <div className="title-textWitdraw font">เปลี่ยนรหัสผ่าน</div>
+        <div className="wrapperReset">
+          <div className="textFrameReset">
+            <div className="title-textReset font">เปลี่ยนรหัสผ่าน</div>
           </div>
           <div className="form-containerWitdraw">
             <div className="form-innerWitdraw">
@@ -193,10 +200,10 @@ const ResetPassword = () => {
                       value={passwordOle}
                       onChange={(e) => setpasswordOle(e.target.value)}
                       required
-                      className="input-with-iconReposit colorFontWindarwcredit font"
+                      className="input-with-iconReposit colorFontReset font"
 
                     />
-                    <BsUnlockFill className="input-iconWitdraw" />
+                    <BsUnlockFill className="input-iconReset" />
                   </div>
                 </div>
 
@@ -212,7 +219,7 @@ const ResetPassword = () => {
                       className="input-with-iconReposit font"
 
                     />
-                    <BsUnlockFill className="input-iconWitdraw" />
+                    <BsUnlockFill className="input-iconReset" />
                   </div>
                 </div>
 
@@ -227,16 +234,15 @@ const ResetPassword = () => {
                       required
                       className="input-with-iconReposit colorFontWindarw font"
                     />
-                    <BsUnlockFill className="input-iconWitdraw" />
+                    <BsUnlockFill className="input-iconReset" />
                   </div>
                 </div>
-                <br />
-                <div className="fieldReset btnsubmitWitdraw font">
-                  <input type="submitWitdraw" defaultValue="ยืนยันเปลี่ยนรหัสผ่าน" onClick={() => handleSubmitResetPassword()} />
+                <div className="fieldWitdraw btnsubmitWitdraw font marinReset">
+                  <input type="submitReset" defaultValue="ยืนยันเปลี่ยนรหัสผ่าน" onClick={() => handleSubmitResetPassword()} />
                 </div>
                 <br />
-                <div className="money-link ">
-                  <a className="font" href="#"> พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
+                <div className="marinReset">
+                  <a className="font" href="#" style={{ color: '#ffd000' }}> พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                 </div>
               </form>
             </div>

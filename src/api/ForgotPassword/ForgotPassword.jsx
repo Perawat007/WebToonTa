@@ -236,7 +236,7 @@ const ForgotPassword = () => {
     <>
       {show && (
         <div className="overlayRegiter">
-          <div className="modalContainerRegiter">
+          <div className="modalContainerForgot">
             <div className="imgForGet">
               <img src={cartoon} alt="/" />
             </div>
@@ -426,7 +426,7 @@ const ForgotPassword = () => {
       {showRegiterOTP && (
         <div className="overlayRegiter">
 
-          <div className="modalContainerRegiter">
+          <div className="modalContainerForgot">
             <div className="modalRightRegiter">
               <div className="contentRegiter">
                 <p className="titleDialogRegiter font">ยืนยัน OTP</p>
@@ -510,11 +510,11 @@ const ForgotPassword = () => {
           </div>
 
           <div className="textFrameHeadersForgotPassword">
-            <div className="title-textForgotPassword font" style={{ color: '#ad00c4' }}>{title}</div>
+            <div className="title-textForgotPassword font" style={{ color: '#ffffff' }}>{title}</div>
           </div>
 
-          <div className="progressBar">
-            <div className="progressBar-done" style={styleBar}>
+          <div className="progressBarForgot">
+            <div className="progressBarForgot-done" style={styleBar}>
               {showprogressBar}%
             </div>
           </div>
@@ -539,9 +539,9 @@ const ForgotPassword = () => {
                               value={numberPhone}
                               onChange={(e) => setNumberPhone(e.target.value)}
                               required
-                              className="input-with-iconForgotPassword"
+                              className="input-with-iconForgotPassword font"
                             />
-                            <BsPhoneFill className="input-iconForgotPassword" style={{ color: '#FFFFFF' }} />
+                            <BsPhoneFill className="input-iconForgotPassword" style={{ color: '#1218ff' }} />
                           </div>
                         </div>
                         <div className="fieldForgotPassword btnsubmitForgotPassword font">
@@ -549,7 +549,7 @@ const ForgotPassword = () => {
                           <input type="submit" value="ยืนยัน" onClick={handleSubmitA} />
                         </div>
                         <div className="ForgotPassword-link font">
-                          <a>พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
+                          <a style={{ color: '#ffd000' }}>พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                         </div>
                       </form>
                     </>
@@ -571,7 +571,7 @@ const ForgotPassword = () => {
                               required
                               className="input-with-iconForgotPassword"
                             />
-                            <BsUnlockFill className="input-iconForgotPassword" style={{ color: '#FFFFFF' }} />
+                            <BsUnlockFill className="input-iconForgotPassword" style={{ color: '#1218ff' }} />
                           </div>
                         </div>
 
@@ -586,7 +586,7 @@ const ForgotPassword = () => {
                               required
                               className="input-with-iconForgotPassword"
                             />
-                            <BsUnlockFill className="input-iconForgotPassword" style={{ color: '#FFFFFF' }} />
+                            <BsUnlockFill className="input-iconForgotPassword" style={{ color: '#1218ff' }} />
                           </div>
                         </div>
 
@@ -596,7 +596,7 @@ const ForgotPassword = () => {
                           </div>
                         </div>
                         <div className="ForgotPassword-link font">
-                          <a>พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
+                          <a style={{ color: '#ffd000' }} >พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>
                         </div>
                       </form>
                     </>

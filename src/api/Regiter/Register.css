@@ -22,7 +22,7 @@
 }
 
 .progressBar {
-    background-color: #d8d8d8;
+    background-color: #1218ff;
     border-radius: 20px;
     position: relative;
     margin: 15px auto;
@@ -36,8 +36,8 @@
 
 .progressBar-done {
     position: absolute;
-    background: linear-gradient(to left, #e11fe7, #b200df);
-    box-shadow: 0 3px 3px -5px #F2709C, 0 2px 5px #F2709C;
+    background: linear-gradient(to left, #0ab3ff, #1218ff);
+    box-shadow: 0 3px 3px -5px #000000, 0 2px 5px #000000;
     border-radius: 20px;
     color: #fff;
     display: flex;
@@ -73,7 +73,7 @@
     justify-content: center;
     align-items: center;
     z-index: 4;
-    background: #ffffff;
+    background: linear-gradient(to bottom, #0ab3ff 1%, #1218ff 40%);
     padding: 10px;
     border-radius: 30px;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
@@ -114,7 +114,7 @@
     font-size: 17px;
     font-weight: 400;
     text-align: left;
-    color: #930bbd;
+    color: #ffffff;
     margin: 5px 0 10px 0;
     margin-left: 22%;
 }
@@ -126,13 +126,13 @@
 
 
 .form-innerRegister form .fieldRegister input::placeholder {
-    color: #ff00ff;
+    color: #1218ff;
     transition: all 0.3s ease;
 }
 
 
 .textFrameRegister {
-    background-color: #930bbd;
+    background-color: #ffffff;
     border-radius: 30px;
     width: 40%;
     height: 60px;
@@ -145,7 +145,6 @@
 
 
 .textFrameHeadersRegister {
-    background-color: #ffffff;
     border-radius: 10px;
     width: 100%;
     height: 60px;
@@ -158,7 +157,7 @@
 
 .title-textRegister {
     font-size: 22px;
-    color: #ffffff;
+    color: #1218ff;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -302,7 +301,7 @@ input[type="radio"] {
     font-size: 30px;
     text-align: center;
     transition: all 0.3s ease;
-    background: -webkit-linear-gradient(left, #930bbd, #b31de0, #c244e9, #be3ee6);
+    background-color: #ffffff;
     box-shadow: 5px 0.2px 9px black;
     color: white;
 }
@@ -313,12 +312,12 @@ input[type="radio"] {
 }
 
 .form-innerRegister form .fieldDataRegister input::placeholder {
-    color: #ffffff;
+    color: #1218ff;
     transition: all 0.3s ease;
 }
 
 form .fieldDataRegister input:focus::placeholder {
-    color: #ffffff;
+    color: #1218ff;
 }
 
 .form-innerRegister form .pass-link {
@@ -333,7 +332,7 @@ form .fieldDataRegister input:focus::placeholder {
 
 .form-innerRegister form .pass-link a,
 .form-innerRegister form .Register-link a {
-    color: #fa4299;
+    color: #ffd000;
     text-decoration: none;
 }
 
@@ -371,7 +370,7 @@ form .btnsubmitRegister input[type="submit"] {
     width: 60%;
     z-index: 2;
     color: #ffffff;
-    background: -webkit-linear-gradient(right, #1218FF, #0AB3FF);
+    background-color: #f431ee;
     margin-top: 2%;
     box-shadow: 5px 0.2px 9px black;
 }
@@ -382,7 +381,7 @@ form .btnsubmitRegister input[type="submitri"] {
     width: 62%;
     z-index: 2;
     color: #ffffff;
-    background: -webkit-linear-gradient(right, #1218FF, #0AB3FF);
+    background-color: #f431ee;
 }
 
 .wrapInputRegiter {
@@ -512,7 +511,6 @@ form .btnsubmitRegister input[type="submitri"] {
         width: 80%;
         height: 50rem;
         z-index: 4;
-        background: #ffffff;
         padding: 10px;
         margin-top: 8%;
     }
@@ -599,7 +597,6 @@ form .btnsubmitRegister input[type="submitri"] {
     }
 
     .progressBar {
-        background-color: #d8d8d8;
         border-radius: 20px;
         height: 30px;
         width: 300px;
@@ -772,7 +769,6 @@ form .btnsubmitRegister input[type="submitri"] {
     }
 
     .progressBar {
-        background-color: #d8d8d8;
         border-radius: 20px;
         height: 30px;
         width: 300px;
@@ -931,7 +927,6 @@ form .btnsubmitRegister input[type="submitri"] {
         width: 90%;
         height: 55rem;
         z-index: 4;
-        background: #ffffff;
         padding: 5px;
         margin-top: 28%;
     }
@@ -1019,7 +1014,6 @@ form .btnsubmitRegister input[type="submitri"] {
     }
 
     .progressBar {
-        background-color: #d8d8d8;
         border-radius: 20px;
         height: 30px;
         width: 200px;

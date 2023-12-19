@@ -752,7 +752,7 @@ textarea {
     cursor: pointer;
     margin: auto;
     padding: 5px 15px;
-    min-width: 80px;
+    min-width: 100px;
     font-size: 14px
 }
 

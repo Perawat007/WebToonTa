@@ -35,7 +35,7 @@
     justify-content: center;
     align-items: center;
     z-index: 4;
-    background: #ffffff;
+    background: linear-gradient(to bottom, #0ab3ff 1%, #1218ff 40%);
     padding: 10px;
     border-radius: 30px;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
@@ -59,6 +59,7 @@
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
+
 .wrapperLogin .slide-controlsLogin {
     position: relative;
     display: flex;
@@ -67,7 +68,6 @@
     overflow: hidden;
     margin: 5px 0 10px 0;
     justify-content: space-between;
-    border: 1px solid rgb(255, 255, 255);
     border-radius: 30px;
 }
 
@@ -76,7 +76,7 @@
     font-size: 17px;
     font-weight: 400;
     text-align: left;
-    color: #930bbd;
+    color: #ffffff;
     margin: 5px 0 10px 0;
     margin-left: 15%;
 }
@@ -93,7 +93,7 @@
 
 
 .textFrameLogin {
-    background-color: #930bbd;
+    background-color: #ffffff;
     border-radius: 30px;
     width: 40%;
     height: 60px;
@@ -106,7 +106,7 @@
 
 .title-textLogin {
     font-size: 22px;
-    color: #ffffff;
+    color: #1218ff;
     text-align: center;
     justify-content: center;
     align-items: center;
@@ -123,6 +123,7 @@
     cursor: pointer;
     z-index: 1;
     transition: all 0.6s ease;
+    display: none;
 }
 
 .slide-controlsLogin label.signup {
@@ -137,7 +138,7 @@
     left: 0;
     z-index: 0;
     border-radius: 5px;
-    background: -webkit-linear-gradient(left, #a445b2, #fa4299);
+    background: #f431ee;
     transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     display: none;
 }
@@ -224,9 +225,10 @@ input[type="radio"] {
     font-size: 30px;
     text-align: center;
     transition: all 0.3s ease;
-    background: -webkit-linear-gradient(left, #930bbd, #b31de0, #c244e9, #be3ee6);
+    /* background: -webkit-linear-gradient(left, #930bbd, #b31de0, #c244e9, #be3ee6); */
+    background: #ffffff;
     box-shadow: 5px 0.2px 9px black;
-    color: white;
+    color: #1218ff;
 }
 
 .form-innerLogin form .fieldDataLogin input:focus {
@@ -235,12 +237,12 @@ input[type="radio"] {
 }
 
 .form-innerLogin form .fieldDataLogin input::placeholder {
-    color: #ffffff;
+    color: #1218ff;
     transition: all 0.3s ease;
 }
 
 form .fieldDataLogin input:focus::placeholder {
-    color: #ffffff;
+    color: #1218ff;
 }
 
 .form-innerLogin form .pass-link {
@@ -255,7 +257,7 @@ form .fieldDataLogin input:focus::placeholder {
 
 .form-innerLogin form .pass-link a,
 .form-innerLogin form .Login-link a {
-    color: #fa4299;
+    color: #ffd000;
     text-decoration: none;
 }
 
@@ -293,9 +295,9 @@ form .btnsubmitLogin input[type="submit"] {
     width: 60%;
     z-index: 2;
     color: #ffffff;
-    background: -webkit-linear-gradient(right, #1218FF , #0AB3FF);
+    background: #f431ee;
     margin-top: 2%;
-    box-shadow: 5px 0.2px 9px black;
+    /* box-shadow: 5px 0.2px 9px black; */
 }
 
 
@@ -303,7 +305,7 @@ form .btnsubmitLogin input[type="submit"] {
     position: absolute;
     transform: translate(40%, 50%);
     font-size: 30px;
-    color: #ffffff;
+    color: #1218ff;
     pointer-events: none;
 }
 
@@ -336,17 +338,17 @@ form .btnsubmitLogin input[type="submit"] {
 
 .imgWayLogin {
     width: 500px;
-    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);  
+    box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
     border-radius: 50%;
     overflow: hidden;
-    
+
     bottom: 78%;
     right: 0%;
     z-index: 0;
     display: block;
 }
 
-.imgWaymonterLoginIIIC{
+.imgWaymonterLoginIIIC {
     width: 12%;
     box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
     border-radius: 50%;
@@ -357,7 +359,8 @@ form .btnsubmitLogin input[type="submit"] {
     z-index: 4;
     display: block;
 }
-.imgWaymonterLoginIII{
+
+.imgWaymonterLoginIII {
     width: 8%;
     box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
     border-radius: 50%;
@@ -368,7 +371,8 @@ form .btnsubmitLogin input[type="submit"] {
     z-index: 4;
     display: block;
 }
-.imgWaymonterLoginII{
+
+.imgWaymonterLoginII {
     width: 15%;
     box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
     border-radius: 50%;
@@ -380,7 +384,7 @@ form .btnsubmitLogin input[type="submit"] {
     display: block;
 }
 
-.imgWaymonterLoginI{
+.imgWaymonterLoginI {
     width: 15%;
     box-shadow: 1px 22px 25px rgba(0, 0, 0, 0.712);
     border-radius: 50%;
@@ -469,18 +473,19 @@ form .btnsubmitLogin input[type="submit"] {
     input {
         font-size: 14px;
     }
+
     .main-Login {
         min-height: 85vw;
     }
+
     .wrapperLogin {
         width: 70%;
         height: 40rem;
         z-index: 4;
-        background: #ffffff;
         padding: 10px;
         margin-top: 25%;
     }
-    
+
     .wrapperLogin.title-text {
         display: flex;
         width: 100%;
@@ -518,7 +523,7 @@ form .btnsubmitLogin input[type="submit"] {
         width: 70%;
         height: 40px;
     }
-    
+
     .input-iconLogin {
         left: 20px;
         top: 40%;
@@ -564,35 +569,35 @@ form .btnsubmitLogin input[type="submit"] {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .scaltimgLoginCircleI {
         width: 30%;
         bottom: 20%;
         left: 70%;
         z-index: 3;
     }
-    
+
     .scaltimgLoginCircleII {
         width: 100%;
         bottom: 10%;
         right: 30%;
         z-index: 3;
     }
-    
+
     .scaltimgLoginCircleIII {
         width: 25%;
         top: 0%;
         left: 75%;
         z-index: 4;
     }
-    
+
     .scaltimgLoginCircleIIII {
         width: 50%;
         bottom: 10%;
         right: 60%;
         z-index: 4;
     }
-    
+
     .scaltimgLoginCircleV {
         position: absolute;
         width: 70%;
@@ -607,24 +612,26 @@ form .btnsubmitLogin input[type="submit"] {
     input {
         font-size: 14px;
     }
+
     .wrapperLogin {
         width: 80%;
         height: 35rem;
         z-index: 4;
-        background: #ffffff;
         padding: 10px;
         margin-top: 35%;
     }
+
     .main-Login {
         overflow-x: hidden;
         align-items: center;
         min-height: 130vw;
     }
+
     .wrapperLogin.title-text {
         display: flex;
         width: 100%;
     }
-    
+
     .wrapperLogin .title {
         width: 100%;
         font-size: 35px;
@@ -658,6 +665,7 @@ form .btnsubmitLogin input[type="submit"] {
         height: 40px;
         margin: auto;
     }
+
     .form-innerLogin form .fieldLogin input {
         height: 80%;
         width: 100%;
@@ -690,17 +698,17 @@ form .btnsubmitLogin input[type="submit"] {
         display: none;
     }
 
-    .imgWaymonterLoginIIIC{
+    .imgWaymonterLoginIIIC {
         width: 15%;
         bottom: 80%;
         right: 0%;
     }
 
-    .imgWaymonterLoginIII{
+    .imgWaymonterLoginIII {
         display: none;
     }
 
-    .imgWaymonterLoginI{
+    .imgWaymonterLoginI {
         width: 30%;
         bottom: 45%;
         left: 0%;
@@ -713,35 +721,35 @@ form .btnsubmitLogin input[type="submit"] {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .scaltimgLoginCircleI {
         width: 30%;
         bottom: 20%;
         left: 70%;
         z-index: 3;
     }
-    
+
     .scaltimgLoginCircleII {
         width: 100%;
         bottom: 10%;
         right: 30%;
         z-index: 3;
     }
-    
+
     .scaltimgLoginCircleIII {
         width: 25%;
         top: 10%;
         left: 70%;
         z-index: 4;
     }
-    
+
     .scaltimgLoginCircleIIII {
         width: 50%;
         bottom: 30%;
         right: 50%;
         z-index: 4;
     }
-    
+
     .scaltimgLoginCircleV {
         position: absolute;
         width: 70%;
@@ -749,6 +757,7 @@ form .btnsubmitLogin input[type="submit"] {
         z-index: 4;
         display: none;
     }
+
     .scaltimgLoginCircleVI {
         position: absolute;
         width: 52%;
@@ -756,6 +765,11 @@ form .btnsubmitLogin input[type="submit"] {
         top: 0%;
         left: 60%;
     }
+
+    .slide-controlsLogin .slideLogin {
+        display: block;
+    }
+
 }
 
 @media (max-width: 500px) {
@@ -764,9 +778,11 @@ form .btnsubmitLogin input[type="submit"] {
         height: 10%;
         margin-top: 30%;
     }
+
     .main-Login {
         min-height: 180vw;
     }
+
     .form-innerLogin form .fieldLogin input {
         height: 80%;
         width: 100%;
@@ -793,6 +809,7 @@ form .btnsubmitLogin input[type="submit"] {
         width: 75%;
         margin-top: 2%;
     }
+
     .imgWayLogin {
         width: 100px;
     }
@@ -855,17 +872,18 @@ form .btnsubmitLogin input[type="submit"] {
     input {
         font-size: 14px;
     }
+
     .main-Login {
         min-height: 120vw;
     }
+
     .wrapperLogin {
         width: 90%;
         height: 39rem;
         z-index: 4;
-        background: #ffffff;
         margin-top: 30%;
     }
-    
+
     .wrapperLogin.title-text {
         display: flex;
         width: 100%;
@@ -896,7 +914,7 @@ form .btnsubmitLogin input[type="submit"] {
         height: 40px;
         margin: auto;
     }
-    
+
     .input-iconLogin {
         left: 20px;
         top: 40%;
@@ -946,35 +964,35 @@ form .btnsubmitLogin input[type="submit"] {
         left: 50%;
         transform: translateX(-50%);
     }
-    
+
     .scaltimgLoginCircleI {
         width: 30%;
         bottom: 20%;
         left: 70%;
         z-index: 3;
     }
-    
+
     .scaltimgLoginCircleII {
         width: 100%;
         bottom: 10%;
         right: 30%;
         z-index: 3;
     }
-    
+
     .scaltimgLoginCircleIII {
         width: 25%;
         top: 0%;
         left: 75%;
         z-index: 4;
     }
-    
+
     .scaltimgLoginCircleIIII {
         width: 50%;
         bottom: 10%;
         right: 60%;
         z-index: 4;
     }
-    
+
     .scaltimgLoginCircleV {
         position: absolute;
         width: 70%;

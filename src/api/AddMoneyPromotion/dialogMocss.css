@@ -238,7 +238,7 @@ select {
     height: 100%;
     font-size: 30px;
     background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center/1.4em, linear-gradient(to left, rgba(255, 255, 255, 0.3) 3em, rgba(255, 255, 255, 0.2) 3em);
-    color: rgb(159, 0, 180);
+    color: rgb(255, 255, 255);
     border: 3px solid rgb(121, 0, 158);
     border-radius: 15px;
     box-shadow: 5px 0.2px 9px black;
@@ -249,7 +249,7 @@ select {
 
 select option {
     color: inherit;
-    background-color: #7f0ab6;
+    background-color: #1218ff;
     color: rgb(255, 255, 255);
 }
 

@@ -26,6 +26,7 @@ import PropTypes from "prop-types";
 import { styled } from "@mui/material/styles";
 import { BsUnlockFill, BsPhoneFill } from "react-icons/bs";
 import NavicationBar from "../../view/NavicationBar/navicationbar";
+import { MdPhoneIphone } from "react-icons/md";
 import { red } from "@mui/material/colors";
 
 const RegiterBar = () => {
@@ -39,7 +40,7 @@ const RegiterBar = () => {
   // Dialog
   const [showRegiterA, setRegiterA] = useState(false);
   const [showRegiterOTP, setRegiterOTP] = useState(false);
-  const [showRegiterB, setRegiterB] = useState(true);
+  const [showRegiterB, setRegiterB] = useState(false);
   const [showRegiterC, setRegiterC] = useState(false);
   const [tokenpin, settokenpin] = useState("");
   const [otpPin, setotppin] = useState("");
@@ -150,7 +151,7 @@ const RegiterBar = () => {
   ];
 
   useEffect(() => {
-    setRegiterA(false);
+    setRegiterA(true);
     const newStyle = {
       opacity: 3,
       width: `25%`,
@@ -535,7 +536,7 @@ const RegiterBar = () => {
                 <p className="titleDialogRegiter font">ยืนยัน OTP</p>
               </div>
               <div className="form-innerRegister">
-                <div className="DialogImg">
+                <div className="DialogImgOtp">
                   <img className="scaltimgDialogImg" src={imgDiralog} alt="" />
                 </div>
                 <form action="#" className="Register">
@@ -547,10 +548,11 @@ const RegiterBar = () => {
                         value={otpPin}
                         onChange={(e) => setotppin(e.target.value)}
                         required
-                        className="input-with-iconRegister"
+                        className="input-with-iconRegister font"
+                        style={{ color: '#1218ff' }}
                       />
                     </div>
-                    <BsPhoneFill className="input-iconRegister" style={{ top: '22px', color: '#FFFFFF' }} />
+                    <BsPhoneFill className="input-iconRegister" style={{ top: '22px', color: '#1218ff' }} />
                     <div className="textOTP" style={{ color: '#FFFFFF' }}>
                     </div>
                   </div>
@@ -597,12 +599,13 @@ const RegiterBar = () => {
           </div> */}
 
         <div className="wrapperRegister">
+        <br/>
           <div className="textFrameRegister">
             <div className="title-textRegister font">สมัครสมาชิก</div>
           </div>
 
           <div className="textFrameHeadersRegister">
-            <div className="title-textRegister font" style={{ color: '#ad00c4' }}>{title}</div>
+            <div className="title-textRegister font" style={{ color: '#ffffff' }}>{title}</div>
           </div>
 
           <div className="progressBar">
@@ -631,9 +634,10 @@ const RegiterBar = () => {
                               value={phoneNumber}
                               onChange={(e) => setphoneNumber(e.target.value)}
                               required
-                              className="input-with-iconRegister"
+                              className="input-with-iconRegister font"
+                              style={{ color: '#1218ff' }}
                             />
-                            <BsPhoneFill className="input-iconRegister" style={{ color: '#FFFFFF' }} />
+                            <MdPhoneIphone className="input-iconRegister" style={{ color: '#1218ff' }} />
                           </div>
                         </div>
                         <div className="fieldRegister btnsubmitRegister font">
@@ -661,11 +665,12 @@ const RegiterBar = () => {
                               value={password}
                               onChange={(e) => setPwd(e.target.value)}
                               required
-                              className="input-with-iconRegister"
+                              className="input-with-iconRegister font"
+                              style={{ color: '#1218ff' }}
                             />
-                            <BsUnlockFill className="input-iconRegister" style={{ color: '#FFFFFF' }} />
+                            <BsUnlockFill className="input-iconRegister" style={{ color: '#1218ff' }} />
                           </div>
-                          <p className="font">รหัสต้องประกอบไปด้วยตัวอักษรตัวเล็ก ตัวใหญ่ และตัวเลข</p>
+                          <p className="font"  style={{ color: '#FFFFFF' }}>รหัสต้องประกอบไปด้วยตัวอักษรตัวเล็ก ตัวใหญ่ และตัวเลข</p>
                         </div>
                       <br/>
                         <div className="fieldDataRegister font textinputRegister input-containerRegister">
@@ -677,9 +682,10 @@ const RegiterBar = () => {
                               value={Confrimpassword}
                               onChange={(e) => setPwdConfrim(e.target.value)}
                               required
-                              className="input-with-iconRegister"
+                              className="input-with-iconRegister font"
+                              style={{ color: '#1218ff' }}
                             />
-                            <BsUnlockFill className="input-iconRegister" style={{ color: '#FFFFFF' }} />
+                            <BsUnlockFill className="input-iconRegister" style={{ color: '#1218ff' }} />
                           </div>
                         </div>
 
@@ -706,7 +712,7 @@ const RegiterBar = () => {
                             isSearchable={false} // Enable search functionality
                           />
                         </div> */}
-                        <div className="fieldDataRegister font textinputRegister input-containerRegister">
+                        <div className="fieldDataRegister font  input-containerRegister">
                           <select className="lang_menu font" value={bank} onChange={handleChange}>
                             {usedforOptions.map((option) => (
                               <option key={option.value} value={option.value} data-imagesrc={option.imgPath}>
@@ -725,7 +731,8 @@ const RegiterBar = () => {
                               value={nameBank}
                               onChange={(e) => setNameBank(e.target.value)}
                               required
-                              className="input-with-iconRegister"
+                              className="input-with-iconRegister font"
+                              style={{ color: '#1218ff' }}
                             />
                             {/* <BsPhoneFill className="input-iconRegister" style={{ color: '#FFFFFF' }} /> */}
                           </div>
@@ -740,7 +747,8 @@ const RegiterBar = () => {
                               value={numberBank}
                               onChange={(e) => setNumberBank(e.target.value)}
                               required
-                              className="input-with-iconRegister"
+                              className="input-with-iconRegister font"
+                              style={{ color: '#1218ff' }}
                             />
                             {/* <BsUnlockFill className="input-iconRegister" style={{ color: '#FFFFFF' }} /> */}
                           </div>

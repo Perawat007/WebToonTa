@@ -431,6 +431,22 @@ function WinGame() {
             id: 30, name: 'Pragmatic Play Slot', provider_name: 'PRAGMATIC_SLOT', data_gameid: 'PRAGMATIC_SLOT', data_name: 'PRAGMATIC_SLOT', alt: 'PRAGMATIC_SLOT',
             img: '/GameCamp/32.webp'
         },
+        // {
+        //     id: 31, name: 'Hacksaw', provider_name: 'HACKSAW', data_gameid: 'HACKSAW', data_name: 'HACKSAW', alt: 'HACKSAW',
+        //     img: '/GameCamp/37.webp'
+        // },
+        {
+            id: 32, name: 'Nolimit City', provider_name: 'NOLIMIT', data_gameid: 'NOLIMIT', data_name: 'NOLIMIT', alt: 'NOLIMIT',
+            img: '/GameCamp/36.webp'
+        },
+        // {
+        //     id: 33, name: 'Bolebit', provider_name: 'BOLEBIT', data_gameid: 'BOLEBIT', data_name: 'BOLEBIT', alt: 'BOLEBIT',
+        //     img: '/GameCamp/35.webp'
+        // },
+        {
+            id: 33, name: 'Relax Gaming', provider_name: 'RELAX', data_gameid: 'RELAX', data_name: 'RELAX', alt: 'RELAX',
+            img: '/GameCamp/34.webp'
+        },
     ]
     const settings = {
         className: "center",
@@ -540,7 +556,7 @@ function WinGame() {
 
     return (
         <>
-            <div className="testdata addfont">ค่ายเกมทั้งหมด</div>
+           
             {/* <div className="features-game posRel mgt45 showGame">
                 <div className="game">
                     <div className="list scallGame"> */}
@@ -761,7 +777,9 @@ function WinGame() {
                     </div>
                 </div> 
             </div> */}
+            <div style={{ marginBottom: "0%" }} className="testdata addfont">ค่ายเกมทั้งหมด</div>
             <div className="section-footer mid-footer">
+            
                 <div className="section-footer-inner">
                     <React.Fragment>
                         <Container maxWidth="xxl" sx={{ p: 1 }}>
@@ -786,8 +804,8 @@ function WinGame() {
                                                 <span className="name">
                                                     <span>{row.name}</span>
                                                 </span>
-                                                <div className="box-play">
-                                                    <div className="button-play boxGoPlay" data-gameid={row.id} data-name={row.name}
+                                                <div className="box-play" onClick={() => SeeGameCamp(row.data_gameid)}>
+                                                    <div className="button-play boxGoPlay scallButtom" data-gameid={row.id} data-name={row.name}
                                                         data-pid="191" onClick={() => SeeGameCamp(row.data_gameid)}>เข้าดูเกม</div>
                                                 </div>
                                             </div>

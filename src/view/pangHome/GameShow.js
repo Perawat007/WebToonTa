@@ -287,84 +287,86 @@ function GameShow() {
                     </div>
                 </div>
             )}
-            <div className="testdata addfont">เกมติดอันดับ</div>
-            <div className="features-game posRel mgt45 showGame">
-                <div className="game vGameList">
-                    <div className="list scallGame">
-                        <Swiper
-                            slidesPerView={8}
-                            spaceBetween={5}
-                            loop={true}
+            <div>
+                <div style={{ marginBottom: "0%" }} className="testdata addfont">เกมติดอันดับ</div>
+                <div className="features-game posRel mgt45 showGame">
+                    <div className="game vGameList">
+                        <div className="list scallGame">
+                            <Swiper
+                                slidesPerView={8}
+                                spaceBetween={5}
+                                loop={true}
 
 
-                            breakpoints={{
-                                428: {
-                                    slidesPerView: 3.2,
-                                    spaceBetween: 1,
-                                },
-                                414: {
-                                    slidesPerView: 3.2,
-                                    spaceBetween: 1,
-                                },
-                                390: {
-                                    slidesPerView: 3.2,
-                                    spaceBetween: 1,
-                                },
-                                280: {
-                                    slidesPerView: 2.8,
-                                    spaceBetween: 1,
-                                },
-                                576: {
-                                    slidesPerView: 4,
-                                    spaceBetween: 5,
-                                },
-                                768: {
-                                    slidesPerView: 4,
-                                    spaceBetween: 5,
-                                },
-                                1000: {
-                                    slidesPerView: 8,
-                                    spaceBetween: 5,
-                                },
-                                1200: {
-                                    slidesPerView: 8,
-                                    spaceBetween: 5,
-                                }
-                            }}
+                                breakpoints={{
+                                    428: {
+                                        slidesPerView: 3.2,
+                                        spaceBetween: 1,
+                                    },
+                                    414: {
+                                        slidesPerView: 3.2,
+                                        spaceBetween: 1,
+                                    },
+                                    390: {
+                                        slidesPerView: 3.2,
+                                        spaceBetween: 1,
+                                    },
+                                    280: {
+                                        slidesPerView: 2.8,
+                                        spaceBetween: 1,
+                                    },
+                                    576: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 5,
+                                    },
+                                    768: {
+                                        slidesPerView: 4,
+                                        spaceBetween: 5,
+                                    },
+                                    1000: {
+                                        slidesPerView: 8,
+                                        spaceBetween: 5,
+                                    },
+                                    1200: {
+                                        slidesPerView: 8,
+                                        spaceBetween: 5,
+                                    }
+                                }}
 
-                            modules={[FreeMode, Pagination, Navigation]}
-                            className="mySwiper2"
-                            navigation={false}
-                        >
-                            {gameType.map((row) => (
-                                <SwiperSlide>
-                                    <div key={row.id} className="box ">
-                                        <div className="boxGame">
-                                            <div className="card-image"
-                                                role="img" alt="" style={{
-                                                    backgroundImage: `url(${row.img})`,
+                                modules={[FreeMode, Pagination, Navigation]}
+                                className="mySwiper2"
+                                navigation={false}
+                            >
+                                {gameType.map((row) => (
+                                    <SwiperSlide>
+                                        <div key={row.id} className="box ">
+                                            <div className="boxGame">
+                                                <div className="card-image"
+                                                    role="img" alt="" style={{
+                                                        backgroundImage: `url(${row.img})`,
+                                                        transform: "scale(1)"
+                                                    }}
+                                                    onClick={() => PlayGame(row.data_gameid)}>
+                                                </div>
+                                                <img className='shadowImage ' src={row.img} alt='' style={{
+                                                    cursor: 'pointer',
                                                     transform: "scale(1)"
-                                                }}
-                                                onClick={() => PlayGame(row.data_gameid)}>
+                                                }} onClick={() => PlayGame(row.data_gameid)} />
                                             </div>
-                                            <img className='shadowImage ' src={row.img} alt='' style={{
-                                                cursor: 'pointer',
-                                                transform: "scale(1)"
-                                            }} onClick={() => PlayGame(row.data_gameid)} />
-                                        </div>
 
-                                        {/* <span className="name">
+                                            {/* <span className="name">
                                             <span className='scallButtom'>{row.name}</span>
                                         </span> */}
-                                        {/* <div className="provider-name scallButtom">{row.name}</div> */}
-                                        <div className="box-play">
-                                            <div className="button-play boxGoPlay scallButtom" data-gameid={row.providerCode} data-name={row.name}
-                                                data-pid="191" onClick={() => PlayGame(row.provider_name, row.data_gameid, row.link, row.name)} >เล่น</div>
+                                            {/* <div className="provider-name scallButtom">{row.name}</div> */}
+                                            <div className="box-play" onClick={() => PlayGame(row.provider_name, row.data_gameid, row.link, row.name)}>
+                                                <div className="button-play boxGoPlay scallButtom" data-gameid={row.providerCode} data-name={row.name}
+                                                    data-pid="191" onClick={() => PlayGame(row.provider_name, row.data_gameid, row.link, row.name)} >เล่น</div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </SwiperSlide>
-                            ))}
-                        </Swiper>
+                                    </SwiperSlide>
+                                ))}
+                            </Swiper>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@ import gitWitdraw from '../../img/icon/money.gif'
 import nottifocationimgOne from '../../img/lang/pop1.png'
 import nottifocationimgTwo from '../../img/lang/pop2.png'
 import nottifocationimgThree from '../../img/lang/pop_up3.png'
-
+import nottifocation from '../../img/lang/pop_up1.png'
 import StatusWitdrawTa from "../StatusWithDraw/StatusWitdrawTa";
 
 const WitdrawTa = () => {
@@ -59,7 +59,7 @@ const WitdrawTa = () => {
 
 
   let baseURL = 'https://dogzilla.live/';
-  //const baseURL: 'http://localhost:5000/';
+  //const baseURL = 'http://localhost:5000/';
   const convertedCredituser = parseFloat(credit.replace(/,/g, '')).toFixed(2);
   const convertedCreditturnover = parseFloat(turnover.replace(/,/g, '')).toFixed(2);
 
@@ -141,6 +141,7 @@ const WitdrawTa = () => {
           phonenumber: user,
           agent_id: 2,
           actualize: 'ถอนโดย member จากหน้าเว็บไซต์',
+          withdrawStatus: 'in_progress'
         })
       })
         .then((response) => response.json())
@@ -171,6 +172,8 @@ const WitdrawTa = () => {
           // setresOpen(true);
           if (data.message === 'รอการอนุมัติการถอนเงิน') {
             setresOpenTwo(true);
+          } else {
+            setresOpenThree(true);
           }
         })
     } else {
@@ -319,7 +322,7 @@ const WitdrawTa = () => {
           </div>
           <div className="modalContainerMoneyImg">
             <div className="modalRightMoney">
-              <img src={nottifocationimgThree} alt="/" onClick={handleClose} />
+              <img src={nottifocation} alt="/" onClick={handleClose} />
             </div>
           </div>
         </div>
@@ -359,22 +362,22 @@ const WitdrawTa = () => {
             <div className="form-innerWitdraw">
               <form action="#" className="login">
 
-                <div className="fieldDataWitdrawNoColor font textinputWitdraw input-containerWitdraw">
+                <div className="fieldDataWitdrawNoColor font textinputWitdraw input-containerWitdraw ">
                   <p className="textTitleWitdraw font">ยอดเงินคงเหลือ</p>
-                  <div className="wrapInputWitdraw">
+                  <div className="wrapInputWitdraw ">
                     <input
                       type="text"
                       placeholder="ยอดเงินคงเหลือ"
                       value={credit}
                       required
-                      className="input-with-iconReposit colorFontWindarwcredit font"
+                      className="input-with-iconReposit colorFontWindarwcredit font colorOne"
                       disabled
                     />
                     <BsCoin className="input-iconWitdraw" />
                   </div>
                 </div>
 
-                <div className="fieldDataWitdraw font textinputWitdraw input-containerWitdraw">
+                <div className="fieldDataWitdrawNoColor font textinputWitdraw input-containerWitdraw">
                   <p className="textTitleWitdraw font">จำนวนเงินที่ถอนได้</p>
                   <div className="wrapInputWitdraw">
                     <input
@@ -382,7 +385,7 @@ const WitdrawTa = () => {
                       placeholder="จำนวนเงินที่ถอนได้"
                       value={amountWitDraw}
                       required
-                      className="input-with-iconReposit font"
+                      className="input-with-iconReposit colorFontWindarwcredit font colorOne"
                       disabled
                     />
                     <BsCoin className="input-iconWitdraw" />
@@ -449,7 +452,7 @@ const WitdrawTa = () => {
           </div>
 
 
-          <img className="scaltimgWitdrawCircleIII" src={imgpanpa} alt="" />
+          <img className="scaltimgWitdrawIII" src={imgpanpa} alt="" />
 
           <img className="scaltimgWitdrawCircleIIII" src={imgpanpaII} alt="" />
 

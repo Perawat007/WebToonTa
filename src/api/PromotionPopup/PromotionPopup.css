@@ -41,13 +41,6 @@
     margin: 1.5% auto;
 }
 
-.lineDeposit {
-    width: 100%;
-    margin-top: 10%;
-    margin-bottom: 3%;
-    border-top: 3px solid rgb(96, 0, 151);
-}
-
 .rowDeposit {
     width: 100%;
     height: 100%;
@@ -220,10 +213,5 @@
     .positionButton {
         margin-left: 73%;
         margin-top: 0%;
-    }
-    .lineDeposit {
-        width: 100%;
-        margin-top: 10%;
-        margin-bottom: 1%;
     }
 }

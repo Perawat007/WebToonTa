@@ -66,25 +66,24 @@ function GamePlay() {
   const DataGet = () => {
     const pathA = window.location.pathname;
     const pathSegments = pathA.split("/");
-
-    // axios
-    //   .get(`listGame/${pathSegments[1]}`)
-    //   .then((response) => {
-    //     if (response.data.data.data.games.length <= 20) {
-    //       setValus(1500);
-    //     } else if (
-    //       response.data.data.data.games.length >= 100 &&
-    //       pathSegments[1] !== "YGGDRASIL"
-    //     ) {
-    //       setValus(1200);
-    //     } else if (pathSegments[1] === "YGGDRASIL") {
-    //       setValus(200);
-    //     }
-    //     setItems(response.data.data.data.games);
-    //   })
-    //   .catch((error) => {
-    //     console.log("error", error);
-    //   });
+    axios
+      .get(`listGame/${pathSegments[1]}`)
+      .then((response) => {
+        if (response.data.data.data.games.length <= 20) {
+          setValus(1500);
+        } else if (
+          response.data.data.data.games.length >= 100 &&
+          pathSegments[1] !== "YGGDRASIL"
+        ) {
+          setValus(1200);
+        } else if (pathSegments[1] === "YGGDRASIL") {
+          setValus(200);
+        }
+        setItems(response.data.data.data.games);
+      })
+      .catch((error) => {
+        console.log("error", error);
+      });
   };
   const PlayGame = async (codeGame, nameGame, row) => {
     const pathA = window.location.pathname;
@@ -208,9 +207,9 @@ function GamePlay() {
                     <span>{row.name}</span>
                   </span>
                   {/* <div className="provider-name">{row.name}</div> */}
-                  <div className="box-play">
+                  <div className="box-play" onClick={() => PlayGame(row.code, row.name)}>
                     <div
-                      className="button-play boxGoPlay"
+                      className="button-play boxGoPlay scallButtom"
                       data-gameid={row.providerCode}
                       data-name={row.name}
                       data-pid="191"
