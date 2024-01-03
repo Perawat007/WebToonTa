@@ -506,6 +506,7 @@ const AddPromotionMoney = () => {
           <div className="textFrameDeposit">
             <div className="title-textDeposit font">เติมเงิน</div>
           </div>
+          
           <div className="form-container">
             <div className="form-inner">
               <form action="#"  className="login" >
@@ -548,6 +549,7 @@ const AddPromotionMoney = () => {
                       </ImageListItem>
                     ))}
                   </ImageList>
+                
                 </div>
 
                 <div className="fieldDataDeposit font  input-container">

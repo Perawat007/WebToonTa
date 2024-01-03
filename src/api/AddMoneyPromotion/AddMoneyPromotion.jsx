@@ -78,7 +78,7 @@ const AddMoneyPromotion = () => {
   const [inputValue, setInputValue] = useState('');
   const [imgnofidication, setimgnofidication] = useState();
   const [selectedValueId, setSelectedValueId] = useState('0');
-
+  const [startDispost, setstartDispost] = useState(false);
   let depositaccountlite = [];
 
   let PromotionList = [
@@ -94,6 +94,7 @@ const AddMoneyPromotion = () => {
   //const baseURL = 'http://localhost:5000/';
 
   useEffect(() => {
+    setstartDispost(true)
     if (token) {
       if (data.length === 0) {
         axios.get("/list_userWeb/" + user, "", {
@@ -152,7 +153,7 @@ const AddMoneyPromotion = () => {
   }, []);
 
   const handleImageChange = (event) => {
-    event.preventDefault(); 
+    event.preventDefault();
     const file = event.target.files[0];
     if (file) {
       const reader = new FileReader();
@@ -269,6 +270,7 @@ const AddMoneyPromotion = () => {
       setresOpenThree(false);
       setresOpenFour(false);
       setresOpenFive(false);
+      setstartDispost(false);
     }
   };
 
@@ -380,6 +382,28 @@ const AddMoneyPromotion = () => {
                 <p className="titleDialog font">แจ้งเตือน ยืนยันการฝากเงิน</p>
                 <br />
                 <h3 className="detailDialog font">กรุณาอัพโหลด สลีป</h3>
+              </div>
+              <div className="btnContainerMoney">
+                <button className="btnPrimaryMoney" onClick={handleClose}>
+                  ยืนยัน
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {startDispost && (
+        <div className="overlayMoney">
+          <div className="imgMoney">
+            <img src={cartoon} alt="/" />
+          </div>
+          <div className="modalContainerMoney">
+            <div className="modalRightMoney">
+              <div className="contentMoney">
+                <p className="titleDialog font">อ่านสักนิด</p>
+                <br />
+                <h3 className="detailDialog font">กรุณาใช้บัญชีที่สมัครสมาชิกโอนมาเท่านั้น! หากมีการโอนเงินจากบัญชีอื่นทางเว็บ TOONTA จะไม่มีการรับผิดชอบใดๆทั้งสิ้น!</h3>
               </div>
               <div className="btnContainerMoney">
                 <button className="btnPrimaryMoney" onClick={handleClose}>
@@ -507,7 +531,7 @@ const AddMoneyPromotion = () => {
           </div>
           <div className="form-container">
             <div className="form-inner">
-              <form action="#"  className="login" >
+              <form action="#" className="login" >
                 <div className="containerBank">
                   <ImageList sx={{
                     width: 450, height: 200,
@@ -547,7 +571,6 @@ const AddMoneyPromotion = () => {
                     ))}
                   </ImageList>
                 </div>
-
                 <div className="fieldDataDeposit font  input-container">
                   <select className="lang_menuPromotionDeposit font" style={{ fontSize: '17px' }} value={selectedValue} onChange={selectElement}>
                     {datapromotion.map((option) => (
@@ -584,7 +607,7 @@ const AddMoneyPromotion = () => {
                   )}
                 </div>
                 <div className="fieldMoney btnsubmitDeposit font">
-                <input type="submitDeposit" defaultValue="เติมเงิน" onClick={(e) => handleSubmitdeposit(e)} />
+                  <input type="submitDeposit" defaultValue="เติมเงิน" onClick={(e) => handleSubmitdeposit(e)} />
                 </div>
                 <div className="money-link ">
                   <a className="font" href=""> พบปัญหา ติดต่อฝ่ายบริการลูกค้า</a>

@@ -16,7 +16,7 @@ import MenuDown from "../../view/pangHome/MenuDown";
 import { BsCoin, BsBank2 } from "react-icons/bs";
 import NavicationBar from "../../view/NavicationBar/navicationbar";
 import gitWitdraw from '../../img/icon/money.gif'
-import nottifocationimgOne from '../../img/lang/pop1.png'
+import nottifocationimgOne from '../../img/lang/pop_up4.webp'
 import nottifocationimgTwo from '../../img/lang/pop2.png'
 import nottifocationimgThree from '../../img/lang/pop_up3.png'
 import nottifocation from '../../img/lang/pop_up1.png'
@@ -56,7 +56,7 @@ const WitdrawTa = () => {
   const [resOpenThree, setresOpenThree] = useState(false);
   const [resOpenFour, setresOpenFour] = useState(false);
   const [resOpenFive, setresOpenFive] = useState(false);
-
+  const [withdrawMoney, setwithdrawMoney] = useState(0);
 
   let baseURL = 'https://dogzilla.live/';
   //const baseURL = 'http://localhost:5000/';
@@ -67,8 +67,18 @@ const WitdrawTa = () => {
   const numberValueTurnover = parseFloat(convertedCreditturnover);
 
   useEffect(() => {
-    startWithDraw();
+    withdrawMoneyUser();
   }, []);
+
+  const withdrawMoneyUser = async () => {
+    try {
+      const response = await axios.post(`post/withdrawMoneyUser/${user}/${2}`);
+      setwithdrawMoney(response.data.withdrawMoney);
+      startWithDraw();
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
+  };
 
   const startWithDraw = async () => {
     if (token) {
@@ -85,14 +95,15 @@ const WitdrawTa = () => {
 
             setcreditusers(response.data.credit)
             let moneyWithDraw = 0
-            if (numberValueTurnover !== 0){
+            if (numberValueTurnover !== 0) {
               moneyWithDraw = 0;
             } else {
               moneyWithDraw = numberValuecredit
             }
-            let floorValue = Math.floor(moneyWithDraw);
+            let floorValue = Math.floor(withdrawMoney);
             let formattedValue = floorValue.toLocaleString();
-            //console.log(formattedValue);
+
+            console.log(floorValue);
             if (floorValue < 0) {
               formattedValue = 0;
               setamountWitDraw(formattedValue)
@@ -125,11 +136,11 @@ const WitdrawTa = () => {
   };
 
   const handleSubmit = () => {
-    let moneyWithDraw = numberValuecredit - numberValueTurnover
+    let moneyWithDraw = numberValuecredit - withdrawMoney
     const numberWithoutComma = valueWitDraw.replace(/,/g, ''); // "1000"
     const numberValue = parseFloat(numberWithoutComma); // 1000
     console.log(numberValue, valueWitDraw);
-    if (numberValue >= 100.00 && numberValue <= moneyWithDraw) {
+    if (numberValue >= 100.00 && numberValue <= withdrawMoney) {
       console.log(numberValue);
       fetch(baseURL + 'post/WinhdrawUser', {
         method: 'POST',
@@ -383,7 +394,7 @@ const WitdrawTa = () => {
                     <input
                       type="text"
                       placeholder="จำนวนเงินที่ถอนได้"
-                      value={amountWitDraw}
+                      value={Math.floor(withdrawMoney)}
                       required
                       className="input-with-iconReposit colorFontWindarwcredit font colorOne"
                       disabled
